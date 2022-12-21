@@ -23,5 +23,5 @@
 *.out
 *.synctex.gz
 *.toc
-*.pd
+*.bst
 *.pdf
