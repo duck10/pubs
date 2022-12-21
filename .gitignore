@@ -24,4 +24,5 @@
 *.synctex.gz
 *.toc
 *.vs
-/.vs/slnx.sqlite
+*.vs/slnx.sqlite
+*.json
