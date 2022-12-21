@@ -26,3 +26,4 @@
 *.vs
 *.vs/slnx.sqlite
 *.json
+*.vsidx
