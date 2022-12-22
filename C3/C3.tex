@@ -12,6 +12,7 @@
 %\usepackage{bm}
 \usepackage{graphicx}
 \usepackage{tabularx}
+\usepackage{booktabs}
 %\usepackage{calligra}
 \usepackage{array}
 \DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
@@ -213,216 +214,241 @@
 	
 	The scalars used by \citeasnoun{Delaunay1932} in his formulation of Selling reduction \cite{Selling1874}
 	are (in the conventional order) $b \cdot c$, $a \cdot c$, $a \cdot b$, $a \cdot d$, 
-	$b \cdot d$, $c \cdot d$, where $d = -a-b-c$. (As a mnemonic device, observe that the first three terms use
-	$\alpha$, $\beta$, and $\gamma$, in that order, and the following terms use $a$, $b$, $c$, in that order.)
+	$b \cdot d$, $c \cdot d$, where $d = -a-b-c$. 
+	(As a mnemonic device, 
+	observe that the first three terms use
+	$\alpha$, $\beta$, and $\gamma$, 
+	in that order, 
+	and the following terms use $a$, $b$, $c$, in that order.)
 	
-	\citeasnoun{andrews2019b} chose to represent the scalars in the space \SVI{},
-	\Svec{} (defined in the order above), as a way to create a metric space
-	for the measurement of the distance between lattices. They also consider the representation of this space as the
-	space of three complex dimensions, \CIII{} or {$\{c_1$}, {$c_2$}, {$c_3\}$}. 	
-	In \CIII{}, in terms of the Delone scalars, a vector is \{(\si,\siv ), (\sii,\sv),(\siii,\svi)\}, where the real and imaginary parts
-	of each are the ``opposite'' scalars according to the definition of \citeasnoun{Delaunay1932} (see \citeasnoun{andrews2019a}).
-	As a memonic device, note that the complex components involve ($\alpha,a$), ($\beta, b$), and ($\gamma,c$).
+	\citeasnoun{andrews2019b} chose to 
+	represent the scalars in the space \SVI{},
+	\Svec{} (defined in the order above), 
+	as a way to create a metric space
+	for the measurement of the distance between lattices. T
+	hey also consider the representation of this space as the
+	space of three complex dimensions, \CIII{} or 
+	{$\{c_1$}, {$c_2$}, {$c_3\}$}. 	
 	
-		\citeasnoun{andrews2019b} considered the matrix representations of the reflections in \CIII{} (and in \SVI{}). This paper will describe the boundary transformations at the edges of the fundamental
-	unit of \CIII{}. In \SVI{}, the fundamental unit is the all negative orthant, which contains only and
-	all of the reduced cells. In \SVI{} and \CIII{}, the boundaries are found where any scalar (or correspondingly the real 
-	or imaginary part) is equal to zero. The rationale for this work was that it might lend insights into the
-	topology of the space of lattices. 
+	In \CIII{}, in terms of the Delone scalars, 
+	a vector is \{(\si,\siv ), (\sii,\sv),(\siii,\svi)\}, 
+	where the real and imaginary parts
+	of each are the ``opposite'' scalars 
+	according to the definition of \citeasnoun{Delaunay1932} (see \citeasnoun{andrews2019a}).
+	As a memonic device, 
+	note that the complex components involve ($\alpha,a$), ($\beta, b$), and ($\gamma,c$).
+	
+		\citeasnoun{andrews2019b} considered the matrix representations of the reflections in \CIII{} (and in \SVI{}). 
+		This paper will describe the boundary transformations 
+		at the edges of the fundamental	unit of \CIII{}. 
+		In \SVI{}, the fundamental unit is the all negative orthant, 
+		which contains only and	all of the reduced cells. 
+		In \SVI{} and \CIII{}, 
+		the boundaries are found where any scalar 
+		(or correspondingly the real or imaginary part) 
+		is equal to zero. The rationale for this work was 
+		that it might lend insights into the topology of
+		 the space of lattices. 
 	
 	
 		
 	
 	\section{Notation}
 	
-	Complex numbers will be represented in Cartesian format $(x,y)$, where $x$ is the real part and
+	Complex numbers will be represented 
+	in Cartesian format $(x,y)$, 
+	where $x$ is the real part and
 	$y$ is the imaginary part.
 	
-	We will represent a vector in \CIII{} by \{$(x_1,y_1)$, $(x_2,y_2)$, $(x_3, y_3)$\} as an alternative to  \{(\si,\siv ), (\sii,\sv),(\sii,\svi)\}.
+	We will represent a vector 
+	in \CIII{} by \{$(x_1,y_1)$, $(x_2,y_2)$, $(x_3, y_3)$\} 
+	as an alternative to  \{(\si,\siv ), (\sii,\sv),(\sii,\svi)\}.
 	
-	Next we define the operators in \CIII{} that will be used in the matrix descriptions of 
+	Next we define the operators in \CIII{} t
+	hat will be used in the matrix descriptions of 
 	the transformations at the boundaries of the fundamental unit.\\
 	
-	\begin{table}	
-		\begin{tabular}{|l|l|l|l|}
-			\hline
-			Operator&Usage&Result&Name \\ \hline
-			$\Minus{}_r $&  $\Minus{}_r(c_j)$ & $(-x_j, -x_j+y_j)$ & Minus real \\ \hline
-			$\Minus{}_i $ & $\Minus{}_i(c_j)$ & $(x_j-y_j,-y_j) $ & Minus imag\\ \hline
-			$\textfrak{P}_r$ & $ \textfrak{P}_r(c_j)$ & $(x_j, x_j)$ & Plus real\\ \hline
-			$\textfrak{P}_i$ &  $\textfrak{P}_i(c_j)$  & $(y_j, y_j)$ & Plus imag\\ \hline
-			$\Re$ &  $\Re(c_j)$ & $x_j$ & Real \\ \hline
-			$\Im$  &$ \Im(c_j)$ & $y_j$ & Imaginary \\ \hline
-			
-			
-			
-		\end{tabular}		
+\begin{table}	
+	\begin{tabular}{|l|l|l|l|}
+\toprule
+	Operator
+						&Usage	
+													&Result	
+																			&Name\\
+\midrule
+	$\Minus{}_r $		&  $\Minus{}_r(c_j)$ 		& $(-x_j, -x_j+y_j)$ 	& Minus real \\ 
+	$\Minus{}_i $ 		& $\Minus{}_i(c_j)$ 		& $(x_j-y_j,-y_j) $ 	& Minus imag\\ 
+	$\textfrak{P}_r$ 	& $ \textfrak{P}_r(c_j)$ 	& $(x_j, x_j)$ 			& Plus real\\ 
+	$\textfrak{P}_i$ 	&  $\textfrak{P}_i(c_j)$  	& $(y_j, y_j)$ 			& Plus imag\\ 
+	$\Real$ 			&  $\Real(c_j)$ 			& $x_j$ 				& Real \\ 
+	$\Imaginary$ 		&  $\Imaginary(c_j)$ 		& $y_j$ 				& Imaginary\\
+\bottomrule
+	\end{tabular}		
 		
-	\end{table}
-
+\end{table}
 
 	\section{Matrices of boundary transformations}
 	
 	For the boundary at $s_1$: (the real component of $c_1$).
 	
 	$\begin{bmatrix}
-	\Minus{}_r & 0 & 0 \\
-	\Plus{}_r &  \textrm{i}\Re{} & \Re{} \\
-	\textfrak{P}_r & \textrm{i}\Im{} & \Im{}
+	\Minus{}_r		& 0					& 0 \\
+	\Plus{}_r		&  \textrm{i}\Re{}	& \Re{} \\
+	\textfrak{P}_r	& \textrm{i}\Im{}	& \Im{}
 	\end{bmatrix}$
 	%
 	$\begin{bmatrix}
-	\Minus{}_r & 0 & 0 \\
-	\Plus{}_r &\textrm{i}\Im{} & \Im{} \\
-	\Plus{}_r & \textrm{i}\Re{} & \Re{} \\
+	\Minus{}_r	& 0 				& 0 \\
+	\Plus{}_r	&\textrm{i}\Im{}	& \Im{} \\
+	\Plus{}_r	& \textrm{i}\Re{}	& \Re{} \\
 	\end{bmatrix}$ 
 	%
 	$\begin{bmatrix}
-	\Minus{}_r & 0 & 0 \\
-	\Plus{}_r &  \Re{} & \textrm{i}\Re{} \\
-	\Plus{}_r & \Im{} &\textrm{i}\Im{}
+	\Minus{}_r	& 0			& 0 \\
+	\Plus{}_r	&  \Re{}	& \textrm{i}\Re{} \\
+	\Plus{}_r	& \Im{}		&\textrm{i}\Im{}
 	\end{bmatrix}	$
 	%
 	$\begin{bmatrix}
-	\Minus{}_r & 0 & 0 \\
-	\Plus{}_r & \Im{} &\textrm{i}\Im{} \\
-	\Plus{}_r &  \Re{} &\textrm{i}\Re{} \\
+	\Minus{}_r	& 0			& 0 \\
+	\Plus{}_r	& \Im{}		&\textrm{i}\Im{} \\
+	\Plus{}_r	&  \Re{}	&\textrm{i}\Re{} \\
 	\end{bmatrix}$ \\
 	
 	For the boundary at $s_4$: (the imaginary component of $c_1$).
 	
 	$\begin{bmatrix}
-	\Minus{}_i & 0 & 0 \\
-	\Plus{}_i &  \textrm{i}\Re{} & \Re{} \\
-	\Plus{}_i & \textrm{i}\Im{} & \Im{}
+	\Minus{}_i	& 0					& 0 \\
+	\Plus{}_i	&  \textrm{i}\Re{}	& \Re{} \\
+	\Plus{}_i	& \textrm{i}\Im{}	& \Im{}
 	\end{bmatrix}$
 	%
 	$\begin{bmatrix}
-	\Minus{}_i & 0 & 0 \\
-	\Plus{}_i & \textrm{i}\Im{} & \Im{} \\
-	\Plus{}_i &  \textrm{i}\Re{} & \Re{} \\
+	\Minus{}_i	& 0					& 0 \\
+	\Plus{}_i	& \textrm{i}\Im{}	& \Im{} \\
+	\Plus{}_i	&  \textrm{i}\Re{}	& \Re{} \\
 	\end{bmatrix}$ 
 	%
 	$\begin{bmatrix}
-	\Minus{}_i & 0 & 0 \\
-	\Plus{}_i &  \Re{} & \textrm{i}\Re{} \\
-	\Plus{}_i & \Im{} & \textrm{i}\Im{}
+	\Minus{}_i	& 0			& 0 \\
+	\Plus{}_i	&  \Re{}	& \textrm{i}\Re{} \\
+	\Plus{}_i	& \Im{}		& \textrm{i}\Im{}
 	\end{bmatrix}	$
 	%
 	$\begin{bmatrix}
-	\Minus{}_i & 0 & 0 \\
-	\Plus{}_i & \Im{} & \textrm{i}\Im{} \\
-	\Plus{}_i &  \Re{}& \textrm{i}\Re{} \\
-	\end{bmatrix}$ \\
+	\Minus{}_i	& 0		& 0 \\
+	\Plus{}_i	& \Im{}	& \textrm{i}\Im{} \\
+	\Plus{}_i	&  \Re{}& \textrm{i}\Re{} \\
+\end{bmatrix}$ \\
+
+For the boundary at \sii{} (the real component of \cii{}):
+
+$\begin{bmatrix}
 	
-	For the boundary at \sii{} (the real component of \cii{}):
-	
-	$\begin{bmatrix}
-	
-	\textrm{i}\Re{} & \Plus{}_r & \Re{} \\
-	0 & \Minus{}_r & 0 \\
-	\textrm{i}\Im{} & \Plus{}_r & \Im{}
+	\textrm{i}\Re{}	& \Plus{}_r		& \Re{} \\
+	0				& \Minus{}_r	& 0 \\
+	\textrm{i}\Im{}	& \Plus{}_r		& \Im{}
 \end{bmatrix}$
 %
 $\begin{bmatrix}
-	\textrm{i}\Im{} & \Plus{}_r &  \Im{} \\
-	0 & \Minus{}_r & 0 \\
-	\textrm{i}\Re{} & \Plus{}_r & \Re{} \\
+	\textrm{i}\Im{}	& \Plus{}_r		&  \Im{} \\
+	0				& \Minus{}_r	& 0 \\
+	\textrm{i}\Re{}	& \Plus{}_r		& \Re{} \\
 \end{bmatrix}$ 
 %
 $\begin{bmatrix}
-	\Re{} &\Plus{}_r &   \textrm{i}\Re{} \\
-	0 & \Minus{}_r &  0 \\
-	\Im{} &\Plus{}_r & \textrm{i}\Im{}
+	\Re{}	&\Plus{}_r		&   \textrm{i}\Re{} \\
+	0		& \Minus{}_r	&  0 \\
+	\Im{}	&\Plus{}_r		& \textrm{i}\Im{}
 \end{bmatrix}	$ 
 %
 $\begin{bmatrix}
-	\Im{} & \Plus{}_r & \textrm{i}\Im{} \\
-	0 &\Minus{}_r &  0 \\
-	\Re{} & \Plus{}_r &  \textrm{i}\Re{} \\
+	\Im{}	& \Plus{}_r	& \textrm{i}\Im{} \\
+	0		&\Minus{}_r	&  0 \\
+	\Re{}	& \Plus{}_r	&  \textrm{i}\Re{} \\
 \end{bmatrix}$ \\
 
 
 For the boundary at $s_5$: (the imaginary component of \cii{}).
 
 $\begin{bmatrix}
-\textrm{i}\Re{} & \Plus{}_i & \Re{} \\
-0 & \Minus{}_i & 0 \\
-\textrm{i}\Im{} & \Plus{}_i & \Im{}
+	\textrm{i}\Re{}	& \Plus{}_i		& \Re{} \\
+	0				& \Minus{}_i	& 0 \\
+	\textrm{i}\Im{}	& \Plus{}_i		& \Im{}
 \end{bmatrix}$
 %
 $\begin{bmatrix}
-\textrm{i}\Im{} & \Plus{}_i &  \Im{} \\
-0 & \Minus{}_i & 0 \\
-\textrm{i}\Re{} & \Plus{}_ri& \Re{} \\
+	\textrm{i}\Im{}	& \Plus{}_i		&  \Im{} \\
+	0				& \Minus{}_i	& 0 \\
+	\textrm{i}\Re{}	& \Plus{}_ri	& \Re{} \\
 \end{bmatrix}$ 
 %
 $\begin{bmatrix}
-\Re{} &\Plus{}_i &   \textrm{i}\Re{} \\
-0 & \Minus{}_i &  0 \\
-\Im{} &\Plus{}_i & \textrm{i}\Im{}
+	\Re{}	&\Plus{}_i		&   \textrm{i}\Re{} \\
+	0		& \Minus{}_i	&  0 \\
+	\Im{}	&\Plus{}_i		& \textrm{i}\Im{}
 \end{bmatrix}	$ 
 %
 $\begin{bmatrix}
-\Im{} & \Plus{}_i & \textrm{i}\Im{} \\
-0 &\Minus{}_i &  0 \\
-\Re{} & \Plus{}_i &  \textrm{i}\Re{} \\
+	\Im{}	& \Plus{}_i	& \textrm{i}\Im{} \\
+	0		&\Minus{}_i	&  0 \\
+	\Re{}	& \Plus{}_i	&  \textrm{i}\Re{} \\
 \end{bmatrix}$ \\
 
 
 For the boundary at \siii{} (the real component of \ciii{}):
 
 $\begin{bmatrix}
-
-\textrm{i}\Re{} & \Re{} & \Plus{}_r \\
-\textrm{i}\Im{} & \Im{}& \Plus{}_r  \\
-0 & 0& \Minus{}_r  \\
+	
+	\textrm{i}\Re{}	& \Re{}	& \Plus{}_r \\
+	\textrm{i}\Im{}	& \Im{}	& \Plus{}_r  \\
+	0				& 0		& \Minus{}_r  \\
 \end{bmatrix}$
 %
 $\begin{bmatrix}
-\textrm{i}\Im{} &  \Im{} & \Plus{}_r \\
-\textrm{i}\Re{} & \Re{} & \Plus{}_r \\
-0 & 0 & \Minus{}_r \\
+	\textrm{i}\Im{}	&  \Im{}	& \Plus{}_r \\
+	\textrm{i}\Re{}	& \Re{}		& \Plus{}_r \\
+	0				& 0			& \Minus{}_r \\
 \end{bmatrix}$ 
 %
 $\begin{bmatrix}
-\Re{} &   \textrm{i}\Re{} &\Plus{}_r \\
-\Im{} & \textrm{i}\Im{}&\Plus{}_r \\
-0  &  0 & \Minus{}_r \\
+	\Re{}	&   \textrm{i}\Re{}	&\Plus{}_r \\
+	\Im{}	& \textrm{i}\Im{}	&\Plus{}_r \\
+	0 		&  0				& \Minus{}_r \\
 \end{bmatrix}	$ 
 %
 $\begin{bmatrix}
-\Im{} & \textrm{i}\Im{} & \Plus{}_r \\
-\Re{} &  \textrm{i}\Re{} & \Plus{}_r \\
-0 &  0 &\Minus{}_r \\
+	\Im{}	& \textrm{i}\Im{}	& \Plus{}_r \\
+	\Re{}	&  \textrm{i}\Re{}	& \Plus{}_r \\
+	0		&  0				&\Minus{}_r \\
 \end{bmatrix}$ \\
 
 
 For the boundary at \svi{} (the imaginary component of \ciii{}):
 
 $\begin{bmatrix}
-
-\textrm{i}\Re{} & \Re{} & \Plus{}_i \\
-\textrm{i}\Im{} & \Im{}& \Plus{}_i \\
-0 & 0 & \Minus{}_i 
+	
+	\textrm{i}\Re{}	& \Re{}	& \Plus{}_i \\
+	\textrm{i}\Im{}	& \Im{}	& \Plus{}_i \\
+	0				& 0		& \Minus{}_i 
 \end{bmatrix}$
 %
 $\begin{bmatrix}
-\textrm{i}\Im{} &  \Im{} & \Plus{}_i \\
-\textrm{i}\Re{} & \Re{} & \Plus{}_i \\
-0 & 0 & \Minus{}_i \\
+	\textrm{i}\Im{}	&  \Im{}	& \Plus{}_i \\
+	\textrm{i}\Re{}	& \Re{}		& \Plus{}_i \\
+	0				& 0			& \Minus{}_i \\
 \end{bmatrix}$ 
 %
 $\begin{bmatrix}
-\Re{} &   \textrm{i}\Re{}  &\Plus{}_i \\
-\Im{} & \textrm{i}\Im{} &\Plus{}_i \\
-0 &  0 & \Minus{}_i \\
+	\Re{}	&   \textrm{i}\Re{} &\Plus{}_i \\
+	\Im{}	& \textrm{i}\Im{}	&\Plus{}_i \\
+	0		&  0				& \Minus{}_i \\
 \end{bmatrix}	$ 
 %
 $\begin{bmatrix}
-\Im{} & \textrm{i}\Im{} & \Plus{}_i \\
-\Re{} &  \textrm{i}\Re{} & \Plus{}_i \\
-0 &  0 &\Minus{}_i 
+	\Im{}	& \textrm{i}\Im{}	& \Plus{}_i \\
+	\Re{}	&  \textrm{i}\Re{}	& \Plus{}_i \\
+	0		&  0				&\Minus{}_i 
 \end{bmatrix}$ \\
 
 
@@ -430,25 +456,25 @@ $\begin{bmatrix}
 
 The standard representation of the identity operation is
 
-	$\bf{c'}$  = 
-	$\begin{bmatrix}
-	$1$ & $0$ &  $0$ \\
-	$0$ & $1$ & $0$ \\
-	$0$ & $0$ & $1$ \\
-	\end{bmatrix}$ 
-	$\bf{c}$ \\
+$\bf{c'}$  = 
+$\begin{bmatrix}
+	$1$	& $0$	&  $0$ \\
+	$0$	& $1$	& $0$ \\
+	$0$	& $0$	& $1$ \\
+\end{bmatrix}$ 
+$\bf{c}$ \\
 
 
 The identity in \CIII{} can also be written:
 
 
-	$\bf{c'}$  = 
-	$\begin{bmatrix}
-	$1$ & $0$ &  $0$ \\
-	$0$ & \Re{} +\textrm{i}\Im{} & $0$ \\
-	$0$ & $0$ & \Re{} +\textrm{i}\Im{} \\
-	\end{bmatrix}$ 
-	$\bf{c}$
+$\bf{c'}$  = 
+$\begin{bmatrix}
+	$1$	& $0$						&  $0$ \\
+	$0$	& \Re{} +\textrm{i}\Im{}	& $0$ \\
+	$0$	& $0$						& \Re{} +\textrm{i}\Im{} \\
+\end{bmatrix}$ 
+$\bf{c}$
 \\
 
 \citeasnoun{Delaunay1932} does not consider the boundary transformations 
@@ -458,13 +484,15 @@ for a transformation on \si{}.
 \SvecA{}
 The third matrix above (the third boundary transform for $s_1$) implements this operation and interchanges the
 real part of \ciii{} and the imaginary part of \cii{}.
-~\\
-	$\begin{bmatrix}
-\Minus{}_r & 0 & 0 \\
-\Plus{}_r &  \Re{} & \textrm{i}\Re{} \\
-\Plus{}_r & \Im{} &\textrm{i}\Im{}
+
+\begin{center}
+		$\begin{bmatrix}
+\Minus{}_r	& 0			& 0 \\
+\Plus{}_r	&  \Re{}	& \textrm{i}\Re{} \\
+\Plus{}_r	& \Im{}		&\textrm{i}\Im{}
 \end{bmatrix}	$
-\\
+\end{center}
+
 
 In terms of \CIII, Delone's alternate transformation for the \si{} boundary would
 exchange the real of \cii{} with the imaginary part of \ciii{}. That is the fourth
