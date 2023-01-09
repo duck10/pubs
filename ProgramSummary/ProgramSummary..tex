@@ -20,7 +20,8 @@
 \usepackage{booktabs}
 %\usepackage{calligra}
 \usepackage{array}
-\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+ \usepackage{setspace}
+ \DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
 \def\mathbi#1{\textbf{\em #1}}
 \numberwithin{equation}{section}
 %\DeclareMathSymbol{\Gamma}{\mathalpha}{letters}{"00}
@@ -63,6 +64,7 @@
 
 \newcommand{\scalarsub}[2]{$#1_#2$}
 
+
 %-------------------------------------------------------------------------
 % Information about journal to which submitted
 %-------------------------------------------------------------------------
@@ -80,8 +82,10 @@
 \font\dummyft@=dummy \relax
 \makeatother
 
-
+\DeclareMathOperator{\mr}{\textfrak{P}_i}
 \begin{document}                  % DO NOT DELETE THIS LINE
+	\singlespacing
+	$\mr$
 	
 	%-------------------------------------------------------------------------
 	% The introductory (header) part of the paper
@@ -120,7 +124,7 @@
 	
 	% The title of the paper. Use \shorttitle to indicate an abbreviated title
 	% for use in running heads (you will need to uncomment it).
-	{\LARGE \emph{\today}} \\
+	{\Large PDF generated: \emph{\today}} \\
 	\title{Command line programs from LatticeRepLib}
 	\shorttitle{Command line programs}
 	
@@ -188,6 +192,8 @@
 	\newcommand{\ci}[0]{$c_1$}
 	\newcommand{\cii}[0]{$c_2$}
 	\newcommand{\ciii}[0]{$c_3$}
+	\begin{abstract}
+	\end{abstract}
 	
 	
 	\section{Introduction}
@@ -208,8 +214,13 @@
 	% body text.
 	
 	\section{Data Inputs:}
+	\subsection{Table of input types}
+	
+	In general, there are 5 types of input lines, see Table \ref{inputtypes}.
+	Except for "END", they can be combined in any order.
 	
 	\begin{table}
+		\label{inputtypes}
 		\caption{	All these are case-insensitive. If a particular
 			input lattice is invalid, it is rejected with a message.}
 		\begin{tabular}{l p{.2\textwidth} l l l}
@@ -227,7 +238,7 @@
 			
 			\underline{\textbf{RANDOM:}} Random (valid) unit cell generated\\
 			
-			\textbf{Crystal Lattice Input:} 
+			\underline{\textbf{Crystal lattice input:}} 
 			``\textbf{A}'', ``\textbf{B}'', ``\textbf{C}'', ``\textbf{P}'', ``\textbf{R}'', ``\textbf{F}'', ``\textbf``{I}''	\\
 			~~~~~followed by three axis lengths and three angles (in degrees)\\
 			\underline{\textbf{semicolon}}: 
@@ -246,90 +257,103 @@
 	
 	\section{Programs}
 	
+	\subsection{Filters - change lattice representation}
 	
 	\begin{table}
-		\caption{Programs for convert lattice representations}
-		\begin{tabular}{l l l p{.2\textwidth} p{.5\textwidth} l}
+		\renewcommand{\arraystretch}{1.2}
+		\caption{Programs to convert lattice representations}
+		\begin{tabular}{l l l p{.7\textwidth}  l}
 			\toprule
-			Name&	in&	out&	param& Output	\\
+			Name		&	in	&	out				& Output	\\
 			\midrule
-			CmdToB4&	y&	\BIV{}&&		For each input, 
+			CmdToB4		&	y	&	\BIV{}		&		For each input, 
 			it produces the 4 vectors as a,b,c,d as E3 vectors, 
 			and also the lengths of each of those vectors.\\[.9pt]
-			CmdToC3&	y&	\CIII{}&&		
+			CmdToC	3	&	y	&	\CIII{	}	&		
 			For each input, produces the \CIII{} representation in the form 
 			(\#,\#) (\#,\#) (\#,\#), 
 			which does not conform to the format for input to other programs.\\[.9pt]
-			CmdToCell&	y&	a,b,c,$\alpha$,$\beta$,$\gamma$&&		
+			CmdToCell	&	y	&	
+			\parbox[t]{0.07\textwidth}{${	a,b,c,}$ \\ ${\alpha,\beta,\gamma}$}		&		
 			Converts to the conventional unit cell representation.\\[.9pt]
-			CmdToD13&	y&	\DXIII{}&&		
-			Outputs the lengths of the 13 unique vectors describing the Dirichlet cell.\\[.9pt]
-			CmdToDC&	y&	y		\\[.9pt]
-			CmdToG6&	y&	\GVI{}&&		Converts the input to \GVI{}\\[.9pt]
-			CmdToS6&	y&	\SVI{}&&		Converts the input to \SVI{}\\[.9pt]
+			CmdToDC		&	y	&	\DXIII{}		&	Outputs the lengths of the 13 unique vectors describing the Dirichlet cell.\\[.9pt]			
+			CmdToG6		&	y	&	\GVI{}		&		Converts the input to \GVI{}\\[.9pt]
+			CmdToS6		&	y	&	\SVI{}		&		Converts the input to \SVI{}\\[.9pt]
+			Radial		&	y	&	Polar	&
+				CSomputes the polar distances in Angstroms 
+				from the first input cell. 
+				That is {(a,$\alpha$)}, {(b,$\beta$)}, and {(c,$\gamma$)} 
+				as coordinates in complex space.\\[.9pt]
 			\bottomrule
 			
 		\end{tabular}
 	\end{table}
 
-		\begin{table}
-		\caption{Summary of programs manipulating data}
-		\begin{tabular}{l l l p{.2\textwidth} p{.5\textwidth} l}
+\subsection{Data processing programs}
+
+		\begin{longtable}{l l l p{.2\textwidth} p{.5\textwidth} l}
+			\caption{Summary of programs manipulating data}
+			\label{processingprogs}\\ %NOTE: that lineskip is necessary to prevent toprule from crashing
 			\toprule
-			Name&	in&	out&	param& Output	\\
+			Name		&	in	&	out		&	\begin{parbox}[t]{2cm}{
+				command line\\
+				param{s}}
+			\end{parbox}	& Output	\\
 			\midrule
-			CmdCmplx&	NA&	y&&Currently, this just outputs some 
-			programmed examples.		\\[.9pt]
-			CmdDelone&	y&	\SVI{}&&Converts input to\SVI{}		\\[.9pt]
-			CmdGen&	NA&	\GVI{}&	ngen& - number of examples to generate (optional)\\
-			{}&&&type - &lattice type to generate, many options (optional) 
-			c,t,h,o,r,h,m,a, 
-			cP, cF,cI, tP, tI, hP, hR, oP, oF, oI, oS, mP, mC, mS, aP, 
-			numeric Niggli types - 1-44, 
-			Delone types - C1,C3,C5,~\dots 
-			If no parameters are present, one each of the 44 Niggli types. 
-			If only a number is present, that is how many of each of the 44 Niggli types to generate.
-			For usage examples, see Table \ref{CMDGENexamples}\\[.9pt]
-					CmdLM&	y&	cy&&		Lattice Matching. 
-			The first input cell is used as the reference. 
-			Succeeding cells are matched 
-			as well as possible to the reference cell.\\[.9pt]
-			CmdNiggli&	y&	\GVI{}&&		Produces the Niggli reduced cell for each input\\[.9pt]
-			CmdPath&	?&	? && Clearly not working the way it should		\\[.9pt]
-			CmdPerturb&	y&	y&	n-number of perturbations, parts per thousand to perturb&
-			n cells perturbed normal to the input \SVI{} vector
-			If a lattice centering (including P) is input,
-			the output is in the same centering. Otherwise, the output is in \SVI{}.	\\[.9pt]
-			CmdS6Refl&	y&	\SVI{}&	&	For each input, 
-			all 24 \SVI{} reflections are produced.\\[.9pt]
-			CmdSella&	y&	y		\\[.9pt]
-			CmdSort&	y&	y&	"C3" or "seq'&	\\[.9pt]
-			CmdVolume&	y&	mod&&		Outputs the unit cell and the volume of each input cell.\\[.9pt]
-			MultiMetricDists&	y& mod&"Y/y"(optional)&	Parameter Y/y for maxima style output		\\[.9pt]
-			PlotC3&	y&	mod& 
-			1,2,or 3 for which \CIII{} coordinate to plot. 
-			"seq" or "C3"& Plot one of the 3 \CIII{} coordinates, 
-			sorted by minimizing point to point distance 
-			for \SVI{}{ reflections or 
-				sorting the \CIII{} components to put them 
-				in the asymmetric unit.}	\\[.9pt]
-			Radial&	y&	as radial	&&	
-			Radial computes the polar distances in Angstroms 
-			from the first input cell. 
-			That is {a,$\alpha$}, {b,$\beta$}, and {c,$\gamma$} 
-			as coordinates in complex space.\\[.9pt]
-			SELLA&	y&	mod&&	
-			Outputs the distances from each of the Bravais lattice types 
-			(in \svi{}).	\\[.9pt]
-			SVD&	y&	mod&& Outputs the singular value decomposition vectors
-			and eigenvalues for the input lattice. This is done in \SVI{}.		\\[.9pt]			
+			CmdCmplx	&	NA	&	y		&\hrulefill	&Currently, 
+				this just outputs some programmed examples.		\\[.9pt]
+			CmdDelone	&	y	&	\SVI{}	&\hrulefill	&Converts input to \SVI{}		\\[.9pt]
+			CmdGen		&	NA	&	\GVI{}	&	ngen - number of examples to generate (optional)\\
+				{}		&		&			&type		& - lattice type to 
+				generate, many options (optional) 
+				c,t,h,o,r,h,m,a, 
+				cP, cF,cI, tP, tI, hP, hR, oP, oF, oI, oS, mP, mC, mS, aP, 
+				numeric Niggli types - 1-44, 
+				Delone types - C1,C3,C5,~\dots 
+				If no parameters are present, one each of the 44 Niggli types. 
+				If only a number is present, that is how many of each of the 44 Niggli types to generate.
+				For usage examples, see Table \ref{CMDGENexamples}\\[.9pt]
+			CmdLM		&	y	&	y		&	\hrulefill		&		Lattice Matching. 
+				The first input cell is used as the reference. 
+				Succeeding cells are matched 
+				as well as possible to the reference cell.\\[.9pt]
+			CmdNiggli	&	y	&	\GVI{}	&\hrulefill	&		
+				Produces the Niggli reduced cell for 	each input\\[.9pt]
+			CmdPath		&	?	& ?			&\hrulefill	& Clearly not working the way it should		\\[.9pt]
+			CmdPerturb	&	y	& y			&	n-number of perturbations, 
+			
+				parts per thousand to perturb			&
+				n cells perturbed normal to the input \SVI{} vector
+				If a lattice centering (including P) is input,
+				the output is in the same centering. Otherwise, the output is in \SVI{}.	\\[.9pt]
+			CmdS6Refl	&	y	&	\SVI{}	&\hrulefill	&	For each input, 
+				all 24 \SVI{} reflections are produced.\\[.9pt]
+			CmdSella	&	y	&	y		&\hrulefill	&
+				SELLA produces 2 output: std::out contains the match of
+				each of the 24 Delone types; SVG for the Grimmer
+				diagram is written to a file with a name such as 
+					\verb#SEL__2023-01-07.08_56_42.svg# with date/time stamp.\\
+			CmdSort		&	y	&	y		&"C3" or "seq'&	\\[.9pt]
+			CmdVolume	&	y	&	mod		&\hrulefill	&		Outputs the unit cell 
+				and the volume of each input cell.\\[.9pt]
+			MultiMetricDists&y	& mod		&"Y/y"(optional)&	
+				Parameter Y/y for maxima style output		\\[.9pt]
+			PlotC3		&	y	&	mod		& 			& Plot 
+				the three \CIII{} coordinates\\[.9pt]
+			SELLA		&	y	&	mod		&\hrulefill	&	
+				Outputs the distances from each of the Bravais lattice types 
+				(in \svi{}).	\\[.9pt]
+			SVD			&	y	&	mod		&\hrulefill	& Outputs the singular value decomposition vectors
+				and eigenvalues for the input lattice. This is done in \SVI{}.		\\[.9pt]			
 			\bottomrule
 			
-		\end{tabular}
-	\end{table}
+		\end{longtable}
+%	\end{table}
 	
 	\begin{itemize}
 	\item{CmdGen}
+	
+	\subsection{Individual program details}
 
 CmdGen is a program for creating examples of various types of lattice types.
 		
@@ -347,48 +371,15 @@ are case-sensitive.
 
 \begin{itemize}
 	\item Niggli types by number 1-44 (see Table \ref{NiggliFormsI}).
-	\item Delone types by Delone's designation - 
+\begin{singlespace}
+		\item Delone types by Delone's designation - 
 	C1,C3,C5, T1, T2, T5, R1, R3,\\ 
 	O1A, O2, O3, O4, O5, O1B, M1A, M2A, M3, M4, M1B, M2B, 
 	A1, A2, A3, H4 (see Table \ref{s6table}).
+\end{singlespace}
 	\item Crystal system - c,h,t,o,m,a
 \end{itemize}
 
-\item SVD
-
-On input to a number of lattices, 
-SVD calculates a Singular Value Decomposition.
-The output consists of the eigenvalues and 
-the six eigenvectors.
-It is important to check that the form of
-each cell is the same; for instance, monoclinic
-cell should have the unique interaxial angle
-in the same place (\textit{e.g.} $\beta$)
-
-As an example, consider using SVD to compute the information
-for one of the 
-
-\textbf{Command line:}\\
-CmdGen 5 33 | CmdSort seq | SVD\\
-; SVD\\
-S6 from input cell   0.000 -31.196   0.000 -71.963 -109.653 -131.880\\
-S6 from input cell   0.000 -23.060   0.000 -77.367 -110.398 -125.599\\
-S6 from input cell   0.000 -28.898   0.000 -54.985 -106.336 -82.229\\
-S6 from input cell   0.000 -56.133   0.000 -103.736 -177.343 -123.204\\
-S6 from input cell   0.000 -10.111   0.000 -50.618 -91.57100 -98.102\\
-
-\textbf{eigenvalue     0}         vector         1 0 0 0 0 0\\
-eigenvalue 413.012       vector         0 -0.1728 00 -0.4007 -0.6616 -0.6097\\
-eigenvalue 48.3869       vector         0 -0.4009 0 -0.1129 -0.5164 0.7482\\
-eigenvalue 14.0785       vector         0 -0.7060 0 -0.4581 0.5344 -0.0786\\
-eigenvalue 8.53435       vector         0 0.5576 0 -0.7853 0.1001 0.2494\\
-\textbf{eigenvalue     0}         vector         0 0 -1 0 0 0
-
-The two zero eigenvalues correspond to the invariant
-interaxial angles ($\alpha$ and $\gamma$, in this case).
-
-
-\end{itemize}
 
 \vspace{2pt}
 
@@ -443,6 +434,51 @@ interaxial angles ($\alpha$ and $\gamma$, in this case).
 	\end{table}	
 	
 	
+	\item SVD
+	
+	On input to a number of lattices, 
+	SVD calculates a Singular Value Decomposition.
+	The output consists of the eigenvalues and 
+	the six eigenvectors.
+	It is important to check that the form of
+	each cell is the same; for instance, monoclinic
+	cell should have the unique interaxial angle
+	in the same place (\textit{e.g.} $\beta$)\\
+	
+	As an example, consider using SVD to compute the information
+	for one of the 
+	
+	\begin{samepage}
+		{\nopagebreak{
+				\textbf{Command line:}\\
+				CmdGen 5 33 | CmdSort seq | SVD\\
+				; SVD\\
+				S6 from input cell   0.000 -31.196   0.000 -71.963 -109.653 -131.880\\
+				S6 from input cell   0.000 -23.060   0.000 -77.367 -110.398 -125.599\\
+				S6 from input cell   0.000 -28.898   0.000 -54.985 -106.336 -82.229\\
+				S6 from input cell   0.000 -56.133   0.000 -103.736 -177.343 -123.204\\
+				S6 from input cell   0.000 -10.111   0.000 -50.618 -91.57100 -98.102\\
+			}
+		}
+	\end{samepage}
+	
+	\begin{samepage}
+		\nopagebreak{
+			\textbf{Output}:\\
+			\textbf{eigenvalue     0};         vector         1 0 0 0 0 0\\
+			eigenvalue 413.012;       vector         0 -0.1728 00 -0.4007 -0.6616 -0.6097\\
+			eigenvalue 48.3869;       vector         0 -0.4009 0 -0.1129 -0.5164 0.7482\\
+			eigenvalue 14.0785;       vector         0 -0.7060 0 -0.4581 0.5344 -0.0786\\
+			eigenvalue 8.53435;       vector         0 0.5576 0 -0.7853 0.1001 0.2494\\
+			\textbf{eigenvalue     0};         vector         0 0 -1 0 0 0
+		}
+	\end{samepage}
+	
+	The two zero eigenvalues correspond to the invariant
+	interaxial angles ($\alpha$ and $\gamma$, in this case).
+	
+	
+\end{itemize}
 
 	
 		\begin{table}
@@ -530,7 +566,7 @@ interaxial angles ($\alpha$ and $\gamma$, in this case).
 	
 	\section{Availability of code}
 	
-	The $C^{++}$ ~code for C++ is available in github.com, in
+	The $C^{++}$ ~code is available in github.com, in
 	\url{https://github.com/duck10/LatticeRepLib.git}.
 	
 	\ack{{\bf Acknowledgements}}
