@@ -47,7 +47,7 @@
 \newcommand{\GVI}[0]{$\bf{G^{6}}$}
 \newcommand{\CIII}[0]{$\bf{C^{3}}$}
 \newcommand{\DVII}[0]{$\bf{D^{7}}$}
-\newcommand{\DXIII}[0]{$\bf{D^{13}}$}
+\newcommand{\DXIII}[0]{$\bf{DC^{13}}$}
 \newcommand{\VVII}[0]{$\bf{V^{7}}$}
 
 \newcommand{\vdotv}[2]{${{\bf #1 \cdot #2}}$}
@@ -229,17 +229,17 @@
 			\begin{tabular}{l l l l}
 				\underline{\textbf{Vector Input:}}&
 				\parbox[t]{0.6\textwidth}{\textbf{g} 
-					(or \textbf{v} or \textbf{g6}) for \GVI{} vectors\\
-					\textbf{d} (or \textbf{d7}) for \DVII{} vectors\\
-					\textbf{s} (or s6) for \SVI{}, Delone/Selling scalars\\
+					 for \GVI{} vectors\\
+					\textbf{s} for \SVI{}, Delone/Selling scalars\\
 					\textbf{C3} for \CIII{} input (without parentheses or commas, \\
-					~~~“C” would be interpreted as a C-centered unit cell)}
+					~~~“C” would be interpreted as a C-centered unit cell)\\
+					\textbf{U} for DC7 unsorted}\\
 			\end{tabular}	\\[3pt]
 			
 			\underline{\textbf{RANDOM:}} Random (valid) unit cell generated\\
 			
 			\underline{\textbf{Crystal lattice input:}} 
-			``\textbf{A}'', ``\textbf{B}'', ``\textbf{C}'', ``\textbf{P}'', ``\textbf{R}'', ``\textbf{F}'', ``\textbf``{I}''	\\
+			``\textbf{A}'', ``\textbf{B}'', ``\textbf{C}'', ``\textbf{P}'', ``\textbf{R}'', ``\textbf{H}'',``\textbf{F}'', ``\textbf{I}''	\\
 			~~~~~followed by three axis lengths and three angles (in degrees)\\
 			\underline{\textbf{semicolon}}: 
 			lines beginning with a semicolon are treated as comments\\
@@ -264,7 +264,7 @@
 		\caption{Programs to convert lattice representations}
 		\begin{tabular}{l l l p{.7\textwidth}  l}
 			\toprule
-			Name		&	in	&	out				& Output	\\
+			Name		&	in	&	out			& Output	\\
 			\midrule
 			CmdToB4		&	y	&	\BIV{}		&		For each input, 
 			it produces the 4 vectors as a,b,c,d as E3 vectors, 
@@ -338,8 +338,8 @@
 				and the volume of each input cell.\\[.9pt]
 			MultiMetricDists&y	& mod		&"Y/y"(optional)&	
 				Parameter Y/y for maxima style output		\\[.9pt]
-			PlotC3		&	y	&	mod		& 			& Plot 
-				the three \CIII{} coordinates\\[.9pt]
+			PlotC3		&	y	&	mod		& \hrulefill	& Plot 
+				the three \CIII{} coordinates. See Figure~\ref{plotc3}.\\[.9pt]
 			SELLA		&	y	&	mod		&\hrulefill	&	
 				Outputs the distances from each of the Bravais lattice types 
 				(in \svi{}).	\\[.9pt]
@@ -563,6 +563,13 @@ are case-sensitive.
 	\end{center}
 	\label{NiggliFormsI}
 \end{table}%
+	
+		
+	\begin{figure}
+		\includegraphics[width=\textwidth]{PlotC3}
+		\label{plotc3}
+		\caption{Output of PlotC3}
+	\end{figure}
 	
 	\section{Availability of code}
 	
