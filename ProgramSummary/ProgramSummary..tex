@@ -321,7 +321,14 @@
 				Produces the Niggli reduced cell for 	each input\\[.9pt]
 			CmdPath		&	y	& \SVI{}			&
 			no. of points	& If the number of points is 
-			not used on the command line, the default number to generate is 20.		\\[.9pt]
+			not on the command line, the default number 
+			to generate is 20.	If there is only one point, 
+			then the second point is generated as the 
+			Niggli reduced cell. If more than two points are input, 
+			each successive pair will
+			generate a list of output points; so if
+			3 cells are input, the output will be 
+			2 times the number of points requested.	\\[.9pt]
 			CmdPerturb	&	y	& y			&	n-number of perturbations, 
 			
 				parts per thousand to perturb			&
