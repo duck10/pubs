@@ -85,7 +85,7 @@
 \DeclareMathOperator{\mr}{\textfrak{P}_i}
 \begin{document}                  % DO NOT DELETE THIS LINE
 	\singlespacing
-	$\mr$
+
 	
 	%-------------------------------------------------------------------------
 	% The introductory (header) part of the paper
@@ -192,8 +192,8 @@
 	\newcommand{\ci}[0]{$c_1$}
 	\newcommand{\cii}[0]{$c_2$}
 	\newcommand{\ciii}[0]{$c_3$}
-	\begin{abstract}
-	\end{abstract}
+%	\begin{abstract}
+%	\end{abstract}
 	
 	
 	\section{Introduction}
@@ -261,7 +261,9 @@
 	
 	\begin{table}
 		\renewcommand{\arraystretch}{1.2}
-		\caption{Programs to convert lattice representations}
+		\caption{Programs to convert lattice representations.
+		NOTE: although all can take all of the input types, \BIV{}. \DXIII{}, 
+	Polar write output that cannot be used as input.}
 		\begin{tabular}{l l l p{.7\textwidth}  l}
 			\toprule
 			Name		&	in	&	out			& Output	\\
@@ -274,8 +276,9 @@
 			(\#,\#) (\#,\#) (\#,\#), 
 			which does not conform to the format for input to other programs.\\[.9pt]
 			CmdToCell	&	y	&	
-			\parbox[t]{0.07\textwidth}{${	a,b,c,}$ \\ ${\alpha,\beta,\gamma}$}		&		
-			Converts to the conventional unit cell representation.\\[.9pt]
+			\parbox[t]{0.07\textwidth}{${	a,b,c,}$ \\ ${\alpha,\beta,\gamma}$}	&					Converts to the conventional unit cell representation
+			If the input is already unit cell parameters, then the output
+			will be in the same lattice centering as the input.\\[.9pt]
 			CmdToDC		&	y	&	\DXIII{}		&	Outputs the lengths of the 13 unique vectors describing the Dirichlet cell.\\[.9pt]			
 			CmdToG6		&	y	&	\GVI{}		&		Converts the input to \GVI{}\\[.9pt]
 			CmdToS6		&	y	&	\SVI{}		&		Converts the input to \SVI{}\\[.9pt]
@@ -298,14 +301,16 @@
 			Name		&	in	&	out		&	\begin{parbox}[t]{2cm}{
 				command line\\
 				param{s}}
-			\end{parbox}	& Output	\\
+			\end{parbox}	& Output	\\[.9pt]
 			\midrule
 			CmdCmplx	&	NA	&	y		&\hrulefill	&Currently, 
 				this just outputs some programmed examples.		\\[.9pt]
 			CmdDelone	&	y	&	\SVI{}	&\hrulefill	&Converts input to \SVI{}		\\[.9pt]
-			CmdGen		&	NA	&	\GVI{}	&	ngen - number of examples to generate (optional)\\
+			CmdDists	&	y	& mod		&\hrulefill	&For on input list of n
+			cells, n-1 distances will be output.\\[.9pt]
+			CmdGen		&	NA	&	\GVI{}	&	ngen	&- number of examples to generate (optional)\\
 				{}		&		&			&type		& - lattice type to 
-				generate, many options (optional) 
+				generate (optional); many options 
 				c,t,h,o,r,h,m,a, 
 				cP, cF,cI, tP, tI, hP, hR, oP, oF, oI, oS, mP, mC, mS, aP, 
 				numeric Niggli types - 1-44, 
@@ -318,7 +323,7 @@
 				Succeeding cells are matched 
 				as well as possible to the reference cell.\\[.9pt]
 			CmdNiggli	&	y	&	\GVI{}	&\hrulefill	&		
-				Produces the Niggli reduced cell for 	each input\\[.9pt]
+				Produces the Niggli reduced cell for 	each input.\\[.9pt]
 			CmdPath		&	y	& \SVI{}			&
 			no. of points	& If the number of points is 
 			not on the command line, the default number 
@@ -342,13 +347,20 @@
 				each of the 24 Delone types; SVG for the Grimmer
 				diagram is written to a file with a name such as 
 					\verb#SEL__2023-01-07.08_56_42.svg# with date/time stamp.\\
-			CmdSort		&	y	&	y		&"C3" or "seq'&	\\[.9pt]
+			CmdSort		&	y	&	y		&"C3" or "seq'&	CmdSort has 2 possible actions. If "seq" is specified
+			as the sort type, then in the incoming list of 
+			lattices, in each pair, the second one is multipled by the 24 \SVI{} reflections, and the one that
+			is closest to the first is chosen for output.\\[.9pt]
 			CmdVolume	&	y	&	mod		&\hrulefill	&		Outputs the unit cell 
 				and the volume of each input cell.\\[.9pt]
-			MultiMetricDists&y	& mod		&"Y/y"(optional)&	
-				Parameter Y/y for maxima style output		\\[.9pt]
+%			MultiMetricDists&y	& mod		&"Y/y"(optional)&	
+%				Parameter Y/y for maxima style output		\\[.9pt]
 			PlotC3		&	y	&	mod		& \hrulefill	& Plot 
-				the three \CIII{} coordinates. See Figure~\ref{plotc3}.\\[.9pt]
+				the three \CIII{} coordinates. See Figure~\ref{plotc3}. The gray lines
+				connect successive pairs of points 
+				in the input. The output graphics file
+				is an SVG file whose name is in the output
+				in standard output.\\[.9pt]
 			SELLA		&	y	&	mod		&\hrulefill	&	
 				Outputs the distances from each of the Bravais lattice types 
 				(in \svi{}).	\\[.9pt]
@@ -360,7 +372,8 @@
 %	\end{table}
 	
 	\begin{itemize}
-	\item{CmdGen}
+		  \setlength\itemsep{3em}
+	\item{\textbf{CmdGen}}
 	
 	\subsection{Individual program details}
 
@@ -443,7 +456,7 @@ are case-sensitive.
 	\end{table}	
 	
 	
-	\item SVD
+	\item \textbf{SVD}
 	
 	On input to a number of lattices, 
 	SVD calculates a Singular Value Decomposition.
@@ -460,7 +473,7 @@ are case-sensitive.
 	\begin{samepage}
 		{\nopagebreak{
 				\textbf{Command line:}\\
-				CmdGen 5 33 | CmdSort seq | SVD\\
+				CmdGen 5 33 \textbar~ CmdSort seq \textbar~ SVD\\
 				; SVD\\
 				S6 from input cell   0.000 -31.196   0.000 -71.963 -109.653 -131.880\\
 				S6 from input cell   0.000 -23.060   0.000 -77.367 -110.398 -125.599\\
@@ -486,6 +499,71 @@ are case-sensitive.
 	The two zero eigenvalues correspond to the invariant
 	interaxial angles ($\alpha$ and $\gamma$, in this case).
 	
+	\item \textbf{CmdS6Refl}
+	
+	CmdS6Refl generates the 24 reflections (see \cite{Andrews2019b})
+	of each input lattice. Duplicate outputs of each input are not removed.
+	
+		
+	\item \textbf{CmdPath}
+	
+	CmdPath outputs points along a line between pairs of lattice.
+	
+	The number of points per segment is a commandline parameter.
+	If no parameter is input, the default is 20. This is not
+	the number of steps; it is the number of points that will be
+	output for a segment (pair of input lattices).
+	
+\begin{enumerate}
+	\item Only a single lattice is input. A second point will
+	be generated as the Niggli reduced lattice, and series of points
+	will be output between them.
+	
+	\item Two lattices are input. Then the points will be
+	created between them.
+	
+	\item More than two lattices are input. Then each point
+	and its succeeding point will generate a segment. Each segment
+	will be output as the number of points specified. Note: the
+	final point of one segment and the first point of the next
+	segment will be duplicates.
+\end{enumerate}
+	
+	The line between points is calculated in \SVI{}. The other
+	likely space would be \GVI{}, but the results seem to be the same.
+	As an example, in the case of 3 items input and 5 requested
+	output lattices, the output will consist of 10 lines, 5
+	for each successive pair of lattices, and the 5th and
+	6th points will be the same.\\
+	
+	\textbf{Command Line:}\\
+	 CmdPath 5 \\
+	; Path generator\\
+	f 10 10 10 90 90 90 90\\
+	end\\
+	
+	\textbf{Output:}\\
+	; no. of points output is 5\\
+	S    0.00000   0.00000   0.00000 -100.00000 -100.00000 -100.00000    1\\
+	S    6.25000   6.25000   6.25000 -100.00000 -100.00000 -100.00000    2\\
+	S   12.50000  12.50000  12.50000 -100.00000 -100.00000 -100.00000    3\\
+	S   18.75000  18.75000  18.75000 -100.00000 -100.00000 -100.00000    4\\
+	S   25.00000  25.00000  25.00000 -100.00000 -100.00000 -100.00000    5\\
+	
+	\textbf{Command Line:}\\
+	 CmdPath 5  \textbar~ CmdToCell\\
+	; To Cell\\
+	f 10 10 10  90 90 90\\
+	end\\
+	
+	\textbf{Output:}\\
+	; no. of points output is 5\\
+	P  10.00000  10.00000  10.00000  90.00000  90.00000  90.00000\\
+	P   9.35414   9.35414   9.35414  85.90396  85.90396  85.90396\\
+	P   8.66025   8.66025   8.66025  80.40593  80.40593  80.40593\\
+	P   7.90569   7.90569   7.90569  72.54240  72.54240  72.54240\\
+	P   7.07107   7.07107   7.07107  60.00000  60.00000  60.00000\\
+	
 	
 \end{itemize}
 
@@ -503,9 +581,9 @@ are case-sensitive.
 			Note that five types (O3, M3, M2B, A2, and A3) are not normal 
 			crystallographic types. They are boundary types, and they have
 			fewer free parameters than the generic type requires. For instance,
-			O3 (character: rs0 rs0) has only two free parameters (r and s), whereas
+			O3 (character: \textit{rs0 rs0}) has only two free parameters (r and s), whereas
 			an ordinary orthorhombic type requires three variables.}
-		\includegraphics[width=0.75\textwidth]{DeloneTypesGrid_3}\\
+		\includegraphics[width=0.85\textwidth]{DeloneTypesGrid_3}\\
 		\label{s6table}		
 	\end{table}
 
@@ -585,11 +663,11 @@ are case-sensitive.
 	The $C^{++}$ ~code is available in github.com, in
 	\url{https://github.com/duck10/LatticeRepLib.git}.
 	
-	\ack{{\bf Acknowledgements}}
+	\ack{\bf Acknowledgements}
 	
 	
 	
-	\ack{{\bf Funding information}}      
+	\ack{\bf Funding information}
 	
 	Funding for this research was provided in part by:  
 	US Department of Energy Offices of Biological and 
@@ -601,9 +679,9 @@ are case-sensitive.
 	grant No. 1R21GM129570); Dectris, Ltd.
 	
 	
-	%	\bibliography{reduced}
-	%	
-	%	\bibliographystyle{iucr}
+		\bibliography{reduced}
+		
+		\bibliographystyle{iucr}
 	
 	
 	
