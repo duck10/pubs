@@ -215,11 +215,11 @@
 	As a mnemonic to remember the order: the terms involve, in order, $ \alpha, \beta,
 	\gamma, \mathbf{a}, \mathbf{b}, \mathbf{c}$.
 	
-	\subsection{The space \GVI{}}
-	\citeasnoun{Andrews2014} introduced the space \GVI{} based on the metric tensor
-	and operated on by Niggli reductions \cite{Niggli1928}. A point in \GVI{}
-	is defined by \\
-	$\bf{g}$ =   [$\mathit{a^2}$, $\mathit{b^2}$, $\mathit{c^2}$, 2\vdotv{b}{c}, 2\vdotv{a}{c}, 2\vdotv{a}{b}]
+%	\subsection{The space \GVI{}}
+%	\citeasnoun{Andrews2014} introduced the space \GVI{} based on the metric tensor
+%	and operated on by Niggli reductions \cite{Niggli1928}. A point in \GVI{}
+%	is defined by \\
+%	$\bf{g}$ =   [$\mathit{a^2}$, $\mathit{b^2}$, $\mathit{c^2}$, 2\vdotv{b}{c}, 2\vdotv{a}{c}, 2\vdotv{a}{b}]
 	
 	\subsection{Similarity}
 	
@@ -259,12 +259,23 @@ In Euclidean geometry, two objects are described as ``similar'' if they are iden
 	First, the 24 \SVI{} reflections are
 	applied \cite{Andrews2019b} and the results stored. The store of \SVI{} vectors and their generating matrices holds 24 entries each at that point.
 	
+	Because the 24 operations defining reflection are unitary and
+	in \SVI{} they are simply perturbations of the six values,
+	they retain the values and signs of he six values, 
+	simply rearranging the six scalars.
+	
+	
 	Next the boundary (reduction) transformations \cite{Andrews2019b} are applied to
 	the results of the previous step. Then, the 24 reflections are applied again. In
 	each step, only newly found results are stored. These latter two steps are repeated 
 	at least once in order to gain better coverage of possibly useful transformations. 
 	The counts of entries for each iteration are 24, 1566, 45876, and finally 1016726.
 	Three iterations, {\it i.e.} 45876 entries, have been sufficient in test cases to date.
+	
+	Although the six scalars are all negative for Selling
+	reduced unit cells, the boundary transformations are
+	not unitary, and so not retain the six negative values.
+	
 	
 	Next, all the accumulated, transformed representations of the reference cell must be rescaled and the saved
 	transformations inverted.
@@ -327,7 +338,8 @@ similar the two points are.
 	to place the vector in the region of the original reduced reference cell. Finally, the inverse of the reduction
 	operation that was performed on the reference cell is used to create the best match
 	to the original reference. If it is desirable to restore lattice centering, then that operation must also  be
-	performed.
+	performed; the search returns a primitive representation
+	of the unit cell.
 	
 	\section{Examples}
 	\subsection{A rhombohedral example}
@@ -446,7 +458,7 @@ PDB &   a & b & c & $\alpha$ & $\beta$ & $\gamma$ & fit(degrees) \\ \midrule
 	are the approximate similarity matches.
 	\begin{table}
 		\begin{center}
-			\caption{Adenosine receptor A2A: 5NLX.  }
+			\caption{Adenosine receptor A2A: 5NLX, unit cells as reported.  }
 ~~\\
 			
 			\begin{tabular}{clccccccccccc}
@@ -629,7 +641,9 @@ serial&center& a & b & c & $\alpha$ & $\beta$ & $\gamma$ & fit(degrees) \\
 	how far the points could be from the probe, some cells
 	differ significantly from the search cell. The results are listed
 	in Table \ref{table:PDB1} in their published representation. Table \ref{tablePDB2} lists the same cells
-	in the same order.
+	in the same order as in Table \ref{table:PDB1}, but with 
+	the same lattice centering as 1RGX, which is the first, 
+	reference entry.
 	
 	\begin{table}
 		\begin{center}
@@ -721,7 +735,7 @@ serial&center& a & b & c & $\alpha$ & $\beta$ & $\gamma$ & fit(degrees) \\
 	A method is proposed for transforming unit cells for a group of crystals so that they all appear
 	as similar as possible to a selected cell. The search for
 	cells similar to the reference cell
-	 in done using the reduced cell comparing to 
+	 in done using the reduced cell and comparing to 
 	other possible unit cells nearby in the space \SVI{}. 
 	At the end, the lattice centering of the reference cell
 	is restored.
