@@ -148,7 +148,8 @@
 	% Use the \keyword macro for each word or phrase, e.g. 
 	% \keyword{X-ray diffraction}\keyword{muscle}
 	
-	\keyword{Delaunay}
+	\keyword{lattice}
+	\keyword{reduction}
 	\keyword{Delone}
 	\keyword{Selling}
 	\keyword{\CIII}
@@ -228,6 +229,8 @@
 	according to the definition of~\citeasnoun{Delaunay1932} (see~\citeasnoun{andrews2019a}).
 	As a mnemonic device, 
 	note that the complex components involve ($\alpha,a$), ($\beta, b$), and ($\gamma,c$).
+	Also consider that each complex term uses all 
+	four 3-space vectors; for example, $c_1$ is ($b \cdot c$, $a \cdot d$)
 	
 	~\citeasnoun{andrews2019b} considered the matrix representations 
 	of the reflections in \CIII{} (and in \SVI{}). 
@@ -263,6 +266,7 @@
 	
 	\begin{table}	
 		\label{tab:operators}
+		\caption{The Result column values give the products of each operator as applied to $(x_j, y_j)$}.
 		\begin{tabular}{c l l l }
 			\toprule
 			Operator			&Usage						&Result					&Name\\
@@ -294,6 +298,7 @@
 	\end{bmatrix}$ 
 	%
 	$\begin{bmatrix}
+		\label{thirdmatrix}
 		\Minus{}_r	& 0			& 0 \\
 		\Plus{}_r	&  \Re{}	& \textrm{i}\Re{} \\
 		\Plus{}_r	& \Im{}		&\textrm{i}\Im{}
@@ -452,7 +457,7 @@
 		$0$	& $1$	& $0$ \\
 		$0$	& $0$	& $1$ \\
 	\end{bmatrix}$ 
-	$\bf{c}$ \\
+	$\bf{c}$. \\
 	
 	
 	The identity in \CIII{} can also be written:
@@ -464,7 +469,7 @@
 		$0$	& \Re{} +\textrm{i}\Im{}	& $0$ \\
 		$0$	& $0$						& \Re{} +\textrm{i}\Im{} \\
 	\end{bmatrix}$ 
-	$\bf{c}$
+	$\bf{c}$.
 	\\
 	
 	~\citeasnoun{Delaunay1932} does not 
@@ -476,10 +481,9 @@
 	he lists the following as one of the possible results 
 	for a transformation on \si{}:
 	\SvecA{}.
-	The third matrix above 
-	(the third boundary transform for $s_1$) 
+	The third boundary transform for $s_1$
 	implements this operation and interchanges the
-	real part of \ciii{} and the imaginary part of \cii{}.
+	real part of \ciii{} and the imaginary part of \cii{}:
 	
 	\begin{center}
 		$\begin{bmatrix}
@@ -517,21 +521,21 @@
 	as used by~\citeasnoun{Delaunay1932}
 	when compared to Niggli reduction~\cite{Niggli1928}. 
 	Where all the 	boundaries of the fundamental orthant 
-	in \CIII ~and \SVI{} are basically the same 
+	\SVI{} (and also \CIII{}) are basically the same 
 	(and indeed are related by reflections), 
 	the boundaries formed in Niggli reduction are of multiple types, 
 	and the fundamental unit of the space representing 
 	Niggli reduced cells (\GVI{}, see~\citeasnoun{Andrews2014}) is non-convex.
 	
 	The matrices display one of the properties of \CIII{} 
-	that make it a useful representation. 
+	that make it a useful conceptual representation. 
 	For the scalar being transformed, it and its 
 	opposite scalar create a unique row in each matrix. 
 	Those rows contain
 	only the minus operator and zeros, 
 	highlighting the unique relationship of that pair of scalars.
 	
-	Several aspects of C3 are obvious from inspecting the matrices above. 
+	Several aspects of \CIII{} are obvious from inspecting the matrices above. 
 	First, we see that each boundary has four possible 
 	transformations that can be applied. 
 	Because the each of the transformations at boundaries are self-inverse, 
