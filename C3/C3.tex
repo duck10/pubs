@@ -164,8 +164,11 @@
 	\maketitle                        % DO NOT DELETE THIS LINE
 	
 	\begin{synopsis}
-		Selling reduction and Delone reduction are
-		considered in a space of complex variables.
+		The space \CIII{} is explained in more detail than
+		in the original description. Boundary transformations
+		of the fundamental unit are described in detail. 
+		A graphical presentation of the basic coordinates
+		is described and illustrated.
 	\end{synopsis}
 	\newcommand{\si}[0]{$s_1$}
 	\newcommand{\sii}[0]{$s_2$}
@@ -190,7 +193,11 @@
 	
 	\begin{abstract}
 		
-		The Delone scalars are studied in \CIII, the space of three complex variables.
+		The Delone (Selling) scalars, which are used in 
+		unit cell reduction and in lattice type determination,
+		are studied in \CIII, the space of 3 complex variables.
+		The 3 complex coordinate planes are composed of the 6
+		Delone scalars.
 		
 		{\bf Note:}  In his later publications, Boris Delaunay used the Russian version of his surname, Delone.\\
 		
@@ -507,16 +514,74 @@
 	was adequate to implement reduction. He already listed two.
 	
 	
-%	\section{Graphical display of projections}
+	\section{Graphical display of projections}
 	
-%	Although printing the image of a 6-dimensional object
-%	is impossible, there is some utility to creating the
-%	2-dimensional projections of \CIII{} onto the three
-%	coordinates. 
+	The 2-dimensional nature of the three coordinates of \CIII{} 
+	suggests their use for graphical display. 
+	
+	As an example, we use Phospholipase A2 (retrieved from 
+	the Protein Data Bank \cite{Bernstein1977}), which has had several similar
+	or identical structures determined \cite{LeTrong2007}. \citeasnoun{andrews2019b}
+	found additional cases (see Table \ref{PLA2})
 	
 	
+\begin{table}
+	\begin{tabular}{l c c c c c c c c c}
+		\toprule
+		PDB id & Centering & a&b&c&$\alpha$&$\beta$&$\gamma$\\
+		\midrule
+	1DPY & R& 57.98& 57.98& 57.98& 92.02& 92.02& 92.02\\
+	1FE5 & R& 57.98& 57.98& 57.98& 92.02& 92.02& 92.02\\
+	1G0Z & H& 80.36& 80.36& 99.44& 90&    90&    120\\
+	1G2X & C& 80.95& 80.57& 57.1 & 90&    90.35&  90\\
+	1U4J & H& 80.36& 80.36& 99.44& 90&    90&    120\\
+	2OSN & R& 57.10& 57.10& 57.10& 89.75& 89.75&  89.75\\
+	\bottomrule
+\end{tabular}	\\
+\caption{Phospholipase A2 unit cells}
+\label{PLA2}
+\end{table}
+
+Below, Figure \ref{fig1} shows the unit cells as 
+reported (the centering of lattices has not been removed).
+The following figures show various transformations and
+embellishments of the reported cells.
+
+\begin{figure}
+	\includegraphics[width=1.0\textwidth]{1_35}
+	\caption{Phospholipase A2 unit cells as reported. }
+	\label{fig1}
+\end{figure}
 	
-	
+\begin{figure}
+	\includegraphics[width=1.0\textwidth]{2_06}
+	\caption{The unit cells Niggli reduced. The similarity 
+	of the 3 projections is indicative of the exact or nearly
+exact rhombohedral symmetry.}
+	\label{fig2}
+\end{figure}
+\begin{figure}
+	\includegraphics[width=1.0\textwidth]{3_03}
+	\caption{The unit cells Delone reduced. }
+	\label{fig3}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=1.0\textwidth]{4_13}
+	\caption{The unit cells, Niggli and 5 copies were perturbed 2\%
+	orthogonally to \SVI{} vector. }
+	\label{fig4}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=1.0\textwidth]{5_21}
+	\caption{The unit cells Niggli, and 5 copies were perturbed 10\%
+		orthogonally to \SVI{} vector. }
+	\label{fig5}
+\end{figure}
+
+
+
 	\section{Summary}
 	
 The transformation matrices shown above demonstrate the 
