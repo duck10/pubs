@@ -195,9 +195,12 @@
 		
 		The Delone (Selling) scalars, which are used in 
 		unit cell reduction and in lattice type determination,
-		are studied in \CIII, the space of 3 complex variables.
-		The 3 complex coordinate planes are composed of the 6
-		Delone scalars.
+		are studied in \CIII, the space of three complex variables.
+		The three complex coordinate planes are composed of the six
+		Delone scalars. The transformations at boundaries of the
+		Selling reduced orthant are described as matrices of operators.
+		A graphical representation as the projections onto the
+		three coordinates is described.
 		
 		{\bf Note:}  In his later publications, Boris Delaunay used the Russian version of his surname, Delone.\\
 		
@@ -224,7 +227,8 @@
 	\Svec{} (defined in the order above), 
 	as a way to create a metric space
 	for the measurement of the distance between lattices. 
-	They also consider the representation of this space as the
+	~\citeasnoun{andrews2019b} also considered the representation 
+	of this space as the
 	space of three complex dimensions, \CIII{} or 
 	{$\{c_1$}, {$c_2$}, {$c_3\}$}. 	
 	
@@ -232,7 +236,8 @@
 	a vector is defined as \{(\si,\siv ), (\sii,\sv),(\siii,\svi)\}, 
 	where the real and imaginary parts
 	of each are the ``opposite'' scalars 
-	according to the definition of~\citeasnoun{Delaunay1932} (see~\citeasnoun{andrews2019a}).
+	according to the definition of~\citeasnoun{Delaunay1932}
+	(opposite in terms of the Bravais tetrahedron of scalars) (see~\citeasnoun{andrews2019a}).
 	As a mnemonic device, 
 	note that the complex components involve ($\alpha,a$), ($\beta, b$), and ($\gamma,c$).
 	Additionally, each complex term uses all 
@@ -241,15 +246,14 @@
 	~\citeasnoun{andrews2019b} considered the matrix representations 
 	of the reflections in \CIII{} (and in \SVI{}). 
 	This paper describes the boundary transformations 
-	at the edges of the fundamental	unit of \CIII{}. 
+	at the edges of the fundamental	unit of \CIII{}
+	and also a graphical presentation. 
 	In \SVI{}, the fundamental unit is the all negative orthant, 
-	which contains only and	all of the reduced cells. 
+	which contains only, and all, of the reduced cells. 
 	In \SVI{} and \CIII{}, 
 	the boundaries located where any \SVI{} scalar 
-	(or correspondingly in\CIII{}, the real or imaginary part) 
-	equals to zero. The rationale for this work was 
-	that it might lend insights into the topology of
-	the space of lattices. 
+	(or correspondingly in \CIII{}, a real or imaginary part) 
+	equals to zero. 
 	
 	
 	
@@ -265,10 +269,10 @@
 	in \CIII{} by \{$(x_1,y_1)$, $(x_2,y_2)$, $(x_3, y_3)$\} 
 	as an alternative to  \{(\si,\siv ), (\sii,\sv),(\sii,\svi)\}.
 	
-	Next we define the operators in \CIII{} t
-	hat will be used in the matrix descriptions of 
-	the transformations at the boundaries of the fundamental unit.\\
-	See Table ~\ref{tab:operators}.
+	Next we define the operators in \CIII{} that 
+	will be used in the matrix descriptions of 
+	the transformations at the boundaries of the fundamental unit,
+	see Table ~\ref{tab:operators}.
 	
 	\begin{table}	
 		\label{tab:operators}
@@ -288,6 +292,7 @@
 	\end{table}
 	
 	\section{Matrices of boundary transformations}
+	~~\\
 	
 	For the boundary at $s_1$: (the real component of $c_1$).
 	
@@ -485,9 +490,9 @@
 	define the process of Selling reduction. 
 	For example in \SVI{}, 
 	he lists the following as one of the possible results 
-	for a transformation on \si{}:
+	for a transformation on \si{}, translated to \SVI{}:
 	\SvecA{}.
-	The third boundary transform for $s_1$
+	The third boundary transform for $s_1$ above
 	implements this operation and interchanges the
 	real part of \ciii{} and the imaginary part of \cii{}:
 	
@@ -504,22 +509,22 @@
 	for the \si{} boundary would
 	exchange the real of \cii{} 
 	with the imaginary part of \ciii{}. That is the fourth
-	matrix in the list for \si{}. 
+	matrix above in the list for \si{}. 
 	The other two transformations for \si{} can 
 	be generated from the two we have 
-	just displayed by the "exchange operation"~\cite{andrews2019b} 
+	just mentioned by the ``exchange operation''~\cite{andrews2019b} 
 	applied to the second and third \CIII{} coordinates. Delone 
-	did not describe the latter two transformation, 
+	did not describe the latter two transformations, 
 	perhaps because even a single transformation 
-	was adequate to implement reduction. He already listed two.
+	was adequate to implement reduction. He had already listed two.
 	
 	
 	\section{Graphical display of projections}
 	
-	The 2-dimensional nature of the three coordinates of \CIII{} 
+	The two-dimensional nature of the three coordinates of \CIII{} 
 	suggests their use for graphical display. 
 	
-	As an example, we use Phospholipase A2 (retrieved from 
+	As an example, we use Phospholipase A2 (\textbf{PLA2}) (retrieved from 
 	the Protein Data Bank \cite{Bernstein1977}), which has had several similar
 	or identical structures determined \cite{LeTrong2007}. \citeasnoun{andrews2019b}
 	found additional cases (see Table \ref{PLA2})
@@ -544,7 +549,7 @@
 
 Below, Figure \ref{fig1} shows the unit cells as 
 reported (the centering of lattices has not been removed).
-The following figures show various transformations and
+The following figures (Figures \ref{fig2} to \ref{fig5}) show various transformations and
 embellishments of the reported cells.
 
 \begin{figure}
@@ -555,27 +560,27 @@ embellishments of the reported cells.
 	
 \begin{figure}
 	\includegraphics[width=1.0\textwidth]{2_06}
-	\caption{The unit cells Niggli reduced. The similarity 
+	\caption{The PLA2 unit cells Niggli-reduced. The similarity 
 	of the 3 projections is indicative of the exact or nearly
 exact rhombohedral symmetry.}
 	\label{fig2}
 \end{figure}
 \begin{figure}
 	\includegraphics[width=1.0\textwidth]{3_03}
-	\caption{The unit cells Delone reduced. }
+	\caption{The PLA2 unit cells Delone-reduced. }
 	\label{fig3}
 \end{figure}
 
 \begin{figure}
 	\includegraphics[width=1.0\textwidth]{4_13}
-	\caption{The unit cells, Niggli and 5 copies were perturbed 2\%
+	\caption{The PLA2 unit cells, Niggli-reduced, and five copies were perturbed 2\%
 	orthogonally to \SVI{} vector. }
 	\label{fig4}
 \end{figure}
 
 \begin{figure}
 	\includegraphics[width=1.0\textwidth]{5_21}
-	\caption{The unit cells Niggli, and 5 copies were perturbed 10\%
+	\caption{The PLA2 unit cells Niggli-reduced, and five copies were perturbed 10\%
 		orthogonally to \SVI{} vector. }
 	\label{fig5}
 \end{figure}
@@ -586,19 +591,13 @@ exact rhombohedral symmetry.}
 	
 The transformation matrices shown above demonstrate the 
 considerable regularity of Selling reduction, as used by 
-Delaunay (1932), in comparison to Niggli 
-reduction \cite{Niggli1928}. While all the boundaries of the non-positive 
+Delaunay (1932); The reduction operations of Niggli 
+reduction \cite{Niggli1928} are more complex. 
+While all the boundaries of the non-positive 
 orthant of \SVI{} are essentially the same (and 
 related by reflections), the boundaries formed in 
 Niggli reduction are of multiple types, and the fundamental unit 
-of the space representing Niggli reduced cells (\GVI{}, see \citeasnoun{Andrews2014}) is non-convex.
-
-The matrices also display one of the unique properties of \CIII{}, 
-which makes it a useful conceptual representation. 
-For the scalar being transformed, it and its opposite scalar
-create a unique row in each transformation matrix. These rows contain only
-the minus operator and zeros, highlighting the 
-unique relationship of that pair of scalars.
+of the space representing Niggli-reduced cells (\GVI{}, see \citeasnoun{Andrews2014}) is non-convex.
 
 Several aspects of \CIII{} are evident from inspecting the matrices. 
 First, each boundary has four possible 
@@ -606,7 +605,7 @@ transformations that can be applied. Since each of
 the transformations at boundaries are self-inverse, they are the 
 same transformations that would be used in the process of 
 cell (lattice) reduction. \citeasnoun{Delaunay1932} and \citeasnoun{Delone1975} give only two choices, presumably for simplicity, 
-omitting transformations that use the "exchange" operator 
+omitting transformations that use the ``exchange'' operator 
 (see \citeasnoun{andrews2019b}).
 
 	
@@ -616,7 +615,8 @@ omitting transformations that use the "exchange" operator
 	
 	\section{Availability of code}
 	
-	The $C^{++}$ ~code for \CIII{} is available in github.com, in
+	The $C^{++}$ ~code for \CIII{} and related 
+	software tools is available in github.com, in
 	\url{https://github.com/duck10/LatticeRepLib.git}.
 	
 	%\appendix
@@ -643,7 +643,7 @@ omitting transformations that use the "exchange" operator
 	grant No. 1R21GM129570); Dectris, Ltd.
 	
 	
-	\bibliography{reduced}
+	\bibliography{Reduced}
 	
 	\bibliographystyle{iucr}
 	
