@@ -229,6 +229,14 @@
 	% Now enter the text of the document in multiple \section's, \subsection's
 	% and \subsubsection's as required.
 	
+	\section{Forward}
+	
+	"Measuring Lattices" is intended to be a summary of an invited talk
+	for satellite meeting, "Mathematics and Computer Science for Materials Innovation: Crystal Lattice Classifications" of August, 2022, ECM33
+	meeting (https://www.ecm33.fr/). The intent is describe in brief
+	the basics of implementing a metric space that creates
+	a measure of the "distances" between lattices.
+	
 	\section{History}
 	
 	Human fascination with crystals has a long history. 105,000 years ago,
@@ -297,6 +305,8 @@
 Various paradigms are used 
 by different databases, sometimes only simple ranges on unit cell
 edge length. SAUC uses the methods described herein.	
+
+
 	
 \section{Introduction}
 
@@ -334,6 +344,20 @@ What modern problems require comparing arbitrary groups of cells?
 	\item Studies in epitaxy \cite{yang2014unit}
 \end{itemize}
 
+Crystallographic software delivered with diffractometers, used for processing
+beamline data, etc. has produced more than one and quarter million structures. The structures have had internally consistent lattice and
+symmetry identification, but there have been serious omissions in 
+providing globally consistent lattice and symmetry identification
+because of structures being done in the incorrect space group.
+\citeasnoun{LeTrong2007} published the case of phospholipase
+A2, and more were found in \citeasnoun{McGill2014}.
+Not having failed to be observed is quite different from always working. Two regions of the space of lattice determination come into play here. 
+First, how much error do we want to consider? For protein work, especially for serial crystallography, the errors can be large. Second, the simple methods commonly used in 
+diffractometer software are likely to fail for 
+some of the less common cases: centered lattices commonly cause interesting issues; lattices that are needle- or pancake-shaped are often challenging;
+the five-fold ambiguity cited by \citeasnoun{Gruber1973} also causes confusion. The cited five-fold ambiguity is only for the particular
+case that Gruber listed, but interchanges of the axes to produce
+other, Buerger-reduced cells.
 	
 \section{Techniques used to measure lattices}
 
