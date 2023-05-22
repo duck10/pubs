@@ -1,0 +1,199 @@
+<svg width="2000" height="2000" viewBox="1 0  2400 2400"  version="1.1" xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink">
+<desc>File name  = PLT__2023-05-18.11_20_38.svg </desc> 
+ <g transform="scale(0.6)">
+<g transform = "translate( 500, 500)">
+
+<line x1="0" y1 = "0" x2 ="0" y2 = "-500" stroke-width = "2" stroke="black" > </line>
+
+<line x1="0" y1 = "0" x2 ="-500" y2 = "0" stroke-width = "2" stroke="black" > </line> 
+
+<g transform = "translate( 0, 0)" >
+
+</g> <!--End of transform -->
+
+  <g transform = "translate( 0, 0)" >
+
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="13.2646" cy="-412.317"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="14.1511" cy="-366.097"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-8.86586" cy="-421.607"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-53.0908" cy="-367.209"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-49.3249" cy="-418.295"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="9.44698" cy="-391.72"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-0.748449" cy="-419.687"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="31.9213" cy="-421.334"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="29.8208" cy="-375.001"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-34.8226" cy="-374.698"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="18.1308" cy="-36.1409"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-15.368" cy="14.5769"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="24.0309" cy="34.3404"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-3.60156" cy="36.1974"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="14.6594" cy="21.8418"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="30.5196" cy="-41.4493"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="39.2001" cy="-21.1175"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-1.16521" cy="-28.0842"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-9.17535" cy="-32.9787"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="20.68" cy="42.327"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-29.9477" cy="-377.056"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="35.3499" cy="-384.81"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="23.4971" cy="-400.977"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-9.12146" cy="-389.544"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="29.7629" cy="-449.694"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-385.474" cy="-423.277"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-369.256" cy="-428.925"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-418.464" cy="-361.199"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-360.226" cy="-430.158"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-370.816" cy="-416.466"/>
+</g> <!--End of transform -->
+
+<!--plot labeling-->
+<g transform = "translate(0,-265)" >
+<text x = "-350" y = "-200"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" >Coordinate c</text>
+<g transform = "translate(205,10)">
+<text x = "-328" y = "-200"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >1 </text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text   x = "-480" y = "-20"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text  x = "-480" y = "-20"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >1</text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text  x = "-60" y = "-450" font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text x = "-60" y = "-450"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >4</text >
+</g>
+</g>
+</g>
+<g transform = "translate( 1100, 500)">
+
+<line x1="0" y1 = "0" x2 ="0" y2 = "-500" stroke-width = "2" stroke="black" > </line>
+
+<line x1="0" y1 = "0" x2 ="-500" y2 = "0" stroke-width = "2" stroke="black" > </line> 
+
+<g transform = "translate( 0, 0)" >
+
+</g> <!--End of transform -->
+
+  <g transform = "translate( 0, 0)" >
+
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="27.8471" cy="-379.097"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-38.9784" cy="-429.667"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="19.6142" cy="-366.943"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="5.21424" cy="-381.919"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="19.1327" cy="-365.191"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="42.4366" cy="-374.312"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-33.0526" cy="-385.308"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="0.609487" cy="-377.917"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="28.3757" cy="-379.681"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-42.7065" cy="-350.31"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-437.824" cy="-396.078"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-361.123" cy="-431.188"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-386.184" cy="-375.329"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-386.644" cy="-373.263"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-369.138" cy="-450"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-367.342" cy="-418.757"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-412.154" cy="-373.359"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-428.658" cy="-354.09"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-431.181" cy="-394.336"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-398.253" cy="-432.97"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="41.1825" cy="-35.9743"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="54.9388" cy="-7.4565"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="27.1648" cy="43.8962"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="41.9361" cy="-43.9944"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-1.89862" cy="-11.0061"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-392.125" cy="17.118"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-402.834" cy="48.8658"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-421.223" cy="19.4201"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-410.453" cy="8.24145"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-413.673" cy="35.1433"/>
+</g> <!--End of transform -->
+
+<!--plot labeling-->
+<g transform = "translate(0,-265)" >
+<text x = "-350" y = "-200"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" >Coordinate c</text>
+<g transform = "translate(205,10)">
+<text x = "-328" y = "-200"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >2 </text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text   x = "-480" y = "-20"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text  x = "-480" y = "-20"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >2</text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text  x = "-60" y = "-450" font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text x = "-60" y = "-450"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >5</text >
+</g>
+</g>
+</g>
+<g transform = "translate( 1700, 500)">
+
+<line x1="0" y1 = "0" x2 ="0" y2 = "-500" stroke-width = "2" stroke="black" > </line>
+
+<line x1="0" y1 = "0" x2 ="-500" y2 = "0" stroke-width = "2" stroke="black" > </line> 
+
+<g transform = "translate( 0, 0)" >
+
+</g> <!--End of transform -->
+
+  <g transform = "translate( 0, 0)" >
+
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="14.0044" cy="-368.191"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-22.3215" cy="-359.962"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="22.4405" cy="-370.223"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="27.22" cy="-407.603"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="7.19572" cy="-373.157"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-35.0562" cy="-392.121"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="26.0215" cy="-352.224"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-9.59606" cy="-359.134"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-3.83904" cy="-404.894"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-12.1329" cy="-429.107"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-360.409" cy="-13.6128"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-402.372" cy="39.9713"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-432.639" cy="-36.6021"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-434.733" cy="33.8689"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-375.269" cy="0.350057"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-408.113" cy="-27.9189"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-408.574" cy="-45.8138"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-411.847" cy="27.3288"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-369.15" cy="37.6943"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-363.095" cy="-12.4957"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-422.436" cy="-401.074"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-407.903" cy="-408.146"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-427.188" cy="-372.668"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-384.304" cy="-426.8"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-379.141" cy="-372.005"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="30.2574" cy="52.155"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="13.5483" cy="16.4579"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="34.9941" cy="-28.9277"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-42.8215" cy="-16.5024"/>
+<circle fill="none"  r="5" stroke = "black" stroke-width="2" cx="-33.9426" cy="31.3587"/>
+</g> <!--End of transform -->
+
+<!--plot labeling-->
+<g transform = "translate(0,-265)" >
+<text x = "-350" y = "-200"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" >Coordinate c</text>
+<g transform = "translate(205,10)">
+<text x = "-328" y = "-200"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >3 </text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text   x = "-480" y = "-20"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text  x = "-480" y = "-20"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >3</text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text  x = "-60" y = "-450" font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text x = "-60" y = "-450"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >6</text >
+</g>
+</g>
+</g>
+
+</g> <!--end of scale=0.6-->
+</svg>

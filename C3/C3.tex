@@ -45,9 +45,9 @@
 \newcommand{\VVII}[0]{$\bf{V^{7}}$}
 
 \newcommand{\vdotv}[2]{${{\bf #1 \cdot #2}}$}
-\newcommand{\Imaginary}[0]{$ \textfrak{I} $}
-\newcommand{\Real}[0]{$ \textfrak{R} $}
-\newcommand{\Exchange}[0]{$\textfrak{X}$}
+\newcommand{\Imaginary}[0]{\mathcal{I}}
+\newcommand{\Real}[0]{\mathcal{R}}
+\newcommand{\Exchange}[0]{$\mathcal{X}$}
 
 \newcommand{\nounderline}[3]{\!\!\!\!\!\!\!\!\!#1,&\!\!\!\!\!\!\!\!\!#2,&\!\!\!\!\!\!\!\!\!#3}
 \newcommand{\underlineab}[3]{\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\Exchange{}(#1),&\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\Exchange{}(#2),&\!\!\!\!\!\!\!\!\!#3}
@@ -183,8 +183,8 @@
 	\newcommand{\OPESS}[0]{$$E^3toS^6$$}
 	\newcommand{\MSVI}[0]{$M_{S^{6}}$}
 	\newcommand{\MEIII}[0]{$M_{E^{3}}$}
-	\newcommand{\Plus}[0]{$\textfrak{P}$}	
-	\newcommand{\Minus}[0]{$\textfrak{M}$}
+	\newcommand{\Plus}[0]{\mathcal{P}}	
+	\newcommand{\Minus}[0]{\mathcal{M}}
 	
 	\newcommand{\ci}[0]{$c_1$}
 	\newcommand{\cii}[0]{$c_2$}
@@ -192,7 +192,6 @@
 	
 	
 	\begin{abstract}
-		
 		The Delone (Selling) scalars, which are used in 
 		unit cell reduction and in lattice type determination,
 		are studied in \CIII, the space of three complex variables.
@@ -267,7 +266,7 @@
 	
 	We represent a vector 
 	in \CIII{} by \{$(x_1,y_1)$, $(x_2,y_2)$, $(x_3, y_3)$\} 
-	as an alternative to  \{(\si,\siv ), (\sii,\sv),(\sii,\svi)\}.
+	as an alternative to  \{(\si,\siv ), (\sii,\sv),(\siii,\svi)\}.
 	
 	Next we define the operators in \CIII{} that 
 	will be used in the matrix descriptions of 
@@ -283,10 +282,10 @@
 			\midrule
 			$\Minus{}_r $		&  $\Minus{}_r(c_j)$ 		& $(-x_j, -x_j+y_j)$ 	& Minus real \\ 
 			$\Minus{}_i $ 		& $\Minus{}_i(c_j)$ 		& $(x_j-y_j,-y_j) $ 	& Minus imag\\ 
-			$\textfrak{P}_r$ 	& $ \textfrak{P}_r(c_j)$ 	& $(x_j, x_j)$ 			& Plus real\\ 
-			$\textfrak{P}_i$ 	&  $\textfrak{P}_i(c_j)$  	& $(y_j, y_j)$ 			& Plus imag\\ 
-			$\Real$ 			&  $\Real(c_j)$ 			& $x_j$ 				& Real \\ 
-			$\Imaginary$ 		&  $\Imaginary(c_j)$ 		& $y_j$ 				& Imaginary\\
+			$\mathcal{P}_r$ 	& $ \mathcal{P}_r(c_j)$ 	& $(x_j, x_j)$ 		& Plus real\\ 
+			$\mathcal{P}_i$ 	&  $\mathcal{P}_i(c_j)$  	& $(y_j, y_j)$ 		& Plus imag\\ 
+			$\Real$ 			&  $\Real(c_j)$ 			& $x_j$ or $(x_j,0)$		& Real \\ 
+			$\Imaginary$ 		&  $\Imaginary(c_j)$ 		& $y_j$ pr $(y_j,0)$ 		& Imaginary\\
 			\bottomrule
 		\end{tabular}		
 	\end{table}
@@ -294,111 +293,121 @@
 	\section{Matrices of boundary transformations}
 	~~\\
 	
+	
+	
+	\citeasnoun{andrews2019b} listed the boundary transformations
+	for each of the six \SVI{} boundaries. For each,
+	they only listed 2 transformations, following \citeasnoun{Delaunay1932}
+	and \citeasnoun{Delone1975}. That list is incomplete in the sense
+	that applying the 24 reflections gives 24 boundary transformation,
+	four for each boundary, rather than 12.
+		
+	
 	For the boundary at $s_1$: (the real component of $c_1$).
 	
 	$\begin{bmatrix}
 		\Minus{}_r		& 0					& 0 \\
-		\Plus{}_r		&  \textrm{i}\Re{}	& \Re{} \\
-		\textfrak{P}_r	& \textrm{i}\Im{}	& \Im{}
+		\Plus{}_r		&  \textrm{i}\Real{}	& \Real{} \\
+		\mathcal{P}_r	& \textrm{i}\Imaginary{}	& \Imaginary{}
 	\end{bmatrix}$
 	%
 	$\begin{bmatrix}
 		\Minus{}_r	& 0 				& 0 \\
-		\Plus{}_r	&\textrm{i}\Im{}	& \Im{} \\
-		\Plus{}_r	& \textrm{i}\Re{}	& \Re{} \\
+		\Plus{}_r	&\textrm{i}\Imaginary{}	& \Imaginary{} \\
+		\Plus{}_r	& \textrm{i}\Real{}	& \Real{} \\
 	\end{bmatrix}$ 
 	%
 	$\begin{bmatrix}
 		\label{thirdmatrix}
 		\Minus{}_r	& 0			& 0 \\
-		\Plus{}_r	&  \Re{}	& \textrm{i}\Re{} \\
-		\Plus{}_r	& \Im{}		&\textrm{i}\Im{}
+		\Plus{}_r	&  \Real{}	& \textrm{i}\Real{} \\
+		\Plus{}_r	& \Imaginary{}		&\textrm{i}\Imaginary{}
 	\end{bmatrix}	$
 	%
 	$\begin{bmatrix}
 		\Minus{}_r	& 0			& 0 \\
-		\Plus{}_r	& \Im{}		&\textrm{i}\Im{} \\
-		\Plus{}_r	&  \Re{}	&\textrm{i}\Re{} \\
+		\Plus{}_r	& \Imaginary{}		&\textrm{i}\Imaginary{} \\
+		\Plus{}_r	&  \Real{}	&\textrm{i}\Real{} \\
 	\end{bmatrix}$ \\
 	
 	For the boundary at $s_4$: (the imaginary component of $c_1$).
 	
 	$\begin{bmatrix}
 		\Minus{}_i	& 0					& 0 \\
-		\Plus{}_i	&  \textrm{i}\Re{}	& \Re{} \\
-		\Plus{}_i	& \textrm{i}\Im{}	& \Im{}
+		\Plus{}_i	&  \textrm{i}\Real{}	& \Real{} \\
+		\Plus{}_i	& \textrm{i}\Imaginary{}	& \Imaginary{}
 	\end{bmatrix}$
 	%
 	$\begin{bmatrix}
 		\Minus{}_i	& 0					& 0 \\
-		\Plus{}_i	& \textrm{i}\Im{}	& \Im{} \\
-		\Plus{}_i	&  \textrm{i}\Re{}	& \Re{} \\
+		\Plus{}_i	& \textrm{i}\Imaginary{}	& \Imaginary{} \\
+		\Plus{}_i	&  \textrm{i}\Real{}	& \Imaginary{} \\
 	\end{bmatrix}$ 
 	%
 	$\begin{bmatrix}
 		\Minus{}_i	& 0			& 0 \\
-		\Plus{}_i	&  \Re{}	& \textrm{i}\Re{} \\
-		\Plus{}_i	& \Im{}		& \textrm{i}\Im{}
+		\Plus{}_i	&  \Real{}	& \textrm{i}\Real{} \\
+		\Plus{}_i	& \Imaginary{}		& \textrm{i}\Imaginary{}
 	\end{bmatrix}	$
 	%
 	$\begin{bmatrix}
 		\Minus{}_i	& 0		& 0 \\
-		\Plus{}_i	& \Im{}	& \textrm{i}\Im{} \\
-		\Plus{}_i	&  \Re{}& \textrm{i}\Re{} \\
+		\Plus{}_i	& \Imaginary{}	& \textrm{i}\Imaginary{} \\
+		\Plus{}_i	&  \Real{}& \textrm{i}\Imaginary{} \\
 	\end{bmatrix}$ \\
 	
 	For the boundary at \sii{} (the real component of \cii{}):
 	
 	$\begin{bmatrix}
 		
-		\textrm{i}\Re{}	& \Plus{}_r		& \Re{} \\
+		\textrm{i}\Real{}	& \Plus{}_r		& \Real{} \\
 		0				& \Minus{}_r	& 0 \\
-		\textrm{i}\Im{}	& \Plus{}_r		& \Im{}
+		\textrm{i}\Imaginary{}	& \Plus{}_r		& \Imaginary{}
 	\end{bmatrix}$
 	%
 	$\begin{bmatrix}
-		\textrm{i}\Im{}	& \Plus{}_r		&  \Im{} \\
+		\textrm{i}\Imaginary{}	& \Plus{}_r		&  \Imaginary{} \\
 		0				& \Minus{}_r	& 0 \\
-		\textrm{i}\Re{}	& \Plus{}_r		& \Re{} \\
-	\end{bmatrix}$ 
+		\textrm{i}\Real{}	& \Plus{}_r		& \Real{} \\
+	\end{bmatrix}$ e
 	%
 	$\begin{bmatrix}
-		\Re{}	&\Plus{}_r		&   \textrm{i}\Re{} \\
+		\Real{}	&\Plus{}_r		&   \textrm{i}\Real{} \\
 		0		& \Minus{}_r	&  0 \\
-		\Im{}	&\Plus{}_r		& \textrm{i}\Im{}
+		\Imaginary{}	&\Plus{}_r		& \textrm{i}\Imaginary{}
 	\end{bmatrix}	$ 
 	%
 	$\begin{bmatrix}
-		\Im{}	& \Plus{}_r	& \textrm{i}\Im{} \\
+		\Imaginary{}	& \Plus{}_r	& \textrm{i}\Imaginary{} \\
 		0		&\Minus{}_r	&  0 \\
-		\Re{}	& \Plus{}_r	&  \textrm{i}\Re{} \\
+		\Real{}	& \Plus{}_r	&  \textrm{i}\Real{} \\
 	\end{bmatrix}$ \\
 	
 	
-	For the boundary at $s_5$: (the imaginary component of \cii{}).
+	For the boundary at \sv: (the imaginary component of \cii{}).
 	
 	$\begin{bmatrix}
-		\textrm{i}\Re{}	& \Plus{}_i		& \Re{} \\
+		\textrm{i}\Real{}	& \Plus{}_i		& \Real{} \\
 		0				& \Minus{}_i	& 0 \\
-		\textrm{i}\Im{}	& \Plus{}_i		& \Im{}
+		\textrm{i}\Imaginary{}	& \Plus{}_i		& \Imaginary{}
 	\end{bmatrix}$
 	%
 	$\begin{bmatrix}
-		\textrm{i}\Im{}	& \Plus{}_i		&  \Im{} \\
+		\textrm{i}\Imaginary{}	& \Plus{}_i		&  \Imaginary{} \\
 		0				& \Minus{}_i	& 0 \\
-		\textrm{i}\Re{}	& \Plus{}_ri	& \Re{} \\
+		\textrm{i}\Real{}	& \Plus{}_ri	& \Real{} \\
 	\end{bmatrix}$ 
 	%
 	$\begin{bmatrix}
-		\Re{}	&\Plus{}_i		&   \textrm{i}\Re{} \\
+		\Real{}	&\Plus{}_i		&   \textrm{i}\Real{} \\
 		0		& \Minus{}_i	&  0 \\
-		\Im{}	&\Plus{}_i		& \textrm{i}\Im{}
+		\Imaginary{}	&\Plus{}_i		& \textrm{i}\Imaginary{}
 	\end{bmatrix}	$ 
 	%
 	$\begin{bmatrix}
-		\Im{}	& \Plus{}_i	& \textrm{i}\Im{} \\
+		\Imaginary{}	& \Plus{}_i	& \textrm{i}\Imaginary{} \\
 		0		&\Minus{}_i	&  0 \\
-		\Re{}	& \Plus{}_i	&  \textrm{i}\Re{} \\
+		\Real{}	& \Plus{}_i	&  \textrm{i}\Real{} \\
 	\end{bmatrix}$ \\
 	
 	
@@ -406,26 +415,26 @@
 	
 	$\begin{bmatrix}
 		
-		\textrm{i}\Re{}	& \Re{}	& \Plus{}_r \\
-		\textrm{i}\Im{}	& \Im{}	& \Plus{}_r  \\
+		\textrm{i}\Real{}	& \Real{}	& \Plus{}_r \\
+		\textrm{i}\Imaginary{}	& \Imaginary{}	& \Plus{}_r  \\
 		0				& 0		& \Minus{}_r  \\
 	\end{bmatrix}$
 	%
 	$\begin{bmatrix}
-		\textrm{i}\Im{}	&  \Im{}	& \Plus{}_r \\
-		\textrm{i}\Re{}	& \Re{}		& \Plus{}_r \\
+		\textrm{i}\Imaginary{}	&  \Imaginary{}	& \Plus{}_r \\
+		\textrm{i}\Real{}	& \Real{}		& \Plus{}_r \\
 		0				& 0			& \Minus{}_r \\
 	\end{bmatrix}$ 
 	%
 	$\begin{bmatrix}
-		\Re{}	&   \textrm{i}\Re{}	&\Plus{}_r \\
-		\Im{}	& \textrm{i}\Im{}	&\Plus{}_r \\
+		\Real{}	&   \textrm{i}\Real{}	&\Plus{}_r \\
+		\Imaginary{}	& \textrm{i}\Imaginary{}	&\Plus{}_r \\
 		0 		&  0				& \Minus{}_r \\
 	\end{bmatrix}	$ 
 	%
 	$\begin{bmatrix}
-		\Im{}	& \textrm{i}\Im{}	& \Plus{}_r \\
-		\Re{}	&  \textrm{i}\Re{}	& \Plus{}_r \\
+		\Imaginary{}	& \textrm{i}\Imaginary{}	& \Plus{}_r \\
+		\Real{}	&  \textrm{i}\Real{}	& \Plus{}_r \\
 		0		&  0				&\Minus{}_r \\
 	\end{bmatrix}$ \\
 	
@@ -434,29 +443,91 @@
 	
 	$\begin{bmatrix}
 		
-		\textrm{i}\Re{}	& \Re{}	& \Plus{}_i \\
-		\textrm{i}\Im{}	& \Im{}	& \Plus{}_i \\
+		\textrm{i}\Real{}	& \Real{}	& \Plus{}_i \\
+		\textrm{i}\Imaginary{}	& \Imaginary{}	& \Plus{}_i \\
 		0				& 0		& \Minus{}_i 
 	\end{bmatrix}$
 	%
 	$\begin{bmatrix}
-		\textrm{i}\Im{}	&  \Im{}	& \Plus{}_i \\
-		\textrm{i}\Re{}	& \Re{}		& \Plus{}_i \\
+		\textrm{i}\Imaginary{}	&  \Imaginary{}	& \Plus{}_i \\
+		\textrm{i}\Real{}	& \Real{}		& \Plus{}_i \\
 		0				& 0			& \Minus{}_i \\
 	\end{bmatrix}$ 
 	%
 	$\begin{bmatrix}
-		\Re{}	&   \textrm{i}\Re{} &\Plus{}_i \\
-		\Im{}	& \textrm{i}\Im{}	&\Plus{}_i \\
+		\Real{}	&   \textrm{i}\Real{} &\Plus{}_i \\
+		\Imaginary{}	& \textrm{i}\Imaginary{}	&\Plus{}_i \\
 		0		&  0				& \Minus{}_i \\
 	\end{bmatrix}	$ 
 	%
 	$\begin{bmatrix}
-		\Im{}	& \textrm{i}\Im{}	& \Plus{}_i \\
-		\Re{}	&  \textrm{i}\Re{}	& \Plus{}_i \\
+		\Imaginary{}	& \textrm{i}\Imaginary{}	& \Plus{}_i \\
+		\Real{}	&  \textrm{i}\Real{}	& \Plus{}_i \\
 		0		&  0				&\Minus{}_i 
 	\end{bmatrix}$ \\
-	
+
+\subsection{Derivation}
+
+Consider the \SVI{} vector 	
+	\{$(x_1,y_1)$, $(x_2,y_2)$, $(x_3, y_3)$\};
+in \CIII{} that vector is:  \{(\si,\siv ), (\sii,\sv),(\siii,\svi)\}.
+Stated in \CIII{}, the problem is to find a matrix that converts a \CIII{}
+vector to a more reduced one. Take the case of \si positive and the
+other scalars negative.\\
+
+ \{(-\si,~\siv-\si ),~(\siii+\si,~\sii+\si), (\svi+\si,~\sv+\si)\}\\
+ =
+\begin{tabular}{ccc}
+	 $\begin{bmatrix}
+ 	~\\~\\~\\
+ \end{bmatrix}$
+ 
+$ \begin{Bmatrix}
+ $(\si,\siv )$\\ $(\sii,\sv)$\\$(\siii,\svi)$
+\end{Bmatrix}$
+\end{tabular}\\
+
+Here, one of the four possible result vectors has been chosen 
+(arbitrarily). 
+
+Element 1 of result vector is (-\si,~\siv-\si ), and
+it is created by multiplying the beginning \CIII{} vector by the
+first row of the transformation matrix. In this case, we see
+that \ci of the result only contains scalars from \ci of
+the input, so the first row must contain some operator to
+be multiplied times input \ci, and the second and third
+elements of the matrix row must be zero. We create an operator
+($Minus~real$) to transform the input \ci to the output \ci; so
+the first row of the reduction matrix is: $\Minus{}_i	 0		 0$. 
+
+Element 2 of the result vector is (\siii+\si,~\sii+\si),
+and
+it is created by multiplying the beginning \CIII{} vector by the
+second row of the transformation matrix. The result \cii
+contains \si in both the real and imaginary parts. So
+the first matrix element in that row must insert \si, the
+real part of the input \ci, into both the real and imaginary
+parts. An operator to produce that is created 
+(Plus{}~real). Next we see that the result contains \sii and \siii.
+\siii appears in the real part of the result element and in the
+third part of the input vector. So the third element of the 
+second matrix row must extract the \siii, the real part of 
+\ciii of the input. So the second row now contains the Plus real
+operator and the element to put the  real part of \ciii of the input.
+The final matrix element of the second row (the second element)
+must extract the real part of input \cii and place it in the
+imaginary part of the output vector. The resulting second
+row of the matrix is $\Plus_r~\Real~i\Real$.
+
+Using similar logic, the third row of the matrix is:
+$\Plus_r~\Imaginary~i\Imaginary$.
+
+Having derived the first matrix, the other 23 can
+be derived by the same process. However because all the
+\SVI boundaries are related by the 24 reflection, the
+other 23 matrices can be generated simply
+by multiplying by each of the reflection matrices.
+
 	
 	\section{Basics}
 	
@@ -477,8 +548,8 @@
 	$\bf{c'}$  = 
 	$\begin{bmatrix}
 		$1$	& $0$						&  $0$ \\
-		$0$	& \Re{} +\textrm{i}\Im{}	& $0$ \\
-		$0$	& $0$						& \Re{} +\textrm{i}\Im{} \\
+		$0$	& \Real{} +\textrm{i}\Imaginary{}	& $0$ \\
+		$0$	& $0$						& \Real{} +\textrm{i}\Imaginary{} \\
 	\end{bmatrix}$ 
 	$\bf{c}$.
 	\\
@@ -499,8 +570,8 @@
 	\begin{center}
 		$\begin{bmatrix}
 			\Minus{}_r	& 0			& 0 \\
-			\Plus{}_r	&  \Re{}	& \textrm{i}\Re{} \\
-			\Plus{}_r	& \Im{}		&\textrm{i}\Im{}
+			\Plus{}_r	&  \Real{}	& \textrm{i}\Real{} \\
+			\Plus{}_r	& \Imaginary{}		&\textrm{i}\Imaginary{}
 		\end{bmatrix}	$
 	\end{center}
 	
@@ -530,84 +601,98 @@
 	found additional cases (see Table \ref{PLA2})
 	
 	
-\begin{table}
-	\begin{tabular}{l c c c c c c c c c}
-		\toprule
-		PDB id & Centering & a&b&c&$\alpha$&$\beta$&$\gamma$\\
-		\midrule
-	1DPY & R& 57.98& 57.98& 57.98& 92.02& 92.02& 92.02\\
-	1FE5 & R& 57.98& 57.98& 57.98& 92.02& 92.02& 92.02\\
-	1G0Z & H& 80.36& 80.36& 99.44& 90&    90&    120\\
-	1G2X & C& 80.95& 80.57& 57.1 & 90&    90.35&  90\\
-	1U4J & H& 80.36& 80.36& 99.44& 90&    90&    120\\
-	2OSN & R& 57.10& 57.10& 57.10& 89.75& 89.75&  89.75\\
-	\bottomrule
-\end{tabular}	\\
-\caption{Phospholipase A2 unit cells}
-\label{PLA2}
-\end{table}
-
-Below, Figure \ref{fig1} shows the unit cells as 
-reported (the centering of lattices has not been removed).
-The following figures (Figures \ref{fig2} to \ref{fig5}) show various transformations and
-embellishments of the reported cells.
-
-\begin{figure}
-	\includegraphics[width=1.0\textwidth]{1_35}
-	\caption{Phospholipase A2 unit cells as reported. }
-	\label{fig1}
-\end{figure}
+	\begin{table}
+		\begin{tabular}{m{0.08\textwidth} c c c c c c c c c}
+			\toprule
+			PDB id & Centering & a&b&c&$\alpha$&$\beta$&$\gamma$\\
+			\midrule
+			1DPY & hR& 57.98& 57.98& 57.98& 92.02& 92.02& 92.02\\
+			~~\& 1FE5 \\
+			1G0Z  & hP& 80.36& 80.36& 99.44& 90&    90&    120\\
+			~~\& 1U4J\\
+			1G2X & mC& 80.95& 80.57& 57.1 & 90&    90.35&  90\\
+			2OSN & hR& 57.10& 57.10& 57.10& 89.75& 89.75&  89.75\\
+			\bottomrule
+		\end{tabular}	\\
+		\caption{Phospholipase A2 unit cells}
+		\label{PLA2}
+	\end{table}
 	
-\begin{figure}
-	\includegraphics[width=1.0\textwidth]{2_06}
-	\caption{The PLA2 unit cells Niggli-reduced. The similarity 
-	of the 3 projections is indicative of the exact or nearly
-exact rhombohedral symmetry.}
-	\label{fig2}
-\end{figure}
-\begin{figure}
-	\includegraphics[width=1.0\textwidth]{3_03}
-	\caption{The PLA2 unit cells Delone-reduced. }
-	\label{fig3}
-\end{figure}
-
-\begin{figure}
-	\includegraphics[width=1.0\textwidth]{4_13}
-	\caption{The PLA2 unit cells, Niggli-reduced, and five copies were perturbed 2\%
-	orthogonally to \SVI{} vector. }
-	\label{fig4}
-\end{figure}
-
+	Below, Figure \ref{fig1} shows the unit cells as 
+	reported (the centering of lattices has not been removed).
+	The following figures (Figures \ref{fig2} to \ref{fig5}) show various transformations and
+	embellishments of the reported cells.
+	
+	\begin{figure}
+		\includegraphics[width=1.0\textwidth]{1_35}
+		\caption{Phospholipase A2 unit cells as reported. }
+		\label{fig1}
+	\end{figure}
+	
+	\begin{figure}
+		\includegraphics[width=1.0\textwidth]{2_06}
+		\caption{The PLA2 unit cells Niggli-reduced. The similarity 
+			of the 3 projections is indicative of the exact or nearly
+			exact rhombohedral symmetry.}
+		\label{fig2}
+	\end{figure}
+	
 \begin{figure}
 	\includegraphics[width=1.0\textwidth]{5_21}
 	\caption{The PLA2 unit cells, Niggli-reduced, and five copies were perturbed 10\%
 		orthogonally to \SVI{} vector. }
-	\label{fig5}
+	\label{fig5}	
 \end{figure}
 
-
-
+	\begin{figure}
+		\includegraphics[width=1.0\textwidth]{3_03}
+		\caption{The PLA2 unit cells Delone-reduced. }
+		\label{fig3}
+	\end{figure}
+	
+	\begin{figure}
+		\includegraphics[width=1.0\textwidth]{5_38}
+		\label{5_38}
+		\caption{The PLA2 cells Delone reduced and
+		5 copies perturbed by 10\%.}
+	\end{figure}
+	
+	\begin{figure}
+		\includegraphics[width=1.0\textwidth]{6_53}
+		\label{6_53}
+		\caption{The same cells as plotted in Figure \ref{5_38} 
+			and Delone reduced.}
+	\end{figure}
+	
+\begin{figure}
+	\includegraphics[width=1.0\textwidth]{7_14}
+	\label{7_14}
+		\caption{The same cells as plotted in Figure \ref{5_38} 
+	and Delone reduced, and then each multiplied by the 24
+	\SVI{} reflections.}
+\end{figure}
+	
 	\section{Summary}
 	
-The transformation matrices shown above demonstrate the 
-considerable regularity of Selling reduction, as used by 
-Delaunay (1932). The reduction operations of Niggli 
-reduction \cite{Niggli1928} are more complex. 
-While all the boundaries of the non-positive 
-orthant of \SVI{} are essentially the same (and 
-related by reflections), the boundaries formed in 
-Niggli reduction are of multiple types, and the fundamental unit 
-of the space representing Niggli-reduced cells (\GVI{}, see \citeasnoun{Andrews2014}) is non-convex.
-
-Several aspects of \CIII{} are evident from inspecting the matrices. 
-First, each boundary has four possible 
-transformations that can be applied. Since each of 
-the transformations at boundaries are self-inverse, they are the 
-same transformations that would be used in the process of 
-cell (lattice) reduction. \citeasnoun{Delaunay1932} and \citeasnoun{Delone1975} give only two choices, presumably for simplicity, 
-omitting transformations that use the ``exchange'' operator 
-(see \citeasnoun{andrews2019b}).
-
+	The transformation matrices shown above demonstrate the 
+	considerable regularity of Selling reduction, as used by 
+	Delaunay (1932). The reduction operations of Niggli 
+	reduction \cite{Niggli1928} are more complex. 
+	While all the boundaries of the non-positive 
+	orthant of \SVI{} are essentially the same (and 
+	related by reflections), the boundaries formed in 
+	Niggli reduction are of multiple types, and the fundamental unit 
+	of the space representing Niggli-reduced cells (\GVI{}, see \citeasnoun{Andrews2014}) is non-convex.
+	
+	Several aspects of \CIII{} are evident from inspecting the matrices. 
+	First, each boundary has four possible 
+	transformations that can be applied. Since each of 
+	the transformations at boundaries are self-inverse, they are the 
+	same transformations that would be used in the process of 
+	cell (lattice) reduction. \citeasnoun{Delaunay1932} and \citeasnoun{Delone1975} give only two choices, presumably for simplicity, 
+	omitting transformations that use the ``exchange'' operator 
+	(see \citeasnoun{andrews2019b}).
+	
 	
 	
 	
@@ -659,20 +744,20 @@ omitting transformations that use the ``exchange'' operator
 	
 	% Postscript figures can be included with multiple figure blocks
 	
-%C:\Users\lca\Source\Repos\LatticeRepLib\x64\Debug>plotc3
-%; Graphical output SVG file =PLT__2023-03-07.13_43_35.svg
-%
-%C:\Users\lca\Source\Repos\LatticeRepLib\x64\Debug>cmdniggli | plotc3
-%; Graphical output SVG file =PLT__2023-03-07.13_44_06.svg
-%
-%C:\Users\lca\Source\Repos\LatticeRepLib\x64\Debug>cmddelone | plotc3
-%; Graphical output SVG file =PLT__2023-03-08.07_11_03.svg
-%
-%C:\Users\lca\Source\Repos\LatticeRepLib\x64\Debug>cmdniggli | cmdperturb 5 20 | plotc3
-%; Graphical output SVG file =PLT__2023-03-08.09_00_13.svg
-%
-%C:\Users\lca\Source\Repos\LatticeRepLib\x64\Debug>cmdniggli | cmdperturb 5 100 | plotc3
-%; Graphical output SVG file =PLT__2023-03-08.09_00_21.svg
+	%C:\Users\lca\Source\Repos\LatticeRepLib\x64\Debug>plotc3
+	%; Graphical output SVG file =PLT__2023-03-07.13_43_35.svg
+	%
+	%C:\Users\lca\Source\Repos\LatticeRepLib\x64\Debug>cmdniggli | plotc3
+	%; Graphical output SVG file =PLT__2023-03-07.13_44_06.svg
+	%
+	%C:\Users\lca\Source\Repos\LatticeRepLib\x64\Debug>cmddelone | plotc3
+	%; Graphical output SVG file =PLT__2023-03-08.07_11_03.svg
+	%
+	%C:\Users\lca\Source\Repos\LatticeRepLib\x64\Debug>cmdniggli | cmdperturb 5 20 | plotc3
+	%; Graphical output SVG file =PLT__2023-03-08.09_00_13.svg
+	%
+	%C:\Users\lca\Source\Repos\LatticeRepLib\x64\Debug>cmdniggli | cmdperturb 5 100 | plotc3
+	%; Graphical output SVG file =PLT__2023-03-08.09_00_21.svg
 	
 \end{document}                    % DO NOT DELETE THIS LINE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

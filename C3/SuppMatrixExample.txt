@@ -1,0 +1,53 @@
+Example C++ code for implement the operators in C3 in order
+to create matrices of operators. Here the operators are 
+implemented as static free C++ functions. The code is 
+extracted from the C3 code from LatticeRepLib (Lattice
+Representation Library).
+http://github.com/duck20/LatticeRepLib.git
+
+
+static std::complex<double> c3_Minus_Real(std::complex<double>& a) {
+   const std::complex<double> c = { -a.real(), -a.real() + a.imag() };
+   return c;
+}
+
+static std::complex<double> c3_Minus_Imag(const std::complex<double>& a) {
+   const std::complex<double> c = {a.real() - a.imag(), -a.imag()};
+   return c;
+}
+
+static std::complex<double> c3_Plus_Real(const std::complex<double>& a) {
+   const std::complex<double> c = {a.real(), a.real()};
+   return c;
+}
+
+static std::complex<double> c3_Plus_Imag(const std::complex<double>& a) {
+   const std::complex<double> c = { a.imag(), a.imag() };
+   return c;
+}
+
+static double c3_Real(const std::complex<double>& a) {
+   return a.real();
+}
+
+static double c3_Imag(const std::complex<double>& a) {
+   return a.imag();
+}
+
+static std::complex<double> c3_I_Times_Real(const std::complex<double>& c) {
+   return { 0, c.real() };
+}
+
+static std::complex<double> c3_I_Times_Imag(const std::complex<double>& c) {
+   return { 0, c.imag()};
+}
+
+C3 C3::c3_s1(const C3& a) {
+   C3 c;
+   c[0] = c3_Minus_Real(a[0]);
+   c[1] = c3_Plus_Real(a[0]) + c3_Real(a[1]) +
+        c3_I_Times_Real(a[2]);
+   c[2] = c3_Plus_Real(a[0]) + c3_Imag(a[1]) +
+        c3_I_Times_Imag(a[2]);
+   return c;
+}
