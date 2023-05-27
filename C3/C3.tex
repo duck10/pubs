@@ -478,15 +478,16 @@ other scalars negative.\\
  \{(-\si,~\siv-\si ),~(\siii+\si,~\sii+\si), (\svi+\si,~\sv+\si)\}\\
  =
 \begin{tabular}{ccc}
-	 $\begin{bmatrix}
- 	~\\~\\~\\
- \end{bmatrix}$
+
+ 	RedMat
+
  
 $ \begin{Bmatrix}
  $(\si,\siv )$\\ $(\sii,\sv)$\\$(\siii,\svi)$
 \end{Bmatrix}$
 \end{tabular}\\
 
+We need to solve for RedMat.
 Here, one of the four possible result vectors has been chosen 
 (arbitrarily). 
 
@@ -527,6 +528,62 @@ be derived by the same process. However because all the
 \SVI boundaries are related by the 24 reflection, the
 other 23 matrices can be generated simply
 by multiplying by each of the reflection matrices.
+
+\subsection{Example of use}
+
+To demonstrate the application of the above matrices,
+example C++ code was written to create matrices of operators;
+see the supplementary material for the code or the complete
+library reference in the Availability of Code below.
+
+Create a \CIII{} vector c3 with
+the values \{(1,2),(3,4),(5,6)\} (which does not
+correspond to a valid unit cell). Multiply it by the matrix
+of operators derived above.
+
+The matrix multiply can be implemented as follows"
+
+
+\begin{verbatim}
+C3 C3::c3_s1(const C3& a) {
+    C3 c;
+    c[0] = c3_Minus_Real(a[0]);
+    c[1] = c3_Plus_Real(a[0]) + c3_Real(a[1]) +
+        c3_I_Times_Real(a[2]);
+    c[2] = c3_Plus_Real(a[0]) + c3_Imag(a[1]) +
+        c3_I_Times_Imag(a[2]);
+    return c;
+}
+\end{verbatim}
+
+Therefore, RedMat = \\
+\begin{center}
+	$\begin{bmatrix}
+	\Minus{}_r	& 0			& 0 \\
+	\Plus{}_r	&  \Real{}	& \textrm{i}\Real{} \\
+	\Plus{}_r	& \Imaginary{}		&\textrm{i}\Imaginary{}
+\end{bmatrix}	$
+\end{center}
+
+For example:
+
+\begin{center}
+\{(-1.000,1.000) (4.000,6.000) (5.000,7.000)\} =\\
+$\begin{bmatrix}
+	\Minus{}_r	& 0			& 0 \\
+	\Plus{}_r	&  \Real{}	& \textrm{i}\Real{} \\
+	\Plus{}_r	& \Imaginary{}		&\textrm{i}\Imaginary{}
+\end{bmatrix}	$
+$\begin{Bmatrix}
+	(1,2)\\
+	(3,4)\\
+	(5,6)
+\end{Bmatrix}$\\
+
+\end{center}
+
+which can be verified by hand.
+
 
 	
 	\section{Basics}
@@ -642,6 +699,13 @@ by multiplying by each of the reflection matrices.
 	\caption{The PLA2 unit cells, Niggli-reduced, and five copies were perturbed 10\%
 		orthogonally to \SVI{} vector. }
 	\label{fig5}	
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=1.0\textwidth]{19_57}
+	label{19\_57}
+	\caption{The PLA2 unit cells, Niggli-reduced, and five copies were perturbed 10\%
+		orthogonally to \SVI{} vector, followed by Niggli reduction.}
 \end{figure}
 
 	\begin{figure}
