@@ -229,6 +229,14 @@
 	% Now enter the text of the document in multiple \section's, \subsection's
 	% and \subsubsection's as required.
 	
+	\section{Forward}
+	
+	``Measuring Lattices'' is intended to be a summary of an invited talk
+	for satellite meeting, ``Mathematics and Computer Science for Materials Innovation: Crystal Lattice Classifications'' of August, 2022, ECM33
+	meeting (https://www.ecm33.fr/). The intent is describe in brief
+	the basics of implementing a metric space that creates
+	a measure of the ``distances'' between lattices.
+	
 	\section{History}
 	
 	Human fascination with crystals has a long history. 105,000 years ago,
@@ -297,6 +305,8 @@
 Various paradigms are used 
 by different databases, sometimes only simple ranges on unit cell
 edge length. SAUC uses the methods described herein.	
+
+
 	
 \section{Introduction}
 
@@ -334,6 +344,20 @@ What modern problems require comparing arbitrary groups of cells?
 	\item Studies in epitaxy \cite{yang2014unit}
 \end{itemize}
 
+Crystallographic software delivered with diffractometers, used for processing
+beamline data, etc. has produced more than one and quarter million structures. The structures have had internally consistent lattice and
+symmetry identification, but there have been serious omissions in 
+providing globally consistent lattice and symmetry identification
+because of structures being done in the incorrect space group.
+\citeasnoun{LeTrong2007} published the case of phospholipase
+A2, and more were found in \citeasnoun{McGill2014}.
+Not having failed to be observed is quite different from always working. Two regions of the space of lattice determination come into play here. 
+First, how much error do we want to consider? For protein work, especially for serial crystallography, the errors can be large. Second, the simple methods commonly used in 
+diffractometer software are likely to fail for 
+some of the less common cases: centered lattices commonly cause interesting issues; lattices that are needle- or pancake-shaped are often challenging;
+the five-fold ambiguity cited by \citeasnoun{Gruber1973} also causes confusion. The cited five-fold ambiguity is only for the particular
+case that Gruber listed, but interchanges of the axes produce
+other, Buerger-reduced cells.
 	
 \section{Techniques used to measure lattices}
 
@@ -381,6 +405,8 @@ of their edges, which can be ``glued'' together to make new objects
 and disclose new relationships among the parts. Here we look at a simple 
 example that demonstrates some of the issues that arise
 in measuring distances between lattices.
+
+In the following discussion we will follow the common practice of viewing the circle as a two-dimensional object and the torus as a three-dimensional object.   Formally, as a manifold, a circle is one-dimensional and a torus is a two-dimensional.”
 
 \subsection{Create a simple, 1D unit cell}
 	
@@ -497,7 +523,7 @@ this list by consideration of a seven-dimensional space of Wigner-Seitz cells \c
 	In working with a space in which there are 
 	multiple symmetry-related occurrences of items of interest (atoms, molecules, or,
 	in this case, unit cells), it is conventional to choose a fundamental
-	region. ``A fundamental domain or fundamental region is a subset of the space which contains exactly one point from each of these orbits. It serves as a geometric realization for the abstract set of representatives of the orbits.'' \cite{enwiki:1028832752}. In a two-dimensional graph, it would often be chosen as the all-plus
+	region. ``Given a topological space and a group acting on it, the images of a single point under the group action form an orbit of the action. A fundamental domain or fundamental region is a subset of the space which contains exactly one point from each of these orbits.'' \cite{enwiki:1028832752}. In a two-dimensional graph, it would often be chosen as the all-plus
 	quadrant. In crystallography, it might be a unit cell, a
 	particular asymmetric unit of a crystal, or even a molecule.
 	
@@ -1552,7 +1578,7 @@ might be $\begin{pmatrix} a,\alpha \end{pmatrix}$,
 		 		{ A cell is Selling-reduced if all six components are negative or zero \cite{Delaunay1932}.  
 			\item Reversing the  observation that a Buerger-reduced cell is a good stepping stone to a Selling-reduced cell \cite{Allmann1968},
 			a Selling-reduced cell can be a very efficient stepping stone to a Buerger-reduced cell from which a Niggli-reduced cell can quickly be derived.
-			\item {Selling showed that the all-obtuse (Selling parameters all-negative) case is unique.
+			\item {Selling showed that the all-obtuse (Selling parameters all-negative) case is unique \cite{Selling1874}.
 			 Every \SVI{} vector with all scalars non-positive corresponds to a valid unit cell.}
 
 
