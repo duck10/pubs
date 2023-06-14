@@ -8,7 +8,7 @@
 %xxxxxx just for testing github % 2
 %xxxxxx just for testing github % 3
 
-\documentclass[]{iucr}              % DO NOT DELETE THIS LINE
+\documentclass[preprint]{iucr}              % DO NOT DELETE THIS LINE
 \usepackage{amssymb}
 \usepackage[fleqn]{amsmath}
 %\usepackage{bm}
@@ -301,6 +301,8 @@
 	and \citeasnoun{Delone1975}. That list is incomplete in the sense
 	that applying the 24 reflections gives 24 boundary transformation,
 	four for each boundary, rather than 12.
+	
+	The C3 vector transformations are represented as multiplication by a matrix of the operators defined in Table 1. When a complex vector component is 'multiplied' by an operator, the result is as defined in the table."
 		
 	
 	For the boundary at $s_1$: (the real component of $c_1$).
@@ -341,7 +343,7 @@
 	$\begin{bmatrix}
 		\Minus{}_i	& 0					& 0 \\
 		\Plus{}_i	& \textrm{i}\Imaginary{}	& \Imaginary{} \\
-		\Plus{}_i	&  \textrm{i}\Real{}	& \Imaginary{} \\
+		\Plus{}_i	&  \textrm{i}\Real{}	& \Real{} \\
 	\end{bmatrix}$ 
 	%
 	$\begin{bmatrix}
@@ -353,7 +355,7 @@
 	$\begin{bmatrix}
 		\Minus{}_i	& 0		& 0 \\
 		\Plus{}_i	& \Imaginary{}	& \textrm{i}\Imaginary{} \\
-		\Plus{}_i	&  \Real{}& \textrm{i}\Imaginary{} \\
+		\Plus{}_i	&  \Real{}& \textrm{i}\Real{} \\
 	\end{bmatrix}$ \\
 	
 	For the boundary at \sii{} (the real component of \cii{}):
@@ -369,7 +371,7 @@
 		\textrm{i}\Imaginary{}	& \Plus{}_r		&  \Imaginary{} \\
 		0				& \Minus{}_r	& 0 \\
 		\textrm{i}\Real{}	& \Plus{}_r		& \Real{} \\
-	\end{bmatrix}$ e
+	\end{bmatrix}$
 	%
 	$\begin{bmatrix}
 		\Real{}	&\Plus{}_r		&   \textrm{i}\Real{} \\
@@ -395,7 +397,7 @@
 	$\begin{bmatrix}
 		\textrm{i}\Imaginary{}	& \Plus{}_i		&  \Imaginary{} \\
 		0				& \Minus{}_i	& 0 \\
-		\textrm{i}\Real{}	& \Plus{}_ri	& \Real{} \\
+		\textrm{i}\Real{}	& \Plus{}_i	& \Real{} \\
 	\end{bmatrix}$ 
 	%
 	$\begin{bmatrix}
@@ -529,6 +531,26 @@ be derived by the same process. However because all the
 other 23 matrices can be generated simply
 by multiplying by each of the reflection matrices.
 
+\subsection{Example C++ implementation}
+
+\begin{verbatim}
+static std::complex<double> c3_Minus_Real(std::complex<double>& a) {
+   const std::complex<double> c = { -a.real(), -a.real() + a.imag() };
+   return c;
+}
+	
+C3 C3::c3_s1(const C3& a) {
+   C3 c;
+   c[0] = c3_Minus_Real(a[0]);
+   c[1] = c3_Plus_Real(a[0]) + c3_Real(a[1]) +
+   c3_I_Times_Real(a[2]);
+   c[2] = c3_Plus_Real(a[0]) + c3_Imag(a[1]) +
+   c3_I_Times_Imag(a[2]);
+   return c;
+}
+\end{verbatim}
+
+
 \subsection{Example of use}
 
 To demonstrate the application of the above matrices,
@@ -541,48 +563,37 @@ the values \{(1,2),(3,4),(5,6)\} (which does not
 correspond to a valid unit cell). Multiply it by the matrix
 of operators derived above.
 
-The matrix multiply can be implemented as follows"
-
-
-\begin{verbatim}
-C3 C3::c3_s1(const C3& a) {
-    C3 c;
-    c[0] = c3_Minus_Real(a[0]);
-    c[1] = c3_Plus_Real(a[0]) + c3_Real(a[1]) +
-        c3_I_Times_Real(a[2]);
-    c[2] = c3_Plus_Real(a[0]) + c3_Imag(a[1]) +
-        c3_I_Times_Imag(a[2]);
-    return c;
-}
-\end{verbatim}
+The matrix multiplication can be implemented as follows (including
+only one example of the functions for operators (c3\_Minus\_Real))"
 
 Therefore, RedMat = \\
 \begin{center}
 	$\begin{bmatrix}
-	\Minus{}_r	& 0			& 0 \\
-	\Plus{}_r	&  \Real{}	& \textrm{i}\Real{} \\
-	\Plus{}_r	& \Imaginary{}		&\textrm{i}\Imaginary{}
-\end{bmatrix}	$
+		\Minus{}_r	& 0			& 0 \\
+		\Plus{}_r	&  \textrm{i}\Real{}	& \Real{} \\
+		\Plus{}_r	& \textrm{i}\Imaginary{}		&\Imaginary{}
+	\end{bmatrix}	$
 \end{center}
 
 For example:
 
 \begin{center}
-\{(-1.000,1.000) (4.000,6.000) (5.000,7.000)\} =\\
-$\begin{bmatrix}
-	\Minus{}_r	& 0			& 0 \\
-	\Plus{}_r	&  \Real{}	& \textrm{i}\Real{} \\
-	\Plus{}_r	& \Imaginary{}		&\textrm{i}\Imaginary{}
-\end{bmatrix}	$
-$\begin{Bmatrix}
-	(1,2)\\
-	(3,4)\\
-	(5,6)
-\end{Bmatrix}$\\
-
+	\{(-1.000,1.000) (4.000,6.000) (5.000,7.000)\} =\\
+	$\begin{bmatrix}
+		\Minus{}_r	& 0			& 0 \\
+\Plus{}_r	&  \textrm{i}\Real{}	& \Real{} \\
+\Plus{}_r	& \textrm{i}\Imaginary{}		&\Imaginary{}
+	\end{bmatrix}	$
+	$\begin{Bmatrix}
+		(1,2)\\
+		(3,4)\\
+		(5,6)
+	\end{Bmatrix}$\\
+	
 \end{center}
 
 which can be verified by hand.
+
 
 
 	
@@ -599,7 +610,7 @@ which can be verified by hand.
 	$\bf{c}$. \\
 	
 	
-	The identity in \CIII{} can also be written:\\
+	The identity in \CIII{} could also be written:\\
 	
 	
 	$\bf{c'}$  = 
@@ -610,6 +621,8 @@ which can be verified by hand.
 	\end{bmatrix}$ 
 	$\bf{c}$.
 	\\
+	which is simply replacement of the value one with an
+	equivalent representation as operators.
 	
 	~\citeasnoun{Delaunay1932} does not 
 	consider the boundary transformations 
@@ -702,8 +715,8 @@ which can be verified by hand.
 \end{figure}
 
 \begin{figure}
-	\includegraphics[width=1.0\textwidth]{19_57}
-	label{19\_57}
+	\includegraphics[width=1.0\textwidth]{19_52}
+	\label{19_57}
 	\caption{The PLA2 unit cells, Niggli-reduced, and five copies were perturbed 10\%
 		orthogonally to \SVI{} vector, followed by Niggli reduction.}
 \end{figure}
