@@ -7,3 +7,107 @@ r   80.36  80.36  99.44  90     90     120   1U4J   hP
 C  80.95  80.57  57.1   90     90.35   90    1G2X  mC 
 r  57.10  57.10  57.10  89.75  89.75   89.75  2OSN  hR  
 end
+
+
+C:\Users\lca\Source\Repos\LatticeRepLib\x64\Release>cmdniggli | cmdperturb 1 20 | cmdniggli | plotc3
+P  57.98  57.98  57.98  92.02  92.02  92.02  1DPY  hR
+P  57.98  57.98  57.98  92.02  92.02  92.02  1FE5  hR
+P   80.36  80.36  99.44  90     90     120   1G0Z   hP
+P   80.36  80.36  99.44  90     90     120   1U4J   hP
+P  80.95  80.57  57.1   90     90.35   90    1G2X  mC
+P  57.10  57.10  57.10  89.75  89.75   89.75  2OSN  hR
+end
+; Graphical output SVG file =PLT__2023-05-11.10_46_32.svg
+
+C:\Users\lca\Source\Repos\LatticeRepLib\x64\Release>cmdniggli | cmdperturb 1 20 | cmdniggli | plotc3
+r  57.98  57.98  57.98  92.02  92.02  92.02  1DPY  hR
+r  57.98  57.98  57.98  92.02  92.02  92.02  1FE5  hR
+P   80.36  80.36  99.44  90     90     120   1G0Z   hP
+P   80.36  80.36  99.44  90     90     120   1U4J   hP
+P  80.95  80.57  57.1   90     90.35   90    1G2X  mC
+r  57.10  57.10  57.10  89.75  89.75   89.75  2OSN  hR
+end
+; Graphical output SVG file =PLT__2023-05-11.10_48_07.svg
+
+C:\Users\lca\Source\Repos\LatticeRepLib\x64\Release>cmdniggli | cmdperturb 1 20 | plotc3
+r  57.98  57.98  57.98  92.02  92.02  92.02  1DPY  hR
+r  57.98  57.98  57.98  92.02  92.02  92.02  1FE5  hR
+P   80.36  80.36  99.44  90     90     120   1G0Z   hP
+P   80.36  80.36  99.44  90     90     120   1U4J   hP
+C  80.95  80.57  57.1   90     90.35   90    1G2X  mC
+r  57.10  57.10  57.10  89.75  89.75   89.75  2OSN  hR
+end
+; Graphical output SVG file =PLT__2023-05-11.10_49_19.svg
+
+C:\Users\lca\Source\Repos\LatticeRepLib\x64\Release>cmdniggli
+; Niggli reduced
+r  57.98  57.98  57.98  92.02  92.02  92.02  1DPY  hR
+r  57.98  57.98  57.98  92.02  92.02  92.02  1FE5  hR
+P   80.36  80.36  99.44  90     90     120   1G0Z   hP
+P   80.36  80.36  99.44  90     90     120   1U4J   hP
+C  80.95  80.57  57.1   90     90.35   90    1G2X  mC
+r  57.10  57.10  57.10  89.75  89.75   89.75  2OSN  hR
+end
+G6  3361.680  3361.680  3361.680  -236.987  -236.987  -236.987
+G6  3361.680  3361.680  3361.680  -236.987  -236.987  -236.987
+G6  6457.730  6457.730  9888.314     0.000     0.000 -6457.730
+G6  6457.730  6457.730  9888.314     0.000     0.000 -6457.730
+G6  3260.410  3261.107  3261.107    30.689    28.236    28.236
+G6  3260.410  3260.410  3260.410    28.452    28.452    28.452
+
+C:\Users\lca\Source\Repos\LatticeRepLib\x64\Release>cmdniggli
+; Niggli reduced
+r  57.98  57.98  57.98  92.02  92.02  92.02  1DPY  hR
+r  57.98  57.98  57.98  92.02  92.02  92.02  1FE5  hR
+r   80.36  80.36  99.44  90     90     120   1G0Z   hP
+r   80.36  80.36  99.44  90     90     120   1U4J   hP
+C  80.95  80.57  57.1   90     90.35   90    1G2X  mC
+r  57.10  57.10  57.10  89.75  89.75   89.75  2OSN  hR
+end
+G6  3361.680  3361.680  3361.680  -236.987  -236.987  -236.987
+G6  3361.680  3361.680  3361.680  -236.987  -236.987  -236.987
+G6  3251.278  3251.278  3251.278    44.826    44.826    44.826
+G6  3251.278  3251.278  3251.278    44.826    44.826    44.826
+G6  3260.410  3261.107  3261.107    30.689    28.236    28.236
+G6  3260.410  3260.410  3260.410    28.452    28.452    28.452
+
+C:\Users\lca\Source\Repos\LatticeRepLib\x64\Release>cmdniggli | cmdperturb 1 20 | plotc3
+r  57.98  57.98  57.98  92.02  92.02  92.02  1DPY  hR
+r  57.98  57.98  57.98  92.02  92.02  92.02  1FE5  hR
+r   80.36  80.36  99.44  90     90     120   1G0Z   hP
+r   80.36  80.36  99.44  90     90     120   1U4J   hP
+C  80.95  80.57  57.1   90     90.35   90    1G2X  mC
+r  57.10  57.10  57.10  89.75  89.75   89.75  2OSN  hR
+end
+; Graphical output SVG file =PLT__2023-05-11.11_06_55.svg
+
+C:\Users\lca\Source\Repos\LatticeRepLib\x64\Release>cmddelone | cmdperturb 1 20 | plotc3
+r  57.98  57.98  57.98  92.02  92.02  92.02  1DPY  hR
+r  57.98  57.98  57.98  92.02  92.02  92.02  1FE5  hR
+r   80.36  80.36  99.44  90     90     120   1G0Z   hP
+r   80.36  80.36  99.44  90     90     120   1U4J   hP
+C  80.95  80.57  57.1   90     90.35   90    1G2X  mC
+r  57.10  57.10  57.10  89.75  89.75   89.75  2OSN  hR
+end
+; Graphical output SVG file =PLT__2023-05-11.11_10_30.svg
+
+C:\Users\lca\Source\Repos\LatticeRepLib\x64\Release>cmddelone | cmdperturb 5 20 | plotc3
+r  57.98  57.98  57.98  92.02  92.02  92.02  1DPY  hR
+r  57.98  57.98  57.98  92.02  92.02  92.02  1FE5  hR
+r   80.36  80.36  99.44  90     90     120   1G0Z   hP
+r   80.36  80.36  99.44  90     90     120   1U4J   hP
+C  80.95  80.57  57.1   90     90.35   90    1G2X  mC
+r  57.10  57.10  57.10  89.75  89.75   89.75  2OSN  hR
+end
+; Graphical output SVG file =PLT__2023-05-11.11_11_01.svg
+
+C:\Users\lca\Source\Repos\LatticeRepLib\x64\Release>cmdniggli | cmdperturb 5 20 | plotc3
+r  57.98  57.98  57.98  92.02  92.02  92.02  1DPY  hR
+r  57.98  57.98  57.98  92.02  92.02  92.02  1FE5  hR
+r   80.36  80.36  99.44  90     90     120   1G0Z   hP
+r   80.36  80.36  99.44  90     90     120   1U4J   hP
+C  80.95  80.57  57.1   90     90.35   90    1G2X  mC
+r  57.10  57.10  57.10  89.75  89.75   89.75  2OSN  hR
+end
+; Graphical output SVG file =PLT__2023-05-11.11_11_20.svg
+

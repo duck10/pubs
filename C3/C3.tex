@@ -285,7 +285,7 @@
 			$\mathcal{P}_r$ 	& $ \mathcal{P}_r(c_j)$ 	& $(x_j, x_j)$ 		& Plus real\\ 
 			$\mathcal{P}_i$ 	&  $\mathcal{P}_i(c_j)$  	& $(y_j, y_j)$ 		& Plus imag\\ 
 			$\Real$ 			&  $\Real(c_j)$ 			& $x_j$ or $(x_j,0)$		& Real \\ 
-			$\Imaginary$ 		&  $\Imaginary(c_j)$ 		& $y_j$ pr $(y_j,0)$ 		& Imaginary\\
+			$\Imaginary$ 		&  $\Imaginary(c_j)$ 		& $y_j$ or $(y_j,0)$ 		& Imaginary\\
 			\bottomrule
 		\end{tabular}		
 	\end{table}
@@ -501,7 +501,7 @@ the input, so the first row must contain some operator to
 be multiplied times input \ci, and the second and third
 elements of the matrix row must be zero. We create an operator
 ($Minus~real$) to transform the input \ci to the output \ci; so
-the first row of the reduction matrix is: $\Minus{}_i	 0		 0$. 
+the first row of the reduction matrix is: $\Minus{}_r	 0		 0$. 
 
 Element 2 of the result vector is (\siii+\si,~\sii+\si),
 and
@@ -520,10 +520,10 @@ operator and the element to put the  real part of \ciii of the input.
 The final matrix element of the second row (the second element)
 must extract the real part of input \cii and place it in the
 imaginary part of the output vector. The resulting second
-row of the matrix is $\Plus_r~\Real~i\Real$.
+row of the matrix is $\Plus_r~i\Real~\Real$.
 
 Using similar logic, the third row of the matrix is:
-$\Plus_r~\Imaginary~i\Imaginary$.
+$\Plus_r~i\Imaginary~\Imaginary$.
 
 Having derived the first matrix, the other 23 can
 be derived by the same process. However because all the
