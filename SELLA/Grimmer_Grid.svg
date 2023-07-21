@@ -1,0 +1,114 @@
+<?xml version="1.0" standalone="no" ?>
+<!--the width and height set the total pixel output of the image in the browser-->
+<!--whatever is within the viewbox will be remapped to show in this size-->
+<svg width="510" height="568" viewBox="1 510 568"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<g
+   transform=" translate(-50 -100)   scale( .8 .8)">
+
+   <line id="cI-tP-oP" x1="250" y1="300" x2="250" y2="600" style="stroke:rgb(0,0,0);stroke-width:3" />
+   <line id="cF-hR" x1="400" y1="300" x2="400" y2="450" style="stroke:rgb(0,0,0);stroke-width:3" />
+   <line id="cF-tI" x1="400" y1="300" x2="550" y2="450" style="stroke:rgb(0,0,0);stroke-width:3" />
+   <line id="cP-oI" x1="550" y1="300" x2="550" y2="600" style="stroke:rgb(0,0,0);stroke-width:3" />
+
+
+   <line id="cI-hR" x1="250" y1="300" x2="400" y2="450" style="stroke:rgb(0,0,0);stroke-width:3" />
+   <line id="cP-hR" x1="550" y1="300" x2="400" y2="450" style="stroke:rgb(0,0,0);stroke-width:3" />
+
+   <line id="hP-oS-mP" x1="325" y1="450" x2="323" y2="700" style="stroke:rgb(0,0,0);stroke-width:3" />
+   <line id="tP-oS" x1="250" y1="450" x2="323" y2="600" style="stroke:rgb(0,0,0);stroke-width:3" />
+   <line id="oS-mS" x1="323" y1="600" x2="495" y2="700" style="stroke:rgb(0,0,0);stroke-width:3" />
+   <line id="oP-mP" x1="250" y1="600" x2="323" y2="700" style="stroke:rgb(0,0,0);stroke-width:3" />
+   <line id="hR-mS" x1="400" y1="450" x2="495" y2="700" style="stroke:rgb(0,0,0);stroke-width:3" />
+   <line id="tI-oF" x1="550" y1="450" x2="495" y2="575" style="stroke:rgb(0,0,0);stroke-width:3" />
+   <line id="oI-mS" x1="550" y1="600" x2="495" y2="700" style="stroke:rgb(0,0,0);stroke-width:3" />
+   <line id="oF-mS" x1="495" y1="595" x2="495" y2="700" style="stroke:rgb(0,0,0);stroke-width:3" />
+   <line id="mp-aP" x1="323" y1="700" x2="405" y2="800" style="stroke:rgb(0,0,0);stroke-width:3" />
+   <line id="mS-aP" x1="495" y1="700" x2="405" y2="800" style="stroke:rgb(0,0,0);stroke-width:3" />
+<circle cx="250" cy="300" r="20" fill="white" stroke="black" stroke-width="3"/>
+<circle cx="400" cy="300" r="20" fill="white" stroke="black" stroke-width="3"/>
+<circle cx="550" cy="300" r="20" fill="white" stroke="black" stroke-width="3"/>
+<circle cx="250" cy="450" r="20" fill="white" stroke="black" stroke-width="3"/>
+<circle cx="325" cy="450" r="20" fill="white" stroke="black" stroke-width="3"/>
+<circle cx="400" cy="450" r="20" fill="white" stroke="black" stroke-width="3"/>
+<circle cx="550" cy="450" r="20" fill="white" stroke="black" stroke-width="3"/>
+<circle cx="250" cy="600" r="20" fill="white" stroke="black" stroke-width="3"/>
+<circle cx="325" cy="600" r="20" fill="white" stroke="black" stroke-width="3"/>
+<circle id="oF" cx = "495" cy="575" r="20" fill="white" stroke="black" stroke-width="3"/>
+<circle cx="550" cy="600" r="20" fill="white" stroke="black" stroke-width="3"/>
+<circle cx="323" cy="700" r="20" fill="white" stroke="black" stroke-width="3"/>
+<circle cx="495" cy="700" r="20" fill="white" stroke="black" stroke-width="3"/>
+<circle cx="405" cy="800" r="20" fill="white" stroke="black" stroke-width="3"/>
+<text x="239" y="307" font-size="25">cP</text>
+<text x="386" y="308" font-size="25" >cF</text>
+<text x="537" y="308" font-size="25" >cI</text>
+<text x="238" y="458" font-size="25" >tP</text>
+<text x="313" y="458" font-size="25" >hP</text>
+<text x="386" y="458" font-size="25" >hR</text>
+<text x="542" y="458" font-size="25" >tI</text>
+<text x="236" y="608" font-size="25" >oP</text>
+<text x="310" y="608" font-size="25" >oS</text>
+<text x="480" y="583" font-size="25" >oF</text>
+<text x="535" y="608" font-size="25" >oI</text>
+<text x="307" y="708" font-size="25" >mP</text>
+<text x="478" y="708" font-size="25" >mS</text>
+<text x="392" y="808" font-size="25" >aP</text>
+<text x="170" y="160" font-size="30" >Bravais Lattice Types Heirachy</text>
+<text x="170" y="210" font-size="25" > Grimmer, Hans, Acta Cryst.,  A71(2), 143-149 (2015)</text>
+   <rect id="cF" x="365" y="240" width="83" height="30" stroke-width="2" stroke="orange" fill="white" />
+   <text id="cF" x="375" y="262" font-size="22" font-family="sans-serif" letter-spacing="1">       rr0 rr0</text>
+
+   <rect id="cI" x="515" y="240" width="80" height="30" stroke-width="2" stroke="orange" fill="white" />
+   <text id="cI" x="525" y="262" font-size="22" font-family="sans-serif" letter-spacing="1">      rrr rrr </text>
+
+   <rect id="cP" x="215" y="240" width="87" height="30" stroke-width="2" stroke="orange" fill="white" />
+   <text id="cP" x="220" y="262" font-size="22" font-family="sans-serif" letter-spacing="1">       000 rrrr</text>
+
+   <g transform=" translate(-10 10)  ">    <rect id="hP" x="285" y="380" width="85" height="30" stroke-width="2" stroke="orange" fill="white" />
+   <text id="hP" x="293" y="402" font-size="22" font-family="sans-serif" letter-spacing="1">       00r rrs </text>
+</g>
+
+   <g transform=" translate(40 40)  ">    <rect id="hR" x="390" y="380" width="85" height="50" stroke-width="2" stroke="orange" fill="white" />
+   <text id="hR" x="400" y="400" font-size="22" font-family="sans-serif" letter-spacing="1">       rrr sss </text>
+   <text id="hR" x="400" y="420" font-size="22" font-family="sans-serif" letter-spacing="1">       rr0 sr0 </text>
+</g>
+
+   <g transform=" translate(90 20)  ">    <rect id="mS" x="441" y="650" width="87" height="70" stroke-width="2" stroke="orange" fill="white" />
+   <text id="mS" x="450" y="670" font-size="22" font-family="sans-serif" letter-spacing="1">      rrs ttu </text>
+   <text id="mS" x="450" y="690" font-size="22" font-family="sans-serif" letter-spacing="1">      rs0 stu </text>
+   <text id="mS" x="450" y="710" font-size="22" font-family="sans-serif" letter-spacing="1">      rst rsu </text>
+</g>
+
+   <g transform=" translate(-70 30)  ">    <rect id="mP" x="285" y="650" width="84" height="30" stroke-width="2" stroke="orange" fill="white" />
+   <text id="mP" x="291" y="672" font-size="22" font-family="sans-serif" letter-spacing="1">      00r stu </text>
+</g>
+   <rect id="oS" x="282" y="529" width="87" height="30" stroke-width="2" stroke="orange" fill="white" />
+   <text id="oS" x="290" y="552" font-size="22" font-family="sans-serif" letter-spacing="1">      00r sst </text>
+
+   <rect id="oF" x="460" y="519" width="80" height="30" stroke-width="2" stroke="orange" fill="white" />
+   <text id="oF" x="470" y="540" font-size="22" font-family="sans-serif" letter-spacing="1">       rrs rrt </text>
+
+   <g transform=" translate(40 30)  ">    <rect id="oI" x="539" y="529" width="85" height="50" stroke-width="2" stroke="orange" fill="white" />
+   <text id="oI" x="550" y="550" font-size="22" font-family="sans-serif" letter-spacing="1">       rs0 srt </text>
+   
+   <text id="oI" x="550" y="570" font-size="22" font-family="sans-serif" letter-spacing="1">       rst rst </text>
+</g>
+
+   <g transform=" translate(20 30)  ">    <rect id="oP" x="125" y="530" width="85" height="30" stroke-width="2" stroke="orange" fill="white" />
+   <text id="oP" x="131" y="553" font-size="22" font-family="sans-serif" letter-spacing="1">       000 rst </text>
+</g>
+
+   <g transform=" translate(40 40)  ">    <rect id="tI" x="539" y="380" width="83" height="50" stroke-width="2" stroke="orange" fill="white" />
+   <text id="tI" x="550" y="400" font-size="22" font-family="sans-serif" letter-spacing="1">      rrs rrs </text>
+   <text id="tI" x="550" y="420" font-size="22" font-family="sans-serif" letter-spacing="1">      rr0 rrs </text>
+</g>
+
+   <g transform=" translate(20 30)  ">    <rect id="tP" x="125" y="380" width="86" height="30" stroke-width="2" stroke="orange" fill="white" />
+   <text id="tP" x="132" y="402" font-size="22" font-family="sans-serif" letter-spacing="1">       000 rrs </text>
+</g>
+
+   </g>
+
+   </svg>
+
+
