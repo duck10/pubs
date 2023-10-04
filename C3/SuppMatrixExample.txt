@@ -45,9 +45,9 @@ static std::complex<double> c3_I_Times_Imag(const std::complex<double>& c) {
 C3 C3::c3_s1(const C3& a) {
    C3 c;
    c[0] = c3_Minus_Real(a[0]);
-   c[1] = c3_Plus_Real(a[0]) + c3_Real(a[1]) +
-        c3_I_Times_Real(a[2]);
-   c[2] = c3_Plus_Real(a[0]) + c3_Imag(a[1]) +
-        c3_I_Times_Imag(a[2]);
+   c[1] = c3_Plus_Real(a[0]) + c3_I_Times_Real(a[1]) +
+        c3_Real(a[2]);
+   c[2] = c3_Plus_Real(a[0]) + c3_Times_Imag(a[1]) +
+        c3_I_Imag(a[2]);
    return c;
 }
