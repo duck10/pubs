@@ -1,0 +1,197 @@
+Command: Check Input
+Purpose: Verify input lattice types and parameters
+Output type: Valid input is reported as unit cell a, b, c, &alpha;, &beta;, &gamma;. 
+Warnings are output for invalid inputs.
+Parameters: NA
+
+--------------------------------------------------
+Command: Generate cells of a particular type or types
+Purpose: To Create valid unit cells of various types
+Output type: Randomly chosen cell parameters for the various selected
+types. Output cells are reported in G<sup>6</sup> form. The 
+lattice type is shown following the numerical parameters.
+Parameters: (default values in parentheses)
+-- The number of cells of each type to be generated (1)
+-- The type(s) of selected output required. Examples are
+---- "all" (default) -- produces examples of each of the 44 Niggli types 
+(see the International Tables) and
+each of the 24 Delone types [HJB can we display the Delone chart?] (all)
+---- a number between 1 and 44 will generate examples of that Niggli type. For instance,
+24 will create Niggli type 24 (which is hR).
+---- "m" generates monoclinic examples
+---- "A1" generates a general triclinic Delone type with not S<sup>6</sup> zeros.
+---- "C" will generate cubic types [HJB, this is buggy and needs more work from LCA]
+---- Unrecognized input will generate all types
+
+--------------------------------------------------
+Command: compute Niggli-reduced primitive cells
+Purpose: Perform Niggli reduction on input cells
+Output type: G<sup>6</sup> form of the reduced cells of input
+Parameters: NA
+
+--------------------------------------------------
+Command: compute Selling-reduced primitive cells
+Purpose: Perform Selling/Delone reduction on input cells
+Output type: S<sup>6</sup> form of the reduced cells of input
+Parameters: NA
+
+--------------------------------------------------
+Command: compute NCDist and CS6Dist distances
+Purpose: For a group of input cells, distances are reported in 3 different calculations:
+the simple Euclidean distance, the NCDist (G<sup>6</sup>) distance, and the CS6Dist
+(S<sup>6</sup>) distances. Distances are calculated in 2 different ways. The first
+is the rolling calculation of pairs in the list. The second is the distance of each 
+cell from the first input cell.
+Output type: The distance for each input is output on a single line, starting with a 
+semicolon so that it will be ignored by succeeding programs. The input cells are echoed
+to the output line as primitive and a, b, c &alpha;, &beta;, &gamma; so that they 
+can be used for input. Each output cell is followed
+by its ordinal number, and the distance calculations list the ordinals for the
+cells used of each calculation.
+Parameters: NA
+
+--------------------------------------------------
+Command: apply Lattice Matching algorithm to listed cells
+Purpose: Taking the first input cells as the "REFERENCE", the alternative cells of
+each succeeding cell are examined to find a closest match to the reference. 
+Andrews, Lawrence C., Herbert J. Bernstein, and Nicholas K. Sauter. 
+"Approximating lattice similarity." 
+Acta Crystallographica Section A: Foundations and Advances 79.5 (2023).
+
+Output type: 
+Example:
+f 10 10 10  90 90 90
+p 7 7.1 6.9 59 60 61
+end
+; Lattice Matching
+F     10.000    10.000    10.000    90.000    90.000    90.000 ( 0  degrees in S6)   REFERENCE
+F     10.050     9.821     9.832    89.143    92.094    88.781 ( 3.07179  degrees in S6)
+end
+  
+  
+Parameters: NA
+
+--------------------------------------------------
+Command: compute path between pairs of cells
+Purpose: A series of points is computed between each pair of input cells. The
+computation is one in S<sup>6</sup>. For n input cells, n-1 paths will be
+generated.
+Output type: S6 
+Parameters: The number of points in -each- path.(20)
+
+--------------------------------------------------
+Command: compute perturbed versions of input cells
+Purpose: 
+Output type: unit cell edge lengths and angles
+Parameters: The number of perturbations of each input cell (20) and the amount of
+perturbation in parts-per-thousand (ppt) (1 ppt). The calculation is done S<sup>6</sup>.
+Example: requesting 10 perturbations and 10 ppt (1%) perturbations.
+f 10 10 10  90 90 90
+end
+; Perturb vectors
+
+F 10	10	10	90	90	90	    original inputCell
+F     9.940     9.916     9.884    89.573    89.357    89.565   perturbed  
+F    10.016    10.029     9.960    89.567    90.358    90.109   perturbed  
+F     9.956     9.921     9.929    89.938    89.497    89.452   perturbed  
+F     9.896     9.992    10.053    90.576    89.709    89.376   perturbed  
+F     9.969     9.989     9.984    90.509    89.490    89.668   perturbed  
+F     9.963     9.984     9.904    89.655    89.147    90.336   perturbed  
+F    10.015     9.928     9.962    89.793    90.276    89.394   perturbed  
+F    10.019     9.922     9.884    89.295    89.772    89.926   perturbed  
+F     9.914     9.918     9.909    89.327    89.348    89.820   perturbed  
+F    10.020     9.978    10.119    90.295    90.410    89.960   perturbed
+
+; CmdPerturb: number of cells to produce =  10  orthogonal perturbation of  10 /1000
+
+end
+
+--------------------------------------------------
+Command: apply S6 reflections to input cells
+Purpose: The 24 permutations of the S<sup>6</sup> cell vectors: a, b, , and d, where d=-a-b-c.
+Duplicates are removed.
+Output type: S<sup>6</sup>
+Parameters: NA
+
+--------------------------------------------------
+Command: apply Sella algorithm
+Purpose: Determine potentially higher symmetry for input cells
+Output type: agreement factors for each of the Bravais lattice types. Reduced cell
+information for the input cells.
+Graphical output: the figure of the hierarchy of Bravais lattice types 
+with numerical agreement determined by Sella.
+(Grimmer, H., & Nespolo, M. (2006). 
+Geminography: the crystallography of twins. Zeitschrift für Kristallographie-Crystalline Materials, 221(1), 28-50.)
+
+Parameters: choices if only some outputs are needed (all)
+
+--------------------------------------------------
+Command: compute Bravais tetrahedron (B4)
+Purpose: computes the edge vectors of the unit cell and their negative sum. These 4
+vectors also define the Bravais tetrahedron Delone, B. N., Galiulin, R. V., 
+& Shtogrin, M. I. (1975). On the Bravais types of 
+lattices. Journal of Soviet Mathematics, 4(1), 79-156.
+Output type: echoes the input cell as a, b, c, &alpha;, &beta;, &gamma;, 
+followed by the vectors and a listing of their lengths.
+Parameters: NA
+
+--------------------------------------------------
+Command: compute complex cell presentation (C<sup>3</sup>)
+Purpose: presents input cells as C<sup>3</sup>
+Output type: the C<sup>3</sup> version of the input. Note: at this time,
+these cannot be used as input to other programs.
+Parameters: NA
+Example:
+g 100 110 120 0 1 2
+end
+; To C3
+C3 (0.000,-101.500) (0.500,-111.000) (1.000,-120.500) 
+; 
+end
+
+--------------------------------------------------
+Command: compute side-angle cells (a, b, c, &alpha;, &beta;, &gamma;)
+Purpose: converts input cell representations to cell parameters
+Output type: a, b, c, &alpha, &beta;, &gamma;. If the input cell is not in 
+cell parameters already, then the output assumes primitive.
+Parameters: NA
+
+--------------------------------------------------
+Command: compute G<sup>6</sup> version of cells
+Purpose: 
+Output type: 
+Parameters: NA
+
+--------------------------------------------------
+Command: compute S<sup>6</sup> version of cells
+Purpose: 
+Output type: 
+Parameters: NA
+
+--------------------------------------------------
+Command: compute unsorted Dirichlet cells (dc7unsrt)
+Purpose: 
+Output type: 
+Parameters: NA
+
+--------------------------------------------------
+Command: compute volumes of listed cells
+Purpose: 
+Output type: 
+Parameters: NA
+
+--------------------------------------------------
+Command: compute linearized S<sup>6</sup> or Root Invariant version of cells
+Purpose: Both of the output choices are 6-space vectors of positive numbers.
+The values are derived by first applying Selling/Delone reduction so that all of 
+the S<sup>6</sup> values are non-positive. Then the square roots of the negative 
+of those values are used to create then result (linearized S<sup>6</sup>). The
+root invariant is generated by applying sorting rules of Bright, Cooper, and Kurlin.
+Bright, M., Cooper, A. I., & Kurlin, V. (2021). 
+Welcome to a continuous world of 3-dimensional lattices. 
+arXiv preprint arxiv:2109.11538, 2.
+Output type: 
+Parameters: blank for output both types, "R" for root invariant, 
+and S for linearized S<sup>6</sup>
+
+--------------------------------------------------

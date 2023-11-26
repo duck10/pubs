@@ -77,6 +77,8 @@
 \font\dummyft@=dummy \relax
 \makeatother
 
+\usepackage{setspace}
+
 
 \begin{document}                  % DO NOT DELETE THIS LINE
 
@@ -124,74 +126,88 @@
 	\newcommand{\cii}[0]{$c_2$}
 	\newcommand{\ciii}[0]{$c_3$}
 	
-	
-	
-	%-------------------------------------------------------------------------
-	% The main body of the paper
-	%-------------------------------------------------------------------------
-	% Now enter the text of the document in multiple \section's, \subsection's
-	% and \subsubsection's as required.
-	
 
-	\section{General responses}
+	\singlespacing
 	
+	\section{Note}
+	
+	Although this document is written in first person, Herbert
+	Bernstein has edited and agreed to all statements.
 
+	\section{Response to Reviewer 1}
+		
+	I would like to begin with the response to the issues of the reviewer
+	by quoting the abstract of our article:
 	
-	
-	\section{References to Sources for Information about the Calculations}
-\begin{itemize}
-	\item 	\emph{No operation:} simply check the input for errors
-	\item 	\emph{generate four C6 test cells}
-	\item 	\emph{compute Selling-reduced primitive cells:} Delone/Delaunay/Selling reduction \\
-	\cite{Delaunay1932}\\
-	\cite{Delone1975}\\
-	\cite{Andrews2019a}
-	\item 	\emph{compute NCDist and CS6Dist distances}\\
-	\cite{Andrews2014}\\
-	\cite{Andrews2019b}
-	\item \emph{	apply Lattice Matching algorithm to listed cells}\\
-	\cite{Mighell2002}\\
-	\cite{andrews2021approximate}
-	\item 	\emph{compute Niggli-reduced primitive cells}\\
-	\cite{Niggli1928}
-	\cite{Gruber1973}
-	\item 	\emph{compute path between pairs of cells}\\
-	\cite{andrews2023follower}
-	\item 	\emph{compute perturbed versions of input cells}\\
-	\cite{andrews2022generating}
-	\item 	\emph{apply S6 reflections to input cells}\\
-	\cite{Andrews2019b}
-	\item 	\emph{apply Sella algorithm}\\
-	\cite{andrews2023sella}
-	\item 	\emph{compute Bravais tetrahedron (B4)}\\
-	\cite{Delone1975}
-	\item 	\emph{compute Selling-reduced complex cell presentation (C3)}\\
-	\cite{Andrews2019b}
-	\item 	\emph{compute side-angle cells (a, b, c, $\alpha$, $\beta$, $\gamma$)}
-	\item 	\emph{compute raw Dirichlet cells (DC13)}\\
-	\cite{Bernstein2023}
-	\item 	\emph{computed sorted Dirichlet cells (DC)}\\
-	\cite{Bernstein2023}
-	\item 	\emph{compute Niggli-reduced cells (G6)}\\
-	\cite{Andrews2014}
-	\item 	\emph{compute Selling-reduced cells (S6)}\\
-	\cite{Andrews2019b}
-	\item 	\emph{compute unsorted Dirichlet cells (dc7unsrt)}\\
-	\cite{Andrews2019b}
-	\item 	\emph{compute volumes of listed cells}
-\end{itemize}	
+\begin{quote}
+	Several attributions exist for the reduced cells of lattices
+	and for the reduction processes to produce them. The actual
+	origins of the terms are compared and a taxonomy created. The
+	terms ``Niggli reduction", ``Niggli cell", ``Delaunay reduction",
+	and ``Delaunay cell" most accurately describe the crystallographic usages
+	of reduced cells and reduction methods. 
+\end{quote}
 
-%			\ack{{\bf Funding information}}      
-%			
-%			Funding for this research was provided in part by:  
-%			US Department of Energy Offices of Biological and 
-%			Environmental Research and of Basic Energy Sciences 
-%			(grant No. DE-AC02-98CH10886; grant No. E-SC0012704); 
-%			U.S. National Institutes of Health (grant No. P41RR012408; 
-%			grant No. P41GM103473; grant No. P41GM111244; 
-%			grant No. R01GM117126,
-%			grant No. 1R21GM129570); Dectris, Ltd.
-			
+It seems that Reviewer 1 has misunderstood the aim of the article, which is clearly given in the abstract.
+
+Reviewer 1:
+
+\begin{quotation}
+	Current manuscript suggests brief description of various approaches to the choice of
+reduced cells of crystal lattices and associated reduction methods. In fact, the problem of
+reduction for lattices has much more general mathematical meaning and consists in finding
+conditions on parameters of an “elementary cell” allowing to find for any lattice the unique
+(in certain sense) frame characterizing the elementary cell. The application to classification
+of 3-dimensional crystal lattices is an important physical problem and it is certainly
+very useful for specialists in crystallography to adapt and to follow terminology and
+the mathematical results formulated over more than 250-years history of such celebrated
+mathematical problem.
+After reading the current.
+\end{quotation}
+
+We completely agree with the reviewer's statements. But this is not
+the paper, nor the intent, to describe the important topics they allude to.
+Even our abstract is clear that this is not the intent. If the reviewer
+would prepare the article they describe, I would eagerly read it.
+
+On the issue of \cite{Delone1975}: unfortunately neither of us knows
+the Russian language, so we have always consulted the English translation.
+We agree that that paper is an important one. To point out an
+important point from that paper, they discuss unit cells as being in
+a metric space; it is the same space that we have elaborated as S6 
+in our own work.
+
+The reviewer's comment has led us to include a
+reference to that very useful article.
+
+
+	\section{Response to Reviewer 2}
+	
+	The reviewer writes:
+	
+\begin{quotation}
+		Ten methods are described in sequence included in alphabetical order of the authors. It is noticeable that the latest
+	date for the references of the methods is 1960 and many are from the 19th century. So I doubt the timeliness and
+	tbe relevance to crystallographers of this contribution.
+\end{quotation}
+
+It is true that the table that lists the types and their taxonomy does
+only have dates from 1960 and farther into the past. That is because
+the table lists the types and the dates of their original 
+creations/publication.
+
+The later text cites dates including 2023. 
+
+The only other issue this reviewer lists is whether to change
+the ordering of the descriptions of the types to chronological.
+While they could be changed, that change would make locating
+they particular types more difficult for someone who is not familiar with the original dates. I do not see the
+advantage of such a change.
+
+
+% \citeasnoun{OishiTomiyasu2012}
+
+
 			
 			\bibliography{Reduced}
 			
