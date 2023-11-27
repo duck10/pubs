@@ -1,0 +1,31 @@
+1. Introduction
+
+Welcome to the tutorial!
+What is this website?
+How to access the website
+2. Getting started
+
+Creating an account (if applicable)
+Logging in (if applicable)
+Navigating the website
+3. Using the programs
+
+Selecting a program
+Entering program parameters
+Viewing program output
+4. Exploring the programs
+
+Overview of the available programs
+Program descriptions and usage examples
+5. Troubleshooting
+
+Common problems
+Getting help
+6. Additional tips
+
+Making the most of the website's features
+Finding resources for further learning
+Since users cannot upload or change the programs, 
+the focus of the tutorial would shift towards 
+navigating the website, selecting and using the 
+available programs, and understanding their capabilities.

@@ -1,0 +1,187 @@
+WEB_LRL
+
+Lattice Representation Library for the Web
+
+1. Introduction
+
+Welcome to the tutorial!
+We hope you can find some things here that are interesting/useful/educational.
+
+What is this website?
+WEB_LRL is designed to provide a workspace/playground for investigating
+various aspects of crystallographic unit cells/lattices. We may use the
+terms unit cell and lattice quite interchangeably, but you should realize that
+technically they are not the same things; however, they are alternate
+ways to describe a crystal's lattice.
+
+So what can you do on this web site?
+-- there are tools to generate or modify unit cells
+-- there are tools to report some properties of unit cells
+-- there are tools to convert from one representation of a lattice to another
+-- there is a limited selection of tools to report lattice properties
+
+Structure of the web site
+At the bottom of the title section, there is a "Submit" button (and those are
+also in several places in the left column). That button causes selected calculations
+to be executed.
+Immediately below that section is a place to select "Number of operation windows". Each
+operation executed a single command/program to perform a selected task.
+The left hand column contains several items. The large selection box allows the choice
+of a single operation to perform; the operation will put its results into the
+"Tool Output" box immediately to the right.
+
+Immediately above the "Tool Output" box is a box labeled "Input data"; The Input data 
+box only is shown if the left-hand choice of "use new input" is selected. The choice of
+"use prior output" directs to use the data shown in the preceding "Tool Output" window
+as the "source of data".
+
+2. Getting started
+
+In principle, you can use this web site without knowing any crystallography
+or even without doing any entries. Let's do a simple example.
+
+At the top for "Number of operation windows", choose "1".
+In the left-hand column, choose "use new data.
+In the "Select an operation", choose "Generate cells of a particular type or types".
+When you do that, two new boxes appear before "Input data": "Number of each type" 
+and "Lattice type". For Number of each type, input "2"; for Lattice type, change "all"
+(or whatever is in that box) to "A2" (A2 selected the Delone type of triclinic (anorthic)
+lattice with one zero in the space S<sup>6</sup>).
+Click on "Submit".
+
+In the "Tool Output" windows, the program writes:
+; Generate cells
+; Delone lattice type requested 
+; lattice type = A2
+G6    31.196   131.880   109.653   -95.279    -5.133     0.000   Delone# = A2  aP
+G6    27.012   164.974   111.066  -169.317   -46.120     0.000   Delone# = A2  aP
+;
+end
+  
+This program outputs its data in G<sup>6</sup> representation. In this case,
+notice the zero value for g<sub>6</sub> (90 degrees).
+
+Of course, crystallographers are more used to seeing the lattice parameters
+as lengths and angles. So let's do that.
+
+Change the "Number of operations" to "2". When you do that, a second set of 
+boxes appears so that you can choose a following operation.
+
+For operations #2, choose "compute side-angle cells (a, b, c, &alpha;, &beta;, &gamma;)".
+Make sure that the "Source of data" is set to "use prior output".
+Click "Submit". The result should appear in the "Tool Output" window for operations #2.
+
+; To Cell
+P     5.585    11.484    10.472   113.338    92.515    90.000 
+P     5.197    12.844    10.539   128.713   114.898    90.000 
+end
+  
+That's the operations guide for almost everything on the site. One important thing
+remains: how to input your own data. So let's do a simple example.
+
+In the "number of operations" box, select "3".
+In the first "Select an operation" box, select "Check input". 
+Enter two lines of data:
+P 10 10 10  90 90 90 ( a simple cubic unit cell)
+p 10 10 x10 90 90 90
+and follow with "end" if it not already there
+
+In the second "Select an operations" box select "compute perturbed versions of input cells".
+When you do that, above the second "Tool output" window, two items appear requesting
+"Number of perturbations" and "Parts per thousand". Enter "5" and "10" for those.
+In the third "Select an operations" box select "compute volumes of listed cells".
+Make sure that the second and third operations specify "use prior output".
+Finally, click on "Submit".
+
+The results now appear in the 3 "Tool output" windows.
+
+First output window:
+; CheckInput
+; invalid cell parameter (A)
+P   10.000    10.000    10.000    90.000    90.000    90.000 
+end
+  
+Note two things here: first the invalid cell was detected on input; second,
+the warning message is begun with a semicolon, which will be ignored in
+succeeding programs using it for input.
+
+Second output window:
+; Perturb vectors
+
+P 10.000	10.000	10.000	90.000	90.000	90.000		    original inputCell
+P     9.940     9.916     9.884    89.573    89.357    89.565   perturbed  
+P    10.016    10.029     9.960    89.567    90.358    90.109   perturbed  
+P     9.956     9.921     9.929    89.938    89.497    89.452   perturbed  
+P     9.896     9.992    10.053    90.576    89.709    89.376   perturbed  
+P     9.969     9.989     9.984    90.509    89.490    89.668   perturbed  
+; 
+
+The thing to notice here is that the perturbed cells are all very
+similar to the original input cell.
+
+Third output window:
+; Volume
+  P    10.000    10.000    10.000    90.000    90.000    90.000   Volume = 1000
+  P     9.940     9.916     9.884    89.573    89.357    89.565   Volume = 974.101
+  P    10.016    10.029     9.960    89.567    90.358    90.109   Volume = 1000.44
+  P     9.956     9.921     9.929    89.938    89.497    89.452   Volume = 980.639
+  P     9.896     9.992    10.053    90.576    89.709    89.376   Volume = 993.926
+  P     9.969     9.989     9.984    90.509    89.490    89.668   Volume = 994.114
+end
+
+Note that the volumes are near to the value of the unperturbed cell (1000). The
+1% change request is calculated in the S<sup>6</sup> space, so the volumes do
+not directly reflect that amount.
+
+3. Input types for WEB_LRL  
+
+
+
+LRL_Web Data Inputs:  There are 5 types of input lines Except for “END”, 
+they can be combined in any order. All these are case-insensitive. 
+If a particular input lattice is invalid, it is rejected with a message.
+---  RANDOM: Random (valid) unit cell;
+---  Crystal lattice input: “A”, “B”, “C”, “P”, “R”, “F”, “I” followed 
+by three axis lengths and three angles (in degrees);
+---  semicolon: lines beginning with a semicolon are treated as comments
+---  Vector Input: g (or v or g6) for G6 vectors; s (or s6) for S6, 
+Delone/Selling scalars, C3 for C3 input (without parentheses or 
+commas, “C” would be interpreted as a C-centered unit cell), 
+u for unsorted Dirichlet 7-cells.
+---  END: ends the data input section
+
+
+
+
+4. Overview of available programs
+
+Information
+-- Check Input
+-- compute NCDist and CS6Dist distances
+-- compute volumes of listed cells
+-- apply Sella algorithm
+Andrews, L. C., Bernstein, H. J., & Sauter, N. K. (2023). 
+SELLA--A Program for Determining Bravais Lattice Types. 
+arXiv preprint arXiv:2303.03122.
+
+Output Only
+-- Generate cells of a particular type or types
+
+Type Conversion
+-- compute Bravais tetrahedron (B4)
+-- compute complex cell presentation (C<sup>3</sup>)
+-- compute side-angle cells (a, b, c, &alpha;, &beta;, &gamma;)
+-- compute G<sup>6</sup> version of cells
+-- compute S<sup>6</sup> version of cells
+-- compute linearized S<sup>6</sup> or Root Invariant version of cells
+-- compute unsorted Dirichlet cells (dc7unsrt)
+
+Reduction
+-- compute Selling-reduced primitive cells
+-- compute Niggli-reduced primitive cells
+
+Modify Input
+-- apply Lattice Matching algorithm to listed cells
+-- compute path between pairs of cells
+-- compute perturbed versions of input cells
+-- apply S6 reflections to input cells
