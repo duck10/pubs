@@ -1,0 +1,36 @@
+---- potential reviewers
+Mois mois.aroyo+AEA-gmail.com
+Simmons simmonsc+AEA-hawaii.ed
+Stenkamp stenkamp+AEA-u.washington.edu
+Kurlin vitaliy.kurlin+AEA-gmail.com
+Bright mattbright1974+AEA-gmail.com
+EMRE TA+AV4-CI +ADw-emre.tasci+AEA-hacettepe.edu.tr+AD4-
+
+
+
+Dear Friends and Colleagues,
+
+Subject: announcing WEB+AF8-LRL
+
+We would like to invite you to look at the web site we are developing. It is still 
+in an early phase, but what is there is functional. The intent of WEB+AF8-LRL is to
+increase the availability of software we have written over the years that deals with
+unit cells/lattices and their transformations and properties.
+
+It's still early days, so we would like to hear about issues you might find. There
+are still a few known problem areas, but letting us know when you find them
+can help us resolve them.
+
+Except for one program, they all take the same kind of unit cell input,
+and most write output that can be used to input to another program. The
+site facilitates such chaining together of the programs. 
+
+All of the program source (including the web site) are open source 
+software, freely available to all.
+
+We will appreciate your feedback should you find this useful. Your
+comments and suggestions for additions and for error correction 
+will be gladly welcomed.
+
+Herbert J. Bernstein
+Lawrence C. Andrews

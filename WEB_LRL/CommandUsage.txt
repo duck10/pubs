@@ -84,7 +84,8 @@ Command: compute perturbed versions of input cells
 Purpose: 
 Output type: unit cell edge lengths and angles
 Parameters: The number of perturbations of each input cell (20) and the amount of
-perturbation in parts-per-thousand (ppt) (1 ppt). The calculation is done S<sup>6</sup>.
+perturbation in parts-per-thousand (ppt) (1 ppt). The calculation is done S<sup>6</sup>,
+and the perturbation is in a direction orthogonal to the S<sup>6</sup> vector..
 Example: requesting 10 perturbations and 10 ppt (1%) perturbations.
 f 10 10 10  90 90 90
 end
