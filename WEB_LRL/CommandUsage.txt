@@ -19,20 +19,22 @@ each of the 24 Delone types [HJB can we display the Delone chart?] (all)
 ---- a number between 1 and 44 will generate examples of that Niggli type. For instance,
 24 will create Niggli type 24 (which is hR).
 ---- "m" generates monoclinic examples
----- "A1" generates a general triclinic Delone type with not S<sup>6</sup> zeros.
+---- "A1" generates a general triclinic Delone type with no S<sup>6</sup> zeros.
 ---- "C" will generate cubic types [HJB, this is buggy and needs more work from LCA]
 ---- Unrecognized input will generate all types
 
 --------------------------------------------------
 Command: compute Niggli-reduced primitive cells
-Purpose: Perform Niggli reduction on input cells
+Purpose: Perform Niggli reduction on input cells. The result has
+the shortest edge lengths of the lattice, and is the "most orthogonal" unit cell.
 Output type: G<sup>6</sup> form of the reduced cells of input
 Parameters: NA
 
 --------------------------------------------------
 Command: compute Selling-reduced primitive cells
 Purpose: Perform Selling/Delone reduction on input cells
-Output type: S<sup>6</sup> form of the reduced cells of input
+Output type: S<sup>6</sup> form of the reduced cells of input. The Delone-reduced
+cell has only non-acute interaxial angles.
 Parameters: NA
 
 --------------------------------------------------
@@ -42,10 +44,10 @@ the simple Euclidean distance, the NCDist (G<sup>6</sup>) distance, and the CS6D
 (S<sup>6</sup>) distances. Distances are calculated in 2 different ways. The first
 is the rolling calculation of pairs in the list. The second is the distance of each 
 cell from the first input cell.
-Output type: The distance for each input is output on a single line, starting with a 
+Output type: The distances for each input is output on a single line, starting with a 
 semicolon so that it will be ignored by succeeding programs. The input cells are echoed
 to the output line as primitive and a, b, c &alpha;, &beta;, &gamma; so that they 
-can be used for input. Each output cell is followed
+can be used for further input. Each output cell is followed
 by its ordinal number, and the distance calculations list the ordinals for the
 cells used of each calculation.
 Parameters: NA
@@ -56,9 +58,10 @@ Purpose: Taking the first input cells as the "REFERENCE", the alternative cells 
 each succeeding cell are examined to find a closest match to the reference. 
 Andrews, Lawrence C., Herbert J. Bernstein, and Nicholas K. Sauter. 
 "Approximating lattice similarity." 
-Acta Crystallographica Section A: Foundations and Advances 79.5 (2023).
+Acta Crystallographica Section A: Foundations and Advances 79.5, 480-484 (2023).
 
-Output type: 
+Output type: a, b, c &alpha;, &beta;, &gamma;, with the lattice centering
+chosen to be the same as that of the reference cell.
 Example:
 f 10 10 10  90 90 90
 p 7 7.1 6.9 59 60 61
@@ -74,9 +77,10 @@ Parameters: NA
 --------------------------------------------------
 Command: compute path between pairs of cells
 Purpose: A series of points is computed between each pair of input cells. The
-computation is one in S<sup>6</sup>. For n input cells, n-1 paths will be
-generated.
-Output type: S6 
+computation is done in S<sup>6</sup>. For n input cells, n-1 paths will be
+generated. The individual points are labeled with their ordinals, and each 
+segment is labeled (after the 6 parameters).
+Output type: S6
 Parameters: The number of points in -each- path.(20)
 
 --------------------------------------------------
@@ -113,6 +117,16 @@ Purpose: The 24 permutations of the S<sup>6</sup> cell vectors: a, b, , and d, w
 Duplicates are removed.
 Output type: S<sup>6</sup>
 Parameters: NA
+Example:
+C:\Users\lca\Source\Repos\duck10\LatticeRepLib\x64\Debug>cmds6refl
+f 10 10 10  90 90 90
+end
+; S6 reflections
+S6   0.00000   0.00000   0.00000 -100.00000 -100.00000 -100.00000   0
+S6   0.00000 -100.00000 -100.00000 -100.00000   0.00000   0.00000   1
+S6 -100.00000   0.00000 -100.00000   0.00000 -100.00000   0.00000   2
+S6 -100.00000 -100.00000   0.00000   0.00000   0.00000 -100.00000   3
+
 
 --------------------------------------------------
 Command: apply Sella algorithm
@@ -133,7 +147,8 @@ vectors also define the Bravais tetrahedron Delone, B. N., Galiulin, R. V.,
 & Shtogrin, M. I. (1975). On the Bravais types of 
 lattices. Journal of Soviet Mathematics, 4(1), 79-156.
 Output type: echoes the input cell as a, b, c, &alpha;, &beta;, &gamma;, 
-followed by the vectors and a listing of their lengths.
+followed by the vector representations of the unit cell edges,
+and then a listing of their lengths.
 Parameters: NA
 
 --------------------------------------------------

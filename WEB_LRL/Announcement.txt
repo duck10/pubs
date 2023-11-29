@@ -5,16 +5,20 @@ Stenkamp stenkamp+AEA-u.washington.edu
 Kurlin vitaliy.kurlin+AEA-gmail.com
 Bright mattbright1974+AEA-gmail.com
 EMRE TA+AV4-CI +ADw-emre.tasci+AEA-hacettepe.edu.tr+AD4-
-
+aaron asbrewster+AEA-lbl.gov
+sarah o'brien zods.meow+AEA-gmail.com
 
 
 Dear Friends and Colleagues,
 
-Subject: announcing WEB+AF8-LRL
+Subject: announcing WEB_LRL
 
-We would like to invite you to look at the web site we are developing. It is still 
-in an early phase, but what is there is functional. The intent of WEB+AF8-LRL is to
-increase the availability of software we have written over the years that deals with
+We would like to invite you to look at the web site we are developing.
+http://blondie.arcib.org:8083/+AH4-yaya/lrl_web/
+
+It is still in an early phase, but what is there is functional. The intent 
+of WEB_LRL is to increase the availability and visibility 
+of software we have written over the years that deal with
 unit cells/lattices and their transformations and properties.
 
 It's still early days, so we would like to hear about issues you might find. There
@@ -23,14 +27,20 @@ can help us resolve them.
 
 Except for one program, they all take the same kind of unit cell input,
 and most write output that can be used to input to another program. The
-site facilitates such chaining together of the programs. 
+site facilitates such chaining together of the programs.  (That one program
+simply generates data for other programs to use.)
 
-All of the program source (including the web site) are open source 
+All of the program sources (including the web site) are open source 
 software, freely available to all.
 
 We will appreciate your feedback should you find this useful. Your
 comments and suggestions for additions and for error correction 
 will be gladly welcomed.
 
+Although the site is easily used without help, we are attaching a
+summary of information about the individual commands available and
+also a short tutorial. Like the web site, these are still works-in-progress.
+
+With our best wishes,
 Herbert J. Bernstein
-Lawrence C. Andrews
+Lawrence (Larry) C. Andrews
