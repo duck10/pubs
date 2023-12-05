@@ -1,14 +1,14 @@
-Command: Check Input
+<em>Command: Check Input</em>
 Purpose: Verify input lattice types and parameters
 Output type: Valid input is reported as unit cell a, b, c, &alpha;, &beta;, &gamma;. 
 Warnings are output for invalid inputs.
 Parameters: NA
 
 --------------------------------------------------
-Command: Generate cells of a particular type or types
-Purpose: To Create valid unit cells of various types
-Output type: Randomly chosen cell parameters for the various selected
-types. Output cells are reported in G<sup>6</sup> form. The 
+<em>Command: Generate cells of a particular type or types</em>
+Purpose: To Create valid unit cells of various user-chose types
+Output type: Output cells are reported in G<sup>6</sup> form. Randomly 
+chosen cell parameters for the various selected types.
 lattice type is shown following the numerical parameters.
 Parameters: (default values in parentheses)
 -- The number of cells of each type to be generated (1)
@@ -17,28 +17,30 @@ Parameters: (default values in parentheses)
 (see the International Tables) and
 each of the 24 Delone types [HJB can we display the Delone chart?] (all)
 ---- a number between 1 and 44 will generate examples of that Niggli type. For instance,
-24 will create Niggli type 24 (which is hR).
----- "m" generates monoclinic examples
+24 will create Niggli type 24 (which is hR). {1..44}
+---- "m" generates monoclinic examples {c, t, h, o, m, a}
+---- "mC" generates C-centered monoclinic examples {mP, mS, mC, hR, hP, tP, tI, cF, cI, cP, aP}
 ---- "A1" generates a general triclinic Delone type with no S<sup>6</sup> zeros.
----- "C" will generate cubic types [HJB, this is buggy and needs more work from LCA]
+---- "O4" generates one of the centered orthorhombic Delone type with signature {00r sst}.
+---- "O" will generate all orthombic Delone types {C, T, H, O, M, A}
 ---- Unrecognized input will generate all types
 
 --------------------------------------------------
-Command: compute Niggli-reduced primitive cells
+<em>Command: compute Niggli-reduced primitive cells</em>
 Purpose: Perform Niggli reduction on input cells. The result has
 the shortest edge lengths of the lattice, and is the "most orthogonal" unit cell.
 Output type: G<sup>6</sup> form of the reduced cells of input
 Parameters: NA
 
 --------------------------------------------------
-Command: compute Selling-reduced primitive cells
+<em>Command: compute Selling-reduced primitive cells</em>
 Purpose: Perform Selling/Delone reduction on input cells
 Output type: S<sup>6</sup> form of the reduced cells of input. The Delone-reduced
 cell has only non-acute interaxial angles.
 Parameters: NA
 
 --------------------------------------------------
-Command: compute NCDist and CS6Dist distances
+<em>Command: compute NCDist and CS6Dist distances</em>
 Purpose: For a group of input cells, distances are reported in 3 different calculations:
 the simple Euclidean distance, the NCDist (G<sup>6</sup>) distance, and the CS6Dist
 (S<sup>6</sup>) distances. Distances are calculated in 2 different ways. The first
@@ -53,7 +55,7 @@ cells used of each calculation.
 Parameters: NA
 
 --------------------------------------------------
-Command: apply Lattice Matching algorithm to listed cells
+<em>Command: apply Lattice Matching algorithm to listed cells</em>
 Purpose: Taking the first input cells as the "REFERENCE", the alternative cells of
 each succeeding cell are examined to find a closest match to the reference. 
 Andrews, Lawrence C., Herbert J. Bernstein, and Nicholas K. Sauter. 
@@ -75,17 +77,17 @@ end
 Parameters: NA
 
 --------------------------------------------------
-Command: compute path between pairs of cells
+<em>Command: compute path between pairs of cells</em>
 Purpose: A series of points is computed between each pair of input cells. The
 computation is done in S<sup>6</sup>. For n input cells, n-1 paths will be
 generated. The individual points are labeled with their ordinals, and each 
 segment is labeled (after the 6 parameters).
-Output type: S6
+Output type: S<sup>6</sup>
 Parameters: The number of points in -each- path.(20)
 
 --------------------------------------------------
-Command: compute perturbed versions of input cells
-Purpose: 
+<em>Command: compute perturbed versions of input cells</em>
+Purpose: For each input cell, compute slight altered versions
 Output type: unit cell edge lengths and angles
 Parameters: The number of perturbations of each input cell (20) and the amount of
 perturbation in parts-per-thousand (ppt) (1 ppt). The calculation is done S<sup>6</sup>,
@@ -112,7 +114,7 @@ F    10.020     9.978    10.119    90.295    90.410    89.960   perturbed
 end
 
 --------------------------------------------------
-Command: apply S6 reflections to input cells
+<em>Command: apply S6 reflections to input cells</em>
 Purpose: The 24 permutations of the S<sup>6</sup> cell vectors: a, b, , and d, where d=-a-b-c.
 Duplicates are removed.
 Output type: S<sup>6</sup>
@@ -127,11 +129,24 @@ S6   0.00000 -100.00000 -100.00000 -100.00000   0.00000   0.00000   1
 S6 -100.00000   0.00000 -100.00000   0.00000 -100.00000   0.00000   2
 S6 -100.00000 -100.00000   0.00000   0.00000   0.00000 -100.00000   3
 
+or presenting those as unit cells:
+P    10.000    10.000    10.000    90.000    90.000    90.000 
+P    17.321    10.000    10.000    90.000   125.264   125.264 
+P    10.000    17.321    10.000   125.264    90.000   125.264 
+P    10.000    10.000    17.321   125.264   125.264    90.000 
+
+The values of 17.321 are from the Delone "d" vector, d=-(a+b+c)
+
+But Niggli reduction of those 4 cells gives:
+G6   100.000   100.000   100.000     0.000     0.000     0.000 
+G6   100.000   100.000   100.000     0.000     0.000     0.000 
+G6   100.000   100.000   100.000     0.000     0.000     0.000 
+G6   100.000   100.000   100.000     0.000     0.000     0.000 
 
 --------------------------------------------------
-Command: apply Sella algorithm
+<em>Command: apply Sella algorithm</em>
 Purpose: Determine potentially higher symmetry for input cells
-Output type: agreement factors for each of the Bravais lattice types. Reduced cell
+Output type: agreement factors for each of the Bravais lattice types, and reduced cell
 information for the input cells.
 Graphical output: the figure of the hierarchy of Bravais lattice types 
 with numerical agreement determined by Sella.
@@ -141,7 +156,7 @@ Geminography: the crystallography of twins. Zeitschrift für Kristallographie-Cry
 Parameters: choices if only some outputs are needed (all)
 
 --------------------------------------------------
-Command: compute Bravais tetrahedron (B4)
+<em>Command: compute Bravais tetrahedron (B4)</em>
 Purpose: computes the edge vectors of the unit cell and their negative sum. These 4
 vectors also define the Bravais tetrahedron Delone, B. N., Galiulin, R. V., 
 & Shtogrin, M. I. (1975). On the Bravais types of 
@@ -152,7 +167,7 @@ and then a listing of their lengths.
 Parameters: NA
 
 --------------------------------------------------
-Command: compute complex cell presentation (C<sup>3</sup>)
+<em>Command: compute complex cell presentation (C<sup>3</sup>)</em>
 Purpose: presents input cells as C<sup>3</sup>
 Output type: the C<sup>3</sup> version of the input. Note: at this time,
 these cannot be used as input to other programs.
@@ -166,47 +181,56 @@ C3 (0.000,-101.500) (0.500,-111.000) (1.000,-120.500)
 end
 
 --------------------------------------------------
-Command: compute side-angle cells (a, b, c, &alpha;, &beta;, &gamma;)
+<em>Command: compute side-angle cells (a, b, c, &alpha;, &beta;, &gamma;)</em>
 Purpose: converts input cell representations to cell parameters
 Output type: a, b, c, &alpha, &beta;, &gamma;. If the input cell is not in 
-cell parameters already, then the output assumes primitive.
+cell parameters already, then primitive is assumed.
 Parameters: NA
 
 --------------------------------------------------
-Command: compute G<sup>6</sup> version of cells
-Purpose: 
-Output type: 
+<em>Command: compute G<sup>6</sup> version of cells</em>
+Purpose: convert to G<sup>6</sup> representation
+Output type: G<sup>6</sup>
 Parameters: NA
 
 --------------------------------------------------
-Command: compute S<sup>6</sup> version of cells
-Purpose: 
-Output type: 
+<em>Command: compute S<sup>6</sup> version of cells</em>
+Purpose: convert to S<sup>6</sup> representation
+Output type: S<sup>6</sup>
 Parameters: NA
 
 --------------------------------------------------
-Command: compute unsorted Dirichlet cells (dc7unsrt)
-Purpose: 
-Output type: 
+<em>Command: compute unsorted Dirichlet cells (dc7unsrt)</em>
+Purpose: convert to the 7 parameter form related to the Dirichlet (also Vornoi or Wigner-Seitz) unit cell.
+Output type: DC7u
 Parameters: NA
 
 --------------------------------------------------
-Command: compute volumes of listed cells
-Purpose: 
-Output type: 
+<em>compute V7 version of cells</em>
+Purpose: convert to the 7 parameter vector of Andrews, Bernstein, Pelletier, 1980.
+The vector is define in terms of the Niggli reduced cell a,b,c and the Niggli reduced
+reciprocal cell 1/a*, 1/b*, 1/c*, and the cube root of the reduced cell volume.
+Output type: V<sup>7</sup>
 Parameters: NA
 
 --------------------------------------------------
-Command: compute linearized S<sup>6</sup> or Root Invariant version of cells
+<em>Command: compute volumes of listed cells</em>
+Purpose: compute volumes of listed cells
+Output type: Lattice centering, then cell parameters (a, b, c, &alpha;, &beta;, &gamma;), 
+followed by the volume
+Parameters: NA
+
+--------------------------------------------------
+<em>Command: compute linearized S<sup>6</sup> or Root Invariant version of cells</em>
 Purpose: Both of the output choices are 6-space vectors of positive numbers.
 The values are derived by first applying Selling/Delone reduction so that all of 
 the S<sup>6</sup> values are non-positive. Then the square roots of the negative 
-of those values are used to create then result (linearized S<sup>6</sup>). The
+of those values are used to create the result (linearized S<sup>6</sup>). The
 root invariant is generated by applying sorting rules of Bright, Cooper, and Kurlin.
 Bright, M., Cooper, A. I., & Kurlin, V. (2021). 
 Welcome to a continuous world of 3-dimensional lattices. 
 arXiv preprint arxiv:2109.11538, 2.
-Output type: 
+Output type: The type followed by the 7 parameters.
 Parameters: blank for output both types, "R" for root invariant, 
 and S for linearized S<sup>6</sup>
 

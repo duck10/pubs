@@ -27,7 +27,7 @@ also in several places in the left column). That button causes selected calculat
 to be executed.
 
 Immediately below that section is a place to select "Number of operation windows". Each
-operation executed a single command/program to perform a selected task.
+operation executes a single command/program to perform a selected task.
 The left hand column contains several items. The large selection box allows the choice
 of a single operation to perform; the operation will put its results into the
 "Tool Output" box immediately to the right.
@@ -37,7 +37,7 @@ to be used by the following one.
 
 Immediately above the "Tool Output" box is a box labeled "Input data"; The Input data 
 box only is shown if the left-hand choice of "use new input" is selected. The choice of
-"use prior output" directs to use the data shown in the preceding "Tool Output" window
+"use prior output" directs to use the data shown in the adjacent "Tool Output" window
 as the "source of data".
 
 2. Getting started
@@ -47,8 +47,8 @@ or even without doing any entries. Let's do a simple example.
 
 At the top for "Number of operation windows", choose "1".
 In the left-hand column, choose "use new data.
-In the "Select an operation", choose "Generate cells of a particular type or types".
-When you do that, two new boxes appear before "Input data": "Number of each type" 
+In the "Select an operation" box, choose "Generate cells of a particular type or types".
+When you do that, two new boxes appear above "Input data": "Number of each type" 
 and "Lattice type". For Number of each type, input "2"; for Lattice type, change "all"
 (or whatever is in that box) to "A2" (in the space S<sup>6</sup>A2 selects 
 the Delone type of triclinic (anorthic) lattices with one zero).
@@ -64,7 +64,7 @@ G6    27.012   164.974   111.066  -169.317   -46.120     0.000   Delone# = A2  a
 end
   
 This program outputs its data in G<sup>6</sup> representation. In this case,
-notice the zero value for g<sub>6</sub> (90 degrees).
+notice the zero value for g<sub>6</sub> (90 degrees) , which define case A2.
 
 Of course, crystallographers are more used to seeing the lattice parameters
 as lengths and angles. So let's do that.
@@ -72,7 +72,7 @@ as lengths and angles. So let's do that.
 Change the "Number of operations" to "2". When you do that, a second set of 
 boxes appears so that you can choose a following operation.
 
-For operations #2, choose "compute side-angle cells (a, b, c, &alpha;, &beta;, &gamma;)".
+For operation #2, choose "compute side-angle cells (a, b, c, &alpha;, &beta;, &gamma;)".
 Make sure that the "Source of data" is set to "use prior output".
 Click "Submit". The result should appear in the "Tool Output" window for operations #2.
 
@@ -91,10 +91,11 @@ P 10 10 10  90 90 90 (a simple cubic unit cell)
 p 10 10 x10 90 90 90 (note the error in the fourth entry)
 and follow with "end" if it not already there
 
-In the second "Select an operations" box select "compute perturbed versions of input cells".
+In the second "Select an operation" box select "compute perturbed versions of input cells".
 When you do that, above the second "Tool output" window, two items appear requesting
-"Number of perturbations" and "Parts per thousand". Enter "5" and "10" for those.
-In the third "Select an operations" box select "compute volumes of listed cells".
+"Number of perturbations" and "Parts per thousand; enter "5" and "10" for those.
+
+In the third "Select an operation" box, select "compute volumes of listed cells".
 Make sure that the second and third operations specify "use prior output".
 Finally, click on "Submit".
 
@@ -108,7 +109,7 @@ end
   
 Note two things here: first the invalid cell was detected on input; second,
 the warning message is begun with a semicolon, which will be ignored in
-succeeding programs using it for input.
+succeeding programs using the output for input.
 
 Second output window:
 ; Perturb vectors
@@ -148,14 +149,14 @@ and then calculate the distances between the points.
 To begin, set the number of operations to 3. The first one should be for
 new input, and the later 2 for using prior input.
 
-For the first one, in the "Input data" box, type:
+For the first operation, in the "Input data" box, type:
 p 10 10 10 90 90 10.1
 p 10 10 10 90 90 170.1
 end
   
 and choose: "compute path between pairs of cells".
 
-For the second operation, choose "a, b, c, &alpha;, &beta;, &gamma;",
+For the second operation, choose "compute side-angle cells (a, b, c, &alpha;, &beta;, &gamma;)",
 and "use prior data".
 
 For the third operation, choose "compute NCDist and CS6Dist distances",
@@ -201,22 +202,25 @@ And in the third "Tool output" window, we see:
 So what have we learned here? In the first output, we see the cells in S<sup>6</sup>
 format, but in the second, we see them in the more familiar a, b, c &alpha;, &beta;, &gamma;.
 Finally, in the third output window, we the NCDist and CS6Dist distance between neighboring
-points changing more or less smoothly (in the 17s), except for the distance 
+points Those are followed by the unit cells listed along with their ordinals.
+
+Examining the output, we see the NCDist and CS6SDist distances changing more or less smoothly 
+(in the 20s and 17s), except for the distance 
 between cells 10 and 11 (about 0.1-0.2). How can we examine the cause of that anomaly
 in more detail?
 
-Change the number of operations to 5. For operation 4, change to use new data.
+Change the number of operations to 5. For operation 4, change to ""use new data"".
 Go to the output window for operation 3, and 
-copy the cells for ordinals 10 and 11.
+copy the cells for ordinals 10 and 11:
+P   10.000    10.000    10.000    90.000    90.000    87.046     10
+P   10.000    10.000    10.000    90.000    90.000    92.988     11
+and paste them into the Tool input window for operation 4. 
 
-Make sure to select use new data, and choose
+Make sure to select ""use new data"", and choose
 "compute Niggli-reduced primitive cells".
-  P   10.000    10.000    10.000    90.000    90.000    87.046     10
-  P   10.000    10.000    10.000    90.000    90.000    92.988     11
-and paste them into the Tool input window for operation 4. Add "end" after
-the two cells.
+Add "end" after the two cells.
 
-For operaton 5, make sure it says use prior data, and choose
+For operation 5, make sure it says use "prior data", and choose
 "apply Lattice Matching algorithm to listed cells", and click "Submit".
   
 For the output of operation 4, we see the output:
@@ -257,7 +261,7 @@ As of 2023/11/25, there are almost 20 programs available. A few more will be
 added later. A few programs will have graphical output, but it is not yet 
 implemented. Except for unit cell generation, all the programs read lattice 
 information. Most write output that can be used as input to succeeding programs.
-s
+
 
 Information
 -- Check Input
