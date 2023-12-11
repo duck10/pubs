@@ -237,7 +237,8 @@ end
 
 The space of alternative unit cells for the second cell has been searched for
 the one most similar to the REFERENCE cells. The cell parameters look quite
-similar, and the angle in S<sup>6</sup> is quite small. 
+similar, and the angle between the reference vector and that of the search
+vector is quite small in S<sup>6</sup>. 
 
 ------------------------------------------------------------------------
 3. Input types for WEB_LRL  

@@ -48,7 +48,7 @@ is the rolling calculation of pairs in the list. The second is the distance of e
 cell from the first input cell.
 <em>Output type:</em> The distances for each input is output on a single line, starting with a 
 semicolon so that it will be ignored by succeeding programs. The input cells are echoed
-to the output line as primitive and a, b, c &alpha;, &beta;, &gamma; so that they 
+to the output line as primitive and a, b, c &alpha;, &beta;, &gamma;, so that they 
 can be used for further input. Each output cell is followed
 by its ordinal number, and the distance calculations list the ordinals for the
 cells used of each calculation.
@@ -234,4 +234,11 @@ arXiv preprint arxiv:2109.11538, 2.
 <em>Parameters:</em> blank for output both types, "R" for root invariant, 
 and S for linearized S<sup>6</sup>
 
+--------------------------------------------------
+
+<strong>Command: </strong> [PlotC3]
+<em>Purpose:</em> Graphical output of multiple unit cells in C<sup>3</sup>
+<em>Output type:</em> Name of the file containing the plots
+<em>Graphical output:</em> 2-D plots of the 3 complex coordinates i C<sup>3</sup>
+<em>Parameters:</em> NA
 --------------------------------------------------

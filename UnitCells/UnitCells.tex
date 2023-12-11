@@ -171,6 +171,9 @@
 	\newcommand{\siv}[0]{$s_4$}
 	\newcommand{\sv}[0]{$s_5$}
 	\newcommand{\svi}[0]{$s_6$}
+	\newcommand{\ri}{root invariant}
+%	\newcommand{\sl}{linearized \SVI}
+	\newcommand{\ls}{linearized \SVI}
 	\newcommand{\Svec} [0] {\{\si, \sii, \siii, \siv, \sv, \svi \}}
 	\newcommand{\SvecA} [0] {\{-\si, -\si+\sii, \si+\siii, \si+\sv, \si+\siv, \si+\svi \}}
 	
@@ -293,10 +296,34 @@ cell in the computation of energy levels \cite{dirac1930principles}.
 \subsection{\CIII}
 \label{c3}
 
+\subsection{Linearized \SVI}
+\label{ls}
+Linearized \SVI~is defined as a vector for which then
+values are derived from the \SVI~representation of a 
+lattice by taking the square root of each of the
+6 elements. The advantage created is that the elements
+are now in {\AA}ngstrom units. The disadvantage is that 
+there are no vectors beyond the boundaries, which have zero 
+values; beyond the boundaries one or more of the elements
+of the vector would require the square root of a negative
+number. The consequence is that a Euclidean distance 
+between to related points may greatly exceed the
+shortest measure that could be found.
+
 \subsection{Root Invariant}
 \label{ri}
 % emailed Kurlin and Bright on 8/14/2023 requesting the
 % appropriate reference
+Root invariant is a lattice representation created by
+\cite{bright2021welcome}. Although it has several related
+definitions, the form for a general lattice is the 
+same as \ls, except that a specific sorting of the elements of
+the vector are specified in order to create a unique
+vector. Linearized \SVI~has the properties that there
+are several (up to 24 in some lattices) sortings possible.
+The disadvantage of linearized \SVI~applies here also. Root
+invariant has been used to display meaningful representations 
+of large numbers of experimentally determined lattices.
 
 \section{Wigner-Seitz space}
 
