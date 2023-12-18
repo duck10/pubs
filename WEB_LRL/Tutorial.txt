@@ -1,27 +1,41 @@
 WEB_LRL
 
-Lattice Representation Library for the Web
+<strong>Lattice Representation Library for the Web</strong>
 
-1. Introduction
+<strong>1. Introduction</strong>
 
-Welcome to the tutorial!
+<strong>Welcome to the tutorial!</strong>
 We hope you can find some things here that are interesting/useful/educational.
 If not, an occasional laugh will make everyone feel better.
 
-What is this website?
+<strong>What is this website?</strong>
 WEB_LRL is designed to provide a workspace/playground for investigating
 various aspects of crystallographic unit cells/lattices. We may use the
 terms unit cell and lattice quite interchangeably, but you should realize that
 technically they are not the same things; however, they are alternate
 ways to describe a crystal's lattice.
 
-So what can you do on this web site?
+<strong>What is a unit cell?</strong>
+You can think of a crystal as a stacking of identical boxes to generate
+a 3-dimensional lattice. Each box is the same (and, although it's not important
+here, even the contents of each box are the same). We talk about "the
+unit cell", but there are many choices of the box in any lattice. The 
+most common way for crystallographers to describe the box (i.e., unit cell)
+is by listing the lengths of three unique edges and the angles between them.
+
+But there are other ways to describe the box. In this web site, you can
+change the representation to other kinds. One list the three 3-D vectors that
+are the unique edges (call B4, on the website). Another useful (to crystallogaphers)
+one is the three dot products between the edges and the additional three
+dot products of each edge with the negative of the vector sum of them.
+
+<strong>So what can you do on this web site?</strong>
 -- there are tools to generate or modify unit cells
 -- there are tools to report some properties of unit cells
 -- there are tools to convert from one representation of a lattice to another
 -- there is a limited selection of tools to report lattice properties
 
-Structure of the web site
+<strong>Structure of the web site</strong>
 At the bottom of the title section, there is a "Submit" button (and those are
 also in several places in the left column). That button causes selected calculations
 to be executed.
@@ -40,7 +54,7 @@ box only is shown if the left-hand choice of "use new input" is selected. The ch
 "use prior output" directs to use the data shown in the adjacent "Tool Output" window
 as the "source of data".
 
-2. Getting started
+<strong>2. Getting started</strong>
 
 In principle, you can use this web site without knowing any crystallography
 or even without doing any entries. Let's do a simple example.
@@ -141,7 +155,7 @@ Note that the volumes are near to the value of the unperturbed cell (1000). The
 and the cell parameters do not directly reflect that amount.
 ------------------------------------------------------------------------
 
-Let's do another example. We'll create a series of points from one
+<strong>Let's do another example.</strong> We'll create a series of points from one
 lattice to another, change the presentation to a, b, c, &alpha;, &beta;, &gamma; 
 just so we can look at the cell parameters,,
 and then calculate the distances between the points.
@@ -241,7 +255,7 @@ similar, and the angle between the reference vector and that of the search
 vector is quite small in S<sup>6</sup>. 
 
 ------------------------------------------------------------------------
-3. Input types for WEB_LRL  
+<strong>3. Input types for WEB_LRL  /<strong>
 
 here are 5 types of input lines.
 Except for “END”, they can be combined in any order. All these are case-insensitive. 
@@ -256,7 +270,7 @@ commas, “C” would be interpreted as a C-centered unit cell),
 u for unsorted Dirichlet 7-cells.
 ---  END: ends the data input section
 
-4. Overview of available programs
+<strong>4. Overview of available programs</strong>
 
 As of 2023/11/25, there are almost 20 programs available. A few more will be
 added later. A few programs will have graphical output, but it is not yet 
@@ -264,7 +278,7 @@ implemented. Except for unit cell generation, all the programs read lattice
 information. Most write output that can be used as input to succeeding programs.
 
 
-Information
+<strong>Information</strong>
 -- Check Input
 -- compute NCDist and CS6Dist distances
 -- compute volumes of listed cells
@@ -273,10 +287,10 @@ Andrews, L. C., Bernstein, H. J., & Sauter, N. K. (2023).
 SELLA--A Program for Determining Bravais Lattice Types. 
 arXiv preprint arXiv:2303.03122.
 
-Output Only
+<strong>Output Only</strong>
 -- Generate cells of a particular type or types
 
-Type Conversion
+<strong>Type Conversion</strong>
 -- compute Bravais tetrahedron (B4)
 -- compute complex cell presentation (C<sup>3</sup>)
 -- compute side-angle cells (a, b, c, &alpha;, &beta;, &gamma;)
@@ -285,11 +299,11 @@ Type Conversion
 -- compute linearized S<sup>6</sup> or Root Invariant version of cells
 -- compute unsorted Dirichlet cells (dc7unsrt)
 
-Reduction
+<strong>Unit cell reduction</strong>
 -- compute Selling-reduced primitive cells
 -- compute Niggli-reduced primitive cells
 
-Modify Input
+<strong>Modify Input</strong>
 -- apply Lattice Matching algorithm to listed cells
 -- compute path between pairs of cells
 -- compute perturbed versions of input cells

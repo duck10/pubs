@@ -146,8 +146,9 @@ G6   100.000   100.000   100.000     0.000     0.000     0.000
 --------------------------------------------------
 <strong>Command: apply Sella algorithm</strong>
 <em>Purpose:</em> Determine potentially higher symmetry for input cells
-<em>Output type:</em> agreement factors for each of the Bravais lattice types, and reduced cell
-information for the input cells.
+<em>Output type:</em> agreement factors for each of the Bravais lattice types
+that fill well and reduced cell information for the input cells. Also the name
+of the graphical output file.
 <em>Graphical output:</em> the figure of the hierarchy of Bravais lattice types 
 with numerical agreement determined by Sella.
 (Grimmer, H., & Nespolo, M. (2006). 
@@ -169,16 +170,13 @@ and then a listing of their lengths.
 --------------------------------------------------
 <strong>Command: compute complex cell presentation (C<sup>3</sup>)</strong>
 <em>Purpose:</em> presents input cells as C<sup>3</sup>
-<em>Output type:</em> the C<sup>3</sup> version of the input. Note: at this time,
-these cannot be used as input to other programs.
+<em>Output type:</em> the C<sup>3</sup> version of the input. 
 <em>Parameters:</em> NA
 <em>Example:</em>
+; To C3
 g 100 110 120 0 1 2
 end
-; To C3
 C3 (0.000,-101.500) (0.500,-111.000) (1.000,-120.500) 
-; 
-end
 
 --------------------------------------------------
 <strong>Command: compute side-angle cells (a, b, c, &alpha;, &beta;, &gamma;)</strong>
@@ -241,4 +239,7 @@ and S for linearized S<sup>6</sup>
 <em>Output type:</em> Name of the file containing the plots
 <em>Graphical output:</em> 2-D plots of the 3 complex coordinates i C<sup>3</sup>
 <em>Parameters:</em> NA
+The 3 (2-D) coordinate axes are plotted in a single line. The all-negative quadrants 
+are shown. A consequence is that if the unit cells have not been Selling/Delone
+reduced, then points will plot outside of that quadrant.
 --------------------------------------------------
