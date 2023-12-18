@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title>LRL_Web data input</title>
+	<meta name="generator" content="LibreOffice 7.3.5.2 (Windows)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2023-12-18T14:25:04.129000000"/>
+</head>
+<body lang="en-US" dir="ltr"><h1>LRL_Web!</h1>
+<p><strong>Lattice Representation Library for the Web</strong><br/>
+<br/>
+<strong>1.
+Introduction</strong><br/>
+<br/>
+<strong>Welcome to the tutorial!</strong><br/>
+We
+hope you can find some things here that are
+interesting/useful/educational.<br/>
+If not, an occasional laugh will
+make everyone feel better.<br/>
+<br/>
+<strong>What is this
+website?</strong><br/>
+WEB_LRL is designed to provide a
+workspace/playground for investigating<br/>
+various aspects of
+crystallographic unit cells/lattices. <br/>
+We may use the terms unit
+cell and lattice quite interchangeably, but you should realize
+that<br/>
+technically they are not the same things; however, they are
+alternate ways to describe <br/>
+a crystal's lattice.<br/>
+<br/>
+<strong>What
+is a unit cell?</strong><br/>
+You can think of a crystal as a
+stacking of identical boxes to generate a 3-dimensional lattice.
+<br/>
+Each box is the same (and, although it's not <br/>
+important
+here, even the contents of each box are the same). We talk about
+<br/>
+&quot;the unit cell&quot;, but there are many choices of the
+box in any lattice. The <br/>
+most common way for crystallographers
+to describe the box (i.e., unit cell)<br/>
+is by listing the lengths
+of three unique edges and the angles between them.<br/>
+<br/>
+But
+there are other ways to describe the box. In this web site, you can
+change the representation<br/>
+to other kinds. One list the three 3-D
+vectors that are the unique edges (call B4, on the website). <br/>
+Another
+useful (to crystallogaphers) one is the three dot products between
+the edges and the <br/>
+additional three dot products of each edge
+with the negative of the vector sum of them.<br/>
+<br/>
+<strong>So
+what can you do on this web site?</strong><br/>
+-- there are tools to
+generate or modify unit cells<br/>
+-- there are tools to report some
+properties of unit cells<br/>
+-- there are tools to convert from one
+representation of a lattice to another<br/>
+-- there is a limited
+selection of tools to report lattice properties <br/>
+<br/>
+<strong>Structure
+of the web site</strong><br/>
+At the bottom of the title section,
+there is a &quot;Submit&quot; button (and those are also in several
+<br/>
+places in the left column). That button causes selected
+calculations to be executed.</p>
+<p>Immediately below that section is a place to select &quot;Number
+of operation windows&quot;. Each o<br/>
+peration executes a single
+command/program to perform a selected task. The left hand column
+<br/>
+contains several items. The large selection box allows the
+choice of a single operation to perform; <br/>
+the operation will put
+its results into the &quot;Tool Output&quot; box immediately to the
+right.</p>
+<p><br/>
+The intent is that operations specified for one input can be
+chained together to be used by the following one.<br/>
+<br/>
+Immediately
+above the &quot;Tool Output&quot; box is a box labeled &quot;Input
+data&quot;; The Input data box only is <br/>
+shown if the left-hand
+choice of &quot;use new input&quot; is selected. The choice of &quot;use
+prior output&quot; directs <br/>
+to use the data shown in the
+adjacent &quot;Tool Output&quot; window as the &quot;source of
+data&quot;.<br/>
+<br/>
+<strong>2. Getting started</strong><br/>
+In
+principle, you can use this web site without knowing any
+crystallography or even without doing <br/>
+any entries. Let's do a
+simple example.<br/>
+<br/>
+At the top for &quot;Number of operation
+windows&quot;, choose &quot;1&quot;. In the left-hand column, choose
+<br/>
+&quot;use new data. In the &quot;Select an operation&quot; box,
+choose &quot;Generate cells of a particular type or types&quot;.
+<br/>
+When you do that, two new boxes appear above &quot;Input data&quot;:
+&quot;Number of each type&quot; and <br/>
+&quot;Lattice type&quot;.
+For Number of each type, input &quot;2&quot;; for Lattice type,
+change &quot;all&quot; (or whatever is in that box) t<br/>
+o &quot;A2&quot;
+(in the space S<sup>6</sup>A2 selects the Delone type of triclinic
+(anorthic) lattices with one zero). Click on &quot;Submit&quot;.<br/>
+<br/>
+In
+the &quot;Tool Output&quot; window, the program writes:<br/>
+;
+Generate cells<br/>
+; Delone lattice type requested <br/>
+; lattice
+type = A2<br/>
+G6 31.196 131.880 109.653 -95.279 -5.133 0.000 Delone#
+= A2 aP<br/>
+G6 27.012 164.974 111.066 -169.317 -46.120 0.000 Delone#
+= A2 aP<br/>
+;<br/>
+end<br/>
+<br/>
+This program outputs its data in
+G<sup>6</sup> representation. In this case, notice the zero value for
+g<sub>6</sub> (90 degrees) , <br/>
+which define case A2.<br/>
+<br/>
+Of
+course, crystallographers are more used to seeing the lattice
+parameters as lengths and angles. So let's do that.<br/>
+<br/>
+Change
+the &quot;Number of operations&quot; to &quot;2&quot;. When you do
+that, a second set of boxes appears so that you can c<br/>
+hoose a
+following operation.<br/>
+<br/>
+For operation #2, choose &quot;compute
+side-angle cells (a, b, c, &alpha;, &beta;, &gamma;)&quot;. Make sure
+that the &quot;Source of data&quot; is set to <br/>
+&quot;use prior
+output&quot;. Click &quot;Submit&quot;. The result should appear in
+the &quot;Tool Output&quot; window for operations #2.<br/>
+<br/>
+; To
+Cell<br/>
+P 5.585 11.484 10.472 113.338 92.515 90.000 <br/>
+P 5.197
+12.844 10.539 128.713 114.898 90.000 <br/>
+end<br/>
+<br/>
+That's the
+operations guide for almost everything on the site. One important
+thing remains: how to input your <br/>
+own data. So let's do a simple
+example.<br/>
+<br/>
+In the &quot;number of operations&quot; box,
+select &quot;3&quot;.<br/>
+In the first &quot;Select an operation&quot;
+box, select &quot;Check input&quot;. <br/>
+Enter two lines of data:<br/>
+P
+10 10 10 90 90 90 (a simple cubic unit cell)<br/>
+p 10 10 x10 90 90
+90 (note the error in the fourth entry)<br/>
+and follow with &quot;end&quot;
+if it not already there<br/>
+<br/>
+In the second &quot;Select an
+operation&quot; box select &quot;compute perturbed versions of input
+cells&quot;.<br/>
+When you do that, above the second &quot;Tool
+output&quot; window, two items appear requesting &quot;Number of
+perturbations&quot; <br/>
+and &quot;Parts per thousand; enter &quot;5&quot;
+and &quot;10&quot; for those.<br/>
+<br/>
+In the third &quot;Select an
+operation&quot; box, select &quot;compute volumes of listed
+cells&quot;.<br/>
+Make sure that the second and third operations
+specify &quot;use prior output&quot;.<br/>
+Finally, click on
+&quot;Submit&quot;.<br/>
+<br/>
+The results now appear in the 3 &quot;Tool
+output&quot; windows.<br/>
+<br/>
+First output window:<br/>
+;
+CheckInput<br/>
+; invalid cell parameter (A)<br/>
+P 10.000 10.000
+10.000 90.000 90.000 90.000 <br/>
+end<br/>
+<br/>
+Note two things
+here: first the invalid cell was detected on input; second, the
+warning message is begun <br/>
+with a semicolon, which will be
+ignored in succeeding programs using the output for input.<br/>
+<br/>
+Second
+output window:<br/>
+; Perturb vectors<br/>
+<br/>
+P 10.000 10.000
+10.000 90.000 90.000 90.000 original inputCell<br/>
+P 9.940 9.916
+9.884 89.573 89.357 89.565 perturbed <br/>
+P 10.016 10.029 9.960
+89.567 90.358 90.109 perturbed <br/>
+P 9.956 9.921 9.929 89.938
+89.497 89.452 perturbed <br/>
+P 9.896 9.992 10.053 90.576 89.709
+89.376 perturbed <br/>
+P 9.969 9.989 9.984 90.509 89.490 89.668
+perturbed <br/>
+; <br/>
+<br/>
+The thing to notice here is that the
+perturbed cells are all very similar to the original input cell.
+That's not <br/>
+surprising since we only requested 1% change.<br/>
+<br/>
+Third
+output window:<br/>
+; Volume<br/>
+P 10.000 10.000 10.000 90.000
+90.000 90.000 Volume = 1000<br/>
+P 9.940 9.916 9.884 89.573 89.357
+89.565 Volume = 974.101<br/>
+P 10.016 10.029 9.960 89.567 90.358
+90.109 Volume = 1000.44<br/>
+P 9.956 9.921 9.929 89.938 89.497 89.452
+Volume = 980.639<br/>
+P 9.896 9.992 10.053 90.576 89.709 89.376
+Volume = 993.926<br/>
+P 9.969 9.989 9.984 90.509 89.490 89.668 Volume
+= 994.114<br/>
+end<br/>
+<br/>
+Note that the volumes are near to the
+value of the unperturbed cell (1000). The 1% change request is
+calculated <br/>
+in the S<sup>6</sup> space, so the volumes and the
+cell parameters do not directly reflect that amount.
+-<br/>
+-----------------------------------------------------------------------<br/>
+<br/>
+<strong>Let's
+do another example.</strong> We'll create a series of points from one
+lattice to another, change the presentation <br/>
+to a, b, c, &alpha;,
+&beta;, &gamma; just so we can look at the cell parameters, and then
+calculate the distances between the points.<br/>
+<br/>
+To begin, set
+the number of operations to 3. The first one should be for new input,
+and the later 2 for using prior input.<br/>
+<br/>
+For the first
+operation, in the &quot;Input data&quot; box, type:<br/>
+p 10 10 10
+90 90 10.1<br/>
+p 10 10 10 90 90 170.1<br/>
+end<br/>
+<br/>
+and
+choose: &quot;compute path between pairs of cells&quot;.<br/>
+<br/>
+For
+the second operation, choose &quot;compute side-angle cells (a, b, c,
+&alpha;, &beta;, &gamma;)&quot;, and &quot;use prior data&quot;.<br/>
+<br/>
+For
+the third operation, choose &quot;compute NCDist and CS6Dist
+distances&quot;, and &quot;use prior data&quot;.<br/>
+<br/>
+Click on
+&quot;Submit&quot;.<br/>
+<br/>
+In the first &quot;Tool output&quot;
+window, we see:<br/>
+; Path generator<br/>
+; no. of points output is
+20<br/>
+S 0.00000 0.00000 98.45032 -198.45032 -198.45032 -100.00000
+1<br/>
+S 0.00000 0.00000 88.08394 -188.08394 -188.08394 -100.00000
+2<br/>
+...<br/>
+<br/>
+In the second &quot;Tool output&quot; window,
+we see:<br/>
+; To Cell<br/>
+P 10.000 10.000 10.000 90.000 90.000
+10.100 <br/>
+P 10.000 10.000 10.000 90.000 90.000 28.256 <br/>
+P
+10.000 10.000 10.000 90.000 90.000 38.997 <br/>
+P 10.000 10.000
+10.000 90.000 90.000 47.661 <br/>
+...<br/>
+<br/>
+And in the third
+&quot;Tool output&quot; window, we see:<br/>
+; CmdDists, calculate
+distances<br/>
+; ordinals G6-Euclidean NCDist CS6Dist ___
+G6-Euclidean NCDist CS6Dist ordinals<br/>
+; 1 to 2 20.732 29.320
+17.247 ___ 20.732 29.320 17.247 1 to 2 <br/>
+; 2 to 3 20.732 29.320
+17.955 ___ 41.465 58.640 35.106 1 to 3 <br/>
+... <br/>
+; 8 to 9
+20.732 20.732 17.954 ___ 165.862 100.848 83.774 1 to 9 <br/>
+; 9 to
+10 20.732 20.732 17.954 ___ 186.594 97.168 91.915 1 to 10 <br/>
+; 10
+to 11 20.732 0.119 0.103 ___ 207.326 97.177 93.381 1 to 11 <br/>
+; 11
+to 12 20.734 20.734 17.956 ___ 228.060 100.882 83.735 1 to 12 <br/>
+;
+12 to 13 20.733 20.733 17.955 ___ 248.793 108.492 78.929 1 to 13 <br/>
+...
+<br/>
+<br/>
+P 10.000 10.000 10.000 90.000 90.000 10.100 1<br/>
+P
+10.000 10.000 10.000 90.000 90.000 28.256 2<br/>
+P 10.000 10.000
+10.000 90.000 90.000 38.997 3<br/>
+P 10.000 10.000 10.000 90.000
+90.000 47.661 4<br/>
+P 10.000 10.000 10.000 90.000 90.000 55.260
+5<br/>
+<br/>
+So what have we learned here? In the first output, we
+see the cells in S<sup>6</sup> format, but in the second, we see them
+i<br/>
+n the more familiar a, b, c &alpha;, &beta;, &gamma;. Finally,
+in the third output window, we the NCDist and CS6Dist distance
+<br/>
+between neighboring points Those are followed by the unit cells
+listed along with their ordinals.<br/>
+<br/>
+Examining the output, we
+see the NCDist and CS6SDist distances changing more or less smoothly
+(in the 20s and 17s), <br/>
+except for the distance between cells 10
+and 11 (about 0.1-0.2). How can we examine the cause of that <br/>
+anomaly
+in more detail?<br/>
+<br/>
+Change the number of operations to 5. For
+operation 4, change to &quot;&quot;use new data&quot;&quot;.<br/>
+Go
+to the output window for operation 3, and copy the cells for ordinals
+10 and 11:<br/>
+P 10.000 10.000 10.000 90.000 90.000 87.046 10<br/>
+P
+10.000 10.000 10.000 90.000 90.000 92.988 11<br/>
+and paste them into
+the Tool input window for operation 4. <br/>
+<br/>
+Make sure to
+select &quot;&quot;use new data&quot;&quot;, and choose &quot;compute
+Niggli-reduced primitive cells&quot;. Add &quot;end&quot; after the
+two cells.<br/>
+<br/>
+For operation 5, make sure it says use &quot;prior
+data&quot;, and choose &quot;apply Lattice Matching algorithm to
+listed cells&quot;, <br/>
+and click &quot;Submit&quot;.<br/>
+<br/>
+For
+the output of operation 4, we see the output:<br/>
+; Niggli
+reduced<br/>
+G6 100.000 100.000 100.000 -0.000 0.000 -10.307 <br/>
+G6
+100.000 100.000 100.000 0.000 0.000 -10.425 <br/>
+end<br/>
+<br/>
+And
+for the output of operation 5, we see:<br/>
+; Lattice Matching<br/>
+P
+10.000 10.000 10.000 90.000 90.000 92.954 ( 0 degrees in S6)
+REFERENCE<br/>
+P 10.000 10.000 10.000 90.000 90.000 92.988 ( 0.026989
+degrees in S6)<br/>
+end<br/>
+<br/>
+The space of alternative unit
+cells for the second cell has been searched for the one most similar
+to the REFERENCE <br/>
+cells. The cell parameters look quite similar,
+and the angle between the reference vector and that of the <br/>
+search
+vector is quite small in S<sup>6</sup>.
+<br/>
+<br/>
+------------------------------------------------------------------------<br/>
+<strong>3.
+Input types for WEB_LRL </strong><br/>
+<br/>
+here are 5 types of
+input lines.<br/>
+Except for &ldquo;END&rdquo;, they can be combined
+in any order. All these are case-insensitive. <br/>
+If a particular
+input lattice is invalid, it is rejected with a message.<br/>
+---
+RANDOM: Generate a random (valid) unit cell (a, b, c, &alpha;, &beta;,
+&gamma;);<br/>
+--- Crystal lattice input: &ldquo;A&rdquo;, &ldquo;B&rdquo;,
+&ldquo;C&rdquo;, &ldquo;P&rdquo;, &ldquo;R&rdquo;, &ldquo;F&rdquo;,
+&ldquo;I&rdquo; followed by a, b, c, &alpha;, &beta;, &gamma; (in
+degrees);<br/>
+--- semicolon: lines beginning with a semicolon are
+treated as comments<br/>
+--- Vector Input: <br/>
+g (or v or g6) for
+G<sup>6</sup> vectors; <br/>
+s (or s6) for S<sup>6</sup>,
+Delone/Selling scalars, <br/>
+C3 for C<sup>3</sup> input (without
+parentheses or commas, &ldquo;C&rdquo; would be interpreted as a
+C-centered unit cell), <br/>
+u for unsorted Dirichlet 7-cells. ---
+END: ends the data input section<br/>
+<br/>
+<strong>4. Overview of
+available programs</strong><br/>
+<br/>
+As of 2023/11/25, there are
+almost 20 programs available. A few more will be added later. A few
+programs will have <br/>
+graphical output, but it is not yet
+implemented. Except for unit cell generation, all the programs read
+lattice information. <br/>
+Most write output that can be used as
+input to succeeding programs.<br/>
+<br/>
+<strong>Information</strong><br/>
+--
+Check Input<br/>
+-- compute NCDist and CS6Dist distances<br/>
+--
+compute volumes of listed cells<br/>
+-- apply Sella
+algorithm<br/>
+Andrews, L. C., Bernstein, H. J., &amp; Sauter, N. K.
+(2023). SELLA--A Program for Determining Bravais Lattice <br/>
+Types.
+arXiv preprint arXiv:2303.03122.<br/>
+<br/>
+<strong>Output Only</strong>
+-- Generate cells of a particular type or types<br/>
+<br/>
+<strong>Type
+Conversion</strong><br/>
+-- compute Bravais tetrahedron (B4)<br/>
+--
+compute complex cell presentation (C<sup>3</sup>)<br/>
+-- compute
+side-angle cells (a, b, c, &alpha;, &beta;, &gamma;)<br/>
+-- compute
+G<sup>6</sup> version of cells<br/>
+-- compute S<sup>6</sup> version
+of cells<br/>
+-- compute linearized S<sup>6</sup> or Root Invariant
+version of cells<br/>
+-- compute unsorted Dirichlet cells
+(dc7unsrt)<br/>
+<br/>
+<strong>Unit cell reduction</strong><br/>
+--
+compute Selling-reduced primitive cells<br/>
+-- compute
+Niggli-reduced primitive cells<br/>
+<br/>
+<strong>Modify Input</strong><br/>
+--
+apply Lattice Matching algorithm to listed cells<br/>
+-- compute path
+between pairs of cells<br/>
+-- compute perturbed versions of input
+cells<br/>
+-- apply S6 reflections to input cells</p>
+</body>
+</html>
