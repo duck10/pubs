@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.3.5.2 (Windows)"/>
+	<meta name="created" content="2023-12-18T18:17:00.063000000"/>
+	<meta name="changed" content="2023-12-20T07:31:46.388000000"/>
+</head>
+<body>
+  <h1>LRL_Web Descriptions of Programs</h1>
+<strong>LRL_Web Data Inputs:</strong><br>
+
+--------------------------------------------------<br>
+<strong>Command: Generate cells of a particular type or
+types</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> To Create valid unit cells of
+various user-chose types<br>
+<em style="text-decoration: underline;">Output type:</em> Output cells are reported in G<sup>6</sup> form. Randomly chosen cell<br> 
+parameters for the various selected types. Lattice type is shown following <br>
+the numerical parameters.<br>
+<em style="text-decoration: underline;">Parameters:</em> (default values in parentheses)<br>
+--- The number of cells of each type to be generated (1)<br>
+--- The type(s) of selected output required. Examples are<br>
+--- &quot;all&quot; (default) -- produces examples of each of the
+44 Niggli types 
+<br>
+(see the International Tables) and each of the 24 Delone types
+(all)<br>
+--- a number between 1 and 44 will generate examples of that
+Niggli type. For instance,<br>
+24 will create Niggli type 24 (which is hR). {1-44}<br>
+--- &quot;m&quot; generates monoclinic examples {allowed types: c, t, h, o, m, a}<br>
+--- &quot;mC&quot; generates C-centered monoclinic examples {mP,
+mS, mC, hR, hP, tP, tI, cF, cI, cP, aP}<br>
+--- &quot;A1&quot; generates a general triclinic Delone type with
+no S<sup>6</sup> zeros.<br>
+--- &quot;O4&quot; generates one of the centered orthorhombic
+Delone type with signature {00r sst}.<br>
+--- &quot;O&quot; will generate all orthombic Delone types {allowed types: C, T,
+H, O, M, A}<br>
+--- Unrecognized input will generate all types<br>
+<br/>
+
+--------------------------------------------------<br>
+<strong>Command: compute Niggli-reduced primitive
+cells</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> Perform Niggli reduction on input
+cells. The result has<br>
+the shortest edge lengths of the lattice and is the &quot;most
+orthogonal&quot; unit cell.<br>
+<em style="text-decoration: underline;">Output type:</em> G<sup>6</sup> form
+of the reduced cells of input<br>
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+<br/>
+
+--------------------------------------------------<br>
+<strong>Command: compute Selling-reduced primitive
+cells</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> Perform Selling/Delone reduction on
+input cells<br>
+<em style="text-decoration: underline;">Output type:</em> S<sup>6</sup> form
+of the reduced cells of input. The Delone-reduced<br>
+cell has only non-acute interaxial angles.<br>
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+<br/>
+
+--------------------------------------------------<br>
+<strong>Command: compute NCDist and CS6Dist
+distances</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> For a group of input cells,
+distances are reported in 3 different calculations:<br>
+the simple Euclidean distance, the NCDist (G<sup>6</sup>)
+distance, and the CS6Dist<br>
+(S<sup>6</sup>) distances. Distances are calculated in
+2 different ways. The first<br>
+is the rolling calculation of pairs in the list. The second is the
+distance of each 
+<br>
+cell from the first input cell.<br>
+<em style="text-decoration: underline;">Output type:</em> The distances for each input is
+output on a single line, starting with a 
+<br>
+semicolon so that it will be ignored by succeeding programs. The
+input cells are echoed<br>
+to the output line as primitive and a, b, c &amp;alpha;, &amp;beta;,
+&amp;gamma;, so that they 
+<br>
+can be used for further input. Each output cell is followed<br>
+by its ordinal number, and the distance calculations list the
+ordinals for the<br>
+cells used of each calculation.<br>
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+<br/>
+
+--------------------------------------------------<br>
+<strong>Command: apply Lattice Matching algorithm to listed
+cells</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> Taking the first input cells as the
+&quot;REFERENCE&quot;, the alternative cells of<br>
+each succeeding cell are examined to find a closest match to the
+reference. 
+<br>
+Andrews, Lawrence C., Herbert J. Bernstein, and Nicholas K.
+Sauter. 
+<br>
+&quot;Approximating lattice similarity.&quot; 
+<br>
+Acta Crystallographica Section A: Foundations and Advances 79.5,
+480-484 (2023).<br>
+<br/>
+
+<em style="text-decoration: underline;">Output type:</em> a, b, c &amp;alpha;, &amp;beta;,
+&amp;gamma;, with the lattice centering<br>
+chosen to be the same as that of the reference cell.<br>
+<em style="text-decoration: underline;">Example:</em><br>
+f 10 10 10  90 90 90<br>
+p 7 7.1 6.9 59 60 61<br>
+end<br>
+; Lattice Matching<br>
+F     10.000    10.000    10.000    90.000    90.000    90.000 ( 0
+ degrees in S6)   REFERENCE<br>
+F     10.050     9.821     9.832    89.143    92.094    88.781 (
+3.07179  degrees in S6)<br>
+end<br>
+  
+<br>
+
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+<br/>
+
+--------------------------------------------------<br>
+<strong>Command: compute path between pairs of
+cells</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> A series of points is computed
+between each pair of input cells. The<br>
+computation is done in S<sup>6</sup>. For n input
+cells, n-1 paths will be<br>
+generated. The individual points are labeled with their ordinals,
+and each 
+<br>
+segment is labeled (after the 6 parameters).<br>
+<em style="text-decoration: underline;">Output type:</em> S<sup>6</sup><br>
+<em style="text-decoration: underline;">Parameters:</em> The number of points in -each- path (20)<br>
+<br/>
+
+--------------------------------------------------<br>
+<strong>Command: compute perturbed versions of input
+cells</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> For each input cell, compute slight
+altered versions<br>
+<em style="text-decoration: underline;">Output type:</em> unit cell edge lengths and
+angles<br>
+<em style="text-decoration: underline;">Parameters:</em> The number of perturbations of
+each input cell (20) and the amount of<br>
+perturbation in parts-per-thousand (ppt) (1 ppt). The calculation
+is done S<sup>6</sup>,<br>
+and the perturbation is in a direction orthogonal to the
+S<sup>6</sup> vector..<br>
+<em style="text-decoration: underline;">Example:</em> requesting 10 perturbations and 10
+ppt (1%) perturbations.<br>
+f 10 10 10  90 90 90<br>
+end<br>
+; Perturb vectors<br>
+<br/>
+
+F 10	10	10	90	90	90	    original inputCell<br>
+F     9.940     9.916     9.884    89.573    89.357    89.565  perturbed  <br>
+F    10.016    10.029     9.960    89.567    90.358    90.109  perturbed  <br>
+F     9.956     9.921     9.929    89.938    89.497    89.452  perturbed  <br>
+F     9.896     9.992    10.053    90.576    89.709    89.376  perturbed  <br>
+F     9.969     9.989     9.984    90.509    89.490    89.668  perturbed  <br>
+F     9.963     9.984     9.904    89.655    89.147    90.336  perturbed  <br>
+F    10.015     9.928     9.962    89.793    90.276    89.394  perturbed  <br>
+F    10.019     9.922     9.884    89.295    89.772    89.926 perturbed  <br>
+F     9.914     9.918     9.909    89.327    89.348    89.820  perturbed  <br>
+F    10.020     9.978    10.119    90.295    90.410    89.960  perturbed <br>
+<br/>
+
+; CmdPerturb: number of cells to produce =  10  orthogonal
+perturbation of  10 /1000<br>
+end<br>
+<br/>
+
+--------------------------------------------------<br>
+<strong>Command: apply S6 reflections to input
+cells</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> The 24 permutations of the
+S<sup>6</sup> cell vectors: a, b, , and d, where
+d=-a-b-c.<br>
+Duplicates are removed.<br>
+<em style="text-decoration: underline;">Output type:</em> S<sup>6</sup><br>
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+<em style="text-decoration: underline;">Example:</em><br>
+C:\Users\lca\Source\Repos\duck10\LatticeRepLib\x64\Debug>cmds6refl<br>
+f 10 10 10  90 90 90<br>
+end<br>
+; S6 reflections<br>
+S6   0.00000   0.00000   0.00000 -100.00000 -100.00000 -100.00000  0<br>
+S6   0.00000 -100.00000 -100.00000 -100.00000   0.00000   0.00000  1<br>
+S6 -100.00000   0.00000 -100.00000   0.00000 -100.00000   0.00000  2<br>
+S6 -100.00000 -100.00000   0.00000   0.00000   0.00000 -100.00000  3<br>
+<br/>
+
+or presenting those as unit cells:<br>
+P    10.000    10.000    10.000    90.000    90.000    90.000 
+<br>
+P    17.321    10.000    10.000    90.000   125.264   125.264 
+<br>
+P    10.000    17.321    10.000   125.264    90.000   125.264 
+<br>
+P    10.000    10.000    17.321   125.264   125.264    90.000 
+<br>
+<br/>
+
+The values of 17.321 are from the Delone &quot;d&quot; vector,
+d=-(a+b+c)<br>
+<br/>
+
+But Niggli reduction of those 4 cells gives:<br>
+G6   100.000   100.000   100.000     0.000     0.000     0.000 
+<br>
+G6   100.000   100.000   100.000     0.000     0.000     0.000 
+<br>
+G6   100.000   100.000   100.000     0.000     0.000     0.000 
+<br>
+G6   100.000   100.000   100.000     0.000     0.000     0.000 
+<br>
+<br>
+--------------------------------------------------<br>
+<strong>Command: apply Sella algorithm</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> Determine potentially higher
+symmetry for input cells<br>
+<em style="text-decoration: underline;">Output type:</em> agreement factors for each of
+the Bravais lattice types<br>
+that fill well and reduced cell information for the input cells.
+Also the name<br>
+of the graphical output file.<br>
+<em style="text-decoration: underline;">Graphical output:</em> the figure of the hierarchy
+of Bravais lattice types 
+<br>
+with numerical agreement determined by Sella.<br>
+(Grimmer, H., &amp; Nespolo, M. (2006). 
+<br>
+Geminography: the crystallography of twins. Zeitschrift<br>
+ f&uuml;r
+Kristallographie-Crystalline Materials, 221(1), 28-50.)<br>
+<br/>
+
+<em style="text-decoration: underline;">Parameters:</em> choices if only some outputs are
+needed (all)<br>
+<br/>
+
+--------------------------------------------------<br>
+<strong>Command: compute Bravais tetrahedron (B4)</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> computes the edge vectors of the
+unit cell and their negative sum. These 4<br>
+vectors also define the Bravais tetrahedron Delone, B. N.,
+Galiulin, R. V., 
+<br>
+&amp; Shtogrin, M. I. (1975). On the Bravais types of 
+<br>
+lattices. Journal of Soviet Mathematics, 4(1), 79-156.<br>
+<em style="text-decoration: underline;">Output type:</em> echoes the input cell as a, b,
+c, &amp;alpha;, &amp;beta;, &amp;gamma;, 
+<br>
+followed by the vector representations of the unit cell edges,<br>
+and then a listing of their lengths.<br>
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+<br/>
+----------------------------------<br>
+<strong>Command: compute complex cell presentation
+(C<sup>3</sup>)</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> presents input cells as
+C<sup>3</sup><br>
+<em style="text-decoration: underline;">Output type:</em> the C<sup>3</sup>
+version of the input. 
+<br>
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+<em style="text-decoration: underline;">Example:</em><br>
+; To C3<br>
+g 100 110 120 0 1 2<br>
+end<br>
+C3 (0.000,-101.500) (0.500,-111.000) (1.000,-120.500) <br>
+<br>
+
+--------------------------------------------------<br>
+<strong>Command: compute side-angle cells (a, b, c, &amp;alpha;,
+&amp;beta;, &amp;gamma;)</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> converts input cell representations
+to cell parameters<br>
+<em style="text-decoration: underline;">Output type:</em> a, b, c, &amp;alpha, &amp;beta;,
+&amp;gamma;. If the input cell is not in 
+<br>
+cell parameters already, then primitive is assumed.<br>
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+<br>
+
+--------------------------------------------------<br>
+<strong>Command: compute G<sup>6</sup> version
+of cells</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> convert to G<sup>6</sup>
+representation<br>
+<em style="text-decoration: underline;">Output type:</em> G<sup>6</sup><br>
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+<br/>
+
+--------------------------------------------------<br>
+<strong>Command: compute S<sup>6</sup> version
+of cells</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> convert to S<sup>6</sup>
+representation<br>
+<em style="text-decoration: underline;">Output type:</em> S<sup>6</sup><br>
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+<br/>
+
+--------------------------------------------------<br>
+<strong>Command: compute unsorted Dirichlet cells
+(dc7unsrt)</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> convert to the 7 parameter form
+related to the Dirichlet (also Vornoi or Wigner-Seitz) unit cell.<br>
+Bernstei and Andrews, 2023.
+<em style="text-decoration: underline;">Output type:</em> DC7u<br>
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+<br/>
+
+--------------------------------------------------<br>
+<strong>compute V7 version of cells</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> convert to the 7 parameter vector of
+Andrews, Bernstein, Pelletier, 1980.<br>
+The vector is define in terms of the Niggli reduced cell a,b,c and
+the Niggli reduced<br>
+reciprocal cell 1/a*, 1/b*, 1/c*, and the cube root of the reduced
+cell volume.<br>
+Note that all 7 scalars are in the units of Angstroms.
+<em style="text-decoration: underline;">Output type:</em> V<sup>7</sup><br>
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+<br/>
+
+--------------------------------------------------<br>
+<strong>Command: compute volumes of listed cells</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> compute volumes of listed cells<br>
+<em style="text-decoration: underline;">Output type:</em> Lattice centering, then cell
+parameters (a, b, c, &amp;alpha;, &amp;beta;, &amp;gamma;), 
+<br>
+followed by the volume<br>
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+<br>
+
+--------------------------------------------------<br>
+<strong>Command: compute linearized S<sup>6</sup>
+or Root Invariant version of cells</strong><br>
+<em style="text-decoration: underline;">Purpose:</em> Both of the output choices are
+6-space vectors of positive numbers.<br>
+The values are derived by first applying Selling/Delone reduction
+so that all of 
+<br>
+the S<sup>6</sup> values are non-positive. Then the
+square roots of the negative 
+<br>
+of those values are used to create the result (linearized
+S<sup>6</sup>). The<br>
+root invariant is generated by applying sorting rules of Bright,
+Cooper, and Kurlin.<br>
+Bright, M., Cooper, A. I., &amp; Kurlin, V. (2021). 
+<br>
+Welcome to a continuous world of 3-dimensional lattices. 
+<br>
+arXiv preprint arxiv:2109.11538, 2.<br>
+<em style="text-decoration: underline;">Output type:</em> The type followed by the 7
+parameters.<br>
+<em style="text-decoration: underline;">Parameters:</em> blank for output of both types, &quot;R&quot;
+for root invariant, and S for linearized S<sup>6</sup>
+<br>
+<br>
+--------------------------------------------------<br>
+
+
+<strong>Command: </strong> [PlotC3]<br>
+<em style="text-decoration: underline;">Purpose:</em> Graphical output of multiple unit
+cells in C<sup>3</sup><br>
+<em style="text-decoration: underline;">Output type:</em> Name of the file containing the
+plots<br>
+<em style="text-decoration: underline;">Graphical output:</em> 2-D plots of the 3 complex
+coordinates in C<sup>3</sup><br>
+<em style="text-decoration: underline;">Parameters:</em> NA<br>
+The 3 (2-D) coordinates are plotted in a single row. The
+all-negative quadrants 
+<br>
+are shown. A consequence is that if the unit cells have not been
+Selling/Delone<br>
+reduced, then points will plot outside of that quadrant.<br>
+
+--------------------------------------------------<br>
+</body>
+</html>
