@@ -1,44 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LRL_Web data input</title>
+	<meta http-equiv="content-type" content="text/html; charset=windows-1252"/>
+	<title>LRL_Web data input</title>
+	<meta name="generator" content="LibreOffice 7.3.5.2 (Windows)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2023-12-20T10:46:42.796000000"/>
 </head>
-<body>
-  <h1>LRL_Web!</h1>
-<strong>LRL_Web Data Inputs:</strong><br>
-
-<strong>General Input:</strong> <br> 
- There are 5 types of input lines. Except for "END", they can be combined in any order.<br> 
-All these are case-insensitive. If a particular input lattice is invalid, it is rejected with a message.<br><br>
---- RANDOM: Produces random (valid) unit cell;<br> 
---- Crystal lattice input: "A", "B", "C", "P", "R", "F", "I" followed by three axis lengths and three angles (in degrees);<br> 
---- semicolon: lines beginning with a semicolon are treated as comments<br> 
---- END ends the data input section<br><br> 
-<strong>Vector Input:</strong> <br> 
---- g (or g6) for G<sup>6</sup>vectors; <br> 
---- s (or s6) for S<sup>6</sup>, Delone/Selling scalars,<br> 
---- c3 (or C3) for C<sup>3</sup> input (without parentheses or commas) (C would be interpreted as a C-centered unit cell)<br>
-
---- C3 input is in the order: (s1,s4), (s2,s5), (s3,s6) where the elements are the S<sup>6</sup> Delone scalars.<br>
-
---- u (or U or DC7u or DU) for unsorted Dirichlet 7 cells.<br> 
-<br> 
-<strong>Examples of unit cell inputs</strong><br> 
-F 10 20 30 90 90 90<br> 
-G 100 400 900 0 -215.02 0<br> 
-S6 0 -107.51 0 7.51 -400 -792.49<br> 
-random<br>
-C3 (0.000,-100.000) (0.000,-100.000) (0.000,-100.000)<br> 
-; this is a comment<br> 
-end<br>
-
-<br><strong>Invalid Input:</strong><br>
-The most common invalid input is an invalid unit cell, entered either as a cell or a vector.<br>
-If an unrecognized lattice symbol or word is used, then a message is output.<br>
-Here are a few examples:<br>
---- randoq<br>
---- p 10 10 10 120 120 121<br>
---- S6 100 100 100 -90 -90 -90<br>
-
+<body lang="en-US" dir="ltr"><h1>LRL_Web!</h1>
+<p><strong>LRL_Web Data Inputs:</strong><br/>
+<strong>General Input:</strong>
+<br/>
+There are 5 types of input lines. Except for &quot;END&quot;,
+they can be combined in any order.<br/>
+All these are
+case-insensitive. If a particular input lattice is invalid, it is
+rejected with a message.<br/>
+<br/>
+--- RANDOM: Produces random
+(valid) unit cell;<br/>
+--- Crystal lattice input: &quot;A&quot;,
+&quot;B&quot;, &quot;C&quot;, &quot;P&quot;, &quot;R&quot;, &quot;F&quot;,
+&quot;I&quot; followed by three axis lengths and three angles (in
+degrees);<br/>
+--- semicolon: lines beginning with a semicolon are
+treated as comments<br/>
+--- END ends the data input section<br/>
+<br/>
+<strong>Vector
+Input:</strong> <br/>
+--- g (or g6) for G<sup>6</sup>vectors; <br/>
+---
+s (or s6) for S<sup>6</sup>, Delone/Selling scalars,<br/>
+--- c3 (or
+C3) for C<sup>3</sup> input (in order: (s1,s4), (s2,s5), (s3,s6),
+with or without punctuation)<br>
+ (C would be interpreted as a C-centered
+unit cell)<br/>
+--- C3 input is in the order: (s1,s4), (s2,s5),
+(s3,s6) where the elements are the S<sup>6</sup> Delone scalars.<br/>
+---
+u (or U or DC7u or DU) for unsorted Dirichlet 7 cells.<br/>
+<br/>
+<strong>Examples
+of unit cell inputs</strong><br/>
+F 10 20 30 90 90 90<br/>
+G 100 400
+900 0 -215.02 0<br/>
+S6 0 -107.51 0 7.51 -400 -792.49<br/>
+random<br/>
+C3
+(0.000,-100.000) (0.000,-100.000) (0.000,-100.000)<br/>
+; this is a
+comment<br/>
+end<br/>
+<br/>
+<strong>Invalid Input:</strong><br/>
+The
+most common invalid input is an invalid unit cell, entered either as
+a cell or a vector.<br/>
+If an unrecognized lattice symbol or word is
+used, then a message is output.<br/>
+Here are a few examples:<br/>
+---
+randoq<br/>
+--- p 10 10 10 120 120 121<br/>
+--- S6 100 100 100 -90
+-90 -90</p>
 </body>
 </html>
