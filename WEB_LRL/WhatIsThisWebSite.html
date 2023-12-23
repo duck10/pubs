@@ -8,11 +8,12 @@
 	<meta name="changed" content="2023-12-21T08:42:16.130000000"/>
 	<meta name="created" content="00:00:00">
 	<meta name="created" content="00:00:00">
+	<meta name="created" content="00:00:00">
 </head>
-
-<body lang="en-US" dir="ltr"><h1>LRL_WEB (<u>L</u>attice <u>R</u>epresentation <u>L</u>ibrary)</h1>
-
-<strong style="font-size: 25px;">LRL_Web: About this web site:</strong><br>
+<body lang="en-US" dir="ltr"><h1>LRL_WEB (<u>L</u>attice
+<u>R</u>epresentation <u>L</u>ibrary)</h1>
+<p><strong><font size="4" style="font-size: 15pt">LRL_Web: About this
+web site</font></strong></p>
 <p>We would like to invite you to look at the web site we are
 developing.<br/>
 http://blondie.arcib.org:8083/+AH4-yaya/lrl_web/<br/>
@@ -20,65 +21,121 @@ http://blondie.arcib.org:8083/+AH4-yaya/lrl_web/<br/>
 It
 is still in an early phase, but what is there is functional. The
 intent of <b>WEB_LRL</b> is to increase<br/>
-the availability and visibility
-of software we have written over the years that <br/>
-deal with unit
-cells/lattices and their transformations and properties.<br/>
+the availability and
+visibility of software we have written over the years that <br/>
+deal
+with unit cells/lattices and their transformations and
+properties.<br/>
 <br/>
-It's
-still early days, so we would like to hear about issues you might
-find. There are still a<br/>
-few known problem areas, but letting us
-know when you find them can help us <br/>
+It's still early days, so we would like to
+hear about issues you might find. There are still a<br/>
+few known
+problem areas, but letting us know when you find them can help us
+<br/>
 resolve them.<br/>
 <br/>
-Except
-for one program, they all take the same kind of unit cell input, and
-most write<br/>
-output that can be used to input to another program.
-The site facilitates such <br/>
-chaining together of the programs.
-(That one program simply generates data <br/>
-for other programs to
-use.)<br/>
+Except for one program, they all take
+the same kind of unit cell input, and most write<br/>
+output that can
+be used to input to another program. The site facilitates such
 <br/>
-All of the program sources (including the web site)
-are open source software, freely available to all.<br/>
-We will appreciate your feedback should you find this useful. Your comments
-and suggestions for additions <br>
-and for error correction will be gladly welcomed.<br/>
+chaining together of the programs. (That one program simply
+generates data <br/>
+for other programs to use.)<br/>
 <br/>
-Although the site is easily used without help, we are attaching a summary of
-information about the <br> 
-individual commands available and also a short tutorial. Like the web site, 
-these are still <br>
+All of
+the program sources (including the web site) are open source
+software, freely available to all.<br/>
+We will appreciate your
+feedback should you find this useful. Your comments and suggestions
+for additions <br/>
+and for error correction will be gladly
+welcomed.<br/>
+<br/>
+Although the site is easily used without help,
+we are attaching a summary of information about the <br/>
+individual
+commands available and also a short tutorial. Like the web site,
+these are still <br/>
 works-in-progress.<br/>
 <br/>
-
-<strong style="font-size: 25px;">A short essay about unit cells:</strong><br>
-
-<p>
-Crystals are magical-looking things that have interested people since prehistory.<br>
-A moment's thought tells you that there is something special about the way that<br>
-they are constructed. Crystallographers are women and men who study the structures<br>
-of crystals. The structures are usually described in terms of the &quot;unit cell&quot;,<br>
-the building block that when stacked up makes the crystal.
+<strong><font size="4" style="font-size: 15pt">A
+short essay about unit cells</font></strong></p>
+<p>Crystals are magical-looking things that have interested people
+since prehistory.<br/>
+A moment's thought tells you that there is
+something special about the way that<br/>
+they are constructed.
+Crystallographers are women and men who study the structures<br/>
+of
+crystals. The structures are usually described in terms of the &quot;unit
+cell&quot;,<br/>
+the building block that when stacked up makes the
+crystal. 
 </p>
-<p>
-Unit cells are usually thought of as boxes and described by the length&apos;s of their<br>
-edges and the angles between them. The problem that arises is that there are different<br>
-choices of how to define the unit cell of a crystal, some as simple as interchanging the<br>
-edges (and there are other, more complex choices). <b>WEB_LRL</b> is designed to allow<<br>
-access to some programs that can show such choices and to display some information<br>
-  about the lattices and the relationship between different choices and cells.
+<p>Unit cells are usually thought of as boxes and described by the
+length&amp;apos;s of their<br/>
+edges and the angles between them.
+The problem that arises is that there are different<br/>
+choices of
+how to define the unit cell of a crystal, some as simple as
+interchanging the<br/>
+edges (and there are other, more complex
+choices). <b>WEB_LRL</b> is designed to allow&lt;<br/>
+access to some
+programs that can show such choices and to display some
+information<br/>
+about the lattices and the relationship between
+different choices and cells. 
 </p>
 
+<p><strong><font size="4" style="font-size: 15pt">Different ways to describe a unit cell</font></strong><br/>
+<p>
+<b>WEB_LRL</b> is designed to give access to several different ways that cells are described.<BR>
+The different ways are briefly described below. Programs in <b>WEB_LRL</b> are designed to provide<br>
+for the transformations between the types. It does this by providing the ability to read<br>
+the data from the input window for each type (except V<sup>7</sup>).
+<table>
+<tr>
+    <td>E<sup>3</sup></td> 
+    <td>lengths and angles</td>
+</tr>
+<tr>
+   <td>E<sup>3</sup> </td>
+   <td>edge vectors (not really E<sup>3</sup>, since there are 9 variables)</td>
+</tr>
+<tr>
+   <td>G<sup>6</sup></td>
+</tr>
+<tr>
+   <td>S<sup>6</sup></td>
+</tr>
+<tr>
+   <td>G<sup>6</sup></td>
+</tr>
+<tr>
+   <td>C<sup>3</sup></td>
+</tr>
+<tr>
+   <td>V<sup>7</sup></td>
+</tr>
+<tr>
+   <td>DC<sup>7</sup>u</td>
+</tr>
+   <td>S<sup>6</sup>L</td>
+</tr>
+<tr>
+   <td>RI</td>
+</tr>
 
+</table>
+</p>
+<strong><font size="4" style="font-size: 15pt">LRL_Web
+About this web site:</font></strong><br/>
 
-<strong style="font-size: 25px;">LRL_Web About this web site:</strong><br>
-<strong style="font-size: 25px;">LRL_Web About this web site:</strong><br>
-<strong style="font-size: 25px;">LRL_Web About this web site:</strong><br>
-
+<strong><font size="4" style="font-size: 15pt">LRL_Web
+About this web
+site:</font></strong><br/>
 --------------------------------------------------</p>
 </body>
 </html>
