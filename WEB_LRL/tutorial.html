@@ -79,8 +79,8 @@ there is a &quot;Submit&quot; button (and those are also in several
 places in the left column). That button causes selected
 calculations to be executed.</p>
 <p>Immediately below that section is a place to select &quot;Number
-of operation windows&quot;. Each o<br/>
-peration executes a single
+of operation<br/>
+ windows&quot;. Each operation executes a single
 command/program to perform a selected task. The left hand column
 <br/>
 contains several items. The large selection box allows the
@@ -127,6 +127,7 @@ o &quot;A2&quot;
 In
 the &quot;Tool Output&quot; window, the program writes:<br/>
 ;
+<i>
 Generate cells<br/>
 ; Delone lattice type requested <br/>
 ; lattice
@@ -136,7 +137,7 @@ G6 31.196 131.880 109.653 -95.279 -5.133 0.000 Delone#
 G6 27.012 164.974 111.066 -169.317 -46.120 0.000 Delone#
 = A2 aP<br/>
 ;<br/>
-end<br/>
+end<br/></i>
 <br/>
 This program outputs its data in
 G<sup>6</sup> representation. In this case, notice the zero value for
@@ -159,13 +160,13 @@ that the &quot;Source of data&quot; is set to <br/>
 &quot;use prior
 output&quot;. Click &quot;Submit&quot;. The result should appear in
 the &quot;Tool Output&quot; window for operations #2.<br/>
-<br/>
+<br/><i>
 ; To
 Cell<br/>
 P 5.585 11.484 10.472 113.338 92.515 90.000 <br/>
 P 5.197
 12.844 10.539 128.713 114.898 90.000 <br/>
-end<br/>
+end<br/></i>
 <br/>
 That's the
 operations guide for almost everything on the site. One important
@@ -206,12 +207,12 @@ The results now appear in the 3 &quot;Tool
 output&quot; windows.<br/>
 <br/>
 First output window:<br/>
-;
+;<i>
 CheckInput<br/>
 ; invalid cell parameter (A)<br/>
 P 10.000 10.000
 10.000 90.000 90.000 90.000 <br/>
-end<br/>
+end<br/></i>
 <br/>
 Note two things
 here: first the invalid cell was detected on input; second, the
@@ -220,7 +221,7 @@ with a semicolon, which will be
 ignored in succeeding programs using the output for input.<br/>
 <br/>
 Second
-output window:<br/>
+output window:<br/><i>
 ; Perturb vectors<br/>
 <br/>
 P 10.000 10.000
@@ -234,7 +235,7 @@ P 9.956 9.921 9.929 89.938
 P 9.896 9.992 10.053 90.576 89.709
 89.376 perturbed <br/>
 P 9.969 9.989 9.984 90.509 89.490 89.668
-perturbed <br/>
+perturbed <br/></i>
 ; <br/>
 <br/>
 The thing to notice here is that the
@@ -243,7 +244,7 @@ That's not <br/>
 surprising since we only requested 1% change.<br/>
 <br/>
 Third
-output window:<br/>
+output window:<br/><i>
 ; Volume<br/>
 P 10.000 10.000 10.000 90.000
 90.000 90.000 Volume = 1000<br/>
@@ -257,7 +258,7 @@ P 9.896 9.992 10.053 90.576 89.709 89.376
 Volume = 993.926<br/>
 P 9.969 9.989 9.984 90.509 89.490 89.668 Volume
 = 994.114<br/>
-end<br/>
+end<br/></i>
 <br/>
 Note that the volumes are near to the
 value of the unperturbed cell (1000). The 1% change request is
@@ -299,18 +300,18 @@ Click on
 &quot;Submit&quot;.<br/>
 <br/>
 In the first &quot;Tool output&quot;
-window, we see:<br/>
+window, we see:<br/><i>
 ; Path generator<br/>
 ; no. of points output is
 20<br/>
 S 0.00000 0.00000 98.45032 -198.45032 -198.45032 -100.00000
 1<br/>
 S 0.00000 0.00000 88.08394 -188.08394 -188.08394 -100.00000
-2<br/>
+2<br/></i>
 ...<br/>
 <br/>
 In the second &quot;Tool output&quot; window,
-we see:<br/>
+we see:<br/><i>
 ; To Cell the same path points as unit cells<br/>
 P 10.000 10.000 10.000 90.000 90.000
 10.100 <br/>
@@ -319,10 +320,11 @@ P
 10.000 10.000 10.000 90.000 90.000 38.997 <br/>
 P 10.000 10.000
 10.000 90.000 90.000 47.661 <br/>
-...<br/>
+...<br/></i>
 <br/>
 And in the third
 &quot;Tool output&quot; window, we see:<br/>
+<i>
 ; CmdDists, calculate
 distances<br/>
 ; ordinals G6-Euclidean NCDist CS6Dist ___
@@ -354,7 +356,7 @@ P 10.000 10.000 10.000 90.000
 90.000 47.661 4<br/>
 P 10.000 10.000 10.000 90.000 90.000 55.260
 5<br/>
-<br/>
+<br/></i>
 So what have we learned here? In the first output, we
 see the cells in S<sup>6</sup> format, but in the second, we see them
 <br/>
@@ -396,22 +398,24 @@ and click &quot;Submit&quot;.<br/>
 <br/>
 For
 the output of operation 4, we see the output:<br/>
-; Niggli
-reduced<br/>
+<i>
+; Niggli reduced<br/>
 G6 100.000 100.000 100.000 -0.000 0.000 -10.307 <br/>
 G6
 100.000 100.000 100.000 0.000 0.000 -10.425 <br/>
 end<br/>
+</i>
 <br/>
 And
 for the output of operation 5, we see:<br/>
+<i>
 ; Lattice Matching<br/>
 P
 10.000 10.000 10.000 90.000 90.000 92.954 ( 0 degrees in S6)
 REFERENCE<br/>
 P 10.000 10.000 10.000 90.000 90.000 92.988 ( 0.026989
 degrees in S6)<br/>
-end<br/>
+end<br/></i>
 <br/>
 The space of alternative unit
 cells for the second cell has been searched for the one most similar
@@ -422,7 +426,219 @@ search
 vector is quite small in S<sup>6</sup>.
 <br/>
 <br/>
-------------------------------------------------------------------------<br/>
+-----------------------------------------------------------------------<br/>
+<br/>
+<strong>Yet another example.</strong> 
+
+Prelude:
+Several structures of krait venom toxin phosphorolase A2 have been reported. Several<br/>
+ space groups have been reported, but LeTrong and Stenkamp, 2007, have determined that some are actually<br/>
+ the same. Two examples are: <br/>
+r  57.10  57.10  57.10  89.75  89.75   89.75  2OSN  hR   <br/>
+C  80.95  80.57  57.1   90     90.35   90    1G2X  mC  <br/>
+<br/>
+To begin, set the number operation windows to 1. Input the two cell above into the above cells into<br/>
+ the Input Data window. Select &quot;Sella&quot; as the operation,
+ and click on &quot;Submit&quot; .
+<br/>
+In the Output window, we see:
+<br/>
+<i>
+; SELLA method symmetry searching <br/>
+; Sella graphics file SEL_2024-03-14.13_57_35_35bf2e_0.svg <br/>
+; Sella graphics file SEL_2024-03-14.13_57_35_35bf2e_1.svg <br/>
+; Sella cell block start 0 <br/></i>
+... <br/>
+<br/>
+(followed by a considerable output that we will ignore here). <br/>
+(The graphics file names will be different for your test.) <br/>
+
+Of course, the diagram for the first file finds that the match for hR (Rhombohedral) is zero, since it was input<br/>
+ as rhombohedral. The second file has a distance from hR equal to 1.14,
+ indicating a likely match.<br/>
+<img src="SEL_2024-03-14.13_57_35_35bf2e_0.svg" alt="PlotC3 SVG part 1"/>
+<img src="SEL_2024-03-14.13_57_35_35bf2e_1.svg" alt="PlotC3 SVG part 1"/>
+ <br/>
+Of course, we now face the question of what the rhombohedral cell of the second cell<br/>
+ looks like. For that purpose, we can use lattice matching.  <br/>
+<br/>
+Change the operation selection to &quot;Matching&quot;, and click &quot;Submit&quot;. Here is the result: <br/>
+<br/>
+<i>
+; Lattice Matching <br/>
+R 57.100 57.100 57.100 89.750 89.750 89.750 ( 0 degrees in S) REFERENCE <br/>
+R 57.106 57.100 57.106 89.752 89.730 89.752 ( 0.013 degrees in S6<br/>
+</i>
+We see immediately that the cells are quite similar, and the angle  <br/>
+between is quite small (in S<sup>6</sup>). <br/>
+-<br/>
+<br/>
+-----------------------------------------------------------------------<br/>
+<br/>
+<strong>And just one more example.</strong> <br/>
+<strong>Part 1</strong> <br/>
+
+Set the number of operations to 3.<br/>
+For the first operation, choose &quot;Generate cells&quot<br/>
+Set the first parameter to 1.<br/>
+Set the second parameter to &quot;44 C1 T2 C3 H4 C5&quot;<br/>
+(this is a list of one triclinic cells and one of each of the Delone lattice types, 1-5.)<br/><br/>
+For the second operation, choose &quot;Path&quot;<br/><br/>
+For the third operation, choose &quot;PlotC3&quot;<br/>
+Click on &quot;Submit&quot; .
+<br/><br/>
+In the Output Window for the first operation, we see:<br/>
+; Generate cells<br/>
+; Niggli lattice types requested<br/>
+G6 103.159 109.653 163.076 100.412 62.392 5.133 IT# = 44 aP<br/>
+; Delone lattice type requested<br/>
+G6 145.766 145.766 145.766 -97.177 -97.177 -97.177 Delone# = C1 cI<br/>
+; Delone lattice type requested<br/>
+G6 54.106 54.106 104.724 -54.106 -54.106 0.000 Delone# = T2 tI<br/>
+; Delone lattice type requested<br/>
+G6 82.864 82.864 82.864 -82.864 -82.864 0.000 Delone# = C3 cF<br/>
+; Delone lattice type requested
+G6 66.691 66.691 71.740 0.000 0.000 -66.691 Delone# = H4 hP
+; Delone lattice type requested<br/>
+G6 43.675 43.675 43.675 0.000 0.000 0.000 Delone# = C5 cP<br/>
+<br/>
+In the Output Window for the second operation, we see:<br/>
+; Path generator<br/>
+; no. of points output is 100<br/>
+; path segment 1<br/>
+S 50.20600 31.19600 2.56650 -136.92150 -162.42550 -244.47800 segment 1 point 1 count 1<br/>
+S 45.00629 26.99682 -0.12587 -132.27242 -156.43411 -234.16805 segment 1 point 2 count 2<br/>
+S 39.80658 22.79763 -2.81824 -127.62334 -150.44271 -223.85811 segment 1 point 3 count 3<br/>
+... and lots more ...<br/>
+<br/>
+In the Output Window for the third operation, we see:<br/>
+; PlotC3 <br/>
+; Graphical output SVG file = PLT_2024-03-17.14_32_14_35ddd8_0.svg <br/>
+The S6 data range is -244.478 to 50.206 <br/>
+<br/>
+P 10.157 10.472 12.770 67.948 76.083 88.617<br/>
+P 10.267 10.562 12.734 70.451 78.083 90.067<br/>
+P 10.375 10.651 12.699 72.884 80.036 91.461<br/>
+P 10.483 10.740 12.663 75.258 81.946 92.805<br/>
+P 10.589 10.828 12.627 77.580 83.818 94.102<br/>
+...<br/>
+P 8.600 8.600 8.631 90.000 90.000 92.720<br/>
+P 8.625 8.625 8.640 90.000 90.000 91.352<br/>
+P 8.650 8.650 8.650 90.000 90.000 90.000<br/>
+; Number of points: 100<br/>
+
+P 10.16 10.47 12.77 67.95 76.08 88.62<br/>
+P 10.27 10.56 12.73 70.45 78.08 90.07<br/>
+P 10.38 10.65 12.70 72.88 80.04 91.46<br/>
+<br/>
+...
+
+P 8.65 8.65 8.65 90.00 90.00 90.00... and lots more ...<br/><br/>
+
+Click on the graphics file name (<i>PLT_2024-03-17.14_32_14_35ddd8_0.svg</i> in this example), to display the C<sup>3</sup> plot.
+<br/>
+<br/>
+
+<img src="PLT_2024-03-17.14_32_14_35ddd8_0.svg" alt="PlotC3 SVG part 1" width="1000"/>
+<br/>
+So what do we learn from that? First as expected, the generated path is a single line from <br/>
+the first point to the final point. The line takes sharp turns at each waypoint in the path.<br/>
+The line starts with a blue point that is not inside the all negative-orthant; that is because<br/>
+it is generated as a Niggli point for an all-plus cell. The other 5 points are all within the<br/>
+the orthant because they are all generated from the Delone descriptions of Selling-reduced<br/>
+cells.<br/>
+<br/>
+
+
+
+<strong>Part 2</strong> <br/>
+Set the number of operations to 5.<br/>
+(We will only need 4 for this part, but 5 will make the next step simpler.)<br/>
+Set operation 3 to Check Input<br/>
+Set operation 4 to Delone (reduction).<br/>
+Set operation 5 to PlotC3<br/>
+Click on &quot;Submit&quot; .
+<br/><br/>
+
+In Output window 5, we see:<br/><br/>
+ PlotC3<br/>
+; Graphical output SVG file = <i>PLT_2024-03-17.15_25_36_35de94_0.svg</i><br/>
+The S6 data range is -148.28 to 0<br/>
+<br/>
+P 14.277 10.472 13.127 115.624 116.710 108.581<br/>
+P 15.325 10.562 12.734 109.549 117.516 114.227<br/>
+P 15.859 10.651 12.699 107.116 119.331 114.791<br/>
+P 16.375 10.740 12.663 104.742 121.110 115.327<br/>
+P 16.876 10.828 12.627 102.420 122.862 115.839<br/>
+...<br/>
+P 8.600 8.600 8.631 90.000 90.000 92.720<br/>
+P 8.625 8.625 8.640 90.000 90.000 91.352<br/>
+P 8.650 8.650 8.650 90.000 90.000 90.000<br/>
+; Number of points: 100<br/>
+<br/>
+P 14.28 10.47 13.13 115.62 116.71 108.58<br/>
+P 15.32 10.56 12.73 109.55 117.52 114.23<br/>
+P 15.86 10.65 12.70 107.12 119.33 114.79<br/>
+<br/>
+...<br/>
+<br/>
+P 8.65 8.65 8.65 90.00 90.00 90.00<br/>
+<br/>
+end<br/>
+<br/>
+Click on the graphics file name (<i>PLT_2024-03-17.15_25_36_35de94_0.svg</i> in this example), to display the C<sup>3</sup> plot.
+<br/>
+<br/>
+<img src="PLT_2024-03-17.15_25_36_35de94_0.svg" alt="PlotC3 SVG Part 2" width="1000"/>
+<br/>
+So what do we learn from this example. The light gray lines are drawn between adjacent points in the input. If the <br/>
+line is long, then the points are relatively far apart (note that in the first part, all adjacent points were close). As is <br/>
+well-known, no unit cell reduction is perturbation-stable.
+<br/>
+<br/>
+
+<strong>Part 3</strong> <br/>
+Change the choice of Operation 3 to Perturb, with arguments 20 and 10 (20 perturbations<br/>
+and 1% changes)<br/>
+Click on &quot;Submit&quot; .
+<br/><br/>
+In Output window 5, we see:<br/><br/>
+; PlotC3 <br/>
+; Graphical output SVG file = <i>PLT_2024-03-17.15_37_06_35df2a_0.svg</i> <br/>
+The S6 data range is -150.893 to 0 <br/>
+ <br/>
+P 14.277 10.472 13.127 115.624 116.710 108.581 <br/>
+P 13.871 10.303 12.699 114.575 116.086 109.527 <br/>
+P 14.316 10.517 12.984 115.515 116.136 109.227 <br/>
+P 14.112 10.391 13.013 115.448 116.883 108.167 <br/>
+P 14.157 10.465 13.358 116.057 118.280 107.067 <br/>
+...<br/>
+P 14.828 8.672 8.608 90.262 124.860 125.202<br/>
+P 8.679 8.632 8.748 90.297 90.372 90.052 <br/>
+P 12.081 12.074 8.595 90.178 134.967 119.523 <br/>
+; Number of points: 2100 <br/>
+ <br/>
+P 14.28 10.47 13.13 115.62 116.71 108.58 <br/>
+P 13.87 10.30 12.70 114.57 116.09 109.53 <br/>
+P 14.32 10.52 12.98 115.52 116.14 109.23 <br/>
+ <br/>
+...<br/>
+ <br/>
+P 12.08 12.07 8.60 90.18 134.97 119.52 <br/>
+ <br/>
+ 
+ Click on the graphics file name (<i>PLT_2024-03-17.15_37_06_35df2a_0.svg</i> in this example), to display the C3 plot.<br/>
+<br/>
+<br/>
+<img src="PLT_2024-03-17.15_37_06_35df2a_0.svg" alt="PlotC3 SVG part 3" width="1000"/>
+<br/>
+ So what do we learn from this example. Again,light gray lines are drawn between adjacent points in the input.<br/>
+ But now there are many more lines, further emphasizing that computing the smallest distance between two point<br/>
+ is not simply a matter of cell reduction followed by calculating the Euclidean distance between. Here, many <br/>
+ points that were close together, now are relatively far apart in this simple projection.<br/>
+
+ 
+<br/><br/>------------------------------------------------------------------------<br/><br/>
 <strong>3. Input types for WEB_LRL </strong><br/>
 <br/>
 there are 5 types of
