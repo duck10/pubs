@@ -9,11 +9,57 @@
 </head>
 <body lang="en-US" dir="ltr"><h1>LRL_Web Descriptions of Programs</h1>
 <strong style="font-size: 25px;">LRL_Web Program Choices:</strong><br>
+
+
+
+<div class="nav">
+Jump to the sections below <br>
+<table border="0">
+<td align="center" width="300px"> <a href="#CheckInput">Check input</a><br>
+<td align="center" width="300px"> <a href="#CmdS6Refl">Generate S6 reflection</a><br>
+<td align="center" width="300px"> <a href="#CmdToG6">Compute G6 cells</a>
+</tr/>
+<tr>
+<td align="center" width="300px"> <a href="#CmdDelone">Do Selling reduction</a><br>
+<td align="center" width="300px"> <a href="#CmdScale">Scale all cell to same S6 size</a><br>
+<td align="center" width="300px"> <a href="#CmdToS6L">Compute S6 or Root Invariants</a>
+</tr/>
+<tr>
+<td align="center" width="300px"> <a href="#CmdDists">Compute distance between</a><br>
+<td align="center" width="300px"> <a href="#CmdSella">Apply Sella algorithm</a><br>
+<td align="center" width="300px"> <a href="#CmdToU">Compute DC7unsrt cells</a>
+</tr/>
+<tr>
+<td align="center" width="300px"> <a href="#CmdGen">Generate data</a><br>
+<td align="center" width="300px"> <a href="#CmdToS6">Compute S6 cells</a><br>
+<td align="center" width="300px"> <a href="#CmdToV7">Computer V7 cells</a>
+</tr/>
+<tr>
+<td align="center" width="300px"> <a href="#CmdLM">Lattice matching</a><br>
+<td align="center" width="300px"> <a href="#CmdToB4">Compute B4 cells</a><br>
+<td align="center" width="300px"> <a href="#CmdVolume">Compute cell volumes</a>
+</tr/>
+<tr>
+<td align="center" width="300px"> <a href="#CmdNiggli">Do Niggli reduction</a><br>
+<td align="center" width="300px"> <a href="#CmdToC3">Compute C3 cells</a><br>
+<td align="center" width="300px"> <a href="#Dirichlet">Show Dirichlet cells</a>
+</tr/>
+<tr>
+<td align="center" width="300px"> <a href="#CmdPath">Make a path between cells</a><br>
+<td align="center" width="300px"> <a href="#CmdToCell">Computer length and angle cell</a><br>
+<td align="center" width="300px"> <a href="#PlotC3">Make plot of C3 data</a>
+</tr/>
+<tr>
+<td align="center" width="300px"> <a href="#CmdPerturb">Apply perturbations to cells</a>
+ 
+  </table>
+</div>
 --------------------------------------------------<br>
 dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
 dnl Command:  CheckInput
 <br>
 dnl<br><br>
+<a name="Checkinput"> </a>
 <strong>Command: Check Input</strong><br>
 <em><u>Purpose:</u></em> Verify input lattice types and parameters<br>
 <em><u>Output type:</u></em> Valid input is reported as unit cell a, b, c, &amp;alpha;, &amp;beta;, &amp;gamma;.<br>
@@ -26,6 +72,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdDelone
 <br>
 dnl<br><br>
+<a name="CmdDelone"> </a>
 <strong>Command:
 compute Selling-reduced primitive cells</strong><br>
 <em><u>Purpose:</u></em>
@@ -43,6 +90,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdDists
 <br>
 dnl<br><br>
+<a name="CmdDists"> </a>
 <strong>Command:
 compute NCDist and CS6Dist distances</strong><br>
 <em><u>Purpose:</u></em>
@@ -90,6 +138,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdGen
 <br>
 dnl<br><br>
+<a name="CmdGen"> </a>
 <strong>Command:
 Generate cells of a particular type or types</strong><br>
 <em><u>Purpose:</u></em>
@@ -138,6 +187,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdLM
 <br>
 dnl<br><br>
+<a name="CmdLM"> </a>
 <strong>Command:
 apply Lattice Matching algorithm to listed cells</strong><br>
 <em><u>Purpose:</u></em>
@@ -176,6 +226,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdNiggli
 <br>
 dnl<br><br>
+<a name="CmdNiggli"> </a>
 <strong>Command:
 compute Niggli-reduced primitive cells</strong><br>
 <em><u>Purpose:</u></em>
@@ -193,6 +244,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdPath
 <br>
 dnl<br><br>
+<a name="CmdPath"> </a>
 <strong>Command:
 compute path between pairs of cells</strong><br>
 <em><u>Purpose:</u></em>
@@ -214,6 +266,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdPerturb
 <br>
 dnl<br><br>
+<a name="CmdPerturb"> </a>
 <strong>Command:
 compute perturbed versions of input cells</strong><br>
 <em><u>Purpose:</u></em>
@@ -267,6 +320,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdS6Refl
 <br>
 dnl<br><br>
+<a name="CmdS6Refl"> </a>
 <strong>Command:
 apply S6 reflections to input cells</strong><br>
 <em><u>Purpose:</u></em>
@@ -320,6 +374,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdScale
 <br>
 dnl<br><br>
+<a name="CmdScale"> </a>
 <strong>Command:
 Scale unit cells data to single size</strong><br>
 <em><u>Purpose:</u></em>Scale all input cells to have the same vector size as the first input.
@@ -336,6 +391,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdSella
 <br>
 dnl<br><br>
+<a name="CmdSella"> </a>
 <strong>Command:
 apply Sella algorithm</strong><br>
 <em><u>Purpose:</u></em>
@@ -366,7 +422,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdToB4
 <br>
 dnl<br><br>
-<strong>Command:
+<a name="CmdToB4"> </a><strong>Command:
 compute Bravais tetrahedron (B<sup>4</sup>)</strong><br>
 <em><u>Purpose:</u></em>
 computes the edge vectors of the unit cell and their negative sum.
@@ -391,6 +447,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdToC3
 <br>
 dnl<br><br>
+<a name="CmdToC3"> </a>
 <strong>Command:
 compute complex cell presentation (C</strong><strong><sup>3</sup></strong><strong>)</strong><br>
 <em><u>Purpose:</u></em>
@@ -413,6 +470,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdToCell
 <br>
 dnl<br><br>
+<a name="CmdToCell"> </a>
 <strong>Command:
 compute side-angle cells (a, b, c, &amp;alpha;, &amp;beta;,
 &amp;gamma;)</strong><br>
@@ -430,6 +488,7 @@ NA<br>
 --------------------------------------------------<br>
 dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
 dnl Command:  CmdToG6
+<a name="CmdToG6"> </a>
 <br>
 dnl<br><br>
 <strong>Command:compute G</strong><strong><sup>6</sup></strong><strong> version of
@@ -443,9 +502,10 @@ NA<br>
 <br>
 --------------------------------------------------<br>
 dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
-dnl Command:  CmdT0S6
+dnl Command:  CmdToS6
 <br>
 dnl<br><br>
+<a name="CmdToS6"> </a>
 <strong>Command: compute S<sup>6</sup> version of cells</strong><br>
 <em><u>Purpose:</u></em> convert to S<sup>6</sup>
 representation (note that lattice centering is not removed)<br>
@@ -459,6 +519,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdToS6L
 <br>
 dnl<br><br>
+<a name="CmdToS6L"> </a>
 <strong>Command:
 compute linearized S</strong><strong><sup>6</sup></strong><strong> or
 Root Invariant version of cells</strong><br>
@@ -491,6 +552,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdToU
 <br>
 dnl<br><br>
+<a name="CmdToU"> </a>
 <strong>Command: compute unsorted Dirichlet cells (dc7unsrt)</strong><br>
 <em><u>Purpose:</u></em>
 convert to the 7 parameter form related to the Dirichlet<br>
@@ -507,6 +569,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdToV7
 <br>
 dnl<br><br>
+<a name="CmdToV7"> </a>
 <strong>Command: compute V<sup>7</sup> version of cells</strong><br>
 <em><u>Purpose:</u></em> convert to
 the 7 parameter vector of Andrews, Bernstein, Pelletier, 1980.<br>
@@ -527,6 +590,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  CmdVolume
 <br>
 dnl<br><br>
+<a name="CmdVolume"> </a>
 <strong>Command:
 compute volumes of listed cells</strong><br>
 <em><u>Purpose:</u></em>
@@ -543,6 +607,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  Dirichlet
 <br>
 dnl<br><br>
+<a name="Dirichlet"> </a>
 <strong>Command: Dirichlet
 </strong><br>
 <em><u>Purpose:</u></em> draw Dirichlet cells of listed cells<br>
@@ -561,7 +626,7 @@ dnl ----------------------------------------------------------------------------
 dnl Command:  PlotC3
 <br>
 dnl<br><br>
-<strong>Command:
+<a name="PlotC3"> </a><strong>Command:
 draw C3 plot of listed cells</strong><br>
 <em><u>Purpose:</u></em> Graphical output of
 multiple unit cells in C<sup>3</sup><br>
