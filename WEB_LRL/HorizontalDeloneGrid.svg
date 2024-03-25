@@ -4,13 +4,28 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <!-- Creation date and time _2024-03-11.08_38_17.-->
 <desc>Delone grid created for LRL_WEB, the site for Larry Andrews and Herbert J Bernstein</desc>
 
+<text x = "500" y = "30" style = "font-family:sans-serif; font-weight:bold; font-size:25px">Lattice System</text>  
+  
+<g transform="translate(30, 450)">
+<text x="0" y="0" style = "font-family:sans-serif; font-weight:bold; font-size:25px" transform="rotate(270 0 0)">Federov Type</text>
+</g>
+
+
+
+  <g transform="translate(40, 40)">
+
 <!-- _________________________________________________________ -->
 <g transform="translate(0, 0)">
    <rect id="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightcyan" />
    <g transform=" translate(18, 78)  ">
 <polyline stroke="black" points="0,-0   70,-0   35,-60.6218   -0.175,0.303109   0.175,-0.101036   35,-20.2073   35,-60.6218   35,-20.2073   70,-0   " style="fill:none; stroke-width:3 stroke-linejoin:round; stroke-linecap:round"
  />
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "44" y = "-7" >T</text><text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "50" y = "-23" >P</text><text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "10" y = "-23" >Q</text><text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "29" y = "-29" >U</text><text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "29" y = "5" >R</text><text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "10" y = "-4" >S</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "44" y = "-7" >T</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "50" y = "-23" >P</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "10" y = "-23" >Q</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "29" y = "-29" >U</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "29" y = "5" >R</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "10" y = "-4" >S</text>
 </g>
 </g>
 
@@ -991,6 +1006,6 @@ M2B is a 3-D manifold between M1A and M1B</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:18px" x = "100" y="740">
 [modified after Delone, Galiulin, and Shtogrin, 1975]</text>
 
-
+</g>
 <!--
 --><!-- Run Constants--></svg>
