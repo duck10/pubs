@@ -1,0 +1,996 @@
+<svg width="1400" height="600" viewBox="1 0  1400 600"  version="1.1" xmlns="http://www.w3.org/2000/svg" 
+xmlns:xlink="http://www.w3.org/1999/xlink">
+<desc>File name  = PLT_2024-03-25.17_11_00_18c4_0.svg </desc> 
+ <g transform="scale(0.6)">
+<text x = "350" y = "550" font-size = "20"  font-family = "Arial, Helvetica, sans-serif "> The S6 data range is  -99.854  to  0</text>
+<!--#######################################################-->
+<text x = "350" y = "630" font-size = "20"  font-family = "Arial, Helvetica, sans-serif ">
+ 
+</text>   <!-- add a comment such as the command line-->
+<!--#######################################################-->
+<text x = "350" y = "590"  font-size = "20" font-family = "Arial, Helvetica, sans-serif" >LRL-WEB  PlotC3   2024-03-25 </text>
+<circle  r="12" stroke = "black" stroke-width="0.5" fill= "rgb(21, 137, 255)" cx="850" cy="550"/>
+<circle  r="12" stroke = "black" stroke-width="0.5" fill= "rgb(50, 151, 223)" cx="865" cy="550"/>
+<circle  r="12" stroke = "black" stroke-width="0.5" fill= "rgb(79, 166, 191)" cx="880" cy="550"/>
+<circle  r="12" stroke = "black" stroke-width="0.5" fill= "rgb(108, 181, 159)" cx="895" cy="550"/>
+<circle  r="12" stroke = "black" stroke-width="0.5" fill= "rgb(137, 196, 127)" cx="910" cy="550"/>
+<circle  r="12" stroke = "black" stroke-width="0.5" fill= "rgb(166, 210, 95)" cx="925" cy="550"/>
+<circle  r="12" stroke = "black" stroke-width="0.5" fill= "rgb(195, 225, 63)" cx="940" cy="550"/>
+<circle  r="12" stroke = "black" stroke-width="0.5" fill= "rgb(224, 240, 31)" cx="955" cy="550"/>
+<circle  r="12" stroke = "black" stroke-width="0.5" fill= "rgb(254, 255, 0)" cx="970" cy="550"/>
+<circle  r="12" stroke = "black" stroke-width="0.5" fill= "rgb(254, 255, 0)" cx="985" cy="550"/>
+<g transform = "translate( 500, 500)">
+
+<line x1="0" y1 = "0" x2 ="0" y2 = "-500" stroke-width = "2" stroke="black" > </line>
+
+<line x1="0" y1 = "0" x2 ="-500" y2 = "0" stroke-width = "2" stroke="black" > </line> 
+
+<g transform = "translate( 0, 0)" >
+   <polyline fill="none" stroke="#A3A3A3" stroke-width=".5"   points=" 
+0 -254.327,  0 -224.338,  0 -150.637,  0 -133.586,  0 -423.893,  
+0 -223.556,  0 -253.642,  0 -179.008,  0 -210.36,  0 -436.787,  
+
+0 -364.839,  0 -311.997,  0 -256.255,  0 -60.6112,  0 -263.254,  
+0 -421.349,  0 -253.768,  0 -291.193,  0 -241.861,  0 -293.047,  
+
+0 -255.338,  0 -148.988,  0 -76.2265,  0 -304.789,  0 -126.09,  
+0 -182.839,  0 -264.16,  0 -286.287,  0 -227.627,  0 -150.594,  
+
+0 -319.701,  0 -183.862,  0 -71.5239,  0 -199.698,  0 -295.194,  
+0 -288.121,  0 -245.518,  0 -305.186,  0 -351.335,  0 -317.579,  
+
+0 -166.049,  0 -234.036,  0 -157.523,  0 -94.361,  0 -282.957,  
+0 -244.189,  0 -278.791,  0 -195.57,  0 -115.542,  0 -246.066,  
+
+0 -210.347,  0 -325.156,  0 -247.233,  0 -416.877,  0 -288.872,  
+0 -327.187,  0 -306.932,  0 -301.411,  0 -64.7438,  0 -120.718,  
+
+0 -339.855,  0 -273.459,  0 -237.612,  0 -59.5184,  0 -95.4403,  
+0 -237.422,  0 -293.286,  0 -156.232,  0 -174.434,  0 -258.822,  
+
+0 -81.7696,  0 -192.683,  0 -245.64,  0 -213.835,  0 -231.003,  
+0 -309.35,  0 -126.033,  0 -229.263,  0 -304.212,  0 -332.342,  
+
+0 -32.1252,  0 -84.7237,  0 -194.076,  0 -367.381,  0 -145.759,  
+0 -187.115,  0 -132.962,  0 -125.909,  0 -244.038,  0 -18.7046,  
+
+0 -400.817,  0 -235.189,  0 -332.486,  0 -327.761,  0 -136.808,  
+0 -372.09,  0 -147.949,  0 -243.488,  0 -78.1463,  0 -243.542,  
+
+
+0 -123.992,  0 -289.543,  0 -225.052,  0 -91.114,  0 -292.24,  
+0 -147.077,  0 -26.5077,  0 -391.692,  0 -208.236,  0 -143.145,  
+
+0 -207.348,  0 -351.141,  0 -305.927,  0 -290.577,  0 -229.489,  
+0 -248.723,  0 -271.765,  0 -231.987,  0 -113.888,  0 -261.837,  
+
+0 -261.566,  0 -153.661,  0 -227.636,  0 -251.756,  0 -255.577,  
+0 -65.5843,  0 -299.016,  0 -234.193,  0 -270.622,  0 -359.988,  
+
+0 -224.752,  0 -343.181,  0 -81.1252,  0 -42.639,  0 -51.6634,  
+0 -189.979,  0 -112.52,  0 -71.0395,  0 -161.489,  0 -234.376,  
+
+0 -242.265,  0 -256.645,  0 -250.03,  0 -191.789,  0 -357.735,  
+0 -115.312,  0 -302.355,  0 -238.139,  0 -165.403,  0 -254.908,  
+
+0 -267.531,  0 -215.405,  0 -336.916,  0 -241.875,  0 -306.932,  
+0 -210.444,  0 -258.763,  0 -386.027,  0 -338.28,  0 -220.935,  
+
+0 -270.877,  0 -45.6494,  0 -266.83,  0 -303.243,  0 -209.062,  
+0 -117.106,  0 -222.886,  0 -163.233,  0 -167.3,  0 -315.553,  
+
+0 -366.214,  0 -223.071,  0 -273.712,  0 -303.403,  0 -192.016,  
+0 -263.335,  0 -127.313,  0 -239.374,  0 -234.773,  0 -353.543,  
+
+0 -209.114,  0 -56.864,  0 -263.482,  0 -244.378,  0 -260.64,  
+0 -208.833,  0 -114.699,  0 -147.739,  0 -202.683,  0 -314.616,  
+
+0 -53.8852,  0 -166.205,  0 -250.014,  0 -137.608,  0 -220.059,  
+0 -417.699,  0 -221.228,  0 -273.712,  0 -210.324,  0 -396.716,  
+
+
+"/> 
+
+</g> <!--End of transform -->
+
+<!--plot labeling-->
+<g transform = "translate(0,-265)" >
+<text x = "-350" y = "-200"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" >Coordinate c</text>
+<g transform = "translate(205,10)">
+<text x = "-325" y = "-200"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >1 </text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text   x = "-480" y = "-20"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text  x = "-480" y = "-20"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >1</text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text  x = "-60" y = "-450" font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text x = "-60" y = "-450"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >4</text >
+</g>
+</g>
+</g>
+<g transform = "translate( 1100, 500)">
+
+<line x1="0" y1 = "0" x2 ="0" y2 = "-500" stroke-width = "2" stroke="black" > </line>
+
+<line x1="0" y1 = "0" x2 ="-500" y2 = "0" stroke-width = "2" stroke="black" > </line> 
+
+<g transform = "translate( 0, 0)" >
+   <polyline fill="none" stroke="#A3A3A3" stroke-width=".5"   points=" 
+0 -254.327,  0 -224.338,  0 -150.637,  0 -133.586,  0 -423.893,  
+0 -223.556,  0 -253.642,  0 -179.008,  0 -210.36,  0 -436.787,  
+
+0 -364.839,  0 -311.997,  0 -256.255,  0 -60.6112,  0 -263.254,  
+0 -421.349,  0 -253.768,  0 -291.193,  0 -241.861,  0 -293.047,  
+
+0 -255.338,  0 -148.988,  0 -76.2265,  0 -304.789,  0 -126.09,  
+0 -182.839,  0 -264.16,  0 -286.287,  0 -227.627,  0 -150.594,  
+
+0 -319.701,  0 -183.862,  0 -71.5239,  0 -199.698,  0 -295.194,  
+0 -288.121,  0 -245.518,  0 -305.186,  0 -351.335,  0 -317.579,  
+
+0 -166.049,  0 -234.036,  0 -157.523,  0 -94.361,  0 -282.957,  
+0 -244.189,  0 -278.791,  0 -195.57,  0 -115.542,  0 -246.066,  
+
+0 -210.347,  0 -325.156,  0 -247.233,  0 -416.877,  0 -288.872,  
+0 -327.187,  0 -306.932,  0 -301.411,  0 -64.7438,  0 -120.718,  
+
+0 -339.855,  0 -273.459,  0 -237.612,  0 -59.5184,  0 -95.4403,  
+0 -237.422,  0 -293.286,  0 -156.232,  0 -174.434,  0 -258.822,  
+
+0 -81.7696,  0 -192.683,  0 -245.64,  0 -213.835,  0 -231.003,  
+0 -309.35,  0 -126.033,  0 -229.263,  0 -304.212,  0 -332.342,  
+
+0 -32.1252,  0 -84.7237,  0 -194.076,  0 -367.381,  0 -145.759,  
+0 -187.115,  0 -132.962,  0 -125.909,  0 -244.038,  0 -18.7046,  
+
+0 -400.817,  0 -235.189,  0 -332.486,  0 -327.761,  0 -136.808,  
+0 -372.09,  0 -147.949,  0 -243.488,  0 -78.1463,  0 -243.542,  
+
+
+0 -123.992,  0 -289.543,  0 -225.052,  0 -91.114,  0 -292.24,  
+0 -147.077,  0 -26.5077,  0 -391.692,  0 -208.236,  0 -143.145,  
+
+0 -207.348,  0 -351.141,  0 -305.927,  0 -290.577,  0 -229.489,  
+0 -248.723,  0 -271.765,  0 -231.987,  0 -113.888,  0 -261.837,  
+
+0 -261.566,  0 -153.661,  0 -227.636,  0 -251.756,  0 -255.577,  
+0 -65.5843,  0 -299.016,  0 -234.193,  0 -270.622,  0 -359.988,  
+
+0 -224.752,  0 -343.181,  0 -81.1252,  0 -42.639,  0 -51.6634,  
+0 -189.979,  0 -112.52,  0 -71.0395,  0 -161.489,  0 -234.376,  
+
+0 -242.265,  0 -256.645,  0 -250.03,  0 -191.789,  0 -357.735,  
+0 -115.312,  0 -302.355,  0 -238.139,  0 -165.403,  0 -254.908,  
+
+0 -267.531,  0 -215.405,  0 -336.916,  0 -241.875,  0 -306.932,  
+0 -210.444,  0 -258.763,  0 -386.027,  0 -338.28,  0 -220.935,  
+
+0 -270.877,  0 -45.6494,  0 -266.83,  0 -303.243,  0 -209.062,  
+0 -117.106,  0 -222.886,  0 -163.233,  0 -167.3,  0 -315.553,  
+
+0 -366.214,  0 -223.071,  0 -273.712,  0 -303.403,  0 -192.016,  
+0 -263.335,  0 -127.313,  0 -239.374,  0 -234.773,  0 -353.543,  
+
+0 -209.114,  0 -56.864,  0 -263.482,  0 -244.378,  0 -260.64,  
+0 -208.833,  0 -114.699,  0 -147.739,  0 -202.683,  0 -314.616,  
+
+0 -53.8852,  0 -166.205,  0 -250.014,  0 -137.608,  0 -220.059,  
+0 -417.699,  0 -221.228,  0 -273.712,  0 -210.324,  0 -396.716,  
+
+
+"/> 
+
+</g> <!--End of transform -->
+
+<!--plot labeling-->
+<g transform = "translate(0,-265)" >
+<text x = "-350" y = "-200"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" >Coordinate c</text>
+<g transform = "translate(205,10)">
+<text x = "-325" y = "-200"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >2 </text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text   x = "-480" y = "-20"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text  x = "-480" y = "-20"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >2</text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text  x = "-60" y = "-450" font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text x = "-60" y = "-450"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >5</text >
+</g>
+</g>
+</g>
+<g transform = "translate( 1700, 500)">
+
+<line x1="0" y1 = "0" x2 ="0" y2 = "-500" stroke-width = "2" stroke="black" > </line>
+
+<line x1="0" y1 = "0" x2 ="-500" y2 = "0" stroke-width = "2" stroke="black" > </line> 
+
+<g transform = "translate( 0, 0)" >
+   <polyline fill="none" stroke="#A3A3A3" stroke-width=".5"   points=" 
+-324.305 -267.903,  -268.398 -350.535,  -139.294 -358.854,  -183.65 -323.302,  -147.947 -163.72,  
+-178.684 -60.4738,  -342.101 -66.5802,  -325.625 -248.921,  -398.285 -27.6163,  -316.398 -160.448,  
+
+-31.866 -44.9306,  -371.948 -120.438,  -183.222 -124.021,  -276.251 -205.216,  -169.274 -8.85994,  
+-88.8585 -62.1863,  -33.4276 -123.323,  -34.6736 -140.835,  -77.9706 -10.2119,  -390.317 -78.6488,  
+
+-244.685 -237.402,  -137.969 -246.956,  -73.3153 -250.579,  -437.318 -211.552,  -246.136 -82.0017,  
+-2.54847 -433.222,  -185.61 -361.878,  -84.3564 -174.296,  -114.94 -86.8778,  -81.4181 -341.68,  
+
+-145.572 -337.777,  -44.0586 -368.48,  -78.437 -435.435,  -243.083 -83.5385,  -125.166 -397.715,  
+-263.367 -14.3625,  -359.639 -283.644,  -405.272 -325.659,  -397.884 -222.445,  -140.263 -258.682,  
+
+-102.561 -227.537,  -88.2343 -136.477,  -358.958 -147.428,  -304.512 -163.242,  -292.705 -107.031,  
+-137.527 -219.159,  -252.765 -184.143,  -61.5216 -280.251,  -303.669 -23.308,  -154.069 -367.525,  
+
+-418.654 -54.9577,  -365.297 -12.4201,  -66.0957 -237.551,  -248.132 -163.481,  -17.8055 -164.806,  
+-394.123 -202.327,  -378.46 -208.163,  -328.018 -386.755,  -160.391 -67.9187,  -392.73 -266.614,  
+
+-390.459 -123.309,  -296.366 -206.604,  -40.6155 -23.4793,  -142.57 -322.045,  -194.405 -383.451,  
+-123.978 -350.432,  -295.107 -214.405,  -150.071 -37.5939,  -37.524 -188.073,  -119.235 -286.659,  
+
+-387.131 -2.09105,  -341.256 -188.839,  -358.598 -327.358,  -16.4468 -290.188,  -362.023 -309.899,  
+-72.619 -84.575,  -45.9513 -266.141,  -384.114 -146.5,  -149.591 -16.2462,  -140.177 -1.99641,  
+
+-182.942 -201.084,  -283.599 -106.432,  -236.127 -311.887,  -80.9607 -281.098,  -178.116 -244.419,  
+-232.88 -282.4,  -133.115 -361.126,  -63.5202 -310.26,  -257.846 -300.508,  -36.3028 -244.703,  
+
+-402.652 -413.515,  -62.1277 -111.934,  -5.64674 -396.3,  -221.631 -301.954,  -449.038 -283.5,  
+-299.512 -412.951,  -294.223 -114.179,  -167.341 -31.5776,  -366.27 -370.977,  -425.396 -85.6205,  
+
+
+-319.406 -430.297,  -388.255 -379.724,  -197.156 -308.502,  -227.902 -44.8269,  -94.4421 -134.968,  
+-429.08 -0.0901316,  -151.854 -306.123,  -284.458 -19.2882,  -203.562 -197.118,  -308.915 -247.483,  
+
+-91.9793 -421.446,  -182.104 -189.912,  -378.451 -53.9212,  -351.718 -136.603,  -118.618 -238.042,  
+-6.72832 -184.445,  -285.677 -44.2501,  -380.66 -428.35,  -11.503 -394.416,  -76.1387 -247.673,  
+
+-418.585 -418.003,  -403.321 -95.3277,  -10.8068 -58.8154,  -388.026 -312.648,  -394.384 -121.385,  
+-436.205 -336.903,  -159.366 -265.636,  -450 -342.374,  -334.765 -21.0953,  -189.279 -36.972,  
+
+-353.347 -361.283,  -400.959 -133.205,  -418.609 -413.515,  -361.682 -422.888,  -63.7095 -127.464,  
+-164.567 -64.3675,  -390.198 -388.823,  -279.825 -349.116,  -104.544 -182.336,  -178.44 -415.773,  
+
+-130.646 -420.572,  -400.576 -44.1825,  -237.997 -131.178,  -125.24 -440.734,  -412.314 -302.468,  
+-150.202 -109.929,  -232.945 -106.22,  -211.068 -45.183,  -59.746 -149.794,  -140.977 -318.358,  
+
+-92.4502 -26.4221,  -53.7365 -302.464,  -440.946 -299.588,  -124.113 -215.82,  -123.735 -215.707,  
+-411.527 -246.888,  -67.2066 -45.3587,  -394.779 -397.007,  -194.984 -1.14467,  -30.0949 -362.406,  
+
+-142.448 -340.364,  -156.277 -262.639,  -372.104 -83.0067,  -407.21 -436.953,  -79.7101 -103.566,  
+-178.012 -274.221,  -206.226 -388.413,  -285.438 -257.574,  -343.129 -25.8497,  -399.285 -375.177,  
+
+-308.8 -217.744,  -178.361 -390.099,  -386.912 -146.108,  -72.1301 -422.149,  -397.881 -118.96,  
+-152.293 -347.245,  -395.86 -35.2144,  -445.113 -342.843,  -299.424 -286.479,  -245.16 -79.1536,  
+
+-181.746 -79.5907,  -327.764 -18.9412,  -414.79 -94.9446,  -427.634 -387.196,  -68.5969 -347.822,  
+-348.762 -356.768,  -445.126 -236.266,  -367.318 -53.786,  -291.954 -160.867,  -10.8901 -375.452,  
+
+-364.078 -382.226,  -28.0873 -369.742,  -449.448 -158.352,  -145.094 -253.4,  -102.288 -36.0887,  
+-264.547 -158.411,  -368.868 -36.0752,  -192.228 -62.8533,  -121.977 -365.632,  -149.269 -116.603,  
+
+
+"/> 
+
+</g> <!--End of transform -->
+
+<!--plot labeling-->
+<g transform = "translate(0,-265)" >
+<text x = "-350" y = "-200"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" >Coordinate c</text>
+<g transform = "translate(205,10)">
+<text x = "-325" y = "-200"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >3 </text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text   x = "-480" y = "-20"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text  x = "-480" y = "-20"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >3</text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text  x = "-60" y = "-450" font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text x = "-60" y = "-450"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >6</text >
+</g>
+</g>
+</g>
+<g transform = "translate( 500, 500)">
+
+<line x1="0" y1 = "0" x2 ="0" y2 = "-500" stroke-width = "2" stroke="black" > </line>
+
+<line x1="0" y1 = "0" x2 ="-500" y2 = "0" stroke-width = "2" stroke="black" > </line> 
+
+  <g transform = "translate( 0, 0)" >
+
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(21, 137, 255)" cx="0" cy="-254.327"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(22, 137, 253)" cx="0" cy="-224.338"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(23, 138, 252)" cx="0" cy="-150.637"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(24, 138, 251)" cx="0" cy="-133.586"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(25, 139, 249)" cx="0" cy="-423.893"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(26, 139, 248)" cx="0" cy="-223.556"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(28, 140, 247)" cx="0" cy="-253.642"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(29, 141, 246)" cx="0" cy="-179.008"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(30, 141, 244)" cx="0" cy="-210.36"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(31, 142, 243)" cx="0" cy="-436.787"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(32, 142, 242)" cx="0" cy="-364.839"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(33, 143, 240)" cx="0" cy="-311.997"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(35, 144, 239)" cx="0" cy="-256.255"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(36, 144, 238)" cx="0" cy="-60.6112"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(37, 145, 237)" cx="0" cy="-263.254"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(38, 145, 235)" cx="0" cy="-421.349"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(39, 146, 234)" cx="0" cy="-253.768"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(40, 147, 233)" cx="0" cy="-291.193"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(42, 147, 231)" cx="0" cy="-241.861"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(43, 148, 230)" cx="0" cy="-293.047"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(44, 148, 229)" cx="0" cy="-255.338"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(45, 149, 228)" cx="0" cy="-148.988"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(46, 150, 226)" cx="0" cy="-76.2265"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(47, 150, 225)" cx="0" cy="-304.789"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(49, 151, 224)" cx="0" cy="-126.09"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(50, 151, 222)" cx="0" cy="-182.839"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(51, 152, 221)" cx="0" cy="-264.16"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(52, 153, 220)" cx="0" cy="-286.287"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(53, 153, 219)" cx="0" cy="-227.627"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(54, 154, 217)" cx="0" cy="-150.594"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(56, 154, 216)" cx="0" cy="-319.701"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(57, 155, 215)" cx="0" cy="-183.862"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(58, 155, 213)" cx="0" cy="-71.5239"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(59, 156, 212)" cx="0" cy="-199.698"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(60, 157, 211)" cx="0" cy="-295.194"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(61, 157, 210)" cx="0" cy="-288.121"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(63, 158, 208)" cx="0" cy="-245.518"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(64, 158, 207)" cx="0" cy="-305.186"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(65, 159, 206)" cx="0" cy="-351.335"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(66, 160, 205)" cx="0" cy="-317.579"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(67, 160, 203)" cx="0" cy="-166.049"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(69, 161, 202)" cx="0" cy="-234.036"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(70, 161, 201)" cx="0" cy="-157.523"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(71, 162, 199)" cx="0" cy="-94.361"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(72, 163, 198)" cx="0" cy="-282.957"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(73, 163, 197)" cx="0" cy="-244.189"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(74, 164, 196)" cx="0" cy="-278.791"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(76, 164, 194)" cx="0" cy="-195.57"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(77, 165, 193)" cx="0" cy="-115.542"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(78, 166, 192)" cx="0" cy="-246.066"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(79, 166, 190)" cx="0" cy="-210.347"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(80, 167, 189)" cx="0" cy="-325.156"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(81, 167, 188)" cx="0" cy="-247.233"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(83, 168, 187)" cx="0" cy="-416.877"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(84, 169, 185)" cx="0" cy="-288.872"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(85, 169, 184)" cx="0" cy="-327.187"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(86, 170, 183)" cx="0" cy="-306.932"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(87, 170, 181)" cx="0" cy="-301.411"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(88, 171, 180)" cx="0" cy="-64.7438"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(90, 171, 179)" cx="0" cy="-120.718"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(91, 172, 178)" cx="0" cy="-339.855"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(92, 173, 176)" cx="0" cy="-273.459"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(93, 173, 175)" cx="0" cy="-237.612"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(94, 174, 174)" cx="0" cy="-59.5184"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(95, 174, 172)" cx="0" cy="-95.4403"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(97, 175, 171)" cx="0" cy="-237.422"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(98, 176, 170)" cx="0" cy="-293.286"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(99, 176, 169)" cx="0" cy="-156.232"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(100, 177, 167)" cx="0" cy="-174.434"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(101, 177, 166)" cx="0" cy="-258.822"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(102, 178, 165)" cx="0" cy="-81.7696"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(104, 179, 164)" cx="0" cy="-192.683"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(105, 179, 162)" cx="0" cy="-245.64"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(106, 180, 161)" cx="0" cy="-213.835"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(107, 180, 160)" cx="0" cy="-231.003"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(108, 181, 158)" cx="0" cy="-309.35"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(109, 182, 157)" cx="0" cy="-126.033"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(111, 182, 156)" cx="0" cy="-229.263"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(112, 183, 155)" cx="0" cy="-304.212"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(113, 183, 153)" cx="0" cy="-332.342"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(114, 184, 152)" cx="0" cy="-32.1252"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(115, 185, 151)" cx="0" cy="-84.7237"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(117, 185, 149)" cx="0" cy="-194.076"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(118, 186, 148)" cx="0" cy="-367.381"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(119, 186, 147)" cx="0" cy="-145.759"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(120, 187, 146)" cx="0" cy="-187.115"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(121, 187, 144)" cx="0" cy="-132.962"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(122, 188, 143)" cx="0" cy="-125.909"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(124, 189, 142)" cx="0" cy="-244.038"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(125, 189, 140)" cx="0" cy="-18.7046"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(126, 190, 139)" cx="0" cy="-400.817"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(127, 190, 138)" cx="0" cy="-235.189"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(128, 191, 137)" cx="0" cy="-332.486"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(129, 192, 135)" cx="0" cy="-327.761"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(131, 192, 134)" cx="0" cy="-136.808"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(132, 193, 133)" cx="0" cy="-372.09"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(133, 193, 131)" cx="0" cy="-147.949"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(134, 194, 130)" cx="0" cy="-243.488"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(135, 195, 129)" cx="0" cy="-78.1463"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(136, 195, 128)" cx="0" cy="-243.542"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(138, 196, 126)" cx="0" cy="-123.992"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(139, 196, 125)" cx="0" cy="-289.543"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(140, 197, 124)" cx="0" cy="-225.052"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(141, 198, 123)" cx="0" cy="-91.114"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(142, 198, 121)" cx="0" cy="-292.24"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(143, 199, 120)" cx="0" cy="-147.077"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(145, 199, 119)" cx="0" cy="-26.5077"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(146, 200, 117)" cx="0" cy="-391.692"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(147, 201, 116)" cx="0" cy="-208.236"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(148, 201, 115)" cx="0" cy="-143.145"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(149, 202, 114)" cx="0" cy="-207.348"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(150, 202, 112)" cx="0" cy="-351.141"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(152, 203, 111)" cx="0" cy="-305.927"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(153, 204, 110)" cx="0" cy="-290.577"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(154, 204, 108)" cx="0" cy="-229.489"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(155, 205, 107)" cx="0" cy="-248.723"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(156, 205, 106)" cx="0" cy="-271.765"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(157, 206, 105)" cx="0" cy="-231.987"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(159, 206, 103)" cx="0" cy="-113.888"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(160, 207, 102)" cx="0" cy="-261.837"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(161, 208, 101)" cx="0" cy="-261.566"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(162, 208, 99)" cx="0" cy="-153.661"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(163, 209, 98)" cx="0" cy="-227.636"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(165, 209, 97)" cx="0" cy="-251.756"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(166, 210, 96)" cx="0" cy="-255.577"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(167, 211, 94)" cx="0" cy="-65.5843"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(168, 211, 93)" cx="0" cy="-299.016"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(169, 212, 92)" cx="0" cy="-234.193"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(170, 212, 90)" cx="0" cy="-270.622"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(172, 213, 89)" cx="0" cy="-359.988"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(173, 214, 88)" cx="0" cy="-224.752"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(174, 214, 87)" cx="0" cy="-343.181"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(175, 215, 85)" cx="0" cy="-81.1252"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(176, 215, 84)" cx="0" cy="-42.639"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(177, 216, 83)" cx="0" cy="-51.6634"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(179, 217, 82)" cx="0" cy="-189.979"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(180, 217, 80)" cx="0" cy="-112.52"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(181, 218, 79)" cx="0" cy="-71.0395"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(182, 218, 78)" cx="0" cy="-161.489"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(183, 219, 76)" cx="0" cy="-234.376"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(184, 220, 75)" cx="0" cy="-242.265"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(186, 220, 74)" cx="0" cy="-256.645"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(187, 221, 73)" cx="0" cy="-250.03"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(188, 221, 71)" cx="0" cy="-191.789"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(189, 222, 70)" cx="0" cy="-357.735"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(190, 222, 69)" cx="0" cy="-115.312"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(191, 223, 67)" cx="0" cy="-302.355"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(193, 224, 66)" cx="0" cy="-238.139"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(194, 224, 65)" cx="0" cy="-165.403"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(195, 225, 64)" cx="0" cy="-254.908"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(196, 225, 62)" cx="0" cy="-267.531"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(197, 226, 61)" cx="0" cy="-215.405"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(198, 227, 60)" cx="0" cy="-336.916"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(200, 227, 58)" cx="0" cy="-241.875"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(201, 228, 57)" cx="0" cy="-306.932"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(202, 228, 56)" cx="0" cy="-210.444"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(203, 229, 55)" cx="0" cy="-258.763"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(204, 230, 53)" cx="0" cy="-386.027"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(205, 230, 52)" cx="0" cy="-338.28"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(207, 231, 51)" cx="0" cy="-220.935"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(208, 231, 49)" cx="0" cy="-270.877"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(209, 232, 48)" cx="0" cy="-45.6494"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(210, 233, 47)" cx="0" cy="-266.83"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(211, 233, 46)" cx="0" cy="-303.243"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(213, 234, 44)" cx="0" cy="-209.062"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(214, 234, 43)" cx="0" cy="-117.106"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(215, 235, 42)" cx="0" cy="-222.886"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(216, 236, 41)" cx="0" cy="-163.233"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(217, 236, 39)" cx="0" cy="-167.3"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(218, 237, 38)" cx="0" cy="-315.553"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(220, 237, 37)" cx="0" cy="-366.214"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(221, 238, 35)" cx="0" cy="-223.071"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(222, 238, 34)" cx="0" cy="-273.712"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(223, 239, 33)" cx="0" cy="-303.403"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(224, 240, 32)" cx="0" cy="-192.016"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(225, 240, 30)" cx="0" cy="-263.335"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(227, 241, 29)" cx="0" cy="-127.313"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(228, 241, 28)" cx="0" cy="-239.374"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(229, 242, 26)" cx="0" cy="-234.773"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(230, 243, 25)" cx="0" cy="-353.543"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(231, 243, 24)" cx="0" cy="-209.114"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(232, 244, 23)" cx="0" cy="-56.864"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(234, 244, 21)" cx="0" cy="-263.482"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(235, 245, 20)" cx="0" cy="-244.378"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(236, 246, 19)" cx="0" cy="-260.64"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(237, 246, 17)" cx="0" cy="-208.833"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(238, 247, 16)" cx="0" cy="-114.699"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(239, 247, 15)" cx="0" cy="-147.739"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(241, 248, 14)" cx="0" cy="-202.683"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(242, 249, 12)" cx="0" cy="-314.616"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(243, 249, 11)" cx="0" cy="-53.8852"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(244, 250, 10)" cx="0" cy="-166.205"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(245, 250, 8)" cx="0" cy="-250.014"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(246, 251, 7)" cx="0" cy="-137.608"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(248, 252, 6)" cx="0" cy="-220.059"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(249, 252, 5)" cx="0" cy="-417.699"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(250, 253, 3)" cx="0" cy="-221.228"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(251, 253, 2)" cx="0" cy="-273.712"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(252, 254, 1)" cx="0" cy="-210.324"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(254, 255, 0)" cx="0" cy="-396.716"/>
+</g> <!--End of transform -->
+
+<!--plot labeling-->
+<g transform = "translate(0,-265)" >
+<text x = "-350" y = "-200"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" >Coordinate c</text>
+<g transform = "translate(205,10)">
+<text x = "-325" y = "-200"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >1 </text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text   x = "-480" y = "-20"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text  x = "-480" y = "-20"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >1</text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text  x = "-60" y = "-450" font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text x = "-60" y = "-450"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >4</text >
+</g>
+</g>
+</g>
+<g transform = "translate( 1100, 500)">
+
+<line x1="0" y1 = "0" x2 ="0" y2 = "-500" stroke-width = "2" stroke="black" > </line>
+
+<line x1="0" y1 = "0" x2 ="-500" y2 = "0" stroke-width = "2" stroke="black" > </line> 
+
+  <g transform = "translate( 0, 0)" >
+
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(21, 137, 255)" cx="0" cy="-254.327"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(22, 137, 253)" cx="0" cy="-224.338"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(23, 138, 252)" cx="0" cy="-150.637"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(24, 138, 251)" cx="0" cy="-133.586"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(25, 139, 249)" cx="0" cy="-423.893"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(26, 139, 248)" cx="0" cy="-223.556"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(28, 140, 247)" cx="0" cy="-253.642"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(29, 141, 246)" cx="0" cy="-179.008"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(30, 141, 244)" cx="0" cy="-210.36"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(31, 142, 243)" cx="0" cy="-436.787"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(32, 142, 242)" cx="0" cy="-364.839"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(33, 143, 240)" cx="0" cy="-311.997"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(35, 144, 239)" cx="0" cy="-256.255"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(36, 144, 238)" cx="0" cy="-60.6112"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(37, 145, 237)" cx="0" cy="-263.254"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(38, 145, 235)" cx="0" cy="-421.349"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(39, 146, 234)" cx="0" cy="-253.768"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(40, 147, 233)" cx="0" cy="-291.193"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(42, 147, 231)" cx="0" cy="-241.861"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(43, 148, 230)" cx="0" cy="-293.047"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(44, 148, 229)" cx="0" cy="-255.338"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(45, 149, 228)" cx="0" cy="-148.988"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(46, 150, 226)" cx="0" cy="-76.2265"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(47, 150, 225)" cx="0" cy="-304.789"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(49, 151, 224)" cx="0" cy="-126.09"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(50, 151, 222)" cx="0" cy="-182.839"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(51, 152, 221)" cx="0" cy="-264.16"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(52, 153, 220)" cx="0" cy="-286.287"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(53, 153, 219)" cx="0" cy="-227.627"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(54, 154, 217)" cx="0" cy="-150.594"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(56, 154, 216)" cx="0" cy="-319.701"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(57, 155, 215)" cx="0" cy="-183.862"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(58, 155, 213)" cx="0" cy="-71.5239"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(59, 156, 212)" cx="0" cy="-199.698"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(60, 157, 211)" cx="0" cy="-295.194"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(61, 157, 210)" cx="0" cy="-288.121"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(63, 158, 208)" cx="0" cy="-245.518"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(64, 158, 207)" cx="0" cy="-305.186"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(65, 159, 206)" cx="0" cy="-351.335"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(66, 160, 205)" cx="0" cy="-317.579"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(67, 160, 203)" cx="0" cy="-166.049"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(69, 161, 202)" cx="0" cy="-234.036"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(70, 161, 201)" cx="0" cy="-157.523"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(71, 162, 199)" cx="0" cy="-94.361"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(72, 163, 198)" cx="0" cy="-282.957"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(73, 163, 197)" cx="0" cy="-244.189"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(74, 164, 196)" cx="0" cy="-278.791"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(76, 164, 194)" cx="0" cy="-195.57"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(77, 165, 193)" cx="0" cy="-115.542"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(78, 166, 192)" cx="0" cy="-246.066"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(79, 166, 190)" cx="0" cy="-210.347"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(80, 167, 189)" cx="0" cy="-325.156"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(81, 167, 188)" cx="0" cy="-247.233"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(83, 168, 187)" cx="0" cy="-416.877"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(84, 169, 185)" cx="0" cy="-288.872"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(85, 169, 184)" cx="0" cy="-327.187"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(86, 170, 183)" cx="0" cy="-306.932"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(87, 170, 181)" cx="0" cy="-301.411"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(88, 171, 180)" cx="0" cy="-64.7438"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(90, 171, 179)" cx="0" cy="-120.718"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(91, 172, 178)" cx="0" cy="-339.855"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(92, 173, 176)" cx="0" cy="-273.459"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(93, 173, 175)" cx="0" cy="-237.612"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(94, 174, 174)" cx="0" cy="-59.5184"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(95, 174, 172)" cx="0" cy="-95.4403"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(97, 175, 171)" cx="0" cy="-237.422"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(98, 176, 170)" cx="0" cy="-293.286"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(99, 176, 169)" cx="0" cy="-156.232"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(100, 177, 167)" cx="0" cy="-174.434"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(101, 177, 166)" cx="0" cy="-258.822"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(102, 178, 165)" cx="0" cy="-81.7696"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(104, 179, 164)" cx="0" cy="-192.683"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(105, 179, 162)" cx="0" cy="-245.64"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(106, 180, 161)" cx="0" cy="-213.835"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(107, 180, 160)" cx="0" cy="-231.003"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(108, 181, 158)" cx="0" cy="-309.35"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(109, 182, 157)" cx="0" cy="-126.033"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(111, 182, 156)" cx="0" cy="-229.263"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(112, 183, 155)" cx="0" cy="-304.212"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(113, 183, 153)" cx="0" cy="-332.342"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(114, 184, 152)" cx="0" cy="-32.1252"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(115, 185, 151)" cx="0" cy="-84.7237"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(117, 185, 149)" cx="0" cy="-194.076"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(118, 186, 148)" cx="0" cy="-367.381"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(119, 186, 147)" cx="0" cy="-145.759"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(120, 187, 146)" cx="0" cy="-187.115"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(121, 187, 144)" cx="0" cy="-132.962"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(122, 188, 143)" cx="0" cy="-125.909"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(124, 189, 142)" cx="0" cy="-244.038"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(125, 189, 140)" cx="0" cy="-18.7046"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(126, 190, 139)" cx="0" cy="-400.817"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(127, 190, 138)" cx="0" cy="-235.189"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(128, 191, 137)" cx="0" cy="-332.486"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(129, 192, 135)" cx="0" cy="-327.761"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(131, 192, 134)" cx="0" cy="-136.808"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(132, 193, 133)" cx="0" cy="-372.09"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(133, 193, 131)" cx="0" cy="-147.949"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(134, 194, 130)" cx="0" cy="-243.488"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(135, 195, 129)" cx="0" cy="-78.1463"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(136, 195, 128)" cx="0" cy="-243.542"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(138, 196, 126)" cx="0" cy="-123.992"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(139, 196, 125)" cx="0" cy="-289.543"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(140, 197, 124)" cx="0" cy="-225.052"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(141, 198, 123)" cx="0" cy="-91.114"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(142, 198, 121)" cx="0" cy="-292.24"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(143, 199, 120)" cx="0" cy="-147.077"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(145, 199, 119)" cx="0" cy="-26.5077"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(146, 200, 117)" cx="0" cy="-391.692"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(147, 201, 116)" cx="0" cy="-208.236"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(148, 201, 115)" cx="0" cy="-143.145"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(149, 202, 114)" cx="0" cy="-207.348"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(150, 202, 112)" cx="0" cy="-351.141"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(152, 203, 111)" cx="0" cy="-305.927"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(153, 204, 110)" cx="0" cy="-290.577"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(154, 204, 108)" cx="0" cy="-229.489"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(155, 205, 107)" cx="0" cy="-248.723"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(156, 205, 106)" cx="0" cy="-271.765"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(157, 206, 105)" cx="0" cy="-231.987"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(159, 206, 103)" cx="0" cy="-113.888"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(160, 207, 102)" cx="0" cy="-261.837"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(161, 208, 101)" cx="0" cy="-261.566"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(162, 208, 99)" cx="0" cy="-153.661"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(163, 209, 98)" cx="0" cy="-227.636"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(165, 209, 97)" cx="0" cy="-251.756"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(166, 210, 96)" cx="0" cy="-255.577"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(167, 211, 94)" cx="0" cy="-65.5843"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(168, 211, 93)" cx="0" cy="-299.016"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(169, 212, 92)" cx="0" cy="-234.193"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(170, 212, 90)" cx="0" cy="-270.622"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(172, 213, 89)" cx="0" cy="-359.988"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(173, 214, 88)" cx="0" cy="-224.752"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(174, 214, 87)" cx="0" cy="-343.181"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(175, 215, 85)" cx="0" cy="-81.1252"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(176, 215, 84)" cx="0" cy="-42.639"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(177, 216, 83)" cx="0" cy="-51.6634"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(179, 217, 82)" cx="0" cy="-189.979"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(180, 217, 80)" cx="0" cy="-112.52"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(181, 218, 79)" cx="0" cy="-71.0395"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(182, 218, 78)" cx="0" cy="-161.489"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(183, 219, 76)" cx="0" cy="-234.376"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(184, 220, 75)" cx="0" cy="-242.265"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(186, 220, 74)" cx="0" cy="-256.645"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(187, 221, 73)" cx="0" cy="-250.03"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(188, 221, 71)" cx="0" cy="-191.789"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(189, 222, 70)" cx="0" cy="-357.735"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(190, 222, 69)" cx="0" cy="-115.312"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(191, 223, 67)" cx="0" cy="-302.355"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(193, 224, 66)" cx="0" cy="-238.139"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(194, 224, 65)" cx="0" cy="-165.403"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(195, 225, 64)" cx="0" cy="-254.908"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(196, 225, 62)" cx="0" cy="-267.531"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(197, 226, 61)" cx="0" cy="-215.405"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(198, 227, 60)" cx="0" cy="-336.916"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(200, 227, 58)" cx="0" cy="-241.875"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(201, 228, 57)" cx="0" cy="-306.932"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(202, 228, 56)" cx="0" cy="-210.444"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(203, 229, 55)" cx="0" cy="-258.763"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(204, 230, 53)" cx="0" cy="-386.027"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(205, 230, 52)" cx="0" cy="-338.28"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(207, 231, 51)" cx="0" cy="-220.935"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(208, 231, 49)" cx="0" cy="-270.877"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(209, 232, 48)" cx="0" cy="-45.6494"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(210, 233, 47)" cx="0" cy="-266.83"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(211, 233, 46)" cx="0" cy="-303.243"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(213, 234, 44)" cx="0" cy="-209.062"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(214, 234, 43)" cx="0" cy="-117.106"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(215, 235, 42)" cx="0" cy="-222.886"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(216, 236, 41)" cx="0" cy="-163.233"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(217, 236, 39)" cx="0" cy="-167.3"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(218, 237, 38)" cx="0" cy="-315.553"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(220, 237, 37)" cx="0" cy="-366.214"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(221, 238, 35)" cx="0" cy="-223.071"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(222, 238, 34)" cx="0" cy="-273.712"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(223, 239, 33)" cx="0" cy="-303.403"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(224, 240, 32)" cx="0" cy="-192.016"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(225, 240, 30)" cx="0" cy="-263.335"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(227, 241, 29)" cx="0" cy="-127.313"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(228, 241, 28)" cx="0" cy="-239.374"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(229, 242, 26)" cx="0" cy="-234.773"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(230, 243, 25)" cx="0" cy="-353.543"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(231, 243, 24)" cx="0" cy="-209.114"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(232, 244, 23)" cx="0" cy="-56.864"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(234, 244, 21)" cx="0" cy="-263.482"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(235, 245, 20)" cx="0" cy="-244.378"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(236, 246, 19)" cx="0" cy="-260.64"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(237, 246, 17)" cx="0" cy="-208.833"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(238, 247, 16)" cx="0" cy="-114.699"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(239, 247, 15)" cx="0" cy="-147.739"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(241, 248, 14)" cx="0" cy="-202.683"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(242, 249, 12)" cx="0" cy="-314.616"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(243, 249, 11)" cx="0" cy="-53.8852"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(244, 250, 10)" cx="0" cy="-166.205"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(245, 250, 8)" cx="0" cy="-250.014"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(246, 251, 7)" cx="0" cy="-137.608"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(248, 252, 6)" cx="0" cy="-220.059"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(249, 252, 5)" cx="0" cy="-417.699"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(250, 253, 3)" cx="0" cy="-221.228"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(251, 253, 2)" cx="0" cy="-273.712"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(252, 254, 1)" cx="0" cy="-210.324"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(254, 255, 0)" cx="0" cy="-396.716"/>
+</g> <!--End of transform -->
+
+<!--plot labeling-->
+<g transform = "translate(0,-265)" >
+<text x = "-350" y = "-200"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" >Coordinate c</text>
+<g transform = "translate(205,10)">
+<text x = "-325" y = "-200"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >2 </text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text   x = "-480" y = "-20"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text  x = "-480" y = "-20"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >2</text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text  x = "-60" y = "-450" font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text x = "-60" y = "-450"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >5</text >
+</g>
+</g>
+</g>
+<g transform = "translate( 1700, 500)">
+
+<line x1="0" y1 = "0" x2 ="0" y2 = "-500" stroke-width = "2" stroke="black" > </line>
+
+<line x1="0" y1 = "0" x2 ="-500" y2 = "0" stroke-width = "2" stroke="black" > </line> 
+
+  <g transform = "translate( 0, 0)" >
+
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(21, 137, 255)" cx="-324.305" cy="-267.903"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(22, 137, 253)" cx="-268.398" cy="-350.535"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(23, 138, 252)" cx="-139.294" cy="-358.854"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(24, 138, 251)" cx="-183.65" cy="-323.302"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(25, 139, 249)" cx="-147.947" cy="-163.72"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(26, 139, 248)" cx="-178.684" cy="-60.4738"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(28, 140, 247)" cx="-342.101" cy="-66.5802"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(29, 141, 246)" cx="-325.625" cy="-248.921"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(30, 141, 244)" cx="-398.285" cy="-27.6163"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(31, 142, 243)" cx="-316.398" cy="-160.448"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(32, 142, 242)" cx="-31.866" cy="-44.9306"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(33, 143, 240)" cx="-371.948" cy="-120.438"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(35, 144, 239)" cx="-183.222" cy="-124.021"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(36, 144, 238)" cx="-276.251" cy="-205.216"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(37, 145, 237)" cx="-169.274" cy="-8.85994"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(38, 145, 235)" cx="-88.8585" cy="-62.1863"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(39, 146, 234)" cx="-33.4276" cy="-123.323"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(40, 147, 233)" cx="-34.6736" cy="-140.835"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(42, 147, 231)" cx="-77.9706" cy="-10.2119"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(43, 148, 230)" cx="-390.317" cy="-78.6488"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(44, 148, 229)" cx="-244.685" cy="-237.402"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(45, 149, 228)" cx="-137.969" cy="-246.956"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(46, 150, 226)" cx="-73.3153" cy="-250.579"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(47, 150, 225)" cx="-437.318" cy="-211.552"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(49, 151, 224)" cx="-246.136" cy="-82.0017"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(50, 151, 222)" cx="-2.54847" cy="-433.222"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(51, 152, 221)" cx="-185.61" cy="-361.878"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(52, 153, 220)" cx="-84.3564" cy="-174.296"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(53, 153, 219)" cx="-114.94" cy="-86.8778"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(54, 154, 217)" cx="-81.4181" cy="-341.68"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(56, 154, 216)" cx="-145.572" cy="-337.777"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(57, 155, 215)" cx="-44.0586" cy="-368.48"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(58, 155, 213)" cx="-78.437" cy="-435.435"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(59, 156, 212)" cx="-243.083" cy="-83.5385"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(60, 157, 211)" cx="-125.166" cy="-397.715"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(61, 157, 210)" cx="-263.367" cy="-14.3625"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(63, 158, 208)" cx="-359.639" cy="-283.644"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(64, 158, 207)" cx="-405.272" cy="-325.659"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(65, 159, 206)" cx="-397.884" cy="-222.445"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(66, 160, 205)" cx="-140.263" cy="-258.682"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(67, 160, 203)" cx="-102.561" cy="-227.537"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(69, 161, 202)" cx="-88.2343" cy="-136.477"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(70, 161, 201)" cx="-358.958" cy="-147.428"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(71, 162, 199)" cx="-304.512" cy="-163.242"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(72, 163, 198)" cx="-292.705" cy="-107.031"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(73, 163, 197)" cx="-137.527" cy="-219.159"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(74, 164, 196)" cx="-252.765" cy="-184.143"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(76, 164, 194)" cx="-61.5216" cy="-280.251"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(77, 165, 193)" cx="-303.669" cy="-23.308"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(78, 166, 192)" cx="-154.069" cy="-367.525"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(79, 166, 190)" cx="-418.654" cy="-54.9577"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(80, 167, 189)" cx="-365.297" cy="-12.4201"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(81, 167, 188)" cx="-66.0957" cy="-237.551"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(83, 168, 187)" cx="-248.132" cy="-163.481"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(84, 169, 185)" cx="-17.8055" cy="-164.806"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(85, 169, 184)" cx="-394.123" cy="-202.327"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(86, 170, 183)" cx="-378.46" cy="-208.163"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(87, 170, 181)" cx="-328.018" cy="-386.755"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(88, 171, 180)" cx="-160.391" cy="-67.9187"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(90, 171, 179)" cx="-392.73" cy="-266.614"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(91, 172, 178)" cx="-390.459" cy="-123.309"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(92, 173, 176)" cx="-296.366" cy="-206.604"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(93, 173, 175)" cx="-40.6155" cy="-23.4793"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(94, 174, 174)" cx="-142.57" cy="-322.045"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(95, 174, 172)" cx="-194.405" cy="-383.451"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(97, 175, 171)" cx="-123.978" cy="-350.432"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(98, 176, 170)" cx="-295.107" cy="-214.405"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(99, 176, 169)" cx="-150.071" cy="-37.5939"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(100, 177, 167)" cx="-37.524" cy="-188.073"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(101, 177, 166)" cx="-119.235" cy="-286.659"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(102, 178, 165)" cx="-387.131" cy="-2.09105"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(104, 179, 164)" cx="-341.256" cy="-188.839"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(105, 179, 162)" cx="-358.598" cy="-327.358"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(106, 180, 161)" cx="-16.4468" cy="-290.188"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(107, 180, 160)" cx="-362.023" cy="-309.899"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(108, 181, 158)" cx="-72.619" cy="-84.575"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(109, 182, 157)" cx="-45.9513" cy="-266.141"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(111, 182, 156)" cx="-384.114" cy="-146.5"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(112, 183, 155)" cx="-149.591" cy="-16.2462"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(113, 183, 153)" cx="-140.177" cy="-1.99641"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(114, 184, 152)" cx="-182.942" cy="-201.084"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(115, 185, 151)" cx="-283.599" cy="-106.432"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(117, 185, 149)" cx="-236.127" cy="-311.887"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(118, 186, 148)" cx="-80.9607" cy="-281.098"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(119, 186, 147)" cx="-178.116" cy="-244.419"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(120, 187, 146)" cx="-232.88" cy="-282.4"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(121, 187, 144)" cx="-133.115" cy="-361.126"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(122, 188, 143)" cx="-63.5202" cy="-310.26"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(124, 189, 142)" cx="-257.846" cy="-300.508"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(125, 189, 140)" cx="-36.3028" cy="-244.703"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(126, 190, 139)" cx="-402.652" cy="-413.515"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(127, 190, 138)" cx="-62.1277" cy="-111.934"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(128, 191, 137)" cx="-5.64674" cy="-396.3"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(129, 192, 135)" cx="-221.631" cy="-301.954"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(131, 192, 134)" cx="-449.038" cy="-283.5"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(132, 193, 133)" cx="-299.512" cy="-412.951"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(133, 193, 131)" cx="-294.223" cy="-114.179"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(134, 194, 130)" cx="-167.341" cy="-31.5776"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(135, 195, 129)" cx="-366.27" cy="-370.977"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(136, 195, 128)" cx="-425.396" cy="-85.6205"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(138, 196, 126)" cx="-319.406" cy="-430.297"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(139, 196, 125)" cx="-388.255" cy="-379.724"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(140, 197, 124)" cx="-197.156" cy="-308.502"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(141, 198, 123)" cx="-227.902" cy="-44.8269"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(142, 198, 121)" cx="-94.4421" cy="-134.968"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(143, 199, 120)" cx="-429.08" cy="-0.0901316"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(145, 199, 119)" cx="-151.854" cy="-306.123"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(146, 200, 117)" cx="-284.458" cy="-19.2882"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(147, 201, 116)" cx="-203.562" cy="-197.118"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(148, 201, 115)" cx="-308.915" cy="-247.483"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(149, 202, 114)" cx="-91.9793" cy="-421.446"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(150, 202, 112)" cx="-182.104" cy="-189.912"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(152, 203, 111)" cx="-378.451" cy="-53.9212"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(153, 204, 110)" cx="-351.718" cy="-136.603"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(154, 204, 108)" cx="-118.618" cy="-238.042"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(155, 205, 107)" cx="-6.72832" cy="-184.445"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(156, 205, 106)" cx="-285.677" cy="-44.2501"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(157, 206, 105)" cx="-380.66" cy="-428.35"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(159, 206, 103)" cx="-11.503" cy="-394.416"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(160, 207, 102)" cx="-76.1387" cy="-247.673"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(161, 208, 101)" cx="-418.585" cy="-418.003"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(162, 208, 99)" cx="-403.321" cy="-95.3277"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(163, 209, 98)" cx="-10.8068" cy="-58.8154"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(165, 209, 97)" cx="-388.026" cy="-312.648"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(166, 210, 96)" cx="-394.384" cy="-121.385"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(167, 211, 94)" cx="-436.205" cy="-336.903"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(168, 211, 93)" cx="-159.366" cy="-265.636"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(169, 212, 92)" cx="-450" cy="-342.374"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(170, 212, 90)" cx="-334.765" cy="-21.0953"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(172, 213, 89)" cx="-189.279" cy="-36.972"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(173, 214, 88)" cx="-353.347" cy="-361.283"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(174, 214, 87)" cx="-400.959" cy="-133.205"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(175, 215, 85)" cx="-418.609" cy="-413.515"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(176, 215, 84)" cx="-361.682" cy="-422.888"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(177, 216, 83)" cx="-63.7095" cy="-127.464"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(179, 217, 82)" cx="-164.567" cy="-64.3675"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(180, 217, 80)" cx="-390.198" cy="-388.823"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(181, 218, 79)" cx="-279.825" cy="-349.116"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(182, 218, 78)" cx="-104.544" cy="-182.336"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(183, 219, 76)" cx="-178.44" cy="-415.773"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(184, 220, 75)" cx="-130.646" cy="-420.572"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(186, 220, 74)" cx="-400.576" cy="-44.1825"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(187, 221, 73)" cx="-237.997" cy="-131.178"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(188, 221, 71)" cx="-125.24" cy="-440.734"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(189, 222, 70)" cx="-412.314" cy="-302.468"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(190, 222, 69)" cx="-150.202" cy="-109.929"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(191, 223, 67)" cx="-232.945" cy="-106.22"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(193, 224, 66)" cx="-211.068" cy="-45.183"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(194, 224, 65)" cx="-59.746" cy="-149.794"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(195, 225, 64)" cx="-140.977" cy="-318.358"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(196, 225, 62)" cx="-92.4502" cy="-26.4221"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(197, 226, 61)" cx="-53.7365" cy="-302.464"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(198, 227, 60)" cx="-440.946" cy="-299.588"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(200, 227, 58)" cx="-124.113" cy="-215.82"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(201, 228, 57)" cx="-123.735" cy="-215.707"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(202, 228, 56)" cx="-411.527" cy="-246.888"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(203, 229, 55)" cx="-67.2066" cy="-45.3587"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(204, 230, 53)" cx="-394.779" cy="-397.007"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(205, 230, 52)" cx="-194.984" cy="-1.14467"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(207, 231, 51)" cx="-30.0949" cy="-362.406"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(208, 231, 49)" cx="-142.448" cy="-340.364"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(209, 232, 48)" cx="-156.277" cy="-262.639"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(210, 233, 47)" cx="-372.104" cy="-83.0067"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(211, 233, 46)" cx="-407.21" cy="-436.953"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(213, 234, 44)" cx="-79.7101" cy="-103.566"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(214, 234, 43)" cx="-178.012" cy="-274.221"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(215, 235, 42)" cx="-206.226" cy="-388.413"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(216, 236, 41)" cx="-285.438" cy="-257.574"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(217, 236, 39)" cx="-343.129" cy="-25.8497"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(218, 237, 38)" cx="-399.285" cy="-375.177"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(220, 237, 37)" cx="-308.8" cy="-217.744"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(221, 238, 35)" cx="-178.361" cy="-390.099"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(222, 238, 34)" cx="-386.912" cy="-146.108"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(223, 239, 33)" cx="-72.1301" cy="-422.149"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(224, 240, 32)" cx="-397.881" cy="-118.96"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(225, 240, 30)" cx="-152.293" cy="-347.245"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(227, 241, 29)" cx="-395.86" cy="-35.2144"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(228, 241, 28)" cx="-445.113" cy="-342.843"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(229, 242, 26)" cx="-299.424" cy="-286.479"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(230, 243, 25)" cx="-245.16" cy="-79.1536"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(231, 243, 24)" cx="-181.746" cy="-79.5907"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(232, 244, 23)" cx="-327.764" cy="-18.9412"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(234, 244, 21)" cx="-414.79" cy="-94.9446"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(235, 245, 20)" cx="-427.634" cy="-387.196"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(236, 246, 19)" cx="-68.5969" cy="-347.822"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(237, 246, 17)" cx="-348.762" cy="-356.768"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(238, 247, 16)" cx="-445.126" cy="-236.266"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(239, 247, 15)" cx="-367.318" cy="-53.786"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(241, 248, 14)" cx="-291.954" cy="-160.867"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(242, 249, 12)" cx="-10.8901" cy="-375.452"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(243, 249, 11)" cx="-364.078" cy="-382.226"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(244, 250, 10)" cx="-28.0873" cy="-369.742"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(245, 250, 8)" cx="-449.448" cy="-158.352"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(246, 251, 7)" cx="-145.094" cy="-253.4"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(248, 252, 6)" cx="-102.288" cy="-36.0887"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(249, 252, 5)" cx="-264.547" cy="-158.411"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(250, 253, 3)" cx="-368.868" cy="-36.0752"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(251, 253, 2)" cx="-192.228" cy="-62.8533"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(252, 254, 1)" cx="-121.977" cy="-365.632"/>
+<circle  r="10" stroke = "black" stroke-width="0.5" fill= "rgb(254, 255, 0)" cx="-149.269" cy="-116.603"/>
+</g> <!--End of transform -->
+
+<!--plot labeling-->
+<g transform = "translate(0,-265)" >
+<text x = "-350" y = "-200"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" >Coordinate c</text>
+<g transform = "translate(205,10)">
+<text x = "-325" y = "-200"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >3 </text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text   x = "-480" y = "-20"  font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text  x = "-480" y = "-20"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >3</text >
+</g>
+</g>
+<g transform = "translate(0,0)" >
+<text  x = "-60" y = "-450" font-size = "40" font-family = "Arial, Helvetica, sans-serif" > -s </text>
+<g transform = "translate(30,10)">
+<text x = "-60" y = "-450"  font-size = "30" font-family = "Arial, Helvetica, sans-serif" >6</text >
+</g>
+</g>
+</g>
+
+</g> <!--end of scale=0.6-->
+</svg>
