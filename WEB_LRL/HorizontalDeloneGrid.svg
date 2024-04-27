@@ -10,6 +10,10 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
    
    <polyline id="cellborder" stroke="black" points="0,-0   70,-0   35,-60.6218   -0.175,0.303109   0.175,-0.101036   35,-20.2073   35,-60.6218   35,-20.2073   70,-0   " style="fill:none; stroke-width:3 stroke-linejoin:round; stroke-linecap:round"
  />
+   <text id="zeroP" x="48.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
+   <text id="zeroQ" x="13.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
+   <text id="zeroR" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
+   <text id="zeroU" x="31" y="-34.4145" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
 
 <line id="oneSlashP" x1="57.3497" y1="-33.1109" x2="47.6503" y2="-27.5109" style="stroke:rgb(0,0,0);stroke-width:3"/>
 <line id="oneSlashQ" x1="12.6503" y1="-33.1109" x2="22.3497" y2="-27.5109" style="stroke:rgb(0,0,0);stroke-width:3"/>
@@ -223,8 +227,8 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
    <use href="#cellborder" />
 <use href="#oneSlashP" />
 <use href="#oneSlashQ" />
-<line name="oneSlash" x1="14.7" y1="-14.9534" x2="20.3" y2="-5.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
-<line name="oneSlash" x1="55.3" y1="-14.9534" x2="49.7" y2="-5.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<use href="#oneSlashS" />
+<use href="#oneSlashT" />
 </g>
    <use href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >O1A</text>
@@ -240,7 +244,6 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <use href="#2SlashQ" />
 <use href="#3SlashR" />
 <use href="#oneSlashS" />
-<line name="oneSlash" x1="14.7" y1="-14.9534" x2="20.3" y2="-5.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
 <use href="#2SlashT" />
 <use href="#3SlashU" />
 </g>
@@ -346,10 +349,9 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
    <use href="#cellborder" />
 <use href="#oneSlashP" />
 <use href="#oneSlashQ" />
-   <text name="cP" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-<line name="oneSlash" x1="14.7" y1="-14.9534" x2="20.3" y2="-5.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
-<line name="oneSlash" x1="55.3" y1="-14.9534" x2="49.7" y2="-5.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<use href="#zeroR" />
+<use href="#oneSlashS" />
+<use href="#oneSlashT" />
 </g>
    <use href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >T2</text>
@@ -363,7 +365,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
    <g transform=" translate(24, 75)  ">
    <use href="#cellborder" />
 <use href="#oneSlashP" />
-   <text name="cP" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
+<use href="#zeroR" />
 <use href="#2SlashS" />
 <use href="#2SlashQ" />
 <use href="#oneSlashT" />
@@ -380,10 +382,8 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
    <g transform=" translate(24, 75)  ">
    <use href="#cellborder" />
 <use href="#oneSlashQ" />
-   <text name="cP" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-<line name="oneSlash" x1="14.7" y1="-14.9534" x2="20.3" y2="-5.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
-
+<use href="#zeroR" />
+<use href="#oneSlashS" />
 </g>
    <use href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >M2A</text>
@@ -400,9 +400,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <use href="#oneSlashP" />
 <use href="#2SlashT" />
 <use href="#2SlashQ" />
-
-   <text name="cP" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
+<use href="#zeroR" />
 <use href="#oneSlashS" />
 </g>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:60px" x = "75" y = "55" >*</text>
@@ -417,10 +415,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
    <rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightyellow" />
    <g transform=" translate(24, 75)  ">
    <use href="#cellborder" />
-   <text name="cP" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-
-
+<use href="#zeroR" />
 </g>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:60px" x = "75" y = "55" >*</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >A2</text>
@@ -480,14 +475,10 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
    <use href="#cellborder" />
 <use href="#oneSlashP" />
 <use href="#oneSlashQ" />
-   <text name="cP" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-<line name="oneSlash" x1="14.7" y1="-14.9534" x2="20.3" y2="-5.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
-<line name="oneSlash" x1="55.3" y1="-14.9534" x2="49.7" y2="-5.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
-   <text name="cP" x="31" y="-34.4145" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-
-
+<use href="#zeroR" />
+<use href="#oneSlashS" />
+<use href="#oneSlashT" />
+<use href="#zeroU" />
 </g>
    <use href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >C3</text>
@@ -503,13 +494,9 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
    <use href="#cellborder" />
 <use href="#oneSlashP" />
 <use href="#oneSlashQ" />
-   <text name="cP" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-<line name="oneSlash" x1="55.3" y1="-14.9534" x2="49.7" y2="-5.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
-   <text name="cP" x="31" y="-34.4145" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-
-
+<use href="#zeroR" />
+<use href="#oneSlashT" />
+<use href="#zeroU" />
 </g>
    <use href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >R3</text>
@@ -525,14 +512,10 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
    <use href="#cellborder" />
 <use href="#oneSlashP" />
 <use href="#2SlashQ" />
-   <text name="cP" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
+<use href="#zeroR" />
 <use href="#oneSlashS" />
 <use href="#2SlashT" />
-   <text name="cP" x="31" y="-34.4145" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-
-
+<use href="#zeroU" />
 </g>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:60px" x = "75" y = "55" >*</text>
    <use href="#blank" />
@@ -549,13 +532,9 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
   <g transform=" translate(24, 75)  ">
    <use href="#cellborder" />
 <use href="#oneSlashQ" />
-   <text name="cP" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-<line name="oneSlash" x1="55.3" y1="-14.9534" x2="49.7" y2="-5.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
-   <text name="cP" x="31" y="-34.4145" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-
-
+<use href="#zeroR" />
+<use href="#oneSlashT" />
+<use href="#zeroU" />
 </g>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:60px" x = "75" y = "55" >*</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >M3</text>
@@ -563,24 +542,18 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rs0 ts0)</text>
 </g>
 
-
 <!-- _________________________________________________________ -->
 <g transform="translate(700, 300)">
    <rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="#909090" />
 </g>
-
 
 <!-- _________________________________________________________ -->
 <g transform="translate(800, 300)">
    <rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightyellow" />
    <g transform=" translate(24, 75)  ">
    <use href="#cellborder" />
-   <text name="cP" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-   <text name="cP" x="31" y="-34.4145" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-
-
+<use href="#zeroR" />
+<use href="#zeroU" />
 </g>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:60px" x = "75" y = "55" >*</text>
    <use href="#blank" />
@@ -638,19 +611,14 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
    <use href="#unused" x="200" y="400" />
    <use href="#unused" x="300" y="400" />
 
-
 <!-- _________________________________________________________ -->
 <g transform="translate(400, 400)">
    <g transform=" translate(24, 75)  ">
    <use href="#cellborder" />
-   <text name="cP" x="48.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-   <text name="cP" x="13.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
+   <use href="#zeroP" />
+   <use href="#zeroQ" />
 <use href="#oneSlashS" />
 <use href="#oneSlashT" />
-
-
 </g>
    <use href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >O4</text>
@@ -664,12 +632,8 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <g transform="translate(600, 400)">
    <g transform=" translate(24, 75)  ">
    <use href="#cellborder" />
-   <text name="cP" x="48.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-   <text name="cP" x="13.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-
-
+   <use href="#zeroP" />
+   <use href="#zeroQ" />
 </g>
    <use href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >M4</text>
@@ -684,9 +648,8 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <g transform="translate(900, 400)">
    <g transform=" translate(24, 75)  ">
    <use href="#cellborder" />
-   <text name="cP" x="48.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-   <text name="cP" x="13.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
+   <use href="#zeroP" />
+   <use href="#zeroQ" />
 <use href="#oneSlashR" />
 <use href="#oneSlashS" />
 <use href="#oneSlashT" />
@@ -696,7 +659,6 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >hP</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(00r rrs)</text>
 </g>
-
 
 <!-- _________________________________________________________ -->
 <g transform="translate(1000, 400)">
@@ -712,7 +674,6 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 </g>
 </g>
 
-
 <!-- _________________________________________________________ -->
 <g transform="translate(1100, 400)">
    <use href="#blank" />
@@ -723,10 +684,9 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <polygon fill = "CYAN " stroke = "black" stroke-width = "2" points = "-46.5846, 66.5386  3.49405, 116.129  45.8495, 116.129  -4.22921, 66.5386  " stroke-linejoin = "round" />
 <polygon fill = "CYAN " stroke = "black" stroke-width = "2" points = "-41.2564, -19.5901  -46.5846, 66.5386  -4.22921, 66.5386  1.09903, -19.5901  " stroke-linejoin = "round" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "0" y = "129" >hP, type 4 </text>
-"<text style = "font-family:sans-serif; font-weight:bold; font-size:30px" x = "-60" y = "-30" >H4</text>
-"</g>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:30px" x = "-60" y = "-30" >H4</text>
 </g>
-
+</g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(0, 500)">
@@ -736,21 +696,16 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "7" y = "92" >cuboid</text>
 </g>
 
-
 <!-- _________________________________________________________ -->
 <g transform="translate(100, 500)">
    <g transform=" translate(24, 75)  ">
    <use href="#cellborder" />
-   <text name="cP" x="48.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-   <text name="cP" x="13.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-   <text name="cP" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
+   <use href="#zeroP" />
+   <use href="#zeroQ" />
+   <use href="#zeroR" />
 <use href="#oneSlashS" />
 <use href="#oneSlashT" />
 <use href="#oneSlashU" />
-
 </g>
    <use href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >C5</text>
@@ -758,19 +713,15 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(000 rrr)</text>
 </g>
 
-
 <!-- _________________________________________________________ -->
 <g transform="translate(200, 500)">
    <g transform=" translate(24, 75)  ">
    <use href="#cellborder" />
-   <text name="cP" x="48.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-   <text name="cP" x="13.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-   <text name="cP" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
+   <use href="#zeroP" />
+   <use href="#zeroQ" />
+   <use href="#zeroR" />
 <use href="#oneSlashS" />
 <use href="#oneSlashT" />
-
 </g>
    <use href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >T5</text>
@@ -784,14 +735,9 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <g transform="translate(400, 500)">
    <g transform=" translate(24, 75)  ">
    <use href="#cellborder" />
-   <text name="cP" x="48.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-   <text name="cP" x="13.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-   <text name="cP" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-
-
-
+   <use href="#zeroP" />
+   <use href="#zeroQ" />
+   <use href="#zeroR" />
 </g>
    <use href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >O5</text>
@@ -814,7 +760,6 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 </g>
 </g>
 
-
 <!-- _________________________________________________________ -->
 <g transform="translate(1100, 500)">
    <use href="#blank" />
@@ -827,20 +772,15 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <text style = "font-family:sans-serif; font-weight:bold; font-size:30px" x = "-60" y = "-30" >O5</text>
 </g>
 </g>
-
-
 <g transform="translate(1000, 00)">
 <rect name="Basic" x="0" y="0" width="202" height="102" stroke-width="2" stroke="black" fill="white" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "3" y = "15" >Dirichlet cells</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "13" y = "30" >also known as</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "18" y = "45" >Voronoi domains</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "18" y = "60" >Federov parallelohedra</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "18" y = "75" >Wigner-Seitz cell</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "18" y = "45" >Dirichlet domains</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "18" y = "60" >Voronoi domains</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "18" y = "75" >Federov parallelohedra</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "18" y = "90" >Wigner-Seitz cell</text>
 </g>
-
-
-
-
 
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "100" y="650">
 * Not a full-dimensional Bravais type</text>
