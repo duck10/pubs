@@ -172,33 +172,42 @@
 	--- The number of cells of each type to be
 	generated (1)<br>
 	--- The type(s) of selected output requested.
-	Examples are<br>
-	--- &quot;all&quot; (default) -- produces examples
-	of each of the 44 Niggli types <br>
+	Examples are:
+	<ul>
+	<li>--- <strong>&quot;all&quot;</strong> (default) -- produces examples
+	of each of the 44 Niggli types 
 	(see the International Tables)
-	and also each of the 24 Delone types (all)<br>
-	--- a number between
-	1 and 44 will generate examples of that Niggli type. For instance,<br>
+	and also each of the 24 Delone types (all)<br></li>
+	<li>--- &quot;<strong>Gruber&quot;</strong> (default) -- produces the 
+	the requested number of copies of the
+	five nearly-Niggli-reduced<br/>
+	examples of Gruber, 1973.</li>
+	(Only a single example of them is generated.<br>
+	<li>--- &quot;<strong>random&quot;</strong> (default) -- produces the
+	the requested number of random unit cells.	<br></li>
+	<li>--- a number between
+	<strong>1</strong> and <strong>44</strong> will generate examples of that Niggli type. For instance,<br>
 	24
-	will create Niggli type 24 (which is hR). {allowed values: 1-44}<br>
-	---
-	&quot;m&quot; generates monoclinic examples {allowed types: c, t, h,
-	o, m, a}<br>
-	--- &quot;mC&quot; generates C-centered monoclinic
-	examples {mP, mS, mC, hR, hP, tP, tI, cF, cI, cP, aP}<br>
-	--- &quot;A1&quot;
+	will create Niggli type 24 (which is hR). {allowed values: 1-44}<br></li>
+	<li>---
+	<strong>&quot;m&quot;</strong> generates monoclinic examples {allowed types: c, t, h,
+	o, m, a}<br></li>
+	<li>--- <strong>&quot;mC&quot;</strong> generates C-centered monoclinic
+	examples {mP, mS, mC, hR, hP, tP, tI, cF, cI, cP, aP}<br></li>
+	<li>--- <strong>&quot;A1&quot;</strong>
 	generates a general triclinic Delone type with no S<sup>6</sup> zero
-	scalars.<br>
-	--- &quot;O4&quot; generates the centered orthorhombic
-	Delone type with signature {00r sst}.<br>
-	--- &quot;O&quot; will
+	scalars.<br></li>
+	<li>--- <strong>&quot;O4&quot;</strong> generates the centered orthorhombic
+	Delone type with signature {00r sst}.<br></li>
+	<li>--- <strong>&quot;O&quot;</strong> will
 	generate all orthorhombic Delone types {allowed types: C, T, H, O, M,
-	A}<br>
-	--- &quot;a list of types&quot; will generate each of the types
-	example: &quot;44 O3 H4 C5&quot;
-	--- Unrecognized input will generate all
-	types<br>
+	A}<br></li>
+	<li>--- <u>a list of types</u> will generate each of the types;
+	example: <strong>&quot;44 O3 H4 C5&quot;</strong><br/></li>
+	<li>--- Unrecognized input will generate all
+	types<br></li>
 	<br>
+	</ul>
 	--------------------------------------------------<br>
 	dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
 	dnl Command:  CmdLM
