@@ -1,19 +1,31 @@
 <?xml version="1.0" standalone="no"?>
-<svg width="1400" height ="750" viewBox = "0 0 1400 750"
+<svg width="1400" height ="790" viewBox = "0 0 1400 790"
 version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <!-- Creation date and time _2024-03-11.08_38_17.-->
 <desc>Delone grid created for LRL_WEB, the site for Larry Andrews and Herbert J Bernstein</desc>
 
 <defs>
-   <rect id="unused" width="102" height="102" stroke-width="2" stroke="black" fill="gray" />
+   <rect id="unused" width="102" height="102" stroke-width="2" stroke="black" fill="#909090" />
    <rect id="blank" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="none" />
+
+           <style> <!-- from Anthropic's AI Claude -->
+            .large-text { font-family: sans-serif; font-weight: bold; font-size: 75px; }
+            .characteristic-text { font-family: sans-serif; font-weight:700; font-size: 13px; }
+        </style>
+		
+		        <path
+           d="m 94.762602,17.76833 -6.869748,3.601414 6.869748,3.622232 -1.582121,2.935257 -6.932203,-3.830406 v 7.161193 h -3.538961 v -7.161193 l -6.95302,3.830406 -1.582124,-2.935257 6.953019,-3.622232 -6.953019,-3.601414 1.582124,-2.935256 6.95302,3.788771 v -7.161193 h 3.538961 v 7.161193 l 6.932203,-3.788771 z"
+           style="font-weight:bold;font-size:60px;font-family:sans-serif;stroke-width:0.710568"
+           id="asterisk" />
+
+
    
    <polyline id="cellborder" stroke="black" points="0,-0   70,-0   35,-60.6218   -0.175,0.303109   0.175,-0.101036   35,-20.2073   35,-60.6218   35,-20.2073   70,-0   " style="fill:none; stroke-width:3 stroke-linejoin:round; stroke-linecap:round"
  />
-   <text id="zeroP" x="48.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-   <text id="zeroQ" x="13.5" y="-24.3109" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-   <text id="zeroR" x="31" y="6" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
-   <text id="zeroU" x="31" y="-34.4145" style="font-family:sans-serif; font-size=:26; font-weight:bold; ">0</text>
+   <text id="zeroP" x="48.5" y="-24.3109" style="font-family:sans-serif; font-size=26; font-weight:bold; ">0</text>
+   <text id="zeroQ" x="13.5" y="-24.3109" style="font-family:sans-serif; font-size=26; font-weight:bold; ">0</text>
+   <text id="zeroR" x="31" y="6" style="font-family:sans-serif; font-size=26; font-weight:bold; ">0</text>
+   <text id="zeroU" x="31" y="-34.4145" style="font-family:sans-serif; font-size=26; font-weight:bold; ">0</text>
 
 <line id="oneSlashP" x1="57.3497" y1="-33.1109" x2="47.6503" y2="-27.5109" style="stroke:rgb(0,0,0);stroke-width:3"/>
 <line id="oneSlashQ" x1="12.6503" y1="-33.1109" x2="22.3497" y2="-27.5109" style="stroke:rgb(0,0,0);stroke-width:3"/>
@@ -74,94 +86,94 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 
 <!-- _________________________________________________________ -->
 <g transform="translate(0, 0)">
-   <rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightcyan" />
+			<rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightcyan" />
    <g transform=" translate(18, 78)  ">
-   <use href="#cellborder" />
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "44" y = "-7" >T</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "50" y = "-23" >P</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "10" y = "-23" >Q</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "29" y = "-29" >U</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "29" y = "5" >R</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "10" y = "-4" >S</text>
+   <use xlink:href="#cellborder" />
+<text class="characteristic-text" x = "44" y = "-7" >T</text>
+<text class="characteristic-text" x = "50" y = "-23" >P</text>
+<text class="characteristic-text" x = "10" y = "-23" >Q</text>
+<text class="characteristic-text" x = "29" y = "-29" >U</text>
+<text class="characteristic-text" x = "29" y = "5" >R</text>
+<text class="characteristic-text" x = "10" y = "-4" >S</text>
 </g>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(100, 0)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "75" >C</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "5" y = "96" >cubic</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:12px" x = "5" y = "96" >cubic</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(200, 0)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "75" >T</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "5" y = "96" >tetragonal</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:12px" x = "5" y = "96" >tetragonal</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(300, 0)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "75" >R</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "5" y = "96" >rhombohedral</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:11px" x = "5" y = "96" >rhombohedral</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(400, 0)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "75" >O</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "5" y = "96" >orthorhombic</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:12px" x = "5" y = "96" >orthorhombic</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(500, 0)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "75" >O</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "5" y = "96" >orthorhombic</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:12px" x = "5" y = "96" >orthorhombic</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(600, 0)">
-   <use href="#blank" />
-<text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "75" >M</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "5" y = "96" >monoclinic</text>
+   <use xlink:href="#blank" />
+<text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "23" y = "75" >M</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:12px" x = "5" y = "96" >monoclinic</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(700, 0)">
-   <use href="#blank" />
-<text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "75" >M</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "5" y = "96" >monoclinic</text>
+   <use xlink:href="#blank" />
+<text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "23" y = "75" >M</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:12px" x = "5" y = "96" >monoclinic</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(800, 0)">
-   <use href="#blank" />
-<text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "75" >A</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "5" y = "96" >anorthic</text>
+   <use xlink:href="#blank" />
+<text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "25" y = "75" >A</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:12px" x = "5" y = "96" >anorthic</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(900, 0)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "75" >H</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "5" y = "96" >hexagonal</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:12px" x = "5" y = "96" >hexagonal</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(1000, 0)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(1100, 0)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(0, 100)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "65" >1</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "7" y = "76" >truncated</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "7" y = "92" >octahedron</text>
@@ -170,130 +182,130 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <!-- _________________________________________________________ -->
 <g transform="translate(100, 100)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-   <use href="#oneSlashP" />
-   <use href="#oneSlashQ" />
-   <use href="#oneSlashR" />
-   <use href="#oneSlashS" />
-   <use href="#oneSlashT" />
-   <use href="#oneSlashU" />
+   <use xlink:href="#cellborder" />
+   <use xlink:href="#oneSlashP" />
+   <use xlink:href="#oneSlashQ" />
+   <use xlink:href="#oneSlashR" />
+   <use xlink:href="#oneSlashS" />
+   <use xlink:href="#oneSlashT" />
+   <use xlink:href="#oneSlashU" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >C1</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >cI</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rrr rrr)</text>
+<text class="characteristic-text" x = "5" y = "95" >cI</text>
+        <text x="29" y="95" class="characteristic-text">(rrr rrr)</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(200, 100)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashP" />
-<use href="#oneSlashQ" />
-<use href="#2SlashR" />
-<use href="#oneSlashS" />
-<use href="#oneSlashT" />
-<use href="#2SlashU" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashP" />
+<use xlink:href="#oneSlashQ" />
+<use xlink:href="#2SlashR" />
+<use xlink:href="#oneSlashS" />
+<use xlink:href="#oneSlashT" />
+<use xlink:href="#2SlashU" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >T1</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >tI</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rrs rrs)</text>
+<text class="characteristic-text" x = "5" y = "95" >tI</text>
+        <text x="29" y="95" class="characteristic-text">(rrr rrs)</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(300, 100)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashP" />
-<use href="#oneSlashQ" />
-<use href="#oneSlashR" />
-<use href="#2SlashS" />
-<use href="#2SlashT" />
-<use href="#2SlashU" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashP" />
+<use xlink:href="#oneSlashQ" />
+<use xlink:href="#oneSlashR" />
+<use xlink:href="#2SlashS" />
+<use xlink:href="#2SlashT" />
+<use xlink:href="#2SlashU" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >R1</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >hR</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rrr sss)</text>
+<text class="characteristic-text" x = "5" y = "95" >hR</text>
+        <text x="29" y="95" class="characteristic-text">(rrr sss)</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(400, 100)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashP" />
-<use href="#oneSlashQ" />
-<use href="#oneSlashS" />
-<use href="#oneSlashT" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashP" />
+<use xlink:href="#oneSlashQ" />
+<use xlink:href="#oneSlashS" />
+<use xlink:href="#oneSlashT" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >O1A</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >oF</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rrs rrt)</text>
+<text class="characteristic-text" x = "5" y = "95" >oF</text>
+        <text x="29" y="95" class="characteristic-text">(rrs rrt)</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(500, 100)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashP" />
-<use href="#2SlashQ" />
-<use href="#3SlashR" />
-<use href="#oneSlashS" />
-<use href="#2SlashT" />
-<use href="#3SlashU" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashP" />
+<use xlink:href="#2SlashQ" />
+<use xlink:href="#3SlashR" />
+<use xlink:href="#oneSlashS" />
+<use xlink:href="#2SlashT" />
+<use xlink:href="#3SlashU" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >O1B</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >oI</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rst rst)</text>
+<text class="characteristic-text" x = "5" y = "95" >oI</text>
+        <text x="29" y="95" class="characteristic-text">(rst rst)</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(600, 100)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashP" />
-<use href="#oneSlashQ" />
-<use href="#2SlashS" />
-<use href="#2SlashT" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashP" />
+<use xlink:href="#oneSlashQ" />
+<use xlink:href="#2SlashS" />
+<use xlink:href="#2SlashT" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >M1A</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >mC</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rrs ttu)</text>
+<text class="characteristic-text" x = "5" y = "95" >mC</text>
+<text class="characteristic-text" x = "29" y = "95" >(rrs ttu)</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(700, 100)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashP" />
-<use href="#2SlashQ" />
-<use href="#oneSlashS" />
-<use href="#2SlashT" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashP" />
+<use xlink:href="#2SlashQ" />
+<use xlink:href="#oneSlashS" />
+<use xlink:href="#2SlashT" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >M1B</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >mC</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rst rsu)</text>
+<text class="characteristic-text" x = "5" y = "95" >mC</text>
+<text class="characteristic-text" x = "29" y = "95" >(rst rsu)</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(800, 100)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
+   <use xlink:href="#cellborder" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >A1</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >aP</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rst uvw)</text>
+<text class="characteristic-text" x = "5" y = "95" >aP</text>
+<text class="characteristic-text" x = "29" y = "95" >(rst uvw)</text>
 </g>
-   <use href="#unused" x="900" y="100" />
+   <use xlink:href="#unused" x="900" y="100" />
 <!-- _________________________________________________________ -->
 <g transform="translate(1000, 100)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 
 <g transform = "translate(33, 35) scale( .5, .5)">
   <polygon fill="CYAN " stroke="black" stroke-width="2" points="39.8407, 5.8924  91.5418, 8.76279  87.2362, 65.5892  35.5352, 62.7188  "/>
@@ -317,7 +329,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 
 <!-- _________________________________________________________ -->
 <g transform="translate(1100, 100)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 
 <g transform = "translate(35, 33)  scale(.5,.5)" >
 <polygon fill = "CYAN " stroke = "black" stroke-width = "2" points = "27.0046, -46.2506  -52.7479, 6.34286  -23.7111, 5.78468  -8.52081, 1.9355  71.2317, -50.658  42.1949, -50.0998  " stroke-linejoin = "round" />
@@ -334,97 +346,97 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 
 <!-- _________________________________________________________ -->
 <g transform="translate(0, 200)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "65" >2</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "7" y = "76" >elongated</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "7" y = "92" >dodecahedron</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "6" y = "76" >elongated</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:12px" x = "6" y = "92" >dodecahedron</text>
 </g>
-   <use href="#unused" x="100" y="200" />
+   <use xlink:href="#unused" x="100" y="200" />
 <!-- _________________________________________________________ -->
 <g transform="translate(200, 200)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashP" />
-<use href="#oneSlashQ" />
-<use href="#zeroR" />
-<use href="#oneSlashS" />
-<use href="#oneSlashT" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashP" />
+<use xlink:href="#oneSlashQ" />
+<use xlink:href="#zeroR" />
+<use xlink:href="#oneSlashS" />
+<use xlink:href="#oneSlashT" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >T2</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >tI</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rr0 rrs)</text>
+<text class="characteristic-text" x = "5" y = "95" >tI</text>
+<text class="characteristic-text" x = "29" y = "95" >(rr0 rrs)</text>
 </g>
 
-   <use href="#unused" x="300" y="200" />
+   <use xlink:href="#unused" x="300" y="200" />
 <!-- _________________________________________________________ -->
 <g transform="translate(400, 200)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashP" />
-<use href="#zeroR" />
-<use href="#2SlashS" />
-<use href="#2SlashQ" />
-<use href="#oneSlashT" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashP" />
+<use xlink:href="#zeroR" />
+<use xlink:href="#2SlashS" />
+<use xlink:href="#2SlashQ" />
+<use xlink:href="#oneSlashT" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >O2</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >oI</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rs0 srt)</text>
+<text class="characteristic-text" x = "5" y = "95" >oI</text>
+<text class="characteristic-text" x = "29" y = "95" >(rs0 srt)</text>
 </g>
 
-   <use href="#unused" x="500" y="200" />
+   <use xlink:href="#unused" x="500" y="200" />
 <!-- _________________________________________________________ -->
 <g transform="translate(600, 200)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashQ" />
-<use href="#zeroR" />
-<use href="#oneSlashS" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashQ" />
+<use xlink:href="#zeroR" />
+<use xlink:href="#oneSlashS" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >M2A</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >mC</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rs0 stu)</text>
+<text class="characteristic-text" x = "5" y = "95" >mC</text>
+<text class="characteristic-text" x = "29" y = "95" >(rs0 stu)</text>
 </g>
 
 
 <!-- _________________________________________________________ -->
 <g transform="translate(700, 200)">
-   <rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightyellow" />
+				<rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightyellow" />
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashP" />
-<use href="#2SlashT" />
-<use href="#2SlashQ" />
-<use href="#zeroR" />
-<use href="#oneSlashS" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashP" />
+<use xlink:href="#2SlashT" />
+<use xlink:href="#2SlashQ" />
+<use xlink:href="#zeroR" />
+<use xlink:href="#oneSlashS" />
 </g>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:60px" x = "75" y = "55" >*</text>
+<use xlink:href="#asterisk"/>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >M2B</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >mC</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rs0 rst)</text>
+<text class="characteristic-text" x = "5" y = "95" >mC</text>
+<text class="characteristic-text" x = "29" y = "95" >(rs0 rst)</text>
 </g>
 
 
 <!-- _________________________________________________________ -->
 <g transform="translate(800, 200)">
-   <rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightyellow" />
+				<rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightyellow" />
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#zeroR" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#zeroR" />
 </g>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:60px" x = "75" y = "55" >*</text>
+<use xlink:href="#asterisk"/>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >A2</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >aP</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rs0 tuv)</text>
+<text class="characteristic-text" x = "5" y = "95" >aP</text>
+<text class="characteristic-text" x = "29" y = "95" >(rs0 tuv)</text>
 </g>
 
-   <use href="#unused" x="900" y="200" />
+   <use xlink:href="#unused" x="900" y="200" />
 
 <!-- _________________________________________________________ -->
 <g transform="translate(1000, 200)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 
 <!--type 2 -->
 <g transform = "translate(33, 35) scale( .5, .5)">
@@ -435,14 +447,14 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <polygon fill="CYAN" stroke="black" stroke-width="2" points="-38.3615, -8.21251  -41.6978, 59.2784  -13.7835, 52.3158  -10.4472, -15.1751 "/>
 <polygon fill="CYAN" stroke="black" stroke-width="2" points="-10.4472, -15.1751  -13.7835, 52.3158  21.8013, 59.2784  25.1376, -8.21251 "/>
 <text style="font-family:sans-serif; font-weight:bold; font-size:15px" x="0" y="129" >mC, type 2 </text>
-<text style="font-family:sans-serif; font-weight:bold; font-size:30px" x="-60" y="-30" >M2a</text>
+<text style="font-family:sans-serif; font-weight:bold; font-size:30px" x="-60" y="-30" >M2A</text>
 </g>
 </g>
 
 
 <!-- _________________________________________________________ -->
 <g transform="translate(1100, 200)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 
 <g transform = "translate(35, 33)  scale(.5,.5)" >
 <polygon fill = "CYAN " stroke = "black" stroke-width = "2" points = "67.369, -1.1095  68.2535, 60.0399  79.8088, 101.964  102.485, 61.1095  101.6, -0.0399133  90.0447, -41.9638  " stroke-linejoin = "round" />
@@ -459,7 +471,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 
 <!-- _________________________________________________________ -->
 <g transform="translate(0, 300)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "65" >3</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "7" y = "76" >truncated</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "7" y = "92" >octahedron</text>
@@ -469,101 +481,102 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <!-- _________________________________________________________ -->
 <g transform="translate(100, 300)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashP" />
-<use href="#oneSlashQ" />
-<use href="#zeroR" />
-<use href="#oneSlashS" />
-<use href="#oneSlashT" />
-<use href="#zeroU" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashP" />
+<use xlink:href="#oneSlashQ" />
+<use xlink:href="#zeroR" />
+<use xlink:href="#oneSlashS" />
+<use xlink:href="#oneSlashT" />
+<use xlink:href="#zeroU" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >C3</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >cF</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rr0 rr0)</text>
+<text class="characteristic-text" x = "5" y = "95" >cF</text>
+<text class="characteristic-text" x = "29" y = "95" >(rr0 rr0)</text>
 </g>
 
-   <use href="#unused" x="200" y="300" />
+   <use xlink:href="#unused" x="200" y="300" />
 
 <!-- _________________________________________________________ -->
 <g transform="translate(300, 300)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashP" />
-<use href="#oneSlashQ" />
-<use href="#zeroR" />
-<use href="#oneSlashT" />
-<use href="#zeroU" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashP" />
+<use xlink:href="#oneSlashQ" />
+<use xlink:href="#zeroR" />
+<use xlink:href="#oneSlashT" />
+<use xlink:href="#zeroU" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >R3</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >hR</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rr0 sr0) </text>
+<text class="characteristic-text" x = "5" y = "95" >hR</text>
+<text class="characteristic-text" x = "29" y = "95" >(rr0 sr0) </text>
 </g>
 
 
 <!-- _________________________________________________________ -->
 <g transform="translate(400, 300)">
-   <rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightyellow" />
+					<rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightyellow" />
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashP" />
-<use href="#2SlashQ" />
-<use href="#zeroR" />
-<use href="#oneSlashS" />
-<use href="#2SlashT" />
-<use href="#zeroU" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashP" />
+<use xlink:href="#2SlashQ" />
+<use xlink:href="#zeroR" />
+<use xlink:href="#oneSlashS" />
+<use xlink:href="#2SlashT" />
+<use xlink:href="#zeroU" />
 </g>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:60px" x = "75" y = "55" >*</text>
-   <use href="#blank" />
+<use xlink:href="#asterisk"/>
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >O3</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >oI</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rs0 rs0)</text>
+<text class="characteristic-text" x = "5" y = "95" >oI</text>
+<text class="characteristic-text" x = "29" y = "95" >(rs0 rs0)</text>
 </g>
 
-   <use href="#unused" x="500" y="300" />
+   <use xlink:href="#unused" x="500" y="300" />
 
 <!-- _________________________________________________________ -->
 <g transform="translate(600, 300)">
-    <rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightyellow" />
+					<rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightyellow" />
   <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#oneSlashQ" />
-<use href="#zeroR" />
-<use href="#oneSlashT" />
-<use href="#zeroU" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#oneSlashQ" />
+<use xlink:href="#zeroR" />
+<use xlink:href="#oneSlashT" />
+<use xlink:href="#zeroU" />
 </g>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:60px" x = "75" y = "55" >*</text>
+
+<use xlink:href="#asterisk"/>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >M3</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >mC</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rs0 ts0)</text>
+<text class="characteristic-text" x = "5" y = "95" >mC</text>
+<text class="characteristic-text" x = "29" y = "95" >(rs0 ts0)</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(700, 300)">
-   <rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="#909090" />
+   <use xlink:href="#unused" x="0" y="0" />
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(800, 300)">
-   <rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightyellow" />
+					<rect name="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="black" fill="lightyellow" />
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-<use href="#zeroR" />
-<use href="#zeroU" />
+   <use xlink:href="#cellborder" />
+<use xlink:href="#zeroR" />
+<use xlink:href="#zeroU" />
 </g>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:60px" x = "75" y = "55" >*</text>
-   <use href="#blank" />
+<use xlink:href="#asterisk"/>
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >A3</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >aP</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(rs0 tu0)</text>
+<text class="characteristic-text" x = "5" y = "95" >aP</text>
+<text class="characteristic-text" x = "29" y = "95" >(rs0 tu0)</text>
 </g>
 
-   <use href="#unused" x="900" y="300" />
+   <use xlink:href="#unused" x="900" y="300" />
 
 <!-- _________________________________________________________ -->
 <g transform="translate(1000, 300)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 
 <g transform = "translate(33, 35) scale( .5, .5)">
 <polygon fill="cyan" stroke="black" stroke-width="2" points="7.57635, -32.9103  -52.2116, 22.8489  -9.83738, 1.73758  49.9506, -54.0216 "/>
@@ -580,7 +593,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 
 <!-- _________________________________________________________ -->
 <g transform="translate(1100, 300)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 
 <g transform = "translate(35, 33)  scale(.5,.5)" >
 <polygon fill = "CYAN " stroke = "black" stroke-width = "2"  points = "51.1177, 76.6069  104.739, 53.3034  85.6502, 87.6947  32.0292, 110.998  " stroke-linejoin = "round" />
@@ -598,68 +611,68 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 
 <!-- _________________________________________________________ -->
 <g transform="translate(0, 400)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "65" >4</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "7" y = "76" >hexagonal</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "7" y = "92" >prism</text>
 </g>
 
-   <use href="#unused" x="100" y="400" />
-   <use href="#unused" x="200" y="400" />
-   <use href="#unused" x="300" y="400" />
+   <use xlink:href="#unused" x="100" y="400" />
+   <use xlink:href="#unused" x="200" y="400" />
+   <use xlink:href="#unused" x="300" y="400" />
 
 <!-- _________________________________________________________ -->
 <g transform="translate(400, 400)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-   <use href="#zeroP" />
-   <use href="#zeroQ" />
-<use href="#oneSlashS" />
-<use href="#oneSlashT" />
+   <use xlink:href="#cellborder" />
+   <use xlink:href="#zeroP" />
+   <use xlink:href="#zeroQ" />
+<use xlink:href="#oneSlashS" />
+<use xlink:href="#oneSlashT" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >O4</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >oS</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(00r sst)</text>
+<text class="characteristic-text" x = "5" y = "95" >oS</text>
+<text class="characteristic-text" x = "29" y = "95" >(00r sst)</text>
 </g>
 
-   <use href="#unused" x="500" y="400" />
+   <use xlink:href="#unused" x="500" y="400" />
 
 <!-- _________________________________________________________ -->
 <g transform="translate(600, 400)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-   <use href="#zeroP" />
-   <use href="#zeroQ" />
+   <use xlink:href="#cellborder" />
+   <use xlink:href="#zeroP" />
+   <use xlink:href="#zeroQ" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >M4</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >mP</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(00r stu)</text>
+<text class="characteristic-text" x = "5" y = "95" >mP</text>
+<text class="characteristic-text" x = "29" y = "95" >(00r stu)</text>
 </g>
 
-   <use href="#unused" x="700" y="400" />
-   <use href="#unused" x="800" y="400" />
+   <use xlink:href="#unused" x="700" y="400" />
+   <use xlink:href="#unused" x="800" y="400" />
 
 <!-- _________________________________________________________ -->
 <g transform="translate(900, 400)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-   <use href="#zeroP" />
-   <use href="#zeroQ" />
-<use href="#oneSlashR" />
-<use href="#oneSlashS" />
-<use href="#oneSlashT" />
+   <use xlink:href="#cellborder" />
+   <use xlink:href="#zeroP" />
+   <use xlink:href="#zeroQ" />
+<use xlink:href="#oneSlashR" />
+<use xlink:href="#oneSlashS" />
+<use xlink:href="#oneSlashT" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >H4</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >hP</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(00r rrs)</text>
+<text class="characteristic-text" x = "5" y = "95" >hP</text>
+<text class="characteristic-text" x = "29" y = "95" >(00r rrs)</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(1000, 400)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 
   <g transform = "translate(35, 33) scale(.5 .5)" >
   <polygon fill="cyan" stroke="black" stroke-width="2" points="-26.7141, 97.9372  111.526, 23.5026  120, 8.14268  -18.2397, 82.5773  " />
@@ -673,7 +686,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 
 <!-- _________________________________________________________ -->
 <g transform="translate(1100, 400)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 
 <g transform = "translate(35, 33)  scale(.5,.5)" >
 <polygon fill = "CYAN " stroke = "black" stroke-width = "2" points = "1.09903, -19.5901  -4.22921, 66.5386  45.8495, 116.129  101.256, 79.5901  106.585, -6.53857  56.506, -56.1286  " stroke-linejoin = "round" />
@@ -687,7 +700,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 
 <!-- _________________________________________________________ -->
 <g transform="translate(0, 500)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "76" >5</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "7" y = "76" ></text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:13px" x = "7" y = "92" >cuboid</text>
@@ -696,61 +709,61 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <!-- _________________________________________________________ -->
 <g transform="translate(100, 500)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-   <use href="#zeroP" />
-   <use href="#zeroQ" />
-   <use href="#zeroR" />
-<use href="#oneSlashS" />
-<use href="#oneSlashT" />
-<use href="#oneSlashU" />
+   <use xlink:href="#cellborder" />
+   <use xlink:href="#zeroP" />
+   <use xlink:href="#zeroQ" />
+   <use xlink:href="#zeroR" />
+<use xlink:href="#oneSlashS" />
+<use xlink:href="#oneSlashT" />
+<use xlink:href="#oneSlashU" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >C5</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >cP</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(000 rrr)</text>
+<text class="characteristic-text" x = "5" y = "95" >cP</text>
+<text class="characteristic-text" x = "29" y = "95" >(000 rrr)</text>
 </g>
 
 <!-- _________________________________________________________ -->
 <g transform="translate(200, 500)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-   <use href="#zeroP" />
-   <use href="#zeroQ" />
-   <use href="#zeroR" />
-<use href="#oneSlashS" />
-<use href="#oneSlashT" />
+   <use xlink:href="#cellborder" />
+   <use xlink:href="#zeroP" />
+   <use xlink:href="#zeroQ" />
+   <use xlink:href="#zeroR" />
+<use xlink:href="#oneSlashS" />
+<use xlink:href="#oneSlashT" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >T5</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >tP</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(000 rrs)</text>
+<text class="characteristic-text" x = "5" y = "95" >tP</text>
+<text class="characteristic-text" x = "29" y = "95" >(000 rrs)</text>
 </g>
 
-   <use href="#unused" x="300" y="500" />
+   <use xlink:href="#unused" x="300" y="500" />
 
 <!-- _________________________________________________________ -->
 <g transform="translate(400, 500)">
    <g transform=" translate(24, 75)  ">
-   <use href="#cellborder" />
-   <use href="#zeroP" />
-   <use href="#zeroQ" />
-   <use href="#zeroR" />
+   <use xlink:href="#cellborder" />
+   <use xlink:href="#zeroP" />
+   <use xlink:href="#zeroQ" />
+   <use xlink:href="#zeroR" />
 </g>
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >O5</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "5" y = "95" >oP</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:16px" x = "32" y = "95" >(000 rst)</text>
+<text class="characteristic-text" x = "5" y = "95" >oP</text>
+<text class="characteristic-text" x = "29" y = "95" >(000 rst)</text>
 </g>
 
-   <use href="#unused" x="500" y="500" />
-   <use href="#unused" x="600" y="500" />
-   <use href="#unused" x="700" y="500" />
-   <use href="#unused" x="800" y="500" />
-   <use href="#unused" x="900" y="500" />
+   <use xlink:href="#unused" x="500" y="500" />
+   <use xlink:href="#unused" x="600" y="500" />
+   <use xlink:href="#unused" x="700" y="500" />
+   <use xlink:href="#unused" x="800" y="500" />
+   <use xlink:href="#unused" x="900" y="500" />
 
    <!-- _________________________________________________________ -->
 <g transform="translate(1000, 500)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 <g transform="translate(35, 33) scale(.5 .5)" >
 <polygon fill="cyan" stroke="black" stroke-width="2" points="-60, 3.63106  -5.48374, 3.63106  80.0943, -42.4481  25.578, -42.4481  " />
 <polygon fill="cyan" stroke="black" stroke-width="2" points="-60, 3.63106  -20.0943, 102.448  34.422, 102.448  -5.48374, 3.63106  " />
@@ -762,7 +775,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 
 <!-- _________________________________________________________ -->
 <g transform="translate(1100, 500)">
-   <use href="#blank" />
+   <use xlink:href="#blank" />
 
 <g transform = "translate(35, 33)  scale(.5,.5)" >
 <polygon fill = "CYAN " stroke = "black" stroke-width = "2" points = "-54.4043, 12.1906  -5.42519, 12.1906  83.3551, -46.3563  34.376, -46.3563  " stroke-linejoin = "round" />
@@ -773,13 +786,13 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 </g>
 </g>
 <g transform="translate(1000, 00)">
-<rect name="Basic" x="0" y="0" width="202" height="102" stroke-width="2" stroke="black" fill="white" />
-<text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "3" y = "15" >Dirichlet cells</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "13" y = "30" >also known as</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "18" y = "45" >Dirichlet domains</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "18" y = "60" >Voronoi domains</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "18" y = "75" >Federov parallelohedra</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:15px" x = "18" y = "90" >Wigner-Seitz cell</text>
+						<rect name="Basic" x="0" y="0" width="202" height="102" stroke-width="2" stroke="black" fill="white" />
+<text style = "font-family:sans-serif; font-weight:bold; font-size:14px" x = "3" y = "15" >Dirichlet cells</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:14px" x = "13" y = "30" >also known as</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:14px" x = "18" y = "45" >Dirichlet domains</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:14px" x = "18" y = "60" >Voronoi domains</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:14px" x = "18" y = "75" >Federov parallelohedra</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:14px" x = "18" y = "90" >Wigner-Seitz cell</text>
 </g>
 
 <text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "100" y="650">
