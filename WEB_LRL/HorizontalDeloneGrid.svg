@@ -13,11 +13,11 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
             .characteristic-text { font-family: sans-serif; font-weight:700; font-size: 13px; }
         </style>
 		
-		        <path
-           d="m 94.762602,17.76833 -6.869748,3.601414 6.869748,3.622232 -1.582121,2.935257 -6.932203,-3.830406 v 7.161193 h -3.538961 v -7.161193 l -6.95302,3.830406 -1.582124,-2.935257 6.953019,-3.622232 -6.953019,-3.601414 1.582124,-2.935256 6.95302,3.788771 v -7.161193 h 3.538961 v 7.161193 l 6.932203,-3.788771 z"
-           style="font-weight:bold;font-size:60px;font-family:sans-serif;stroke-width:0.710568"
-           id="asterisk" />
-
+  <path d="M82.5 11 82.5 32 M74.1 15.25 90.9 27.75 M74.1 27.75 90.9 15.25" stroke="black" stroke-width="4.2" stroke-linecap="butt"
+           id="asterisk" />  <!-- from Anthropic's AI Claude -->
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <path d="M50,20 50,80 M26,35 74,65 M26,65 74,35" stroke="black" stroke-width="12" stroke-linecap="butt"/>
+</svg>
 
    
    <polyline id="cellborder" stroke="black" points="0,-0   70,-0   35,-60.6218   -0.175,0.303109   0.175,-0.101036   35,-20.2073   35,-60.6218   35,-20.2073   70,-0   " style="fill:none; stroke-width:3 stroke-linejoin:round; stroke-linecap:round"
