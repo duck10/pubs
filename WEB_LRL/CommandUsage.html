@@ -50,11 +50,14 @@
 				<td align="center" width="250px"> <a href="#CmdPath">Make a path between cells</a><br>
 				<td align="center" width="250px"> <a href="#CmdToCell">Computer length and angle cell</a><br>
 				<td align="center" width="250px"> <a href="#PlotC3">Make plot of C3 data</a>
-				<td align="center" width="250px"> <a href="#PlotPolar">Make polar coordinate plot of unit cell data</a>
 			</tr>
 			<tr>
+				<td align="center" width="250px"> <a href="#PlotPolar">Make polar coordinate plot of input</a>
 				<td align="center" width="250px"> <a href="#CmdPerturb">Apply perturbations to cells</a>
-
+				<td align="center" width="250px"> <a href="#CmdPrim">Convert cells to primitive</a>
+			</tr>
+			<tr>
+				<td align="center" width="250px"> <a href="#CmdInverse">Convert cells to reciprocal cell</a>
 		</table>
 	</div>
 	--------------------------------------------------<br>
@@ -210,6 +213,23 @@
 	</ul>
 	--------------------------------------------------<br>
 	dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
+	dnl Command:  CmdInverse
+	<br>
+	dnl<br><br>
+	<a name="CmdInverse"> </a>
+	<strong>Command: Make Inverse</strong><br>
+	<em><u>Purpose:</u></em>Generate reciprocal cells<br>
+	<em><u>Output type:</u></em> Valid input is reported as unit cell a, b, c, &amp;alpha;, &amp;beta;, &amp;gamma;.<br>
+	<em><u>Parameters: </u></em>
+	NA<br>
+	Example:<br>
+	f 10 10 10 90 90 90<br>
+	end<br>
+	P 7.0711 7.0711 7.0711 60.0000 60.0000 60.0000
+	<br>
+	<br>
+	--------------------------------------------------<br>
+	dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
 	dnl Command:  CmdLM
 	<br>
 	dnl<br><br>
@@ -358,6 +378,29 @@
 	of 10
 	/1000<br>
 	end<br>
+	<br>
+	--------------------------------------------------<br>
+	dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
+	dnl Command:  CmdPrim
+	<br>
+	dnl<br><br>
+	<a name="CmdPrim"> </a>
+	<strong>
+		Command:
+		convert input cells to primitive
+	</strong><br>
+	<em><u>Purpose:</u></em>
+	For non-primitive input cells, a primitive version is returned.<br>
+	<em><u>Output type:</u></em> a,	b, c, &amp;alpha;, &amp;beta;, &amp;gamma;<br>
+	<em><u>Parameters:</u></em>
+	NA<br>
+	<em><u>Example:</u></em><br>
+	C:\Users\lca\Source\Repos\duck10\LatticeRepLib\x64\Debug>cmdprim<br>
+	; To Primitive<br>
+	f 10 10 10   90 90 90<br>
+	end<br>
+	P 7.0711 7.0711 7.0711 60.0000 60.0000 60.0000
+	<br>
 	<br>
 	--------------------------------------------------<br>
 	dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
