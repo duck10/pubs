@@ -1,0 +1,88 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="120" height ="120" viewBox = "0 0 120 120"
+version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- Creation date and time _2024-03-11.08_38_17.-->
+<desc>Delone grid created for LRL_WEB, the site for Larry Andrews and Herbert J Bernstein</desc>
+
+<defs>
+           <style> <!-- from Anthropic's AI Claude -->
+            .large-text { font-family: sans-serif; font-weight: bold; font-size: 75px; }
+            .characteristic-text { font-family: sans-serif; font-weight:700; font-size: 13px; }
+        </style>
+   
+   <polyline id="tetrahedron" stroke="black" points="0,-0   70,-0   35,-60.6218   -0.175,0.303109   0.175,-0.101036   35,-20.2073   35,-60.6218   35,-20.2073   70,-0   " style="fill:none; stroke-width:3 stroke-linejoin:round; stroke-linecap:round"
+ />
+   <text id="zeroP" x="48.5" y="-24.3109" style="font-family:sans-serif; font-size=26; font-weight:bold; ">0</text>
+   <text id="zeroQ" x="13.5" y="-24.3109" style="font-family:sans-serif; font-size=26; font-weight:bold; ">0</text>
+   <text id="zeroR" x="31" y="6" style="font-family:sans-serif; font-size=26; font-weight:bold; ">0</text>
+   <text id="zeroU" x="31" y="-34.4145" style="font-family:sans-serif; font-size=26; font-weight:bold; ">0</text>
+
+<line id="oneSlashP" x1="57.3497" y1="-33.1109" x2="47.6503" y2="-27.5109" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line id="oneSlashQ" x1="12.6503" y1="-33.1109" x2="22.3497" y2="-27.5109" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line id="oneSlashR" x1="35" y1="-5.6" x2="35" y2="5.6" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line id="oneSlashS" x1="14.7" y1="-14.9534" x2="20.3" y2="-5.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line id="oneSlashT" x1="55.3" y1="-14.9534" x2="49.7" y2="-5.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line id="oneSlashU" x1="40.6" y1="-40.4145" x2="29.4" y2="-40.4145" style="stroke:rgb(0,0,0);stroke-width:3"/>
+
+<g id="2SlashP" >
+</g>
+
+<g id="2SlashQ" >
+<line name="2SlashQa" x1="11.6503" y1="-31.3788" x2="21.3497" y2="-25.7788" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line name="2SlashQb" x1="13.6503" y1="-34.8429" x2="23.3497" y2="-29.2429" style="stroke:rgb(0,0,0);stroke-width:3"/>
+</g>
+
+<g id="2SlashR" >
+<line id="mult2SlashRa" x1="33" y1="-5.6" x2="33" y2="5.6" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line id="mult2SlashRb" x1="37" y1="-5.6" x2="37" y2="5.6" style="stroke:rgb(0,0,0);stroke-width:3"/>
+</g>
+
+<g id="2SlashS" >
+<line name="2SlashSa" x1="12.9679" y1="-13.9534" x2="18.5679" y2="-4.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line name="2SlashSb" x1="16.4321" y1="-15.9534" x2="22.0321" y2="-6.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
+</g>
+
+<g id="2SlashT" >
+<line name="2SlashTa" x1="53.5679" y1="-15.9534" x2="47.9679" y2="-6.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line name="2SlashTb" x1="57.0321" y1="-13.9534" x2="51.4321" y2="-4.25389" style="stroke:rgb(0,0,0);stroke-width:3"/>
+</g>
+
+<g id="2SlashU" >
+<line id="2SlashUa" x1="40.6" y1="-42.4145" x2="29.4" y2="-42.4145" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line id="2SlashUb" x1="40.6" y1="-38.4145" x2="29.4" y2="-38.4145" style="stroke:rgb(0,0,0);stroke-width:3"/>
+</g>
+
+<g id="3SlashR" >
+<line name="3Slash" x1="31" y1="5.6" x2="31" y2="-5.6" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line name="3Slash" x1="35" y1="5.6" x2="35" y2="-5.6" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line name="3Slash" x1="39" y1="5.6" x2="39" y2="-5.6" style="stroke:rgb(0,0,0);stroke-width:3"/>
+</g>
+
+<g id="3SlashU" >
+<line name="3Slash" x1="29.4" y1="-44.4145" x2="40.6" y2="-44.4145" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line name="3Slash" x1="29.4" y1="-40.4145" x2="40.6" y2="-40.4145" style="stroke:rgb(0,0,0);stroke-width:3"/>
+<line name="3Slash" x1="29.4" y1="-36.4145" x2="40.6" y2="-36.4145" style="stroke:rgb(0,0,0);stroke-width:3"/>
+</g>
+
+</defs>
+
+
+<!-- _________________________________________________________ -->
+<g transform="translate(10,10)">
+   <g transform=" translate(24, 75)  ">
+   <use xlink:href="#tetrahedron" />
+   <use xlink:href="#zeroP" />
+   <use xlink:href="#zeroQ" />
+   <use xlink:href="#zeroR" />
+<use xlink:href="#oneSlashS" />
+<use xlink:href="#oneSlashT" />
+<use xlink:href="#oneSlashU" />
+</g>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:25px" x = "5" y = "25" >C5</text>
+<text class="characteristic-text" x = "5" y = "95" >cP</text>
+<text class="characteristic-text" x = "29" y = "95" >(000 rrr)</text>
+
+   <rect x="0" y="0" width="100" height="100" stroke="black" stroke-width="3" fill="none" />>
+</g>
+
+</svg>
