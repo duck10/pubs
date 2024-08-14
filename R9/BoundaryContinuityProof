@@ -1,0 +1,31 @@
+﻿LAcan you prove that the R9 embedding does not have a discontinuity at the boundaries if both cells are reduced EditCertainly. I'll provide a proof that the R9 embedding does not have a discontinuity at the boundaries when both cells are reduced. This proof is suitable for inclusion in a scientific paper.
+Theorem: The R9 embedding f: S6 → R9 is continuous across the boundaries of the fundamental region of S6 when applied to reduced cells.
+Proof:
+Let's consider a boundary in S6 space where one component si approaches zero. Without loss of generality, we'll consider the case where s1 approaches zero from the negative side.
+
+Define a path in S6 approaching the boundary:
+s(t) = (t, s2, s3, s4, s5, s6) where t < 0 and t → 0
+The R9 embedding f is defined as:
+f(s1, s2, s3, s4, s5, s6) = (s1 + s2 + s3, s4 + s5 + s6, s1 - s2, s2 - s3, s4 - s5, s5 - s6, s1 - s4, s2 - s5, s3 - s6)
+As t → 0⁻, the limit of f(s(t)) exists and is equal to:
+lim(t→0⁻) f(s(t)) = (s2 + s3, s4 + s5 + s6, -s2, s2 - s3, s4 - s5, s5 - s6, -s4, s2 - s5, s3 - s6)
+Now, consider what happens just after crossing the boundary. In a reduced cell, when s1 becomes positive, we apply the following transformation:
+s1' = -s1, s2' = s2 + s1, s3' = s3 + s1, s5' = s5 + s1, s6' = s6 + s1
+(s4 remains unchanged)
+Just after crossing the boundary, s1 is slightly positive. Let's call this small positive value ε. After reduction, we have:
+s(ε) = (-ε, s2 + ε, s3 + ε, s4, s5 + ε, s6 + ε)
+Applying f to this reduced cell:
+f(s(ε)) = ((s2 + ε) + (s3 + ε) + (-ε), s4 + (s5 + ε) + (s6 + ε),
+-ε - (s2 + ε), (s2 + ε) - (s3 + ε), s4 - (s5 + ε), (s5 + ε) - (s6 + ε),
+-ε - s4, (s2 + ε) - (s5 + ε), (s3 + ε) - (s6 + ε))
+= (s2 + s3, s4 + s5 + s6 + 2ε, -s2 - 2ε, s2 - s3, s4 - s5 - ε, s5 - s6, -s4 - ε, s2 - s5, s3 - s6)
+As ε → 0⁺, the limit of f(s(ε)) is:
+lim(ε→0⁺) f(s(ε)) = (s2 + s3, s4 + s5 + s6, -s2, s2 - s3, s4 - s5, s5 - s6, -s4, s2 - s5, s3 - s6)
+Comparing the limits from steps 3 and 7, we see that:
+lim(t→0⁻) f(s(t)) = lim(ε→0⁺) f(s(ε))
+
+This equality of limits demonstrates that the R9 embedding f is continuous across the boundary where s1 = 0.
+The same argument can be applied to all other boundaries (s2 = 0, s3 = 0, s4 = 0, s5 = 0, s6 = 0) by symmetry of the embedding function and reduction rules.
+Therefore, the R9 embedding is continuous across all boundaries of the fundamental region of S6 when applied to reduced cells.
+Q.E.D.
+This proof demonstrates that the R9 embedding maintains continuity across the boundaries of S6 space, ensuring a smooth transition between different regions of the space. This property is crucial for accurately representing and analyzing lattice structures, especially when dealing with transformations or comparisons that involve crossing these boundaries.

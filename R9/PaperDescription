@@ -1,0 +1,7 @@
+This outline provides a structure for a comprehensive paper on the R9 embedding. The key points to emphasize in writing this paper would be:
+
+The need for a continuous, invariant representation of lattices that overcomes the limitations of S6 space.
+The mathematical properties of the R9 embedding, particularly its continuity across S6 boundaries and invariance under valid permutations.
+The advantages of R9 embedding over previous distance measures, especially in handling boundary cases and providing a more geometrically intuitive representation.
+Practical applications demonstrating how R9 embedding improves various crystallographic analyses.
+When writing the paper, it would be important to provide concrete examples and comparisons with existing methods to clearly illustrate the benefits of the R9 embedding. Additionally, including visualizations of the embedding and its properties could greatly enhance the paper's impact and clarity.

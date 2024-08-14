@@ -1,0 +1,47 @@
+LAplease summarize the boundary tests for R9 EditCertainly. I'll summarize the boundary tests for the R9 embedding, focusing on how the embedding handles the boundaries of the S6 space.
+Summary of Boundary Tests for R9 Embedding
+The R9 embedding of S6 space is designed to handle the six boundaries of the fundamental region of S6. These boundaries occur when any of the six S6 parameters becomes zero. The tests demonstrate how the embedding behaves when crossing these boundaries.
+Key Points:
+
+Boundary Definition: In S6 space, a boundary is crossed when one of the six parameters (s1, s2, s3, s4, s5, s6) changes from negative to positive.
+Test Procedure:
+a. For each of the six boundaries, two points are considered:
+
+One just inside the fundamental region (si slightly negative)
+One just outside (si slightly positive)
+b. The outside point is reduced back into the fundamental region
+c. Both points are embedded into R9 space
+d. The distance between the embedded points is calculated
+
+
+Expected Behavior:
+
+The distance between the embedded points should be small, reflecting the small change in the original S6 vectors
+The distance should be consistent across all six boundaries
+The embedding should maintain continuity across the boundary
+
+
+Test Results:
+For all six boundaries, the tests showed:
+
+Small, non-zero distances between pairs of points across each boundary
+Consistent distances across different boundaries
+Smooth transition across boundaries, indicating continuity
+
+
+Significance:
+
+Demonstrates that the R9 embedding preserves the topology of S6 space near its boundaries
+Ensures that lattices that are close in S6 space remain close in R9 space, even when they cross a boundary
+Validates the embedding's ability to handle the reduction step required when crossing a boundary
+
+
+Implications:
+
+The R9 embedding provides a continuous representation of S6 space
+It allows for meaningful comparison of lattices near the boundaries of the fundamental region
+The embedding is suitable for applications involving analysis of lattice transitions or comparisons across different regions of S6 space
+
+
+
+These boundary tests are crucial in validating the R9 embedding's ability to faithfully represent the structure of S6 space, particularly in handling the complexities that arise at the boundaries of the fundamental region. The successful performance of the embedding in these tests indicates its robustness and suitability for various crystallographic applications involving lattice comparison and analysis.

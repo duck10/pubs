@@ -1,0 +1,29 @@
+﻿please rewrite the proof that the permutation do not have a linear embedding in the mathematical form of theorem/proof, so that it can be put into a scientific paper
+
+Edit
+Certainly. Here's a formal theorem and proof suitable for inclusion in a scientific paper:
+
+Theorem: There does not exist a linear embedding f: S6 → Rn for any n that is both injective and invariant under all 24 valid permutations of S6.
+
+Proof: Let f: S6 → Rn be a linear embedding, and let P be the set of 24 valid permutations on S6.
+
+Assume, for the sake of contradiction, that f is both injective and invariant under all permutations in P.
+
+Invariance under permutations implies that for any s ∈ S6 and any p ∈ P: f(p(s)) = f(s)
+Given the linearity of f, we can express it as: f(s) = As, where A is an n × 6 matrix
+For f to be invariant under all permutations, we must have: A = AP for all permutation matrices P corresponding to permutations in P
+This implies that each row of A must be of the form (a, a, a, b, b, b) for some a, b ∈ R, as these are the only vectors invariant under all 24 permutations
+Therefore, f can be expressed as: f(s) = (a₁Σ₁ + b₁Σ₂, a₂Σ₁ + b₂Σ₂, ..., aₙΣ₁ + bₙΣ₂) where Σ₁ = s₁ + s₂ + s₃ and Σ₂ = s₄ + s₅ + s₆
+However, this means that f(s) is entirely determined by Σ₁ and Σ₂
+Consider two distinct S6 vectors s and t such that: s₁ + s₂ + s₃ = t₁ + t₂ + t₃ and s₄ + s₅ + s₆ = t₄ + t₅ + t₆
+For these vectors, f(s) = f(t), despite s ≠ t
+This contradicts the assumption that f is injective.
+
+Therefore, no linear embedding f: S6 → Rn can be both injective and invariant under all 24 valid permutations of S6 for any n.
+
+Q.E.D.
+
+This proof demonstrates that it is impossible to construct a linear embedding of S6 into any Euclidean space that preserves both injectivity and invariance under all valid permutations. This result underscores the complexity of the S6 space and the challenges in finding suitable representations for lattice comparison and analysis.
+
+#####################################################
+That is what Claude sid. You would have to judge whether it is reasonable.

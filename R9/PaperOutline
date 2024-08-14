@@ -1,0 +1,58 @@
+
+Title: R9 Embedding: A Continuous and Invariant Representation of Crystallographic Lattices
+Abstract
+[Brief summary of the paper, highlighting the need for R9 embedding, its key properties, and advantages over previous methods]
+
+1. Introduction
+Background on lattice comparison in crystallography
+Challenges with existing distance measures
+Brief introduction to S6 space and its limitations
+Motivation for developing a new embedding
+2. The R9 Embedding
+2.1 Definition and Properties
+Mathematical definition of the R9 embedding
+Proof of injectivity
+Continuity across S6 boundaries
+2.2 Geometric Interpretation
+Relationship between R9 components and lattice geometry
+Visualization of the embedding space
+3. Advantages of R9 Embedding
+3.1 Continuity and Smoothness
+Handling of boundary crossings in S6 space
+Implications for analyzing lattice transformations
+3.2 Invariance Under Valid Permutations
+Discussion of the 24 valid permutations in S6
+Proof of invariance in R9 space
+3.3 Metric Properties
+Definition of distance measure in R9 space
+Comparison with other distance measures (e.g., Niggli distance, BGAOL)
+4. Applications
+4.1 Lattice Comparison and Classification
+Use in crystal system determination
+Application to polytype analysis
+4.2 Phase Transitions
+Tracking structural changes during phase transitions
+Case studies demonstrating advantages over previous methods
+4.3 Crystal Structure Prediction
+Potential use in energy landscape exploration
+Clustering of similar structures in R9 space
+5. Implementation and Computational Aspects
+Efficient algorithms for R9 embedding and distance calculation
+Scaling properties for large datasets
+6. Limitations and Future Work
+Discussion of any limitations of the R9 embedding
+Potential extensions or refinements
+7. Conclusion
+Summary of key advantages of R9 embedding
+Outlook on its potential impact in crystallography
+References
+[List of relevant literature]
+
+Appendices
+Detailed mathematical proofs
+Code snippets for implementation
+Made with
+Artifacts are user-generated and may contain unverified or potentially unsafe content.
+Report
+Remix Artifact
+
