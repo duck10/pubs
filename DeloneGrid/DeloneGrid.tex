@@ -128,7 +128,7 @@
 	\author[b]{Herbert J.}{Bernstein}
 	
 	\aff[a]{9515 NE 137th St, Kirkland, WA, 98034-1820 \country{USA}}
-	\aff[b]{c/o NSLS-II, Brookhaven National Laboratory, Upton, NY, 11973 \country{USA}}
+	\aff[b]{Fresh Pond Research Institute, c/o NSLS-II, Brookhaven National Laboratory, Upton, NY, 11973 \country{USA}}
 	
 	% Use \shortauthor to indicate an abbreviated author list for use in
 	% running heads (you will need to uncomment it).
@@ -213,7 +213,7 @@
 	by \citeasnoun{Delaunay1932}. Like the periodic table of the elements, a brief amount
 	of useful information is included.
 	
-\section{The space \SVI{}}
+        \section{The space \SVI{}}
 	
 		The scalars used by~\citeasnoun{Delaunay1932} in his formulation of Selling reduction ~\cite{Selling1874}
 	are (in the conventional order) $b \cdot c$, $a \cdot c$, $a \cdot b$, $a \cdot d$, 
@@ -236,22 +236,22 @@
 
 	\citeasnoun{Delaunay1932} and \citeasnoun{Delone1975} published a table of the Bravais types
 	as distinguished by Selling (Delaunay) reduction.\cite{andrews2023measuring} published
-	a somewhat modified version of Delaunay's table. The table presented here
+	a somewhat modified version of Delaunay's table. The table presented here in Fig. \ref{grid}
 	is arranged with the lattice family types as columns and the Federov polyhedron
-	types as rows.
-			\begin{figure}
-		\includegraphics[width=10cm]{HorizontalDeloneGrid}
+	types \cite{fedorov1891symmetry} \cite{fedorov1885elements} as rows.
+		\begin{figure}
+		\includegraphics[width=15cm]{HorizontalDeloneGrid.eps}
 		\label{grid}
 		\caption{The  Bravais lattice types.}
-	\end{figure}
+	    \end{figure}
 	
 \section{The labeling of the columns (lattice families)}
 	
 	The columns are labeled according to the lattice family: cubic,
 	tetragonal, rhombohedral, orthorhombic, monoclinic, and
 	triclinic (anorthic). The labels for each reflect the names:
-	\textbf{C}, \textbf{T}, \textbf{R}, \textbf{O},\textbf{ M}, \textbf{A}, \textbf{H} (rather than the choices of Delaunay: \textbf{K}, \textbf{Q},
-	\textbf{R},\textbf{ O},\textbf{ M}, \textbf{T}, \textbf{H}, respectively).
+	\textbf{C}, \textbf{T}, \textbf{R}, \textbf{O},\textbf{ M}, \textbf{A}, \textbf{H} (rather than the choices of Delaunay: 
+        \textbf{K}, \textbf{Q},	\textbf{R},\textbf{ O},\textbf{ M}, \textbf{T}, \textbf{H}, respectively).
 	
 	A further change from the model of Delaunay is the splitting 
 	of orthorhombic and monoclinic into a pair of columns each
@@ -267,8 +267,13 @@ The International Tables for x-ray crystallography \cite{vonLaue1952}
 used the convention of labeling Selling parameters in the Bravais
 tetrahedron, as \textbf{P}, \textbf{Q}, \textbf{R}, \textbf{S}, \textbf{T}, \textbf{U}, corresponding to the \SVI{} scalars
 \Svec, respectively. For reference,
-the figure has been included in the upper left cell of the table.
-		\begin{figure}
+the figure has been included in the upper left cell of the table.  The values of the six
+Selling parameters given in the PQRSTU order unabiguously identify the cell and is called
+the ``\SVI{} characteristic'' of the cell type, given at the bottom center of each cell of
+the table..  Note in particular which Selling
+parameters are zero, denoting right angles among them, and which ones are equal,
+denoting cases of higher symmetry.
+	\begin{figure}
 		\includegraphics[width=5cm]{PQRSTU}
 		\label{PQRSTU}
 		\caption{The key cell with the labels used in the
@@ -313,21 +318,17 @@ the figure has been included in the upper left cell of the table.
 	
 \section{Dirichlet cells}
 
-	At the right end of the table, a few examples of Dirichlet
+	At the right end of the table, there are a few examples of Dirichlet
 	cells for each row. 
-	
-	
-	\cite{fedorov1885elements}
 	
 	
 \section{The unused/vacant cells}
 
-	Prominent in the table are cells shown in gray. They have no
-	corresponding Bravais type. For instance, the cell that would be
+	The cells shown in gray have no corresponding Bravais type. For 
+        instance, the cell that would be
 	$\bf{H1}$ would be a hexagonal cell with no zero parameters
-	(this is no 90$^{\circ}$ angles); 
-	clearly impossible. 
-	
+	(\it{i.e.} no 90$^{\circ}$ angles); 
+	clearly an impossible case. 
 	
 	
 \section{Other changes from Delaunay}
@@ -335,8 +336,8 @@ the figure has been included in the upper left cell of the table.
 	Within the table there are five cells that have a yellow
 	background. Although Delaunay identified these among the 24
 	Bravais types, they are special in the sense that they
-	do no possess the full dimensionality of their lattice
-	family. Most likely, they are only of minor crystallographic 
+	do not possess the full dimensionality of their lattice
+	family. Most likely, they are of only minor crystallographic 
 	interest.
 	
 	Cells $\bf{A1}$ and $\bf{A2}$ are triclinic unit cells with 
@@ -346,7 +347,7 @@ the figure has been included in the upper left cell of the table.
 	$\bf{O3}$ is a 2-D manifold that is the boundary between
 	 $\bf{O2}$ and $\bf{O1B}$.
 	With a characteristic of (rs0 rs0), $\bf{O3}$ has only two
-	free parameters, not the three that is normal for an 
+	free parameters, not the three that are normal for an 
 	orthorhombic unit cell.
 	
 	
