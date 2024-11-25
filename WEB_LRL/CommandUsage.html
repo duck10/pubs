@@ -174,19 +174,19 @@
 	parentheses)<br>
 	--- The number of cells of each type to be
 	generated (1)<br>
-	--- The type(s) of selected output requested.
+	--- The type(s&ensp; of selected output requested.
 	Examples are:
 	<ul>
-	<li>--- <strong>&quot;all&quot;</strong> (default) -- produces examples
+	<li>--- <strong>&quot;all&quot;</strong> (default&ensp; -- produces examples
 	of each of the 44 Niggli types 
-	(see the International Tables)
+	(see the International Tables&ensp;
 	and also each of the 24 Delone types (all)<br></li>
-	<li>--- &quot;<strong>Gruber&quot;</strong> (default) -- produces the 
+	<li>--- &quot;<strong>Gruber&quot;</strong> (default&ensp; -- produces the 
 	the requested number of copies of the
 	five nearly-Niggli-reduced<br/>
 	examples of Gruber, 1973.</li>
 	(Only a single example of them is generated.<br>
-	<li>--- &quot;<strong>random&quot;</strong> (default) -- produces the
+	<li>--- &quot;<strong>random&quot;</strong> (default&ensp; -- produces the
 	the requested number of random unit cells.	<br></li>
 	<li>--- a number between
 	<strong>1</strong> and <strong>44</strong> will generate examples of that Niggli type. For instance,<br>
@@ -267,7 +267,7 @@
 	end<br>
 	; Lattice Matching<br>
 	F 10.000
-	10.000 10.000 90.000 90.000 90.000 ( 0 degrees in S6) REFERENCE<br>
+	10.000 10.000 90.000 90.000 90.000 ( 0 degrees in S6&ensp; REFERENCE<br>
 	F
 	10.050 9.821 9.832 89.143 92.094 88.781 ( 3.07179 degrees in
 	S6)<br>
@@ -339,9 +339,9 @@
 	</em> The original cell is output as S<sup>6</sup> and all <br>
 	requested perturbation are output as lengths and angles.<br>
 	<em><u>Parameters:</u></em>
-	The number of perturbations of each input cell (20) and the amount
+	The number of perturbations of each input cell (20&ensp; and the amount
 	of<br>
-	perturbation in parts-per-thousand (ppt) (1 ppt). The
+	perturbation in parts-per-thousand (ppt&ensp; (1 ppt). The
 	calculation is done S<sup>6</sup>,<br>
 	and the perturbation is in a
 	direction orthogonal to the S<sup>6</sup> vector..<br>
@@ -568,8 +568,8 @@
 	To C3<br>
 	g 100 110 120 0 1 2<br>
 	end<br>
-	C3 (0.000,-101.500)
-	(0.500,-111.000) (1.000,-120.500)
+	C3 (0.000,-101.500&ensp;
+	(0.500,-111.000&ensp; (1.000,-120.500&ensp;
 	<br>
 	<br>
 	--------------------------------------------------<br>
@@ -708,7 +708,7 @@
 	<strong>Command: compute unsorted Dirichlet cells (dc7unsrt)</strong><br>
 	<em><u>Purpose:</u></em>
 	convert to the 7 parameter form related to the Dirichlet<br>
-	(also known as Vornoi or Wigner-Seitz) unit cell. (note that
+	(also known as Vornoi or Wigner-Seitz&ensp; unit cell. (note that
 	lattice centering is not removed)<br>
 	Andrews, L. C., Bernstein, H. J., &amp; Xerri, M. (2023). <br>
 	An invertible seven-dimensional Dirichlet cell<br>characterization of lattices, Acta Cryst., A79, 369-380.<br>
@@ -778,6 +778,53 @@
 	<br>
 	--------------------------------------------------<br>
 	dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
+	dnl Command:  Follow
+	<br>
+	dnl<br><br>
+	<a name="Follow"> </a>
+	<strong>
+		Command: Follow
+	</strong><br>
+	<em><u>Purpose:</u></em> <br>
+	In the default mode (POINT), a single cell is read, and its Niggli-reduced cell is calculated.<br>
+	Multiple cells can be read, and a graphical output is computed for each input cell.<br>
+	In space S<sup>6</sup>, a straight line is computed between those points. Then the distances<br>
+	from points (default: 100 points&ensp; along that line are calculated to the end point (Niggli-reduced cell,<br>
+	in the POINT case). The graphical output shows those distances for each chosen <br>
+distance measure (default: NCDist in G<sup>6</sup> and CS6Dist in S<sup>6</sup>).<br>
+
+For more details on the Follower method, see Andrews and Bernstein:<br>
+<a href="https://www.cambridge.org/engage/api-gateway/coe/assets/orp/resource/item/63f418f01d2d184063d630a3/original/the-follower-algorithm-and-a-program-using-it-to-explore-spaces.pdf" target="_blank">"The Follower algorithm and a program using it to explore spaces"</a><br>
+	<em><u>Output type:</u></em>
+	graphical file names and various text<br>
+	<em><u>Graphical output:</u></em>Follow consumes unit cells descriptions.<br>
+
+	 <br>
+	<em><u>Parameters:</u></em>
+	NA<br>
+	<br>
+	
+	<em><u>Control Parameters</u></em><br>
+Control information is NOT case sensitive.<br>
+
+<em>FOLLOWERMODE</em> One of:<br>
+&emsp;POINT (default)<br>
+&emsp;LINE<br>
+&emsp;CHORD<br>
+&emsp;CHORD3<br>
+&emsp;TRIANGLE<br>
+<em>PERTURBATIONS:</em> how many graphs of slightly different starting point to produce (default: 0)<br>
+<em>PERTURBBY:</em> how much to perturb input cells (default: 0.10)<br>
+<em>GLITCHTHRESHOLD:</em> how large a change in distance between points to consider are problem (default: 4%)<br>
+<em>NUMFOLLOWERPOINTS:</em> the number of distance points to plot (default: 100)<br>
+<em>PRINTDISTANCEDATA:</em> whether to send the input points along the S<sup>6</sup> line to output (default: false)<br>
+<br>
+Sample control input:<br>
+&emsp;numFollowerPoints 77<br>
+&emsp;FollowerMode Line<br>
+<br>
+	--------------------------------------------------<br>
+	dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
 	dnl Command:  PlotC3
 	<br>
 	dnl<br><br>
@@ -793,7 +840,7 @@
 	2-D plots of the 3 complex coordinates in C<sup>3</sup><br>
 	<em><u>Parameters:</u></em>
 	NA<br>
-	The 3 (2-D) coordinates are plotted in a single row. The
+	The 3 (2-D&ensp; coordinates are plotted in a single row. The
 	all-negative quadrants <br>
 	are shown. A consequence is that if the
 	unit cells have not been Selling/Delone<br>
@@ -819,7 +866,7 @@
 	2-D plots of the 3 polar coordinates</sup><br>
 	<em><u>Parameters:</u></em>
 	NA<br>
-	The 3 (2-D) coordinates are plotted. The
+	The 3 (2-D&ensp; coordinates are plotted. The
 	all-positive y half-space is shown for each.
 	<br>
 	--------------------------------------------------<br>
