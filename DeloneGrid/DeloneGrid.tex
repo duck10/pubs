@@ -240,7 +240,7 @@
 	is arranged with the lattice family types as columns and the Federov polyhedron
 	types \cite{fedorov1891symmetry} \cite{fedorov1885elements} as rows.
 		\begin{figure}
-		\includegraphics[width=15cm]{HorizontalDeloneGrid.eps}
+		\includegraphics[width=15cm]{DeloneGridClaude_2-2.eps}
 		\label{grid}
 		\caption{The  Bravais lattice types.}
 	    \end{figure}
@@ -248,12 +248,13 @@
 \section{The labeling of the columns (lattice families)}
 	
 	The columns are labeled according to the lattice family: cubic,
-	tetragonal, rhombohedral, orthorhombic, monoclinic, and
+	tetragonal, hexagonal-rhombohedral, orthorhombic, monoclinic, and
 	triclinic (anorthic). The labels for each reflect the names:
-	\textbf{C}, \textbf{T}, \textbf{R}, \textbf{O},\textbf{ M}, \textbf{A}, \textbf{H} (rather than the choices of Delaunay: 
+	\textbf{C}, \textbf{T}, \textbf{H-R}, \textbf{O},\textbf{ M}, \textbf{A}, \textbf{H} (rather than the choices of Delaunay: 
         \textbf{K}, \textbf{Q},	\textbf{R},\textbf{ O},\textbf{ M}, \textbf{T}, \textbf{H}, respectively).
 	
-	A further change from the model of Delaunay is the splitting 
+	In addition to combining the hexagonal and rhombohedral columns,
+	a further change from the model of Delaunay is the splitting 
 	of orthorhombic and monoclinic into a pair of columns each
 	($\bf{O_A}$, $\bf{O_B}$, $\bf{M_A}$, $\bf{M_B}$). This change 
 	improved the display of these types. Delaunay had merged these
@@ -287,8 +288,11 @@ denoting cases of higher symmetry.
 	
 	Except for rows 3 and 4, each row has a unique number of zero
 	parameters. For rows 3 and 4, the difference is whether the two
-	zeros are on opposite sides of the tetrahedron or on 
-	adjacent sides.
+	zeros are on opposite sides of the tetrahedron (type 3) or on 
+	adjacent sides (type 4). Type 3 is the case when the d-vector has
+	a 90$^{\circ}$ angle to a, b, or c. Type 4 is the case
+	where both 90$^{\circ}$ angles are among $\alpha$, $\beta$,
+	and $\gamma$.
 	
 \section{The cells}
 	
@@ -324,11 +328,7 @@ denoting cases of higher symmetry.
 	
 \section{The unused/vacant cells}
 
-	The cells shown in gray have no corresponding Bravais type. For 
-        instance, the cell that would be
-	$\bf{H1}$ would be a hexagonal cell with no zero parameters
-	(\it{i.e.} no 90$^{\circ}$ angles); 
-	clearly an impossible case. 
+	The cells shown in gray have no corresponding Bravais type.
 	
 	
 \section{Other changes from Delaunay}
@@ -349,6 +349,22 @@ denoting cases of higher symmetry.
 	With a characteristic of (rs0 rs0), $\bf{O3}$ has only two
 	free parameters, not the three that are normal for an 
 	orthorhombic unit cell.
+
+	$\bf{M3}$ is a 2-D manifold that is the boundary between
+	 $\bf{M1A}$ and $\bf{M1B}$.
+	With a characteristic of (rs0 ts0), $\bf{M3}$ has only three
+	free parameters, not the four that are normal for an 
+	monoclinic unit cell.
+	
+	There is a lack of unanimity in the crystallographic community
+	on how best to present cells of the hexagonal-rhombohedral table cell
+	in R1.  In the table we follow the convention of \cite{Burzlaff1985}
+	of using the hR (rrr sss) \SVI{} lattice character (three equal
+	cell edges and three equal cell angles $ \neq 90^{\circ}$).  It is equally valid to
+	choose settings to combine the R1 cells in threes to form true 
+	hexagonal H4 hP (00r rrs) super-cells with $a$ and $b$ as two equal edges
+	with $\gamma=120^{\circ}$ and $\alpha = \beta = 90^{\circ}$, and the original
+	hidden pair of lattice points along body diagonals of the supercells.
 	
 	
 
