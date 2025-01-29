@@ -171,7 +171,7 @@
 	the numerical
 	parameters.<br>
 	<em><u>Parameters:</u></em> (default values in
-	parentheses)<br>
+	parentheses) (deprecated)<br>
 	--- The number of cells of each type to be
 	generated (1)<br>
 	--- The type(s&ensp; of selected output requested.
@@ -316,7 +316,7 @@
 	parameters).<br>
 	<em><u>Output type:</u></em> S<sup>6</sup><br>
 	<em><u>Parameters:</u></em>
-	The number of points in -each- path
+	The number of points in -each- path (deprecated)
 	(20)<br>
 	<br>
 	--------------------------------------------------<br>
@@ -338,7 +338,7 @@
 		</u>
 	</em> The original cell is output as S<sup>6</sup> and all <br>
 	requested perturbation are output as lengths and angles.<br>
-	<em><u>Parameters:</u></em>
+	<em><u>Parameters: (deprecated)</u></em>
 	The number of perturbations of each input cell (20&ensp; and the amount
 	of<br>
 	perturbation in parts-per-thousand (ppt&ensp; (1 ppt). The
@@ -474,7 +474,7 @@
 	<em><u>Output type </u></em>
 	Chosen vector type (one of S6, V7, DC7u, RI (root invariant))<br>
 	<em><u>Parameters:</u></em>
-	Vector type to scale and output(S6)<br>
+	Vector type to scale and output(S6) (deprecated)<br>
 	<br>
 	<br>
 	--------------------------------------------------<br>
@@ -518,7 +518,7 @@
 
 	<em><u>Parameters:</u></em>
 	choices if only some outputs are needed
-	(all)<br>
+	(all) (deprecated)<br>
 	<br>
 	--------------------------------------------------<br>
 	dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
@@ -807,7 +807,7 @@ For more details on the Follower method, see Andrews and Bernstein:<br>
 	<em><u>Control Parameters</u></em><br>
 Control information is NOT case sensitive.<br>
 
-<em>FOLLOWERMODE</em> One of:<br>
+<em>MODE (=FOLLOWERMODE)</em> One of:<br>
 &emsp;POINT (default)<br>
 &emsp;LINE<br>
 &emsp;CHORD<br>
@@ -816,12 +816,29 @@ Control information is NOT case sensitive.<br>
 <em>PERTURBATIONS:</em> how many graphs of slightly different starting point to produce (default: 0)<br>
 <em>PERTURBBY:</em> how much to perturb input cells (default: 0.10)<br>
 <em>GLITCHTHRESHOLD:</em> how large a change in distance between points to consider are problem (default: 4%)<br>
-<em>NUMFOLLOWERPOINTS:</em> the number of distance points to plot (default: 100)<br>
-<em>PRINTDISTANCEDATA:</em> whether to send the input points along the S<sup>6</sup> line to output (default: false)<br>
+<em>GLITCHSONLY:</em> FALSE (default) causes only files that contain a glitch to be written (default false)<br>
+<em>DETECTGLITCHS:</em> TRUE causes glitches to be written on the output graphs (default: true)<br>
+<em>POINTS (=NUMFOLLOWERPOINTS):</em> the number of distance points to plot (default: 100)<br>
+<em>PRINTDATA (=PRINTDISTANCEDATA):</em> whether to send the input points along the S<sup>6</sup> line to output (default: false)<br>
+<em>PREFIX (=FILEPREFIX):</em> changes the text beginning svg file names (default: SEL)<br>
+<em>ENABLE:</em> add distance types to the types that will be displayed on output <BR>
+&emsp;(defaults are NC and CS; you can add RI or V7 or DC7U(as U))<br>
+<em>DISABLE:</em> remove distance types from the list to be shown on the graph<br>
+<em>SHOWMARKERS (=SHOWDATAMARKERS):</em> show a marker at each data point on the output line (default: TRUE)<br>
+
+
+<em>BLOCKSTART:</em> if multiple svg files are written, specifies the ordinal of the first to write<br>
+&emsp; (mostly for use on the website)<br>
+<em>BLOCKSIZE:</em> the number of files to write, starting from BLOCKSTART(mostly for use on the website)<br>
+&emsp; (on the web, this is limited to 20) (mostly for use on the website)<br>
+
+
+
 <br>
-Sample control input:<br>
-&emsp;numFollowerPoints 77<br>
-&emsp;FollowerMode Line<br>
+<em><u>Sample control input</u></em><br>
+&emsp;Points 77<br>
+&emsp;Mode Line<br>
+&emsp;Enable V7<br>
 <br>
 	--------------------------------------------------<br>
 	dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
