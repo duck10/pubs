@@ -170,11 +170,17 @@
 	Lattice types are shown following <br>
 	the numerical
 	parameters.<br>
+	Any input lattice descriptions are copied to the output.
 	<em><u>Parameters:</u></em> (default values in
 	parentheses) (deprecated)<br>
 	--- The number of cells of each type to be
 	generated (1)<br>
-	--- The type(s&ensp; of selected output requested.
+	--- The type(s&ensp; of selected output requested. See Control Parameters<br><br>
+	
+		<em><u>Control Parameters</u></em><br>
+Control information is case sensitive.<br>
+<em>COUNT:</em> the number of each chosen type to randomly generate (default: 5)<br>
+<em>TYPE:</em>  <br>
 	Examples are:
 	<ul>
 	<li>--- <strong>&quot;all&quot;</strong> (default&ensp; -- produces examples
@@ -185,7 +191,6 @@
 	the requested number of copies of the
 	five nearly-Niggli-reduced<br/>
 	examples of Gruber, 1973.</li>
-	(Only a single example of them is generated.<br>
 	<li>--- &quot;<strong>random&quot;</strong> (default&ensp; -- produces the
 	the requested number of random unit cells.	<br></li>
 	<li>--- a number between
@@ -210,6 +215,7 @@
 	<li>--- Unrecognized input will generate all
 	types<br></li>
 	<br>
+
 	</ul>
 	--------------------------------------------------<br>
 	dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
@@ -310,8 +316,8 @@
 	The<br>
 	computation is done in S<sup>6</sup>. For n input cells, n-1
 	paths will be<br>
-	generated. The individual points are labeled with
-	their ordinals and each <br>
+	generated along a single path. The individual points are labeled with
+	their ordinals <br> and each
 	segment is labeled (after the 6
 	parameters).<br>
 	<em><u>Output type:</u></em> S<sup>6</sup><br>
@@ -319,6 +325,9 @@
 	The number of points in -each- path (deprecated)
 	(20)<br>
 	<br>
+		<em><u>Control Parameters</u></em><br>
+<em>COUNT(=POINTS, =LENGTH):</em> the number of cells along the path (default: 20)<br>
+<br>
 	--------------------------------------------------<br>
 	dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
 	dnl Command:  CmdPerturb
@@ -345,6 +354,13 @@
 	calculation is done S<sup>6</sup>,<br>
 	and the perturbation is in a
 	direction orthogonal to the S<sup>6</sup> vector..<br>
+	
+		<br>
+		<em><u>Control Parameters</u></em><br>
+<em>COUNT:</em> the number of perturbed cells to generate (default: 20)<br>
+<em>DELTA:</em> the size of the perturbing vector (default: 4%)<br>
+<br>
+
 	<em><u>Example:</u></em>
 	requesting 10 perturbations and 10 ppt (1%) perturbations.<br>
 	f 10
@@ -468,14 +484,19 @@
 		Command:
 		Scale unit cells data to single size
 	</strong><br>
-	<em><u>Purpose:</u></em>Scale all input cells to have the same vector size as the first input.
+	<em><u>Purpose:</u></em>Scale all input cells to have the same &quotsize&quot as the first input.<br>
+	The output matches the volume of the first unit cell or its S<sup>6</sup> length.
 
 	<br>
-	<em><u>Output type </u></em>
-	Chosen vector type (one of S6, V7, DC7u, RI (root invariant))<br>
+	<em><u>Output type: </u></em>
+	S6<br>
 	<em><u>Parameters:</u></em>
 	Vector type to scale and output(S6) (deprecated)<br>
-	<br>
+		<br>
+		<em><u>Control Parameters</u></em><br>
+<em>TYPE:</em> either VOLUME or S6 (default: VOLUME)<br>
+<br>
+<br>
 	<br>
 	--------------------------------------------------<br>
 	dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
@@ -825,7 +846,6 @@ Control information is NOT case sensitive.<br>
 &emsp;(defaults are NC and CS; you can add RI or V7 or DC7U(as U))<br>
 <em>DISABLE:</em> remove distance types from the list to be shown on the graph<br>
 <em>SHOWMARKERS (=SHOWDATAMARKERS):</em> show a marker at each data point on the output line (default: TRUE)<br>
-
 
 <em>BLOCKSTART:</em> if multiple svg files are written, specifies the ordinal of the first to write<br>
 &emsp; (mostly for use on the website)<br>
