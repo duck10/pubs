@@ -93,7 +93,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
   
 <!-- Vertical label -->
 <g transform="translate(30, 450)">
-<text x="0" y="0" style = "font-family:sans-serif; font-weight:bold; font-size:23px" transform="rotate(270 0 0)">Federov Type</text>
+<text x="0" y="0" style = "font-family:sans-serif; font-weight:bold; font-size:23px" transform="rotate(270 0 0)">Federov Polyhedron Type</text>
 </g>
 
 <g transform="translate(40, 40)">
@@ -120,15 +120,15 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 
 <!-- Tetragonal (T) column header -->
 <g transform="translate(200, 0)">
-<text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "28" y = "75" >T</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "26" y = "75" >T</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:12px" x = "5" y = "96" >tetragonal</text>
 </g>
 
 <!-- Rhombohedral (R) column header -->
 <g transform="translate(300, 0)">
-<text style = "font-family:sans-serif; font-weight:bold; font-size:50px" x = "6" y = "60" >H-R</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:11px" x = "5" y = "96" >rhombohedral</text>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:12px" x = "5" y = "80" >hexagonal</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:75px" x = "23" y = "75" >H</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:12px" x = "5" y = "88" >hexagonal</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:10px" x = "5" y = "97" >(rhombohedral)</text>
 </g>
 
 <!-- Orthorhombic A (OA) column header - shifted right to 500 -->
@@ -223,7 +223,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <text x="29" y="95" class="characteristic-text">(rrr rrs)</text>
 </g>
 
-<!-- R1 cell -->
+<!-- H1 cell -->
 <g transform="translate(300, 100)">
    <g transform="scale(0.8)  translate(25,95) ">
    <use xlink:href="#tetrahedron" />
@@ -234,7 +234,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
    <use xlink:href="#2SlashT" />
    <use xlink:href="#2SlashU" />
 </g>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:23px" x = "5" y = "25" >R1</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:23px" x = "5" y = "25" >H1</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:23px" x = "65" y = "25" >hR</text>
 <text x="29" y="95" class="characteristic-text">(rrr sss)</text>
 </g>
@@ -497,7 +497,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <!-- Gray rectangle for T3 position -->
 <rect  x="200" y="300"  width="102" height="102" stroke-width="2" stroke="none" fill="#B4B4AF" />
 
-<!-- R3 cell -->
+<!-- H3 cell -->
 <g transform="translate(300, 300)">
    <g transform="scale(0.8)  translate(25,95) ">
    <use xlink:href="#tetrahedron" />
@@ -507,7 +507,7 @@ version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.or
 <use xlink:href="#oneSlashT" />
 <use xlink:href="#zeroU" />
 </g>
-<text style = "font-family:sans-serif; font-weight:bold; font-size:23px" x = "5" y = "25" >R3</text>
+<text style = "font-family:sans-serif; font-weight:bold; font-size:23px" x = "5" y = "25" >H3</text>
 <text style = "font-family:sans-serif; font-weight:bold; font-size:22px" x = "67" y = "25" >hR</text>
 <text class="characteristic-text" x = "29" y = "95" >(rr0 sr0) </text>
 </g>
@@ -825,6 +825,23 @@ M2B is a 3-D manifold between M1A and M1B</text>
 
 <text style="font-family:sans-serif; font-weight:bold; font-size:18px" x="100" y="740">
 [modified after Delone, Galiulin, and Shtogrin, 1975]</text>
+
+
+
+<text style="font-family:sans-serif; font-weight:bold; font-size:23px" x="620" y="650">
+ S6 Character</text>
+
+<text style="font-family:sans-serif; font-weight:bold; font-size:14px" x="650" y="670">
+Each Bravais type has an associated S6 &#8220;character&#8221;</text>
+
+<text style="font-family:sans-serif; font-weight:bold; font-size:14px" x="650" y="690">
+Each Character symbolically displays the pattern of </text>
+
+<text style="font-family:sans-serif; font-weight:bold; font-size:14px" x="670" y="710">
+unique, equal, or zero values for the type.</text>
+
+<text style="font-family:sans-serif; font-weight:bold; font-size:14px" x="850" y="870">
+Each Bravais type has an associated S6 &#8220;character&#8221;</text>
 
 </g>
 </g>
