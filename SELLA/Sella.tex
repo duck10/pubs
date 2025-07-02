@@ -43,6 +43,35 @@
 
 \begin{document}                  % DO NOT DELETE THIS LINE
 	
+%	Claude.ai suggestions 10125-04-13
+%	I've reviewed your paper on Bravais lattice determination using the SELLA algorithm, and I have several suggestions for improvements:
+%	
+%	Consistency in terminology: There are variations between "Delaunay" and "Delone" throughout the paper. While you note that Delaunay later changed his name's spelling, consistency within the paper would be helpful. Perhaps use one version with a note about the alternative spelling at first mention.
+%	Incomplete sections: Several sections are marked as incomplete:
+%	
+%	Section 3.1.1 has a note "LCA–need to normalize the vectors..."
+%	Section 3.1.2 has "LCA write pseudocode for Fraction."
+%	Section 6 "LCA this section is incomplete. Table needs caption/label."
+%	Sections 7 and 8 are just headings without content.
+%	
+%	
+%	Figure numbering: There appear to be duplicate Figure 1 entries - one on page 15 and another on page 16, both showing the Bravais tetrahedron.
+%	Table numbering: Table 4 appears without a proper caption on page 13.
+%	Equation formatting: Many mathematical expressions could benefit from proper equation formatting, particularly in the algorithm descriptions.
+%	References: Some references in the text don't match entries in the reference list, and some citations don't follow a consistent format.
+%	Structural organization: The paper would benefit from clearer delineation between the theoretical foundations and the practical algorithm implementation.
+%	Typographical errors: Several minor typographical issues:
+%	
+%	"Imangine a plane" instead of "Imagine a plane" (page 12)
+%	"the distance fomaverage value" instead of "from average value" (page 12)
+%	"LCA," notes to self should be removed for publication
+%	
+%	
+%	Technical clarity: The step-by-step description of the algorithm in Section 3 could be improved with clearer pseudocode or examples.
+%	Figure descriptions: Figures 5-7 need more detailed captions explaining what is being visualized and how to interpret the colored points.
+%	
+%	I hope these suggestions are helpful for improving your manuscript.
+	
 	
 	%-------------------------------------------------------------------------
 	% The introductory (header) part of the paper
@@ -137,7 +166,7 @@
 	transliteration of the Cyrillic spelling of his name.)
 	
 	\citeasnoun{Zimmermann1985} described the program, DELOS
-	for the same purpose and based on the use of Selling scalars, which
+	for the above purpose and based on the use of Selling scalars, which
 	SELLA uses as well; they treat the scalars as a list of 6 numbers, but do not consider them as points in 
 	a space.  SELLA treats the scalars as elements of vectors in the 6-dimensional
 	space, \SVI. Treating lattices as points in a liner space accesses the tools
@@ -146,7 +175,7 @@
 	
 	\citeasnoun{andrews2014} reviewed the literature on 
 	 efforts to create methods to utilize data that contain unavoidable 
-	measurement error and adds a more generic view of the problem.
+	measurement error, and they add a more generic view of the problem.
 	
 	SELLA is a based on Selling (Delone) reduction. It is a complete, closed solution, and it provides a clear metric of fit to each type.
 	
@@ -155,10 +184,10 @@
 	\subsection{The Bravais types}
 	
 	\citeasnoun{Delaunay1932} found that the 14 Bravais lattice types 
-	could be allocated among 24 types that are determined by the 
+	could be allocated among 24 types (here termed "Delone Types") that are determined by the 
 	type of Dirichlet unit cell (termed the Voronoi region \cite{Voronoi1908} or 
 	Dirichlet region \cite{dirichlet1850} by 
-	Delone). Delone used the convention of \citeasnoun{Bravais1850}
+	Delone). Delone used the tetrahedral convention of \citeasnoun{Bravais1850}
 	using the sides of the tetrahedron labeled by the symbols of the six
 	Selling scalars. Figure \ref{fig:PQRSTU} shows the labeling used in
 	the International Tables for Crystallography \cite{Henry1952}; 
@@ -169,7 +198,8 @@
 	
 	\citeasnoun{Burzlaff1985} revised the labeling of the types.
 	Here we have returned to the numbering of the Bravais types to that 
-	of \citeasnoun{Delaunay1932}.
+	of \citeasnoun{Delaunay1932}, which addresses the type
+	of Federov polyhedron for the reduced cell.
 	In some cases, Delone included two forms within a single 
 	type. \citeasnoun{Burzlaff1985}
 	renumbered by ordinals. We have labeled the Delone 
@@ -211,8 +241,8 @@
 	\begin{table}
 		\begin{tabular}{ccccccccc}
 			\toprule
-			\cite{Delaunay1932} & \cite{Burzlaff1985}   &this  \\
-			&  & paper \\
+			\cite{Delaunay1932} & \cite{Burzlaff1985}   &this &Pearson  \\
+			&  & paper & symbol\\
 			\midrule
 			K$_I$ & K1 & C1 & cI \\		
 			K$_{III}$ & K2 & C3 &cF \\		
@@ -247,7 +277,7 @@
 	\end{table}
 	
 	\subsection{The space \SVI{}}
-	\cite{andrews2019} recast the Selling parameters to define a metric space, \SVI{}.
+	\citeasnoun{andrews2019} recast the Selling parameters as a metric space, \SVI{}.
 	The base vectors, $\bf{a}$, $\bf{b}$, $\bf{c}$ of the unit cell
 	are used to define $\bf{d}=-(\bf{a}+\bf{b}+\bf{c})$.
 	A point ${s}$ in \SVI{} is defined as:\\
@@ -264,7 +294,7 @@
 	In \SVI{} for reduced cells, each Bravais type is a single, connected,
 	origin-inclusive, Euclidean manifold. As such, all points in a
 	particular manifold can be described by their ``character'', 
-	a representation of the vectorsns of that type. The table of \citeasnoun{Delaunay1932} included this information 
+	a representation of the vectors of that type. The table of \citeasnoun{Delaunay1932} included this information 
 	encoded in the formalism of Bravais, as a tetrahedron, with
 	the sides marked to show which of the 6 Selling parameters were
 	zero or which pairs (or multiplets) have equal values. 
@@ -278,22 +308,25 @@
 	
 	\subsection{Deriving the projectors and perps}
 	
-	We will need to create projectors for each of the Bravais
-	lattice types. The projectors will be use to generate
+	Sella creates projectors for each of the Bravais
+	lattice types. The projectors will be used to generate
 	images of probe points in each of the types, and the perps
-	will measure the distance from each manifold.
+	will measure the distance from each manifold. Perps
+	are the matrices that when multiplied times a vector,
+	create a vector that is the component of the input 
+	that is orthogonal to the domain that the projector
+	is associated with.
 	
-	We will use Selling reduction; Niggli reduction has a fundamental 
-	unit that is non-convex and some boundaries of the fundamental 
-	unit are partly closed and partly open \cite{andrews2014} leading 
+	We will use Selling reduction; Niggli reduction has a reduced
+	domain that is non-convex and some boundaries of the 
+	reduced domain are partly closed and partly open \cite{andrews2014} leading 
 	to considerable complexity. Because Niggli reduction divides the 
 	fundamental unit of Niggli reduction into separate all obtuse and all acute regions, 
 	the transitions between those are quite complex \cite{andrews2014}. 
-	In space \SVI{} \cite{andrews2019b}, the fundamental 
-	unit is the simple all-negative orthant of a 6-dimensional 
+	In space \SVI{} \cite{andrews2019b}, the reduced domain is the simple, convex all-negative orthant of a 6-dimensional 
 	Cartesian space. Only two kinds of operations in the space 
-	will need to be considered: the 6  transform operations 
-	at the boundaries of the orthant (zeros of an axis) and 
+	will need to be considered: the transform operations 
+	at the boundaries of the reduced orthant (zeros of an axis) and 
 	24 reflections (allowed permutations) \cite{andrews2019}
 	
 	Twenty-four lattice types were enumerated by \citeasnoun{Delaunay1932}. 
@@ -302,14 +335,14 @@
 	shall need all representations of all non-triclinic lattice 
 	types within the \SVI{} fundamental unit (all Selling-reduced 
 	cells) or those generated beyond the boundaries by boundary transforms. 
-	Three forms (M3, M2B, and O3) are reduced dimension boundaries that do
+	Three forms (M3, M2B, and O3) are reduced-dimension boundaries between 2 Delone Types, that do
 	not correspond to unique Bravais types; any lattice that falls in those
-	three is indexed by one of the other types.
+	three is indexed by both of the other types.
 	
 	
 	
 	
-	Seven of the 21 Delone types do not have a zero in their \SVI{} 
+	Seven of the 19 non-triclinic, nondegenerate Delone types do not have a zero in their \SVI{} 
 	representation; the presence of zero indicates that a form is 
 	on the boundary of the \SVI{} fundamental unit. Since a 
 	point on the boundary transforms to another boundary 
@@ -325,18 +358,23 @@
 	Finally, the projectors must be computed for each of the many 
 	sample vectors of the 21 types. We will also need the 
 	``perps'', the operators that give the normal vector to each 
-	such manifold. For a particular manifold, the projector 
+	such manifold. For a particular manifold, its projector 
 	applied to the probe gives
 	the least-squares best fit point within that manifold
 	to the probe vector. 
 	Perps are computed by subtracting the 
-	corresponding projector from the unit matrix. The norm of avector
-	created by multiplying the probe times the projector
+	corresponding projector from the unit matrix. The norm of a vector
+	created by multiplying the probe times a projector
 	 is the distance from that manifold.
 	
 	\subsubsection{Generating sample vectors from all Bravais types\protect\\}
 	
-	Step 1: Generate any random vector that contains no zero 
+	For each Delone Type, we will create a list of
+	vectors that can be generated for that type.
+	
+	\emph{Step 1:}
+	
+	Generate any random vector that contains no zero 
 	values and no duplicate values.  For a later operation, 
 	it should only contain values large enough that adding or
 	subtracting the smallest
@@ -347,22 +385,18 @@
 	
 	
 	
-	Step 2; For each Delone type, multiply its projector times 
+	\emph{Step 2:}
+	
+	 For each Delone type, multiply its projector times 
 	the vector from Step 1. Store  the resulting vector
 	from Step 1 in a list 
-	with entries for each Bravais type (see Table \ref{table:DeloneTypes} 
+	with entries for each Delone type (see Table \ref{table:DeloneTypes} 
 	for the projectors).
 	
-	Step 3:
+	\emph{Step 3:}
 	
 	a) If the vector result of Step 2 contains no zeros, generate the 24 reflections
-	and store in the list by Bravais type. 
-	
-
-	\textit{\textbf{LCA--need to normalize the vectors, just like 
-		in lattice matching. ? Can we use the 
-		lattice matching code here? This is very 
-		incomplete. The processing of multiple zeros is MISSING! But the use of DBL\_MIN is there.}}
+	and store in the list by Delone type. 
 	
 	
 	
@@ -605,7 +639,7 @@
 	Consider the case of M4, primitive monoclinic, the character is \charseq{00r stu}. 
 	For particular values for r,s,t,u, the best monoclinic cell will not
 	depend on whatever values are substituted for the zeros. (It does not depend on the zero values because the projectors to that 
-	manifold create zero elements for any vector.) Imangine a plane
+	manifold create zero elements for any vector.) Imagine a plane
 	with axis that are the values of the two elements of the character that are zero. Points in the plane represent unit 
 	cells with angles defined by the \scalarsub{s}{1} and \scalarsub{s}{2} and r,s,t,u. We can draw a circle in the
 	\scalarsub{s}{1},\scalarsub{s}{2} plane, each point
@@ -627,7 +661,7 @@ character \charseq{00r~sst}. The zeros can be treated the same as above
 for the case of M4 (primitive monoclinic). 
 	The pair of equal values must 
 	have an average value that remains equal to $\bf{s}$ in the lattice character. 
-	That means 3 values to vary (the 2 zeros and the distance fomaverage
+	That means 3 values to vary (the 2 zeros and the distance from average
 	value for the equal scalars), and we can create a sphere around 
 	the point \charseq{00r~sst}. See Figure \ref{fig:O4}.
 	
@@ -635,8 +669,7 @@ for the case of M4 (primitive monoclinic).
 	
 	\section{Comparisons}
 	\textit{\textbf{LCA this section is incomplete. Table needs caption/label.}}
-	Comparison to other distance measure; Data for other measures taken
-	from \citeasnoun{andrews2014}.
+
 	
 \begin{table}
 	\begin{tabular}{cccccc}
@@ -648,7 +681,7 @@ for the case of M4 (primitive monoclinic).
 		mC               &     125.150 &  4.085   &    23. & 4 3.03& 13.80\\	
 		\bottomrule
 	\end{tabular}
-	\caption{Comparison of distance measures}
+	\caption{Comparison to other distance measure; Data for other measures taken from \citeasnoun{andrews2014}.}
 	\label{tab:comparisons}
 \end{table}
 	~\\
@@ -774,13 +807,7 @@ for the case of M4 (primitive monoclinic).
 		\label{fig:PQRSTU}
 	\end{figure}
 	
-	
-	\begin{figure}
-		\caption{The O4 item from the Delone Grid with Delone type description}
-		\label{fig:O4_terminology}
-		\includegraphics[width=12cm]{O4_terminology}
-	\end{figure}
-	
+		
 	%	\begin{figure}
 		%		\caption{The Delone types}
 		%		\label{fig:DeloneTypes}
@@ -794,6 +821,12 @@ for the case of M4 (primitive monoclinic).
 	\end{figure}
 	
 	\begin{figure}
+		\caption{The O4 item from the Delone Grid with Delone type description}
+		\label{fig:O4_terminology}
+		\includegraphics[width=12cm]{O4_terminology}
+	\end{figure}
+	
+	\begin{figure}
 		\caption{}
 		\label{fig:degenerate}
 		\includegraphics[width=12cm]{NullSpaceDistribution}
@@ -803,8 +836,8 @@ for the case of M4 (primitive monoclinic).
 		\label{fig:M4}
 		\caption{Delone type M4: there are two zeros. A circle of 100 points with
 			radius 0.1 is centered at 0,0. The lattices are reduced and the points are
-			plotted at the distance from M4.} The red points indicate the original
-		circle. The blue points are for the reduced cells.
+			plotted at the distance from M4. The red points indicate the original
+		circle. The blue points are for the reduced cells.}
 		\includegraphics[width=12cm]{M4-100-2-zeros}
 	\end{figure}
 	
@@ -819,10 +852,11 @@ for the case of M4 (primitive monoclinic).
 	\end{figure}
 	
 	\begin{figure}
-		\caption{Delone type O4: There are two zeros and one pair.
-			A sphere with radius 0.1 was placed around one point. At each
-			sphere point, the lattice was reduced and the point on the sphere
-			was assigned a color (0.01) to blue (0.0075). 100,000 points are plotted.}
+		\caption{Delone type O4 (character \charseq{00r stu}): There are two zeros and one pair.			 
+			100,000 points are plotted; for each
+			 point, the corresponding lattice was reduced; each point
+			is assigned a color (0.01) to blue (0.0075),
+			according to its reduced distance from the origin.}
 		\label{fig:O4}
 		\includegraphics[width=12cm]{O4_Cropped-2-zeros-1-pair}
 	\end{figure}

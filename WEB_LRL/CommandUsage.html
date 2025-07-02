@@ -37,7 +37,8 @@
 				<td align="center" width="250px"> <a href="#CmdToV7">Computer V7 cells</a>
 			</tr>
 			<tr>
-				<td align="center" width="250px"> <a href="#CmdLM">Lattice matching</a><br>
+				<td align="center" width="250px"> <a href="#CmdLMP3">Lattice matching</a><br>
+				<td align="center" width="250px"> <a href="#CmdLMS6">Lattice matching</a><br>
 				<td align="center" width="250px"> <a href="#CmdToB4">Compute B4 cells</a><br>
 				<td align="center" width="250px"> <a href="#CmdVolume">Compute cell volumes</a>
 			</tr>
@@ -235,11 +236,92 @@ Control information is case sensitive.<br>
 	<br>
 	<br>
 	--------------------------------------------------<br>
+dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
+dnl Command:  CmdLMP3
+<br>
+dnl<br><br>
+<a name="CmdLMP<SUP>3</SUP>"> </a>
+<strong>
+	Command: CmdLMP3
+	Lattice matching in 3D using <strong>P<sup>3</sup></strong>distances for measuring fit.
+</strong><br>
+<em><u>Purpose:</u></em>
+Lattice matching that finds transformation matrices between crystal lattices<br>
+The first cell input is treated as the reference that following "mobiles" will be<br>
+matched to. The output includes the <strong>P<sup>3</sup></strong> distances and S<sup>6</sup>
+ angle measures of fit. If 
+more than one mobile is input, then "comparison mode" is output, which<br>
+is more compact. Output include the transformation matrices that operate on<br>
+the base vectors of the unit cell (this is important). Note, there are likely<br>
+to be more than one transformation listed, but they are listed in order of<br>
+of worsening fit.<br>
+<em><u>Output type:</u>
+</em> transformation matrices, distance metrics (<strong>P<sup>3</sup></strong> and S<sup>6</sup> angles), 
+and transformed lattice parameters<br>
+with detailed quality assessment and multiple solution rankings.<br>
+<em><u>Example:</u></em><br>
+p 10.25 10.74 21.08 87.72 75.97 61.53<br>
+p 10.25 10.74 21.08 78.96 75.97 61.49<br>
+end<br>
+; Production Lattice Matcher Results<br>
+Found 500 results<br>
+Result 1:<br>
+&nbsp;&nbsp;Matrix: [-1.0 0.0 0.0 -1.0 1.0 0.0 0.0 0.0 -1.0]<br>
+&nbsp;&nbsp;Determinant: 1.000000<br>
+&nbsp;&nbsp;P<SUP>3</SUP> distance: 1.025e-02<br>
+&nbsp;&nbsp;S6 angle: 0.01°<br>
+&nbsp;&nbsp;Transformed: 10.250 10.739 21.080 87.714 75.970 61.502<br>
+end<br>
+<em><u>Parameters:</u></em>
+Standard lattice input format (a, b, c, &amp;alpha;, &amp;beta;, &amp;gamma;, <br>
+	followed by the lattice type) (or preceded by the lattice type)<br>
+<br>
+
+<em><u>Control Parameters</u></em><br>
+Control information is NOT case sensitive, and control names can be abbreviated.<br>
+<em>SHOWDETAILS (=DETAILS):</em> display detailed transformation information (default: false)<br>
+<em>COMPARISONMODE:</em> enable comparison mode for multiple input processing (default: true)<br>
+<em>TEST:</em> run test suite to verify system functionality<br>
+&emsp;TEST (no number): run all available tests<br>
+&emsp;TEST n: run specific test number n<br>
+&emsp;TEST -1 (or any negative): show list of available tests<br>
+&emsp;TEST 999: show list of available tests<br>
+<br>
+
+<em><u>Test Suite</u></em><br>
+The system includes a comprehensive test suite with the following tests:<br>
+&emsp;Test 1: Hawaiian- Nearly identical cells with known transformation<br>
+&emsp;Test 2: TrulyIdentical - Identical cells should give perfect quality metrics<br>
+&emsp;Test 3: SmallDifference - Small parameter differences should give good quality<br>
+&emsp;Test 4: ManualCheck - Complex case for manual verification<br>
+&emsp;Test 5: LargeDifference - Very relaxed limits<br>
+&emsp;Test 6: DifferentCentered - Identical lattices with different centering<br>
+&emsp;Test 7: DuplicateDetection - Ensure no duplicate transformation matrices in results<br>
+&emsp;Test 8: HighSymmetryDuplicates - High symmetry case prone to generating duplicates<br>
+&emsp;Test 9: MultipleValidTransforms - Case where multiple valid transformations exist<br>
+<br>
+Usage: <br>
+  test 0 or test >=10 : Run all tests<br>
+  test 1-9 : Run specific test<br>
+  test 999 : Show this test list<br>
+<br>
+
+<em><u>Sample control input</u></em><br>
+&emsp;test 1<br>
+<br>
+<em><u>Sample input</u></em><br>
+; identical lattices created from one random cell by LCA 2025-05-04<br>
+C    12.770    21.235    14.411   136.017    84.071   111.795<br>
+F    33.151    18.241    20.218    83.054   144.781   120.639<br>
+end<br>
+<br>
+
+	--------------------------------------------------<br>
 	dnl -----------------------------------------------------------------------------------------------------------------------------------<br>
-	dnl Command:  CmdLM
+	dnl Command:  CmdLMS6
 	<br>
 	dnl<br><br>
-	<a name="CmdLM"> </a>
+	<a name="CmdLMS6"> </a>
 	<strong>
 		Command:
 		apply Lattice Matching algorithm to listed cells
