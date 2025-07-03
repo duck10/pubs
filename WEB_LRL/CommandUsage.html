@@ -243,22 +243,21 @@ dnl<br><br>
 <a name="CmdLMP<SUP>3</SUP>"> </a>
 <strong>
 	Command: CmdLMP3
-	Lattice matching in 3D using <strong>P<sup>3</sup></strong>distances for measuring fit.
+	Lattice matching in 3D using <strong>P<sup>3</sup></strong> distances for measuring fit.
 </strong><br>
 <em><u>Purpose:</u></em>
 Lattice matching that finds transformation matrices between crystal lattices<br>
 The first cell input is treated as the reference that following "mobiles" will be<br>
-matched to. The output includes the <strong>P<sup>3</sup></strong> distances and S<sup>6</sup>
- angle measures of fit. If 
-more than one mobile is input, then "comparison mode" is output, which<br>
+matched to. The output includes the <strong>P<sup>3</sup></strong> distances and <strong>S<sup>6</sup></strong>
+ angle measures of fit. <br>
+ If more than one mobile is input, then "comparison mode" is output, which<br>
 is more compact. Output include the transformation matrices that operate on<br>
 the base vectors of the unit cell (this is important). Note, there are likely<br>
 to be more than one transformation listed, but they are listed in order of<br>
 of worsening fit.<br>
 <em><u>Output type:</u>
-</em> transformation matrices, distance metrics (<strong>P<sup>3</sup></strong> and S<sup>6</sup> angles), 
-and transformed lattice parameters<br>
-with detailed quality assessment and multiple solution rankings.<br>
+</em> transformation matrices, distance metrics (<strong>P<sup>3</sup></strong> and <strong>S<sup>6</sup></strong> angles), and transformed <br>
+lattice parameters with detailed quality assessment and multiple solution rankings.<br>
 <em><u>Example:</u></em><br>
 p 10.25 10.74 21.08 87.72 75.97 61.53<br>
 p 10.25 10.74 21.08 78.96 75.97 61.49<br>
@@ -273,13 +272,11 @@ Result 1:<br>
 &nbsp;&nbsp;Transformed: 10.250 10.739 21.080 87.714 75.970 61.502<br>
 end<br>
 <em><u>Parameters:</u></em>
-Standard lattice input format (a, b, c, &amp;alpha;, &amp;beta;, &amp;gamma;, <br>
-	followed by the lattice type) (or preceded by the lattice type)<br>
+NA
 <br>
 
 <em><u>Control Parameters</u></em><br>
 Control information is NOT case sensitive, and control names can be abbreviated.<br>
-<em>SHOWDETAILS (=DETAILS):</em> display detailed transformation information (default: false)<br>
 <em>COMPARISONMODE:</em> enable comparison mode for multiple input processing (default: true)<br>
 <em>TEST:</em> run test suite to verify system functionality<br>
 &emsp;TEST (no number): run all available tests<br>
@@ -327,10 +324,11 @@ end<br>
 		apply Lattice Matching algorithm to listed cells
 	</strong><br>
 	<em><u>Purpose:</u></em>
-	Taking the first input cells as the &quot;REFERENCE&quot;, the
+	Taking the first input cell as the &quot;REFERENCE&quot;, the
 	alternative cells of<br>
 	each succeeding cell are examined to find a
 	closest match to the reference lattice. <br>
+	Matching is done in the space <strong>S<sup>6</sup></strong>, so 3D transformations are not computed.<br>
 	<p style="margin-left: 40px">
 		Andrews, Lawrence C., Herbert
 		J. Bernstein, and Nicholas K. Sauter. <br>
