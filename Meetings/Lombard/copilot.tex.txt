@@ -1,0 +1,152 @@
+\documentclass[12pt]{article}
+\usepackage[paperwidth=40in, paperheight=40in, margin=1in]{geometry}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{lmodern}
+\usetikzlibrary{positioning}
+
+% Fonts & layout
+\renewcommand{\familydefault}{\sfdefault}
+\tcbset{
+	colframe=black!30!white,
+	colback=gray!5!white,
+	boxrule=0.5pt,
+	arc=1mm,
+	top=4pt, bottom=4pt,
+	left=6pt, right=6pt,
+	width=0.48\textwidth,
+	height=0.20\textheight,
+	valign=center,
+	fontupper=\fontsize{75}{76}\selectfont
+}
+
+% Space macros
+\newcommand{\HVI}{\textbf{H\textsuperscript{6}}}
+\newcommand{\GVI}{\textbf{G\textsuperscript{6}}}
+\newcommand{\SVI}{\textbf{S\textsuperscript{6}}}
+\newcommand{\PVI}{\textbf{P\textsuperscript{3}}}
+\newcommand{\CIII}{\textbf{C\textsuperscript{3}}}
+
+\begin{document}
+	
+	\begin{center}
+		{\fontsize{90}{100}\selectfont\textbf{Unit Cells in Space or Spaces for Unit Cells}}\
+		
+		\ [0.5cm]
+		{\fontsize{60}{60}\selectfont Lawrence C. Andrews and Herbert J Bernstein — ACA 2025}
+	\end{center}
+	
+	
+	\vspace{0.8cm}
+	
+	% Row 1 — Tree and Abstract
+	\noindent
+	\parbox[t]{0.48\textwidth}{
+		\tcolorbox[title=Crystallographic Space Map]
+		\begin{center}
+			\scalebox{2.}{
+				\begin{tikzpicture}[
+					node distance=0.8cm and 1.8cm,
+					measurement/.style={text width=3.3cm, align=center, rectangle, draw=black,
+						fill=gray!20, rounded corners, font=\small, thick},
+					symmetry/.style={text width=3.3cm, align=center, rectangle, draw=black,
+						dashed, fill=white, rounded corners, font=\small}
+					]
+					\node[measurement] (H7) {H\textsuperscript{7} (Ha\"uy)};
+					\node[measurement] (G6) [below left=of H7] {G\textsuperscript{6}};
+					\node[measurement] (S6) [below=of H7] {S\textsuperscript{6}};
+					\node[measurement] (P3) [below right=of H7] {P\textsuperscript{3}};
+					\node[symmetry] (C3) [below=of S6] {C\textsuperscript{3}};
+					\node[symmetry] (DC7) [below=of G6] {DC7unsrt};
+					\draw[->, thick] (H7) -- (G6);
+					\draw[->, thick] (H7) -- (S6);
+					\draw[->, thick] (H7) -- (P3);
+					\draw[->, thick] (S6) -- (C3);
+					\draw[->, thick] (G6) -- (DC7);
+				\end{tikzpicture}
+			}
+		\end{center}
+		\endtcolorbox
+	}
+	\hfill
+	\parbox[t]{0.48\textwidth}{
+		\tcolorbox[title=Abstract]
+		Crystallographers describe unit cells using multiple mathematical spaces, each revealing different aspects of geometry, symmetry, or classification. Beginning with conventional parameters in \HVI{}, we trace transformations through \GVI{} and \SVI{} into visual (\PVI{}), geometric (DC7unsrt), and symbolic (\CIII{}) spaces.
+		\endtcolorbox
+	}
+	
+	\vspace{1cm}
+	
+	% Row 2 — HVI and GVI
+	\noindent
+	\parbox[t]{0.48\textwidth}{
+		\tcolorbox[title=\HVI{} – Conventional Parameter Space]
+		\textbf{\fontsize{65}{40}\selectfont Conventional Parameter Space (\HVI{})}\
+		
+		Six coordinates: $a$, $b$, $c$, $\alpha$, $\beta$, $\gamma$. Not ideal for comparing geometry or symmetry directly.
+		(``H'' was chosen to honor Ren\'e Just Ha\"uy.)
+		\endtcolorbox
+	}
+	\hfill
+	\parbox[t]{0.48\textwidth}{
+		\tcolorbox[title=\GVI{} – Metric Tensor Space]
+		\textbf{\fontsize{65}{40}\selectfont Metric Tensor Space (\GVI{})}
+		
+		Dot products of cell edges. Basis for Niggli reduction. Space is non-convex with complex boundary behavior.
+		\endtcolorbox
+	}
+	
+	\vspace{1cm}
+	
+	% Row 3 — SVI and PVI
+	\noindent
+	\parbox[t]{0.48\textwidth}{
+		\tcolorbox[title=\SVI{} – Selling Scalar Space]
+		\textbf{\fontsize{65}{40}\selectfont Selling Scalar Space (\SVI{})}\\
+		Uses $d = -a - b - c$ transformation. Convex region; Bravais types form connected manifolds within.
+		\endtcolorbox
+	}
+	\hfill
+	\parbox[t]{0.48\textwidth}{
+		\tcolorbox[
+		colframe=black!30!white,
+		colback=gray!5!white,
+		boxrule=0.5pt,
+		arc=1mm,
+		top=4pt,
+		bottom=4pt,
+		left=6pt,
+		right=6pt,
+		width=0.48\textwidth,
+		height=0.20\textheight,
+		valign=center,
+		fontupper=\fontsize{60}{70}\selectfont
+		]
+		\textbf{\fontsize{65}{30}\selectfont Projection Space (\PVI{})}\
+		\
+		
+		Visual representation space in low dimensions. Highlights proximity between cells and symmetry transitions.
+		\endtcolorbox
+	}
+	
+	\vspace{1cm}
+	
+	% Row 4 — DC7 and Character Space
+	\noindent
+	\parbox[t]{0.48\textwidth}{
+		\tcolorbox[title=DC7unsrt – Dirichlet Descriptor]
+		\textbf{\fontsize{65}{40}\selectfont Dirichlet Descriptor (DC7unsrt)}\\
+		Seven scalars derived from Voronoi cells. Focuses on geometric relationships and symmetry inference.
+		\endtcolorbox
+	}
+	\hfill
+	\parbox[t]{0.48\textwidth}{
+		\tcolorbox[title=\CIII{} – Character Space]
+		\textbf{\fontsize{65}{40}\selectfont Character Space (\CIII{})}\\
+		Symbolic constraints (equalities, zeros, inequalities) form logical patterns that encode Bravais-type symmetries.
+		\endtcolorbox
+	}
+	
+\end{document}

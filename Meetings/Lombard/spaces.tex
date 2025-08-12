@@ -1,0 +1,188 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<style>
+.title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; }
+.space-label { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; }
+.description { font-family: Arial, sans-serif; font-size: 12px; }
+.year { font-family: Arial, sans-serif; font-size: 10px; font-style: italic; }
+.author { font-family: Arial, sans-serif; font-size: 10px; fill: #666; }
+.branch { stroke: #333; stroke-width: 2; fill: none; }
+.node { fill: #4a90e2; stroke: #333; stroke-width: 2; }
+.h6-node { fill: #ff6b6b; }
+.g6-node { fill: #4ecdc4; }
+.s6-node { fill: #45b7d1; }
+.modern-node { fill: #96ceb4; }
+.experimental-node { fill: #feca57; }
+</style>
+</defs>
+
+<!-- Title -->
+<text x="600" y="30" text-anchor="middle" class="title">Evolution of Crystallographic Lattice Representation Spaces</text>
+
+<!-- Timeline axis -->
+<line x1="50" y1="750" x2="1150" y2="750" stroke="#ccc" stroke-width="1"/>
+<text x="50" y="770" class="year">1850</text>
+<text x="300" y="770" class="year">1928</text>
+<text x="550" y="770" class="year">1980</text>
+<text x="800" y="770" class="year">2000</text>
+<text x="1050" y="770" class="year">2020</text>
+
+<!-- H6 - Original 6-parameter space -->
+<g>
+<circle cx="100" cy="600" r="25" class="node h6-node"/>
+<text x="100" y="605" text-anchor="middle" class="space-label">H6</text>
+<text x="100" y="540" text-anchor="middle" class="description">Original 6-parameter space</text>
+<text x="100" y="555" text-anchor="middle" class="description">(a, b, c, α, β, γ)</text>
+<text x="100" y="520" text-anchor="middle" class="year">~1850</text>
+<text x="100" y="505" text-anchor="middle" class="author">Bravais, crystallographers</text>
+</g>
+
+<!-- Branch from H6 to G6 -->
+<path d="M 125 600 Q 200 600 250 450" class="branch"/>
+
+<!-- G6 - Niggli metric tensor space -->
+<g>
+<circle cx="300" cy="400" r="25" class="node g6-node"/>
+<text x="300" y="405" text-anchor="middle" class="space-label">G6</text>
+<text x="300" y="340" text-anchor="middle" class="description">Niggli metric tensor space</text>
+<text x="300" y="355" text-anchor="middle" class="description">G = [a·a, b·b, c·c, 2b·c, 2a·c, 2a·b]</text>
+<text x="300" y="320" text-anchor="middle" class="year">1928</text>
+<text x="300" y="305" text-anchor="middle" class="author">Niggli</text>
+</g>
+
+<!-- Branch from H6 to S6 -->
+<path d="M 125 600 Q 200 600 250 500" class="branch"/>
+
+<!-- S6 - Selling/Delone space -->
+<g>
+<circle cx="300" cy="500" r="25" class="node s6-node"/>
+<text x="300" y="505" text-anchor="middle" class="space-label">S6</text>
+<text x="300" y="440" text-anchor="middle" class="description">Selling (Delone) scalars</text>
+<text x="300" y="455" text-anchor="middle" class="description">s = [b·c, a·c, a·b, a·d, b·d, c·d]</text>
+<text x="300" y="420" text-anchor="middle" class="year">1874/1932</text>
+<text x="300" y="405" text-anchor="middle" class="author">Selling/Delaunay</text>
+</g>
+
+<!-- Branch from G6 to Andrews & Bernstein work -->
+<path d="M 325 400 Q 450 400 500 300" class="branch"/>
+
+<!-- Andrews & Bernstein G6 implementation -->
+<g>
+<circle cx="550" cy="250" r="20" class="node modern-node"/>
+<text x="550" y="255" text-anchor="middle" class="space-label">G6*</text>
+<text x="550" y="195" text-anchor="middle" class="description">G6 with boundary transforms</text>
+<text x="550" y="210" text-anchor="middle" class="description">Perturbation-stable</text>
+<text x="550" y="175" text-anchor="middle" class="year">1988</text>
+<text x="550" y="160" text-anchor="middle" class="author">Andrews & Bernstein</text>
+</g>
+
+<!-- Branch from S6 to modern S6 work -->
+<path d="M 325 500 Q 450 500 500 400" class="branch"/>
+
+<!-- Modern S6 implementation -->
+<g>
+<circle cx="550" cy="350" r="20" class="node modern-node"/>
+<text x="550" y="355" text-anchor="middle" class="space-label">S6*</text>
+<text x="550" y="295" text-anchor="middle" class="description">S6 with projectors (SELLA)</text>
+<text x="550" y="310" text-anchor="middle" class="description">Complete manifold coverage</text>
+<text x="550" y="275" text-anchor="middle" class="year">2019</text>
+<text x="550" y="260" text-anchor="middle" class="author">Andrews, Bernstein, Sauter</text>
+</g>
+
+<!-- Branch to V7 -->
+<path d="M 325 400 Q 400 350 450 300" class="branch"/>
+
+<!-- V7 space -->
+<g>
+<circle cx="450" cy="300" r="18" class="node experimental-node"/>
+<text x="450" y="305" text-anchor="middle" class="space-label">V7</text>
+<text x="450" y="250" text-anchor="middle" class="description">7-parameter space</text>
+<text x="450" y="265" text-anchor="middle" class="description">(a,b,c,a*,b*,c*,V)</text>
+<text x="450" y="230" text-anchor="middle" class="year">1980</text>
+<text x="450" y="215" text-anchor="middle" class="author">Andrews et al.</text>
+</g>
+
+<!-- Branch to modern developments -->
+<path d="M 570 350 Q 650 350 700 200" class="branch"/>
+<path d="M 570 250 Q 650 250 700 150" class="branch"/>
+
+<!-- P3 space -->
+<g>
+<circle cx="750" cy="200" r="18" class="node modern-node"/>
+<text x="750" y="205" text-anchor="middle" class="space-label">P3</text>
+<text x="750" y="150" text-anchor="middle" class="description">3-parameter space</text>
+<text x="750" y="165" text-anchor="middle" class="description">Reduced representation</text>
+<text x="750" y="130" text-anchor="middle" class="year">~2000s</text>
+</g>
+
+<!-- DC7unsrt -->
+<g>
+<circle cx="750" cy="100" r="18" class="node experimental-node"/>
+<text x="750" y="105" text-anchor="middle" class="space-label">DC7unsrt</text>
+<text x="750" y="50" text-anchor="middle" class="description">7-dimensional Dirichlet</text>
+<text x="750" y="65" text-anchor="middle" class="description">Unsorted representation</text>
+<text x="750" y="30" text-anchor="middle" class="year">2023</text>
+<text x="750" y="15" text-anchor="middle" class="author">Bernstein et al.</text>
+</g>
+
+<!-- Branch to C3 and other modern spaces -->
+<path d="M 570 350 Q 700 400 800 350" class="branch"/>
+
+<!-- C3 space -->
+<g>
+<circle cx="850" cy="350" r="18" class="node experimental-node"/>
+<text x="850" y="355" text-anchor="middle" class="space-label">C3</text>
+<text x="850" y="300" text-anchor="middle" class="description">3-dimensional complex</text>
+<text x="850" y="315" text-anchor="middle" class="description">representation</text>
+<text x="850" y="280" text-anchor="middle" class="year">~2019</text>
+<text x="850" y="265" text-anchor="middle" class="author">Andrews et al.</text>
+</g>
+
+<!-- Branch to CS6Dist -->
+<path d="M 570 350 Q 700 450 800 450" class="branch"/>
+
+<!-- CS6Dist -->
+<g>
+<circle cx="850" cy="450" r="18" class="node experimental-node"/>
+<text x="850" y="455" text-anchor="middle" class="space-label">CS6Dist</text>
+<text x="850" y="400" text-anchor="middle" class="description">S6 distance metric</text>
+<text x="850" y="415" text-anchor="middle" class="description">Fast computation</text>
+<text x="850" y="380" text-anchor="middle" class="year">~2019</text>
+</g>
+
+<!-- Branch to future developments -->
+<path d="M 870 350 Q 950 350 1000 300" class="branch"/>
+<path d="M 870 450 Q 950 450 1000 400" class="branch"/>
+
+<!-- Future/theoretical spaces -->
+<g>
+<circle cx="1050" cy="350" r="15" class="node" style="fill: #ddd; stroke-dasharray: 5,5;"/>
+<text x="1050" y="355" text-anchor="middle" class="space-label">?</text>
+<text x="1050" y="305" text-anchor="middle" class="description">Future spaces</text>
+<text x="1050" y="320" text-anchor="middle" class="description">Machine learning?</text>
+<text x="1050" y="285" text-anchor="middle" class="year">Future</text>
+</g>
+
+<!-- Legend -->
+<g transform="translate(50, 50)">
+<text x="0" y="0" class="space-label">Legend:</text>
+<circle cx="15" cy="20" r="8" class="node h6-node"/>
+<text x="30" y="25" class="description">Original spaces</text>
+<circle cx="15" cy="40" r="8" class="node g6-node"/>
+<text x="30" y="45" class="description">Classical reductions</text>
+<circle cx="15" cy="60" r="8" class="node modern-node"/>
+<text x="30" y="65" class="description">Modern implementations</text>
+<circle cx="15" cy="80" r="8" class="node experimental-node"/>
+<text x="30" y="85" class="description">Recent developments</text>
+</g>
+
+<!-- Key relationships -->
+<g transform="translate(900, 550)">
+<text x="0" y="0" class="space-label">Key Transformations:</text>
+<text x="0" y="20" class="description">H6 → G6: Metric tensor</text>
+<text x="0" y="35" class="description">H6 → S6: Selling scalars</text>
+<text x="0" y="50" class="description">G6 → S6: Linear transformation</text>
+<text x="0" y="65" class="description">S6 → C3: Complex representation</text>
+<text x="0" y="80" class="description">All → DC7unsrt: Dirichlet embedding</text>
+</g>
+</svg>

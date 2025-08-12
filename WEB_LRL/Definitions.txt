@@ -1,0 +1,36 @@
+﻿++REDUCTION
+ Conversation opened. 1 unread message.
+
+Skip to content
+Using Gmail with screen readers
+5 of 975
+(no subject)
+Inbox
+
+Herbert J. Bernstein
+Mon, Aug 11, 5:29 PM (13 hours ago)
+to me
+
+Why is reduction as is Niggli-reduction or Selling-Reduction or Minkowski-reduction called reduction.  What is being made smaller?
+
+Edit
+In crystallography and lattice theory, these "reduction" algorithms are called "reduction" because they systematically make the lattice basis vectors smaller and more orthogonal - they're reducing the lengths of the basis vectors and the angles between them to find a more canonical, minimal representation.
+
+Specifically, what's being made smaller:
+
+Vector lengths: The algorithms work to find shorter basis vectors that still span the same lattice. Instead of using arbitrarily long vectors, they find the shortest possible vectors that can serve as a basis.
+
+Non-orthogonality: They reduce the angles between basis vectors, making them as close to perpendicular as possible. This is measured by reducing the off-diagonal terms in the Gram matrix (the matrix of dot products between basis vectors).
+
+Lattice parameters: In crystallographic terms, they're finding the unit cell with the smallest possible lattice parameters (a, b, c, α, β, γ) that still represents the same crystal structure.
+
+The term "reduction" comes from this process of systematically shrinking these quantities to their minimal values while preserving the mathematical properties of the lattice. It's analogous to reducing a fraction to its simplest form - you're finding the most compact, canonical representation.
+
+Each algorithm has slightly different criteria for what constitutes "reduced":
+
+Minkowski reduction: Focuses on finding the shortest possible basis vectors
+Niggli reduction: Uses specific conditions on lattice parameters to ensure uniqueness
+Selling reduction: Based on reducing a quadratic form associated with the lattice
+The goal is always to transform an arbitrary lattice basis into a standardized, minimal form that's easier to work with and compare across different representations of the same lattice.
+
+Very interesting, thanks for sharing.Fixed!Thanks for the tip!
