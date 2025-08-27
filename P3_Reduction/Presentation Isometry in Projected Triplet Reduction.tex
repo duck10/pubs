@@ -1,0 +1,20 @@
+\subsection{Presentation Isometry in Projected Triplet Reduction}
+
+In crystallographic applications, it is conventionally preferred that projected vectors occupy the upper half-plane, such that computed angles via \texttt{atan2} lie within $[0^\circ, 180^\circ]$. However, scalar transformations during reduction may produce vectors in the lower half-plane ($y < 0$), leading to angle values in $(-180^\circ, 0^\circ]$ which, while geometrically valid, can be undesirable in presentation.
+
+To enforce a consistent representation, we define a \emph{presentation isometry} that maps each vector $v_i = (x_i, y_i)$ with $y_i < 0$ to its negation $-v_i = (-x_i, -y_i)$, rotating it $180^\circ$ while preserving its magnitude.
+
+The cost function used during reduction is defined as:
+
+
+\[
+\text{Cost}(P_3) = \frac{|\vec{v}_1 \cdot \vec{v}_2| + |\vec{v}_1 \cdot \vec{v}_3| + |\vec{v}_2 \cdot \vec{v}_3|}{|\vec{v}_1|^2 + |\vec{v}_2|^2 + |\vec{v}_3|^2}
+\]
+
+
+
+Since dot products are wrapped in absolute value, and magnitudes remain unchanged under negation, it follows that flipping vectors into the upper half-plane does not alter the computed cost. Similarly, the triplet's volume, derived from the area spanned by the vectors, remains invariant.
+
+Thus, the quadrant correction process is mathematically sound: it constitutes a direction-preserving transformation that maintains scalar relationships, magnitudes, and reduction metrics, while aligning the final geometry with crystallographic standards.
+
+\textbf{Conclusion:} The upper-half-plane enforcement step introduces no distortion in the scalar reduction process and may be safely applied as a post-processing operation.

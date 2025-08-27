@@ -251,7 +251,7 @@ The first cell input is treated as the reference that following "mobiles" will b
 matched to. The output includes the <strong>P<sup>3</sup></strong> distances and <strong>S<sup>6</sup></strong>
  angle measures of fit. <br>
  If more than one mobile is input, then "comparison mode" is output, which<br>
-is more compact. Output include the transformation matrices that operate on<br>
+is more compact. Output includes the transformation matrices that operate on<br>
 the base vectors of the unit cell (this is important). Note, there are likely<br>
 to be more than one transformation listed, but they are listed in order of<br>
 of worsening fit.<br>
@@ -278,6 +278,9 @@ NA
 <em><u>Control Parameters</u></em><br>
 Control information is NOT case sensitive, and control names can be abbreviated.<br>
 <em>COMPARISONMODE:</em> enable comparison mode for multiple input processing (default: true)<br>
+	<em>MATRIXORDER:</em> choose the range of values of the elements in the matrices <br>
+	to be used to search for matching lattices. The default value is 1, and that selects<br>
+	-1/0/1 for the matrix elements' values; that generates 3480 test matrices.
 <em>TEST:</em> run test suite to verify system functionality<br>
 &emsp;TEST (no number): run all available tests<br>
 &emsp;TEST n: run specific test number n<br>

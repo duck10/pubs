@@ -1,0 +1,46 @@
+// Define the 3D matrices corresponding to G6 transformations
+// Standard presentation matrices
+// FINAL CORRECTED Matrix_3x3 definitions
+// These matrices have determinant = +1 and match the MatG6 transformations
+// Replace your broken definitions with these:
+
+// Standard presentation matrices
+const Matrix_3x3 spnull_3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0); // Identity (unchanged)
+
+// CORRECTED sp1_3D (swaps a and b):
+const Matrix_3x3 sp1_3D(0.0, -1.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0, -1.0);
+
+// CORRECTED sp2_3D (swaps b and c):
+const Matrix_3x3 sp2_3D(-1.0, 0.0, 0.0, 0.0, 0.0, -1.0, 0.0, -1.0, 0.0);
+
+// CORRECTED sp34a_3D (sign changes for β and γ):
+const Matrix_3x3 sp34a_3D(-1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 1.0);
+
+const Matrix_3x3 sp34b_3D(-1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, -1.0); // This was already correct
+
+// CORRECTED sp34c_3D (sign changes for γ and ξ):
+const Matrix_3x3 sp34c_3D(1.0, 0.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0, -1.0);
+
+// Reduction operation matrices (these were already working correctly)
+const Matrix_3x3 R5_Plus_3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -1.0, 1.0);
+const Matrix_3x3 R5_Minus_3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0);
+
+const Matrix_3x3 R6_Plus_3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, -1.0, 0.0, 1.0);
+const Matrix_3x3 R6_Minus_3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0);
+
+const Matrix_3x3 R7_Plus_3D(1.0, 0.0, 0.0, -1.0, 1.0, 0.0, 0.0, 0.0, 1.0);
+const Matrix_3x3 R7_Minus_3D(1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0);
+
+const Matrix_3x3 R8_3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0);
+
+const Matrix_3x3 R9_Plus_3D = R5_Plus_3D;
+const Matrix_3x3 R9_Minus_3D = R5_Minus_3D;
+
+const Matrix_3x3 R10_Plus_3D = R6_Plus_3D;
+const Matrix_3x3 R10_Minus_3D = R6_Minus_3D;
+
+const Matrix_3x3 R11_Plus_3D = R7_Plus_3D;
+const Matrix_3x3 R11_Minus_3D = R7_Minus_3D;
+
+const Matrix_3x3 R12_3D(1.0, 0.0, 0.0, 0.0, 1.0, 0.0, -1.0, -1.0, 1.0);
+

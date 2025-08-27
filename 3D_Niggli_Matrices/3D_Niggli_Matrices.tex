@@ -1,0 +1,336 @@
+%------------------------------------------------------------------------------
+% Template file for the submission of papers to IUCr journals in LaTeX2e
+% using the iucr document class
+% Copyright 1999-2013 International Union of Crystallography
+% Version 1.6 (28 March 2013)
+%------------------------------------------------------------------------------
+% lca IUCr id IUCr6401
+% HJB IUCr id IUCr6484
+% NKS IUCr ID: IUCr7572
+% lca ORCID  0000-0002-4451-1641
+% HJB ORCID 0000-0002-0517-8532
+% NKS ORCID 0000-0003-2786-6552
+%xxxxxx just for testing github % 2
+%xxxxxx just for testing github % 3
+
+\documentclass[preprint]{iucr}              % DO NOT DELETE THIS LINE
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+%\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{minibox}
+%\usepackage{calligra}
+\usepackage{array}
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\def\mathbi#1{\textbf{\em #1}}
+\numberwithin{equation}{section}
+%\DeclareMathSymbol{\Gamma}{\mathalpha}{letters}{"00}
+%\DeclareMathSymbol{\Lambda}{\mathalpha}{letters}{"03}
+%\DeclareMathSymbol{\Omega}{\mathalpha}{letters}{"0A}
+%\DeclareMathAlphabet{\mathitbf}{OML}{cmm}{b}{it}
+\hyphenation{Niggli}
+\def\mathbi#1{\textbf{\em #1}}
+%\numberwithin{equation}{section}
+%\DeclareMathSymbol{\Gamma}{\mathalpha}{letters}{"00}
+%\DeclareMathSymbol{\Lambda}{\mathalpha}{letters}{"03}
+%\DeclareMathSymbol{\Omega}{\mathalpha}{letters}{"0A}
+%\DeclareMathAlphabet{\mathitbf}{OML}{cmm}{b}{it}
+\usepackage{color}
+%\usepackage{ulem}
+\usepackage{url}
+\usepackage{yfonts}
+%\usepackage{xr-hyper}
+%\usepackage[draft]{hyperref}
+%\usepackage{bibentry}
+\usepackage[normalem]{ulem}
+% Redefine \underline to use \textit
+\renewcommand{\underline}[1]{\textit{#1}}
+\newcommand{\SVI}[0]{$\bf{S^{6}}$}
+\newcommand{\GVI}[0]{$\bf{G^{6}}$}
+\newcommand{\CIII}[0]{$\bf{C^{3}}$}
+\newcommand{\DVII}[0]{$\bf{D^{7}}$}
+\newcommand{\VVII}[0]{$\bf{V^{7}}$}
+
+\newcommand{\vdotv}[2]{${{\bf #1 \cdot #2}}$}
+\newcommand{\Imaginary}[0]{\mathcal{I}}
+\newcommand{\Real}[0]{\mathcal{R}}
+\newcommand{\Exchange}[0]{$\mathcal{X}$}
+
+\newcommand{\nounderline}[3]{\!\!\!\!\!\!\!\!\!#1,&\!\!\!\!\!\!\!\!\!#2,&\!\!\!\!\!\!\!\!\!#3}
+\newcommand{\underlineab}[3]{\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\Exchange{}(#1),&\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\Exchange{}(#2),&\!\!\!\!\!\!\!\!\!#3}
+\newcommand{\underlineac}[3]{\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\Exchange{}(#1),&\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!#2,&\!\!\!\!\!\!\!\!\!\Exchange{}(#3)}
+\newcommand{\underlinebc}[3]{\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!#1,&\!\!\!\!\!\!\!\!\!\Exchange{}(#2),&\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!\Exchange{}(#3)}
+
+\newcommand{\scalar}[1]{$#1$}
+
+\newcommand{\scalarsub}[2]{$#1_#2$}
+
+%-------------------------------------------------------------------------
+% Information about journal to which submitted
+%-------------------------------------------------------------------------
+\journalcode{A}              % Indicate the journal to which submitted
+%   A - Acta Crystallographica Section A
+%   B - Acta Crystallographica Section B
+%   C - Acta Crystallographica Section C
+%   D - Acta Crystallographica Section D
+%   E - Acta Crystallographica Section E
+%   F - Acta Crystallographica Section F
+%   J - Journal of Applied Crystallography
+%   M - IUCrJ
+%   S - Journal of Synchrotron Radiation
+\makeatletter
+\font\dummyft@=dummy \relax
+\makeatother
+
+
+\begin{document}
+		{\LARGE \emph{\today}} \\
+	
+\title{Niggli reduction: matrices for 3-D lattice transformations}
+
+% Authors' names and addresses. Use \cauthor for the main (contact) author.
+% Use \author for all other authors. Use \aff for authors' affiliations.
+% Use lower-case letters in square brackets to link authors to their
+% affiliations; if there is only one affiliation address, remove the [a].
+
+
+\cauthor[a]{Lawrence C.}{Andrews}{larry6640995@gmail.com}{}
+\author[b]{Herbert J.}{Bernstein}
+
+\aff[a]{Ronin Institute for Independent Scholarship 2.0, USA}
+\aff[b]{Ronin Institute for Independent Scholarship 2.0, USA}
+
+% Use \shortauthor to indicate an abbreviated author list for use in
+% running heads (you will need to uncomment it).
+
+\shortauthor{Andrews and Bernstein}
+	% Keywords (required for Journal of Synchrotron Radiation only)
+% Use the \keyword macro for each word or phrase, e.g. 
+% \keyword{X-ray diffraction}\keyword{muscle}
+
+\keyword{lattice}
+\keyword{reduction}
+\keyword{Niggli}
+
+	\maketitle
+	\begin{abstract}
+		Niggli reduction finds the most compact unit cell of a 3-D lattice.  
+		Existing algorithms operate in \GVI{} space, and the 3-D basis-vector changes are lost.  
+		We tabulate the 3×3 matrices for every step of the reduction, enabling direct re-indexing of reflections and full reconstruction of the reduction history.
+		
+	\end{abstract}
+	
+		\begin{synopsis}
+
+	\end{synopsis}
+	
+	\section{Introduction}
+	Niggli reduction~\cite{Niggli1928} finds the cell with the three shortest base vectors in a 3-D lattice. \citeasnoun{Gruber1973} published a compact algorithm using scalars that were
+	later described in the space \GVI{} \cite{Andrews2014}. Although effective, 
+	the algorithm works in a six-dimensional space, losing the three-space transformations
+	needed for changing unit cell presentation or for reindexing reflection data.
+	
+	  Here we tabulate the 3-D matrices for transformation of unit cell basis vectors corresponding to each step
+	  in Niggli reduction. They allow the accumulation during Niggli
+	  reduction of all of the changes in the unit cell presentation.
+	  The matrix that is finally accumulated transforms the input basis
+	  to the Niggli reduced basis.
+	
+	\section{Conventions}
+		\citeasnoun{Andrews2014} give the formal presentation of \GVI{}.
+	\begin{itemize}
+		\item $G^{6}=(g_{1},g_{2},g_{3},g_{4},g_{5},g_{6})$ with
+		\[
+		g_{1}=a^{2},\; g_{2}=b^{2},\; g_{3}=c^{2},\; g_{4}=2bc\cos\alpha,\; g_{5}=2ac\cos\beta,\; g_{6}=2ab\cos\gamma.
+		\]
+		\item \citeasnoun{Gruber1973}, called the process of putting the scalars
+		into a fixed order ``normalizing''. We use the more
+		descriptive term ``standard presentation''.
+		\item Gruber labeled his pseudocode for standard presentation
+		as ``Algorithm N'' and his pseudocode for reduction as 
+		``Algorithm B''.
+
+	\end{itemize}
+	
+\section{Matrices and Trigger Conditions}
+
+We list matrices to transform unit cell basis vectors during 
+Niggli reduction in Tables \ref{standardpresentation} and \ref{reduction},
+along with arbitrary names for the operations and also the conditions
+for triggering each operation during reduction. If a condition
+evaluates to true, then the operation should be performed. For
+complete Niggli reduction, the steps are repeated from the identity, SP0,
+to convergence. 
+
+
+
+The numbering of all
+the operations, both standard presentation and reduction, start from zero
+for the first standard presentation and continues through to R12. (Note that
+the matrices for operations R9, R10 and R11 are the same as those for R5,
+R6, and R7, respectively.)
+
+\section{Usage}
+\begin{enumerate}
+	\item Start with SP0.
+	\item Loop through SP and R tables until no trigger fires.
+	\item Accumulate the product of all applied matrices; the final product maps the initial basis to the Niggli-reduced basis. 
+\end{enumerate}
+
+
+
+\begin{table}
+	\caption{The matrices for Standard Presentation (SP). The 
+	conditions for SP34a,b,c are patterns of $(g_4, g_5, g_6)$. The symbols are ``0'' for a fixed value of zero, ``+'' for a positive value in that position, and ``-'' for negative.}
+	\label{standardpresentation}
+	\centering
+	\renewcommand{\arraystretch}{1.4}
+	\begin{tabular}{@{}c@{\quad}l@{\quad}l@{}}
+		\toprule
+		\textbf{Designation} & \textbf{Matrix} & \textbf{Trigger condition on }$G^{6}$\\
+		\midrule
+		SP0 & $\begin{bmatrix}1&0&0\\0&1&0\\0&0&1\end{bmatrix}$ & (identity)\\
+	\midrule
+		SP1 & $\begin{bmatrix}0&-1&0\\-1&0&0\\0&0&-1\end{bmatrix}$ & $|g_{1}|>|g_{2}|+\delta$\\
+	\midrule
+		SP2 & $\begin{bmatrix}-1&0&0\\0&0&-1\\0&-1&0\end{bmatrix}$ & $|g_{2}|>|g_{3}|+\delta$\\
+	\midrule
+		SP34a & $\begin{bmatrix}-1&0&0\\0&-1&0\\0&0&1\end{bmatrix}$ & $(--+)~or~(+0-)~or~(0{+}-)$\\
+		SP34b & $\begin{bmatrix}-1&0&0\\0&1&0\\0&0&-1\end{bmatrix}$ & $(-{+}-) ~or~ (+-0)~or~(0-+)$\\		SP34c & $\begin{bmatrix}1&0&0\\0&-1&0\\0&0&-1\end{bmatrix}$ & $(+--)~or~ (-{+}0)~or~(-0+)$\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+\begin{longtable}[l]{@{}l@{\quad}l@{\quad}l@{}}
+	\caption{The operations for Niggli reduction}
+	\label{reduction}\\
+	\toprule
+	\textbf{Designation} & \textbf{Matrix} & \textbf{Trigger condition on }$G^{6}$ ($\delta>0$)\\
+	\midrule
+	\endfirsthead
+	
+	\multicolumn{3}{@{}c@{}}{\textit{— continued from previous page —}}\\
+	\toprule
+	\textbf{Designation} & \textbf{Matrix} & \textbf{Trigger condition on }$G^{6}$ ($\delta>0$)\\
+	\midrule
+	\endhead
+	
+	\midrule
+	\multicolumn{3}{@{}c@{}}{\textit{— continued on next page —}}\\
+	\endfoot
+	\bottomrule
+	\endlastfoot
+	
+	R5$^{+}$ & $\begin{bmatrix}1&0&0\\0&1&0\\0&-1&1\end{bmatrix}$
+	&  $g_{4}>g_{2}+\delta$, $g_{4} >$ 0.0\\[2ex]
+	
+	R5$^{-}$ & $\begin{bmatrix}1&0&0\\0&1&0\\0&1&1\end{bmatrix}$
+	&  $g_{4}>g_{2}+\delta$, $g_{4} \leq$ 0.0\\[2ex]
+	\midrule
+		
+	R6$^{+}$ & $\begin{bmatrix}1&0&0\\0&1&0\\-1&0&1\end{bmatrix}$
+	&  $g_{5}>g_{1}+\delta$, $g_{5} > 0$\\[2ex]
+	
+	R6$^{-}$ & $\begin{bmatrix}1&0&0\\0&1&0\\1&0&1\end{bmatrix}$
+	&  $g_{5}>g_{1}+\delta$, $g_{5} <= 0$\\[2ex]
+	\midrule
+	R7$^{+}$ & $\begin{bmatrix}1&0&0\\-1&1&0\\0&0&1\end{bmatrix}$
+	&  $g_{6}>g_{1}+\delta$, $g_{6} > 0$\\[2ex]
+	
+	R7$^{-}$ & $\begin{bmatrix}1&0&0\\1&1&0\\0&0&1\end{bmatrix}$
+	&  $g_{6}>g_{1}+\delta$, $g_{6} <= 0$\\[2ex]
+	\midrule
+	R8 & $\begin{bmatrix}1&0&0\\0&1&0\\1&1&1\end{bmatrix}$
+	&  $g_{4}+g_{5}+g_{6}+g{1}+g_{2}< -\delta$\\[2ex]\\
+	\midrule
+	
+	R9$^{+}$ & same as R5$^{+}$
+	&  $|g_{4}-g_{2}| <= \delta~ and~ 2g_{5} < g_{6}+\delta ~and~ g_{4} > 0$\\[2ex]
+	
+	R9$^{-}$ & same as R5$^{-}$
+	&  $|g_{4}-g_{2}| <= \delta~ and~ 2g_{5} < g_{6}+\delta ~and~ g_{4} <= 0$\\[2ex]
+	\midrule
+	
+	R10$^{+}$ & same as R6$^{+}$
+	&  $|g_{5}-g_{1}| <= \delta~ and~ 2g_{4} < g_{6}+\delta ~and~ g_{5} > 0$\\[2ex]
+	
+	R10$^{-}$ & same as R6$^{-}$
+	&  $|g_{5}-g_{1}| <= \delta~ and~ 2g_{4} < g_{6}+\delta ~and~ g_{5} <= 0$\\[2ex]
+
+	\midrule
+
+		R11$^{+}$ & same as R7$^{+}$ &
+\minibox[l]{%
+	$|g_{6}-g_{1}| \le \delta \text{ and } 2g_{4} < g_{5}+\delta \text{ and } g_{6} > 0$ \\
+	$\text{or}$ \\
+	$|g_{6}-g_{1}| < \delta \text{ and } 2g_{4} < g_{5} + \delta
+	\text{ and } g_{6} > 0$%
+} \\[4ex]\
+
+		R11$^{-}$ & same as R7$^{-}$ &
+\minibox[l]{%
+	$|g_{6}-g_{1}| \le \delta \text{ and } 2g_{4} < g_{5}+\delta \text{ and } g_{6} <= 0$ \\
+	$\text{or}$ \\
+	$|g_{6}-g_{1}| < \delta \text{ and } 2g_{4} < g_{5} + \delta
+	\text{ and } g_{6} <= 0$%
+} \\[4ex]
+
+	\midrule
+
+	R12 & $\begin{bmatrix}1&0&0\\0&1&0\\-1&-1&1\end{bmatrix}$
+&  $|g_{4}+g_{5}+g_{6}+g_{1} +g_{2}| <= \delta~ and~ 2|g_{1}+g_{5}|+g_{6} > \delta$\\[2ex]
+
+
+%      else if (fabs(vin[3] + vin[4] + vin[5] + fabs(vin[0]) + fabs(vin[1])) <= delta &&
+%(2.0 * (fabs(vin[0]) + vin[4]) + vin[5] > delta)) { // R12
+%	m1 = R12;  // Use the global R12
+%	m3d_step = R12_3D;
+%	again = true;
+	
+	
+\end{longtable}
+
+	
+\section{Synopsis}
+
+Niggli reduction is formulated in terms of 6 scalars that formally are the components of space \GVI{}. Working in a
+higher dimensional space loses the 3-space transformations that
+are needed for reindexing reflection data and for changing
+the orientation of atomic structure. The matrices are listed
+here corresponding to each of the operations of Niggli reduction.
+
+	\ack{{\bf Acknowledgements}}
+
+We gratefully acknowledge the careful copy-editing and corrections of Frances C. Bernstein.
+
+\ack{{\bf Funding information}}      
+
+Funding for this research was provided in part by:  
+US Department of Energy Offices of Biological and
+Environmental Research and of Basic Energy Sciences
+(grant No. DE-AC02-98CH10886; grant No. E-SC0012704);
+U.S. National Institutes of Health (grant No. P41RR012408;
+grant No. P41GM103473; grant No. P41GM111244;
+grant No. R01GM117126,
+grant No. 1R21GM129570); Dectris, Ltd, and in part by
+Grant No. 1R24GM154040-01 from the NIH
+and the Regents' Prime contract no. DE-AC02-05CH11231 from the Department of Energy.
+
+
+\bibliography{Reduced}
+
+\bibliographystyle{iucr}
+	
+%	\bibliographystyle{plain}f
+%	\begin{thebibliography}{9}
+%		\bibitem{niggli} Niggli, P. (1927). \emph{Handbuch der Experimentalphysik}, Leipzig.
+%		\bibitem{gruber} Gruber, B. (1973). \emph{Acta Cryst.} A29, 433--440.
+%		\bibitem{ab2014} Andrews, L. C. \& Bernstein, H. J. (2014). \emph{Acta Cryst.} A70, 411--418.
+%	\end{thebibliography}
+	
+\end{document}
