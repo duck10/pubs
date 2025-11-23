@@ -177,34 +177,6 @@
 	
 	\section{Introduction}
 	
-	
-	\section*{Scope and Limitations of Niggli's Reduction Rules}
-	
-	Niggli's 1928 reduction framework provides a complete and correct set of rules for identifying a unique reduced cell in the general triclinic case. These rules define a canonical region in metric tensor space ($G^6$) using edge ordering, angle constraints, sign consistency, and tie-breaking equalities.
-	
-	However, the framework is primarily designed to resolve \textbf{first-order boundaries}—those defined by a single equality or saturation condition. These include:
-	
-	\begin{itemize}
-		\item Edge equalities (e.g., $g_1 = g_2$)
-		\item Angle saturations (e.g., $|g_4| = g_2$)
-		\item Orthogonality boundaries (e.g., $g_4 = 0$)
-	\end{itemize}
-	
-	For \textbf{second-order} and \textbf{third-order boundaries}—where multiple conditions intersect—Niggli's rules are often incomplete. In these compound zones:
-	
-	\begin{itemize}
-		\item Reduction may yield multiple valid cells
-		\item Tie-breaking logic may be underspecified or absent
-		\item Classifier intervention is required to resolve ambiguity
-	\end{itemize}
-	
-	It is not yet clear which compound boundaries admit simple, well-defined actions and which do not. A full classification of these zones remains an open problem. The current boundary table enumerates 45 polytopes, but only a subset are fully resolved by Niggli's original rules.
-	
-	This motivates the development of a \textbf{reduction-aware classifier pipeline}—one that augments Niggli's framework with symbolic triggers, parametric thresholds, and adjacency logic to ensure robust Bravais assignment across all regions of $G^6$.
-	
-	
-	
-	
 	We introduce a new Bravais lattice determination algorithm. The Bravais 
 	lattice types were created by \citeasnoun{Bravais1850}. \citeasnoun{Delaunay1932} 
 	and \citeasnoun{Niggli1928} developed methods for the identification 
@@ -230,38 +202,7 @@
 	
 	SELLA is a based on Selling (Delone) reduction. It is a complete, closed solution, and it provides a clear metric of fit to each type.
 	
-	
-	\section{Introduction}
-	\section{Brief historical review}
-	\section{The problem of experimental error and related issues}
-	\subsection{experimental error}
-	\subsection{approximate symmetry}
-	\subsection{Solid solutions}
-	
-	
 	\section{Terminology}
-	
-	\section{SELLA}
-		
-	\subsection{Terminology of the Bravais types}		
-	\subsection{The Bravais tetrahedron}		
-	\subsection{The characteristic}	
-	\subsection{Projectors and perps}	
-	
-	\section{Classifications of the Bravais types}
-	\subsection{Niggli}
-	\subsubsection{the space \GVI{}}		
-	\subsection{Delaunay}
-	\subsubsection{the space \SVI{}}		
-	
-	\section{Algorithms}
-	\subsection{Simple}
-	\subsection{Search with transformed vectors}
-	\subsection{Search with transformed manifolds}
-	\subsection{B-Matrix}
-	
-	
-	\section{THE OLDER TEXT}
 	
 	\subsection{The Bravais types}
 	

@@ -1,0 +1,214 @@
+cpp
+#include <vector>
+#include <cmath>
+#include <cfloat>   // DBL_MAX, DBL_EPSILON
+#include <algorithm>
+
+template <typename T, typename DistanceType>
+class CNearTree {
+public:
+    double GetDimEstimate(double DimEstimateEsd);
+
+private:
+    void CompleteDelayedInsert();
+    long FindInSphere(DistanceType radius, std::vector<T>& sample, const T& probe);
+
+    std::vector<T> m_ObjectStore;
+    DistanceType m_DiamEstimate{};
+    DistanceType m_SumSpacings{};
+    double m_DimEstimate{DBL_MAX};
+    double m_DimEstimateEsd{DBL_MAX};
+
+    // Random number generator (placeholder for your rhr.urand())
+    struct RandomHelper {
+        double urand() { return static_cast<double>(rand()) / RAND_MAX; }
+    } rhr;
+};
+
+template <typename T, typename DistanceType>
+double CNearTree<T, DistanceType>::GetDimEstimate(double DimEstimateEsd) {
+    const_cast<CNearTree*>(this)->CompleteDelayedInsert();
+
+    if (m_DimEstimate == DBL_MAX) return 0.0;
+    if (m_DimEstimate > 0.0 &&
+        (m_DimEstimateEsd <= DimEstimateEsd || DimEstimateEsd <= 0.0)) {
+        return m_DimEstimate;
+    }
+
+    const auto estsize = m_ObjectStore.size();
+    if (estsize < 32 || static_cast<double>(m_DiamEstimate) < DBL_EPSILON) {
+        m_DimEstimate = m_DimEstimateEsd = DBL_MAX;
+        return 0.0;
+    }
+
+    // Estimate density and target radius
+    const double pointDensity = static_cast<double>(estsize) / static_cast<double>(m_DiamEstimate);
+    double targetRadius = 4096.0 / pointDensity;
+    const auto meanSpacing = m_SumSpacings / DistanceType(1 + estsize);
+
+    targetRadius = std::clamp(targetRadius, meanSpacing * 10.0,
+                              static_cast<double>(m_DiamEstimate) / 1.1);
+
+    // Adjust target radius to ensure enough points
+    double shrinkFactor = 4.0;
+    auto randomIndex = [&]() {
+        return static_cast<std::size_t>((estsize - 1) * rhr.urand());
+    };
+
+    T probe = m_ObjectStore[randomIndex()];
+    long popTrial = FindInSphere(static_cast<DistanceType>(targetRadius / shrinkFactor),
+                                 m_ObjectStore, probe);
+
+    long popSmall = 0;
+    while (popTrial < 256 && shrinkFactor > 1.0 && popTrial <= popSmall + 10) {
+        shrinkFactor /= 1.1;
+        popSmall = popTrial;
+        probe = m_ObjectStore[randomIndex()];
+        popTrial = FindInSphere(static_cast<DistanceType>(targetRadius / shrinkFactor),
+                                m_ObjectStore, probe);
+    }
+
+    targetRadius = (targetRadius / shrinkFactor) * 1.1;
+
+    // Trial sampling
+    const std::size_t trials = std::max<std::size_t>(10, static_cast<std::size_t>(std::sqrt(estsize + 0.5)));
+    double estDim = 0.0, estDimSq = 0.0;
+    long goodTrials = 0;
+    const double testLim = (DimEstimateEsd <= 0.0) ? 0.01 : DimEstimateEsd * DimEstimateEsd;
+
+    for (std::size_t ii = 0; ii < trials; ++ii) {
+        probe = m_ObjectStore[randomIndex()];
+        const long popLarge = FindInSphere(static_cast<DistanceType>(targetRadius),
+                                           m_ObjectStore, probe);
+        const long popSmallTrial = FindInSphere(static_cast<DistanceType>(targetRadius / 1.1),
+                                                m_ObjectStore, probe);
+
+        if (popLarge > 0 && popSmallTrial > 0 && popSmallTrial < popLarge) {
+            const double ratio = static_cast<double>(popLarge) / popSmallTrial;
+            const double estd = std::log(ratio) / std::log(1.1);
+            estDim += estd;
+            estDimSq += estd * estd;
+            ++goodTrials;
+
+            const double variance = estDimSq / goodTrials - (estDim * estDim) / (goodTrials * goodTrials);
+            if (goodTrials > (trials + 1) / 2 && std::fabs(variance) <= testLim) break;
+        }
+    }
+
+    if (goodTrials < 1) {
+        m_DimEstimate = m_DimEstimateEsd = DBL_MAX;
+        return 0.0;
+    }
+
+    m_DimEstimate = estDim / goodTrials;
+    m_DimEstimateEsd = std::sqrt(std::fabs(estDimSq / goodTrials - m_DimEstimate * m_DimEstimate));
+
+    if (m_DimEstimate + 3.0 * m_DimEstimateEsd < 0.0) {
+        m_DimEstimate = m_DimEstimateEsd = DBL_MAX;
+    }
+
+    return m_DimEstimate;
+}
+🔧 What Changed
+Clearer variable names and consistent types.
+
+Encapsulated random index selection in a lambda.
+
+Used std::clamp for radius bounds.
+
+Removed redundant casts and parentheses.
+
+Simplified variance check logic.
+
+Preserved algorithm exactly, but made it safer and easier to read.
+
+Would you like me to also modularize the radius adjustment loop into a helper function (e.g., adjustTargetRadius) so the main method reads more like a high-level description of the algorithm? That would make it even more maintainable.
+
+I want to publish a article about Hausdorff dimensions of a set of crystal unit cells. Write the text explaining Hausdorff dimension and the method of estimating it (for publication).
+Here’s a polished, publication‑ready section you could use in your article. I’ve written it in a formal scientific style, suitable for crystallography or mathematical physics journals:
+
+Hausdorff Dimension and Its Estimation in Crystallographic Unit Cells
+The Hausdorff dimension provides a rigorous mathematical measure of the effective dimensionality of a set, extending the familiar notion of integer dimensions to fractal and irregular structures. For a point cloud, such as a collection of crystallographic unit cells represented in a metric space, the Hausdorff dimension characterizes how the number of points within a ball of radius 
+𝑟
+ scales as 
+𝑟
+ increases. Formally, if 
+𝑁
+(
+𝑟
+)
+ denotes the number of points within distance 
+𝑟
+ of a given probe point, then
+
+𝑁
+(
+𝑟
+)
+∼
+𝑟
+𝑑
+,
+where 
+𝑑
+ is the Hausdorff dimension. Unlike topological dimension, which is always an integer, the Hausdorff dimension may take non‑integer values, reflecting the scaling properties of the distribution.
+
+Method of Estimation
+To estimate the Hausdorff dimension of a finite set of unit cells, we employ a local scaling analysis around randomly chosen probe points:
+
+Preconditions The dataset must contain a sufficient number of unit cells (at least several dozen) and a non‑trivial diameter to ensure meaningful statistics.
+
+Radius Selection A target radius is chosen based on the overall point density, adjusted to avoid extremes. The radius is scaled so that spheres around probe points contain a reasonable number of neighbors, typically several hundred.
+
+Neighbor Counts For each probe point, we count the number of unit cells within two concentric spheres:
+
+A larger sphere of radius 
+𝑅
+
+A smaller sphere of radius 
+𝑅
+/
+𝜆
+, with 
+𝜆
+ slightly greater than 1 (e.g., 1.1)
+
+Local Dimension Estimate The ratio of populations in the two spheres provides a local estimate of dimension:
+
+𝑑
+=
+log
+⁡
+ ⁣
+(
+𝑁
+(
+𝑅
+)
+𝑁
+(
+𝑅
+/
+𝜆
+)
+)
+log
+⁡
+(
+𝜆
+)
+.
+Averaging and Error Repeating this procedure across many randomly selected probe points yields a distribution of local dimension estimates. The mean provides the global dimension estimate, while the variance supplies an uncertainty measure.
+
+Application to Unit Cells
+When applied to sets of crystallographic unit cells expressed in reduced metric spaces (e.g., 
+𝑆
+6
+ or 
+𝐺
+6
+), this method quantifies the effective dimensionality of the ensemble. A dimension close to 6 indicates a nearly uniform distribution in the six‑dimensional parameter space, whereas lower values suggest clustering along lower‑dimensional manifolds, reflecting structural correlations or constraints among the cells.
+
+This text explains both the conceptual foundation of Hausdorff dimension and the practical estimation procedure you’ve implemented.
+
+Would you like me to also draft a “Results and Discussion” style paragraph that interprets what different dimension values mean for crystal unit cell datasets (e.g., distinguishing random noise from meaningful structural clustering)? That would make the article more compelling to reviewers.

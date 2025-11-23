@@ -1,0 +1,492 @@
+
+\documentclass[preprint]{iucr}              % DO NOT DELETE THIS LINE
+%\documentclass[]{iucr}              % DO NOT DELETE THIS LINE
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{longtable}
+
+\usepackage[fleqn]{amsmath}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+%\usepackage{amsbsy}
+\usepackage{float}
+\usepackage{url}
+%\usepackage{yfonts}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[outdir=./]{epstopdf}
+\usepackage{epsfig}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{tikz}
+
+\newcommand{\SVI}[0]{$\mathbf{S^{6}}$}
+\newcommand{\GVI}[0]{$\bf{G^{6}}$}
+\newcommand{\scalarsub}[2]{$#1_#2$}
+\newcommand{\vdotv}[2]{${{\bf #1 \cdot #2}}$}
+\newcommand{\charseq}[1]{({\bf #1})}
+
+%-------------------------------------------------------------------------
+% Information about journal to which submitted
+%-------------------------------------------------------------------------
+\journalcode{A}              % Indicate the journal to which submitted
+%   A - Acta Crystallographica Section A
+%   B - Acta Crystallographica Section B
+%   C - Acta Crystallographica Section C
+%   D - Acta Crystallographica Section D
+%   E - Acta Crystallographica Section E
+%   F - Acta Crystallographica Section F
+%   J - Journal of Applied Crystallography
+%   M - IUCrJ
+%   S - Journal of Synchrotron Radiation
+
+\begin{document}                  % DO NOT DELETE THIS LINE
+
+\section{Introduction}
+This is an analysis of Niggli Reduction.
+
+\section*{Historical Evolution of Lattice Reduction: Selling, Niggli, and Krivy--Gruber}
+
+\subsection*{Selling's Trace Minimization (Late 19th Century)}
+
+Selling's reduction aimed to simplify lattice bases by minimizing the trace of the metric tensor:
+
+
+
+\[
+\mathrm{Tr}(\mathbf{G}) = g_1 + g_2 + g_3 = a^2 + b^2 + c^2
+\]
+
+
+
+This corresponds to minimizing the sum of squared edge lengths, favoring compact and symmetric cells. Selling worked geometrically in an inner product space, seeking convex minimal representations. His approach did not enforce uniqueness—multiple minimal cells could exist.
+
+\subsection*{Niggli's Canonical Reduction (1928)}
+
+Niggli adopted Selling's trace minimization as a first-order goal but introduced additional conditions to select a unique reduced cell. These include:
+
+\begin{itemize}
+	\item \textbf{Edge Ordering:} $g_1 \leq g_2 \leq g_3$
+	\item \textbf{Angle Constraints:} $|g_4| \leq g_2$, $|g_5| \leq g_1$, $|g_6| \leq g_1$
+	\item \textbf{Sign Consistency:} All off-diagonal terms ($g_4$, $g_5$, $g_6$) must be either strictly positive or strictly non-positive
+	\item \textbf{Tie-Breaking Equalities:} When equalities occur (e.g., $g_1 = g_2$), apply axis permutations, sign flips, and secondary inequalities to resolve symmetry
+\end{itemize}
+
+These conditions define a canonical region in metric tensor space ($G^6$), ensuring uniqueness, symmetry, and minimal trace.
+
+\subsection*{Krivy--Gruber Algorithmic Formalization (1976)}
+
+While Niggli's formulation was conceptually complete, it lacked algorithmic clarity. Krivy and Gruber translated Niggli's geometric conditions into a stepwise reduction algorithm using unimodular transformations. Their contributions include:
+
+\begin{itemize}
+	\item Explicit handling of inequality violations (e.g., $|g_4| > g_2$)
+	\item Operational logic for equalities and sign transitions
+	\item A reproducible reduction path for computational implementation
+\end{itemize}
+
+Krivy--Gruber did not introduce new geometric constraints. Their work faithfully operationalized Niggli’s reduction, making it computable and robust.
+
+\subsection*{Modern Enhancements}
+
+Contemporary implementations (e.g., BGAOL, Spglib) have added:
+
+\begin{itemize}
+	\item Tolerance bands for floating-point stability
+	\item Fallback logic for near-degenerate cases
+	\item Classifier overrides for boundary intersections and instability zones
+\end{itemize}
+
+These enhancements extend Niggli’s reduction to practical, reproducible classification pipelines.
+
+\subsection{Summary Comparison}
+
+\begin{center}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\textbf{Feature} & \textbf{Selling Reduction} & \textbf{Niggli Reduction} \\
+		\hline
+		Goal & Minimize trace (compact cell) & Minimize trace + enforce canonical form \\
+		Space & Inner product space & Metric tensor space ($G^6$) \\
+		Conditions & Convex minimization & Inequalities + sign rules + tie-breakers \\
+		Output & One of many minimal cells & Unique reduced cell \\
+		\hline
+	\end{tabular}
+\end{center}
+
+
+\begin{longtable}{|c|c|p{5.2cm}|p{3.8cm}|c|c|}
+	\caption{Complete catalog of 45 boundary polytopes of the Niggli-reduced region in $G^6$, extended with symbolic triggers. The final column encodes reduction-relevant features: \textbf{E} (Edge degeneracy), \textbf{A} (Angle saturation), \textbf{O} (Orthogonality), \textbf{C} (Compound intersection), \textbf{N} (Near-degeneracy). These tags support classifier overrides, adjacency logic, and parametric instability detection.} \\
+	\hline
+	\textbf{Label} & \textbf{Condition} & \textbf{Geometric Interpretation} & \textbf{Reduction Behavior} & \textbf{Instability Tag} & \textbf{Symbolic Trigger} \\
+	\hline
+	\endfirsthead
+	\hline
+	\textbf{Label} & \textbf{Condition} & \textbf{Geometric Interpretation} & \textbf{Reduction Behavior} & \textbf{Instability Tag} & \textbf{Symbolic Trigger} \\
+	\hline
+	\endhead
+	\hline
+	\endfoot
+	\hline
+	\endlastfoot
+	
+	A1 & $g_1 = g_2$ & Edge degeneracy between $a$ and $b$ & Soft & S & E \\
+	A2 & $g_2 = g_3$ & Edge degeneracy between $b$ and $c$ & Soft & S & E \\
+	A3 & $g_1 = g_3$ & Edge degeneracy between $a$ and $c$ & Soft & S & E \\
+	A4 & $g_1 = g_2 = g_3$ & Triple edge equality; cubic candidate & Hard & U & E \\
+	A5 & $g_1 \approx g_2$ & Near-degeneracy; axis ambiguity & Conditionally Hard & C & EN \\
+	A6 & $g_2 \approx g_3$ & Near-degeneracy; axis ambiguity & Conditionally Hard & C & EN \\
+	A7 & $g_1 = g_2$, $g_3 \approx g_1$ & Double degeneracy; ambiguous sorting & Hard & U & ECN \\
+	A8 & $g_1 = g_2$, $g_4 = 0$ & Edge equality with orthogonality & Conditionally Hard & C & EO \\
+	A9 & $g_1 = g_3$, $g_5 = 0$ & Edge equality with orthogonality & Conditionally Hard & C & EO \\
+	A10 & $g_2 = g_3$, $g_6 = 0$ & Edge equality with orthogonality & Conditionally Hard & C & EO \\
+	A11 & $g_1 = g_2$, $g_5 = g_6$ & Degenerate manifold with angle coupling & Hard & U & EC \\
+	A12 & $g_1 = g_2$, $g_4 = g_5$ & Degenerate manifold with angle coupling & Hard & U & EC \\
+	A13 & $g_1 = g_2$, $g_4 = g_6$ & Degenerate manifold with angle coupling & Hard & U & EC \\
+	A14 & $g_1 = g_2$, $g_4 = g_5 = g_6$ & Fully coupled degeneracy & Hard & U & EC \\
+	A15 & $g_1 = g_2$, $g_4 = g_5 = g_6 = 0$ & Orthogonality with edge degeneracy & Conditionally Hard & C & ECO \\
+	
+	B1 & $|g_4| = g_2$ & Saturation of $\alpha$ cosine & Conditionally Hard & C & A \\
+	B2 & $|g_5| = g_1$ & Saturation of $\beta$ cosine & Conditionally Hard & C & A \\
+	B3 & $|g_6| = g_1$ & Saturation of $\gamma$ cosine & Conditionally Hard & C & A \\
+	B4 & $|g_4| = g_3$ & Alternate saturation for $\alpha$ & Conditionally Hard & C & A \\
+	B5 & $|g_5| = g_3$ & Alternate saturation for $\beta$ & Conditionally Hard & C & A \\
+	B6 & $|g_6| = g_2$ & Alternate saturation for $\gamma$ & Conditionally Hard & C & A \\
+	B7 & $|g_4| = |g_5|$ & Coupled angle saturation & Hard & U & AC \\
+	B8 & $|g_5| = |g_6|$ & Coupled angle saturation & Hard & U & AC \\
+	B9 & $|g_4| = |g_6|$ & Coupled angle saturation & Hard & U & AC \\
+	B10 & $|g_4| = g_2$, $|g_5| = g_1$ & Dual saturation & Hard & U & AC \\
+	B11 & $|g_4| = g_2$, $g_1 \approx g_2$ & Saturation with edge degeneracy & Hard & U & EAN \\
+	B12 & $|g_5| = g_1$, $g_1 \approx g_3$ & Saturation with edge degeneracy & Hard & U & EAN \\
+	B13 & $|g_6| = g_1$, $g_2 \approx g_3$ & Saturation with edge degeneracy & Hard & U & EAN \\
+	B14 & $|g_4| = g_2$, $g_4 = 0$ & Saturation and orthogonality & Conditionally Hard & C & AO \\
+	B15 & $|g_5| = g_1$, $g_5 = 0$ & Saturation and orthogonality & Conditionally Hard & C & AO \\
+	
+	C1 & $g_4 = 0$ & $\alpha = 90^\circ$ & Soft & S & O \\
+	C2 & $g_5 = 0$ & $\beta = 90^\circ$ & Soft & S & O \\
+	C3 & $g_6 = 0$ & $\gamma = 90^\circ$ & Soft & S & O \\
+	C4 & $g_4 = g_5 = 0$ & $\alpha = \beta = 90^\circ$ & Soft & S & O \\
+	C5 & $g_5 = g_6 = 0$ & $\beta = \gamma = 90^\circ$ & Soft & S & O \\
+	C6 & $g_4 = g_6 = 0$ & $\alpha = \gamma = 90^\circ$ & Soft & S & O \\
+	
+	E1 & $g_1 = g_5 = g_6$ & Edge and angle coupling & Hard & U & EC \\
+	E2 & $g_1 = g_2$, $g_6 = 0$ & Tetragonal–orthorhombic transition & Hard & U & EO \\
+	E3 & $g_4 = g_5 = g_6 = 0$ & Full orthogonality; unstable with edge degeneracy & Conditionally Hard & C & O \\
+	E4 & $g_1 = g_2$, $|g_4| = g_2$ & Edge degeneracy with angle saturation & Hard & U & EA \\
+	E5 & $g_1 = g_3$, $g_5 = 0$ & Axis ambiguity with orthogonality & Conditionally Hard & C & EO \\
+	E6 & $g_2 = g_3$, $|g_6| = g_1$ & Coupled degeneracy and saturation & Hard & U & EA \\
+	E7 & $g_1 = g_2 = g_3$, $g_4 = g_5 = g_6 = 0$ & Fully cubic cell; multiple reduction paths & Hard & U & ECO \\
+E8 & $g_1 = g_2$, $g_4 = g_5$, $g_6 = 0$ & Compound degeneracy with orthogonality; ambiguous sorting & Hard & U & ECO \\
+E9 & $g_4 = g_5 = g_6 = 0$, $g_1 \approx g_2$ & Orthogonality with edge near-degeneracy; classifier override may be needed & Conditionally Hard & C & ENO \\
+\end{longtable}
+
+
+\section*{Saturations in Niggli Reduction}
+
+In the context of Niggli reduction and the geometry of the reduced region in $G^6$, a \textbf{saturation} refers to a condition where one of the Niggli inequalities becomes an exact equality. That is, the metric tensor lies precisely on a boundary of the Niggli-reduced region.
+
+\section*{Definitions: Reduction Behavior Categories}
+
+Each boundary polytope in the Niggli-reduced region of $G^6$ is classified by its reduction behavior. These categories reflect the stability, uniqueness, and reproducibility of the reduced cell under Krivy--Gruber reduction and guide classifier overrides.
+
+\subsection*{Hard}
+
+A boundary is classified as \textbf{Hard} if it exhibits intrinsic instability under reduction. This includes:
+
+\begin{itemize}
+	\item \textbf{Non-uniqueness:} Multiple unimodular transformations yield distinct but valid reduced cells.
+	\item \textbf{Perturbation sensitivity:} Infinitesimal changes in the metric tensor cause discontinuous shifts in the reduced cell.
+	\item \textbf{Oscillatory behavior:} Reduction may cycle or fail to converge near the boundary.
+	\item \textbf{Classifier override required:} Reduction alone cannot guarantee correct Bravais assignment.
+\end{itemize}
+
+Hard boundaries typically involve compound degeneracies, saturated inequalities, or cubic manifolds.
+
+\subsection*{Conditionally Hard}
+
+A boundary is classified as \textbf{Conditionally Hard} if it is stable in isolation but may become unstable when intersected with other boundaries. These cases include:
+
+\begin{itemize}
+	\item \textbf{Single saturations:} Exact equality in one Niggli condition (e.g., $|g_4| = g_2$)
+	\item \textbf{Edge equalities with orthogonality:} Stable unless combined with near-degeneracy
+	\item \textbf{Ambiguous sorting:} Near-equalities that may flip axis order under perturbation
+\end{itemize}
+
+Classifier pipelines must monitor adjacency and apply parametric triggers when multiple such conditions co-occur.
+
+\subsection*{Soft}
+
+A boundary is classified as \textbf{Soft} if it is stable, reproducible, and reduction-consistent. These boundaries:
+
+\begin{itemize}
+	\item Yield a unique reduced cell under Krivy--Gruber reduction
+	\item Are insensitive to small perturbations
+	\item Do not require classifier intervention
+\end{itemize}
+
+Soft boundaries include orthogonality conditions (e.g., $g_4 = 0$) and simple edge equalities (e.g., $g_1 = g_2$) that do not intersect with other instability zones.
+
+\subsection*{Usage in Classifier Pipeline}
+
+These categories are encoded in the \textbf{Reduction Behavior} column of the boundary table and inform:
+
+\begin{itemize}
+	\item Instability tagging (S, C, U)
+	\item Symbolic trigger logic
+	\item Override and fallback mechanisms
+\end{itemize}
+
+They ensure that classification remains robust across the full geometry of the Niggli cone in $G^6$.
+
+
+\subsection*{Definition}
+
+Each Niggli condition imposes a constraint on the components of the metric tensor:
+
+\begin{itemize}
+	\item Edge ordering: $g_1 \leq g_2 \leq g_3$
+	\item Angle constraints: $|g_4| \leq g_2$, $|g_5| \leq g_1$, $|g_6| \leq g_1$
+	\item Sign consistency: all of $g_4$, $g_5$, $g_6$ are either strictly positive or non-positive
+\end{itemize}
+
+A \textbf{saturation} occurs when one of these inequalities becomes an equality, such as:
+
+\begin{itemize}
+	\item $g_1 = g_2$ \hfill (edge length equality)
+	\item $|g_4| = g_2$ \hfill (angle cosine saturation)
+	\item $g_4 = 0$ \hfill (orthogonality boundary)
+\end{itemize}
+
+These equalities define the \textbf{boundary polytopes} of the Niggli cone in $G^6$.
+
+\subsection*{Geometric and Algorithmic Significance}
+
+Saturations mark the transition zones between different lattice types or symmetry classes. They often correspond to Bravais lattice boundaries, such as transitions between orthorhombic and tetragonal cells.
+
+While a single saturation may not destabilize the reduction process, multiple simultaneous saturations can lead to:
+
+\begin{itemize}
+	\item Degeneracy in the metric tensor
+	\item Ambiguity in the choice of reduced cell
+	\item Oscillatory or non-convergent behavior in Krivy--Gruber reduction
+\end{itemize}
+
+These cases define \textbf{instability zones}, where classifier pipelines may need to override reduction logic or apply stabilizing transformations.
+
+
+\section*{Classifier Integration: Symbolic Adjacency Logic and Parametric Triggers}
+
+To support robust Bravais classification near boundary polytopes in $G^6$, we define a symbolic tagging and trigger system that encodes adjacency, degeneracy, and reduction instability. This system enables classifier pipelines to override ambiguous reductions, detect compound zones, and apply parametric logic consistently.
+
+\subsection*{Symbolic Tags}
+
+Each boundary polytope is assigned a symbolic tag based on its defining condition:
+
+\begin{center}
+	\begin{tabular}{|c|l|}
+		\hline
+		\textbf{Symbol} & \textbf{Meaning} \\
+		\hline
+		E & Edge degeneracy (e.g., $g_1 = g_2$, $g_1 \approx g_2$) \\
+		A & Angle saturation (e.g., $|g_4| = g_2$) \\
+		O & Orthogonality (e.g., $g_4 = 0$) \\
+		C & Compound intersection (multiple conditions active) \\
+		N & Near-degeneracy (e.g., $g_1 \approx g_2$, not exact) \\
+		\hline
+	\end{tabular}
+\end{center}
+
+Each boundary in the table may be tagged with one or more symbols (e.g., EA, EO, C) to indicate its reduction behavior and adjacency to other boundaries.
+
+\subsection*{Adjacency Logic}
+
+Let $B_i$ and $B_j$ be boundary polytopes. Define the adjacency function:
+
+
+
+
+
+\[
+\text{Adj}(B_i, B_j) =
+\begin{cases}
+	1 & \text{if } B_i \text{ and } B_j \text{ share a variable or saturate adjacent conditions} \\
+	0 & \text{otherwise}
+\end{cases}
+\]
+
+
+
+
+
+
+This adjacency matrix enables the classifier to:
+
+\begin{itemize}
+\item Detect compound instability zones
+\item Weight instability scores based on proximity
+\item Trigger override logic when multiple adjacent boundaries are active
+\end{itemize}
+
+\subsection*{Parametric Triggers}
+
+Classifier logic may be activated by parametric thresholds or symbolic conditions. Examples include:
+
+\subsubsection*{Edge Degeneracy Trigger}
+
+
+
+\[
+\text{If } |g_1 - g_2| < \epsilon_1 \Rightarrow \text{trigger axis ambiguity}
+\]
+
+
+
+\subsubsection*{Angle Saturation Trigger}
+
+
+
+\[
+\text{If } ||g_4| - g_2| < \epsilon_2 \Rightarrow \text{trigger cosine saturation}
+\]
+
+
+
+\subsubsection*{Compound Zone Trigger}
+
+
+
+\[
+\text{If } g_1 \approx g_2 \text{ and } g_4 = 0 \Rightarrow \text{trigger compound override}
+\]
+
+
+
+These triggers may be encoded as symbolic rules or embedded directly into classifier logic. Thresholds $\epsilon_1$, $\epsilon_2$ should be tuned based on numerical stability and benchmarking.
+
+\subsection*{Classifier Strategy}
+
+\begin{itemize}
+\item Extend the boundary table with a \textbf{Symbolic Trigger} column (e.g., E, EA, EO, C)
+\item Build a lookup dictionary: boundary label $\rightarrow$ trigger set
+\item Use adjacency matrix to detect compound zones
+\item Apply parametric thresholds to activate override logic
+\item Tag unstable zones for fallback or signature-based classification
+\end{itemize}
+
+This system ensures that classifier pipelines remain reduction-aware, reproducible, and robust near degenerate or ambiguous regions of $G^6$.
+
+\subsection*{Examples}
+
+Consider the condition $|g_4| = g_2$. This implies:
+
+
+
+\[
+|2bc\cos\alpha| = b^2 \quad \Rightarrow \quad |\cos\alpha| = \frac{b}{2c}
+\]
+
+
+
+This is the maximum allowable cosine for angle $\alpha$ given the edge lengths $b$ and $c$. The cell lies exactly on the boundary of the reduced region for that angle.
+
+
+\begin{center}
+	\begin{tabular}{|c|p{4.5cm}|p{6cm}|}
+		\hline
+		\textbf{Zone} & \textbf{Typical Conditions} & \textbf{Classifier Implication} \\
+		\hline
+		Soft & $g_1 = g_2$, $g_4 = 0$ & Stable reduction; no override needed \\
+		\hline
+		Conditionally Hard & $|g_4| = g_2$, $g_1 \approx g_2$, $g_1 = g_2$, $g_4 = 0$ & Stable unless intersected; monitor adjacency and apply parametric triggers \\
+		\hline
+		Hard & $g_1 = g_2 = g_3$, $g_4 = g_5 = g_6 = 0$, $g_1 = g_5 = g_6$ & Intrinsically unstable; classifier override required \\
+		\hline
+	\end{tabular}
+\end{center}
+
+
+% This cell is invalid, apparently Polar::rand generates bad cells occasionally
+%\subsection{33277}testCase(np, "case 33277", G6(6.486, 46.833, 30.720, -37.984, 27.277, -24.644), true);
+%\subsubsection{33277}
+%gross failure in both
+%Output:    -1.272     0.088     0.357    -0.924    -0.805    -1.515
+%Converged: YES
+%Is Niggli reduced: NO
+%Standard Niggli:        0.088     0.331    -0.479    -1.572     0.748     1.691
+
+
+\subsection{10130}testCase(np, "case 10130", G6(78.145, 6.409, 1.485, -6.169, -4.536, 8.971), true);
+\subsubsection[10130]
+testCase(np, "acute", G6(0.825,     1.000,    65.850,     0.611,     0.051,     0.825), true);
+converged at 100, but wandered a lot
+  Iteration 99:     0.011     0.295    51.361     0.282     0.015     0.009
+Output:     0.011     0.295    51.357    -0.273    -0.007    -0.009
+Converged: YES
+Is Niggli reduced: YES
+Standard Niggli:        0.011     0.295    51.357    -0.273    -0.007    -0.009
+Max difference: 6.39488e-14
+? MATCH
+
+
+Iteration 100:     0.011     0.295    51.357    -0.273    -0.007    -0.009
+Checking all boundaries:
+IsNiggli true
+g     0.011     0.295    51.357    -0.273    -0.007    -0.009
+
+Checking boundaries:
+Checking boundaries: 8 (0.022)
+Checking boundaries: D' (0) 7' (0) A' (0) 8' (0.0179722) B' (0.00943398) E' (0.00714143)     CONVERGED
+
+Output:     0.011     0.295    51.357    -0.273    -0.007    -0.009
+Converged: YES
+Is Niggli reduced: YES
+Standard Niggli:        0.011     0.295    51.357    -0.273    -0.007    -0.009
+
+
+\subsection{acute}
+   testCase(np, "acute", G6(0.825,     1.000,    65.850,     0.611,     0.051,     0.825), true);
+\subsection{acute}
+Output:     0.825     1.000    65.850    -0.560    -0.051    -0.825
+Converged: YES
+Is Niggli reduced: YES
+Standard Niggli:        0.825     1.000    65.850     0.611     0.051     0.825
+Max difference: 1.65
+? 
+
+
+
+
+\subsection{testCase(np, "obtuse", G6(78.145, 6.409, 1.485, -6.169, -4.536, 8.971), true);}
+\subsection[obtuse]
+======================================================================
+Test: obtuse
+Input:     78.145     6.409     1.485     0.000     0.000     0.000
+
+======================================================================
+Test: Debug test
+Input:    78.145     6.409     1.485     0.000     0.000     0.000
+
+Initial Phase 1:
+Phase1: Pattern 111, applying M2, M1
+Phase1: Pattern 010, applying M2
+Phase1 complete after 3 iterations
+Phase1 complete after 2 iterations
+
+Iteration 0:     1.485     6.409    78.145     0.000     0.000     0.000
+Checking all boundaries:
+IsNiggli true
+g     1.485     6.409    78.145     0.000     0.000     0.000
+3 (6.409) 4 (0) 5 (0)
+Checking boundaries: 6/7 (6.409) 9/A (1.485) C/D (1.485)
+Checking boundaries: 8 (6.409)
+Checking boundaries: D' (0) 7' (0) A' (0) 8' (0) B' (0) E' (0)     CONVERGED
+
+Output:     1.485     6.409    78.145     0.000     0.000     0.000
+Converged: YES
+Is Niggli reduced: YES
+Standard Niggli:        1.485     6.409    78.145     0.000     0.000     0.000
+Max difference: 0
+? MATCH
+
+
+
+
+\end{document}

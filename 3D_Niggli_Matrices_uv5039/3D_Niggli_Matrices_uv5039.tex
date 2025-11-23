@@ -115,7 +115,7 @@
 \keyword{lattice}
 \keyword{reduction}
 \keyword{Niggli}
-
+\keyword{matrices}
 	\maketitle
 	\begin{abstract}
 		Niggli reduction finds the most compact unit cell of a 3-D lattice.  
@@ -124,10 +124,7 @@
 		
 	\end{abstract}
 	
-		\begin{synopsis}
 
-	\end{synopsis}
-	
 	\section{Introduction}
 	Niggli reduction~\cite{Niggli1928} finds the cell with the three shortest base vectors in a 3-D lattice. \citeasnoun{Gruber1973} published a compact algorithm using scalars that were
 	later described in the space \GVI{} \cite{Andrews2014}. Although effective, 
@@ -295,14 +292,21 @@ R6, and R7, respectively.)
 	
 \end{longtable}
 
-	
-\section{Synopsis}
+\ack{{\bf Acknowledgements}}
 
-Niggli reduction is formulated in terms of 6 scalars that formally are the components of space \GVI{}. Working in a
-higher dimensional space loses the 3-space transformations that
-are needed for reindexing reflection data and for changing
-the orientation of atomic structure. The matrices are listed
-here corresponding to each of the operations of Niggli reduction.
+Careful copy-editing and corrections by Frances C. Bernstein are 
+gratefully acknowledged. 
+	
+\section{Availability of code} Code for TransformationMatrices.h is available in github.com, in
+\url{https://github.com/duck10/LatticeRepLib.git}.
+	
+%\section{Synopsis}
+%
+%Niggli reduction is formulated in terms of 6 scalars that formally are the components of space \GVI{}. Working in a
+%higher dimensional space loses the 3-space transformations that
+%are needed for reindexing reflection data and for changing
+%the orientation of atomic structure. The matrices are listed
+%here corresponding to each of the operations of Niggli reduction.
 
 	\ack{{\bf Acknowledgements}}
 

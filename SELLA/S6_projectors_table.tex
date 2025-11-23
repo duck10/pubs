@@ -1,0 +1,348 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{landscape, margin=0.3in}
+
+\begin{document}
+	
+	\begin{table}[h!]
+		\centering
+		\tiny
+		\begin{tabular}{cc}
+			\toprule
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{C1 (cI)} - (rrr rrr) \\[0.3em]
+				$\begin{pmatrix}
+					1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 \\
+					1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 \\
+					1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 \\
+					1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 \\
+					1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 \\
+					1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6
+				\end{pmatrix}$
+			\end{minipage} &
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{T1 (tI)} - (rrr rrs) \\[0.3em]
+				$\begin{pmatrix}
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					0 & 0 & 1/2 & 0 & 0 & 1/2 \\
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					0 & 0 & 1/2 & 0 & 0 & 1/2
+				\end{pmatrix}$
+			\end{minipage} \\[2em]
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{C3 (cF)} - (rr0 rr0) \\[0.3em]
+				$\begin{pmatrix}
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0
+				\end{pmatrix}$
+			\end{minipage} &
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{T2 (tI)} - (rr0 rrs) \\[0.3em]
+				$\begin{pmatrix}
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} \\[2em]
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{C5 (cP)} - (000 rrr) \\[0.3em]
+				$\begin{pmatrix}
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 1/3 & 1/3 & 1/3 \\
+					0 & 0 & 0 & 1/3 & 1/3 & 1/3 \\
+					0 & 0 & 0 & 1/3 & 1/3 & 1/3
+				\end{pmatrix}$
+			\end{minipage} &
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{T5 (tP)} - (000 rrs) \\[0.3em]
+				$\begin{pmatrix}
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 1/2 & 1/2 & 0 \\
+					0 & 0 & 0 & 1/2 & 1/2 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} \\[2em]
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{H1 (hR)} - (rrr sss) \\[0.3em]
+				$\begin{pmatrix}
+					1/3 & 1/3 & 1/3 & 0 & 0 & 0 \\
+					1/3 & 1/3 & 1/3 & 0 & 0 & 0 \\
+					1/3 & 1/3 & 1/3 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 1/3 & 1/3 & 1/3 \\
+					0 & 0 & 0 & 1/3 & 1/3 & 1/3 \\
+					0 & 0 & 0 & 1/3 & 1/3 & 1/3
+				\end{pmatrix}$
+			\end{minipage} &
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{O1A (oF)} - (rrs rrt) \\[0.3em]
+				$\begin{pmatrix}
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					0 & 0 & 1 & 0 & 0 & 0 \\
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					1/4 & 1/4 & 0 & 1/4 & 1/4 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} \\[2em]
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{H3 (hR)} - (rr0 sr0) \\[0.3em]
+				$\begin{pmatrix}
+					1/4 & 1/4 & 0 & 0 & 1/4 & 0 \\
+					1/4 & 1/4 & 0 & 0 & 1/4 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 1 & 0 & 0 \\
+					1/4 & 1/4 & 0 & 0 & 1/4 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0
+				\end{pmatrix}$
+			\end{minipage} &
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{O1B (oI)} - (rst rst) \\[0.3em]
+				$\begin{pmatrix}
+					1/2 & 0 & 0 & 1/2 & 0 & 0 \\
+					0 & 1/2 & 0 & 0 & 1/2 & 0 \\
+					0 & 0 & 1/2 & 0 & 0 & 1/2 \\
+					1/2 & 0 & 0 & 1/2 & 0 & 0 \\
+					0 & 1/2 & 0 & 0 & 1/2 & 0 \\
+					0 & 0 & 1/2 & 0 & 0 & 1/2
+				\end{pmatrix}$
+			\end{minipage} \\[2em]
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{H4 (hP)} - (00r rrs) \\[0.3em]
+				$\begin{pmatrix}
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 1/3 & 1/3 & 1/3 & 0 \\
+					0 & 0 & 1/3 & 1/3 & 1/3 & 0 \\
+					0 & 0 & 1/3 & 1/3 & 1/3 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} &
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{O2 (oI)} - (rs0 srt) \\[0.3em]
+				$\begin{pmatrix}
+					1/2 & 0 & 0 & 0 & 1/2 & 0 \\
+					0 & 1/2 & 0 & 1/2 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 1/2 & 0 & 1/2 & 0 & 0 \\
+					1/2 & 0 & 0 & 0 & 1/2 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} \\
+			
+			\bottomrule
+		\end{tabular}
+		\caption{S6 Projectors for the 24 Delone Types (Part 1 of 2)}
+		\label{tab:s6_projectors_part1}
+	\end{table}
+	
+	\newpage
+	
+	\begin{table}[h!]
+		\centering
+		\tiny
+		\begin{tabular}{cc}
+			\toprule
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{O3 (oI)} - (rs0 rs0) \\[0.3em]
+				$\begin{pmatrix}
+					1/2 & 0 & 0 & 1/2 & 0 & 0 \\
+					0 & 1/2 & 0 & 0 & 1/2 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					1/2 & 0 & 0 & 1/2 & 0 & 0 \\
+					0 & 1/2 & 0 & 0 & 1/2 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0
+				\end{pmatrix}$
+			\end{minipage} &
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{M1A (mC)} - (rrs ttu) \\[0.3em]
+				$\begin{pmatrix}
+					1/2 & 1/2 & 0 & 0 & 0 & 0 \\
+					1/2 & 1/2 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 1 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 1/2 & 1/2 & 0 \\
+					0 & 0 & 0 & 1/2 & 1/2 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} \\[2em]
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{O4 (oS)} - (00r sst) \\[0.3em]
+				$\begin{pmatrix}
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 1 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 1/2 & 1/2 & 0 \\
+					0 & 0 & 0 & 1/2 & 1/2 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} &
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{M1B (mC)} - (rst rsu) \\[0.3em]
+				$\begin{pmatrix}
+					1/2 & 0 & 0 & 1/2 & 0 & 0 \\
+					0 & 1/2 & 0 & 0 & 1/2 & 0 \\
+					0 & 0 & 1 & 0 & 0 & 0 \\
+					1/2 & 0 & 0 & 1/2 & 0 & 0 \\
+					0 & 1/2 & 0 & 0 & 1/2 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} \\[2em]
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{O5 (oP)} - (000 rst) \\[0.3em]
+				$\begin{pmatrix}
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 1 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 1 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} &
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{M2A (mC)} - (rs0 stu) \\[0.3em]
+				$\begin{pmatrix}
+					1 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 1/2 & 0 & 1/2 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 1/2 & 0 & 1/2 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 1 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} \\[2em]
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{M2B (mC)} - (rs0 rst) \\[0.3em]
+				$\begin{pmatrix}
+					1/2 & 0 & 0 & 1/2 & 0 & 0 \\
+					0 & 1/2 & 0 & 0 & 1/2 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					1/2 & 0 & 0 & 1/2 & 0 & 0 \\
+					0 & 1/2 & 0 & 0 & 1/2 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} &
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{M3 (mC)} - (rs0 ts0) \\[0.3em]
+				$\begin{pmatrix}
+					1 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 1/2 & 0 & 0 & 1/2 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 1 & 0 & 0 \\
+					0 & 1/2 & 0 & 0 & 1/2 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0
+				\end{pmatrix}$
+			\end{minipage} \\[2em]
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{M4 (mP)} - (00r stu) \\[0.3em]
+				$\begin{pmatrix}
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 1 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 1 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 1 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} &
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{A1 (aP)} - (rst uvw) \\[0.3em]
+				$\begin{pmatrix}
+					1 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 1 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 1 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 1 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 1 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} \\[2em]
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{A2 (aP)} - (rs0 tuv) \\[0.3em]
+				$\begin{pmatrix}
+					1 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 1 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 1 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 1 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 1
+				\end{pmatrix}$
+			\end{minipage} &
+			
+			\begin{minipage}[t]{0.45\textwidth}
+				\centering
+				\textbf{A3 (aP)} - (rs0 tu0) \\[0.3em]
+				$\begin{pmatrix}
+					1 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 1 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0 \\
+					0 & 0 & 0 & 1 & 0 & 0 \\
+					0 & 0 & 0 & 0 & 1 & 0 \\
+					0 & 0 & 0 & 0 & 0 & 0
+				\end{pmatrix}$
+			\end{minipage} \\
+			
+			\bottomrule
+		\end{tabular}
+		\caption{S6 Projectors for the 24 Delone Types (Part 2 of 2)}
+		\label{tab:s6_projectors_part2}
+	\end{table}
+	
+\end{document}

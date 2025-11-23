@@ -1,0 +1,231 @@
+
+cpp
+#include <vector>
+#include <cmath>
+#include <algorithm>
+#include <limits>
+
+double GetDimEstimate(const double requestedPrecision)
+{
+    // Ensure any pending insertions are completed
+    const_cast<CNearTree*>(this)->CompleteDelayedInsert();
+    
+    // Return cached result if it meets precision requirements
+    if (m_DimEstimate == std::numeric_limits<double>::max()) {
+        return 0.0;
+    }
+    
+    if (m_DimEstimate > 0.0 && 
+        (m_DimEstimateEsd <= requestedPrecision || requestedPrecision <= 0.0)) {
+        return m_DimEstimate;
+    }
+    
+    // Validate minimum requirements
+    const size_t dataSize = m_ObjectStore.size();
+    const double diameter = static_cast<double>(m_DiamEstimate);
+    
+    if (dataSize < 32 || diameter < std::numeric_limits<double>::epsilon()) {
+        m_DimEstimate = std::numeric_limits<double>::max();
+        m_DimEstimateEsd = std::numeric_limits<double>::max();
+        return 0.0;
+    }
+    
+    // Calculate adaptive target radius
+    const double meanSpacing = m_SumSpacings / DistanceType(1 + dataSize);
+    const double pointDensity = static_cast<double>(dataSize) / diameter;
+    const double minRadius = meanSpacing * 10.0;
+    const double maxRadius = diameter / 1.1;
+    
+    double targetRadius = 4096.0 / pointDensity;
+    targetRadius = std::max(targetRadius, minRadius);
+    targetRadius = std::min(targetRadius, maxRadius);
+    
+    // Adaptively shrink radius to find sphere with reasonable point count
+    const size_t targetPopulation = 256;
+    const size_t populationTolerance = 10;
+    double shrinkFactor = 4.0;
+    
+    std::vector<T> spherePointsLarge;
+    std::vector<T> spherePointsSmall;
+    spherePointsLarge.reserve(targetPopulation * 2);
+    spherePointsSmall.reserve(targetPopulation * 2);
+    
+    // Initial probe for radius adjustment
+    size_t probeIndex = static_cast<size_t>((dataSize - 1) * rhr.urand());
+    rhr.urand(); // Advance RNG state
+    rhr.urand();
+    T probe = m_ObjectStore[probeIndex];
+    
+    long previousPopulation = FindInSphere(
+        static_cast<DistanceType>(targetRadius / shrinkFactor),
+        spherePointsLarge,
+        probe
+    );
+    
+    long currentPopulation = previousPopulation;
+    
+    // Iteratively adjust radius
+    while (currentPopulation < targetPopulation && 
+           shrinkFactor > 1.0 && 
+           currentPopulation <= previousPopulation + populationTolerance) {
+        shrinkFactor /= 1.1;
+        previousPopulation = currentPopulation;
+        currentPopulation = FindInSphere(
+            static_cast<DistanceType>(targetRadius / shrinkFactor),
+            spherePointsLarge,
+            probe
+        );
+        
+        probeIndex = static_cast<size_t>((dataSize - 1) * rhr.urand());
+        rhr.urand();
+        rhr.urand();
+        probe = m_ObjectStore[probeIndex];
+    }
+    
+    targetRadius = (targetRadius / shrinkFactor) * 1.1;
+    
+    // Monte Carlo sampling for dimension estimation
+    const size_t numTrials = std::max(static_cast<size_t>(std::sqrt(0.5 + dataSize)), 10UL);
+    const double radiusRatio = 1.1;
+    const double smallRadius = targetRadius / radiusRatio;
+    const double logRatio = std::log(radiusRatio);
+    
+    long successfulTrials = 0;
+    double sumDimension = 0.0;
+    double sumDimensionSquared = 0.0;
+    
+    const double varianceThreshold = (requestedPrecision <= 0.0) ? 
+        0.01 : (requestedPrecision * requestedPrecision);
+    
+    for (size_t trial = 0; trial < numTrials; ++trial) {
+        probeIndex = static_cast<size_t>((dataSize - 1) * rhr.urand());
+        rhr.urand();
+        rhr.urand();
+        probe = m_ObjectStore[probeIndex];
+        
+        const long populationLarge = FindInSphere(
+            static_cast<DistanceType>(targetRadius),
+            spherePointsLarge,
+            probe
+        );
+        
+        const long populationSmall = FindInSphere(
+            static_cast<DistanceType>(smallRadius),
+            spherePointsSmall,
+            probe
+        );
+        
+        // Valid trial requires positive populations with proper scaling
+        if (populationLarge > 0 && populationSmall > 0 && populationSmall < populationLarge) {
+            const double populationRatio = static_cast<double>(populationLarge) / 
+                                          static_cast<double>(populationSmall);
+            const double dimensionEstimate = std::log(populationRatio) / logRatio;
+            
+            sumDimension += dimensionEstimate;
+            sumDimensionSquared += dimensionEstimate * dimensionEstimate;
+            ++successfulTrials;
+            
+            // Early termination if sufficient precision achieved
+            if (successfulTrials > static_cast<long>(numTrials) / 2) {
+                const double meanDim = sumDimension / successfulTrials;
+                const double variance = (sumDimensionSquared / successfulTrials) - 
+                                       (meanDim * meanDim);
+                
+                if (std::fabs(variance) <= varianceThreshold) {
+                    break;
+                }
+            }
+        }
+    }
+    
+    // Validate and cache results
+    if (successfulTrials < 1) {
+        m_DimEstimate = std::numeric_limits<double>::max();
+        m_DimEstimateEsd = std::numeric_limits<double>::max();
+        return 0.0;
+    }
+    
+    m_DimEstimate = sumDimension / static_cast<double>(successfulTrials);
+    
+    const double variance = (sumDimensionSquared / static_cast<double>(successfulTrials)) - 
+                           (m_DimEstimate * m_DimEstimate);
+    m_DimEstimateEsd = std::sqrt(std::fabs(variance));
+    
+    // Reject physically meaningless results
+    if (m_DimEstimate + 3.0 * m_DimEstimateEsd < 0.0) {
+        m_DimEstimate = std::numeric_limits<double>::max();
+        m_DimEstimateEsd = std::numeric_limits<double>::max();
+        return 0.0;
+    }
+    
+    return m_DimEstimate;
+}
+Key Improvements
+Const correctness: Uses std::numeric_limits<double>::max() and epsilon() instead of macros
+Named constants: Replaces magic numbers with descriptive variables (targetPopulation, radiusRatio, etc.)
+Type safety: Explicit casts with clear intent, proper use of size_t and long
+Readability: Meaningful variable names (requestedPrecision vs DimEstimateEsd, populationLarge vs poplarge)
+Memory efficiency: Reserve space for vectors upfront
+Modern C++: Uses std::max, std::min, std::fabs from <algorithm> and <cmath>
+Reduced duplication: Computes logRatio and smallRadius once before loop
+Clearer logic: Explicitly named intermediate values for variance calculations
+Initialization: All variables initialized at declaration point
+Comments: Strategic comments explain algorithm sections without cluttering code
+I want to publish a article about Hausdorff dimensions of a set of crystal unit cells. Write the text explaining Hausdorff dimension and the method of estimating it (for publication).
+
+Hausdorff Dimension of Crystallographic Lattices
+Introduction to Hausdorff Dimension
+The Hausdorff dimension provides a rigorous mathematical framework for characterizing the geometric complexity of point sets in metric spaces, extending beyond the integer dimensions of classical Euclidean geometry. For a set S in ℝ^n^, the Hausdorff dimension dH quantifies how the "mass" (or number of points) scales with the radius of measurement. Unlike topological dimension, which is always an integer, Hausdorff dimension can take non-integer values, making it particularly useful for characterizing fractal-like distributions and irregular point configurations.
+
+For crystallographic applications, the Hausdorff dimension characterizes how unit cell parameters populate the abstract lattice representation spaces (G6, S6, etc.). While individual crystal structures occupy discrete points, collections of related structures—such as those within a Bravais lattice type, space group, or structural family—form point clouds whose dimensional properties reflect the underlying constraints and symmetries of the crystallographic system.
+
+Theoretical Foundation
+The formal definition of Hausdorff dimension relies on δ-covers of a set S. For radius δ > 0, a δ-cover is a collection of sets {Ui} with diameter(Ui) ≤ δ that covers S. The d-dimensional Hausdorff measure is defined as:
+
+H^d^(S) = limδ→0 inf { Σi (diam(Ui))^d^ : {Ui} is a δ-cover of S }
+
+The Hausdorff dimension is then:
+
+dH = inf { d : H^d^(S) = 0 } = sup { d : H^d^(S) = ∞ }
+
+For practical computation with finite point sets, we employ the box-counting dimension, which converges to the Hausdorff dimension for many well-behaved sets. The box-counting dimension exploits the power-law scaling relationship:
+
+N(r) ∝ r^−d^
+
+where N(r) represents the number of points (or boxes) needed to cover the set at scale r.
+
+Computational Method
+Our algorithm estimates the local Hausdorff dimension through an adaptive spherical box-counting method with Monte Carlo sampling. The approach addresses several practical challenges inherent in analyzing finite crystallographic datasets: heterogeneous point distributions, varying local densities, and the need for statistically robust estimates.
+
+Adaptive Radius Selection
+The algorithm begins by determining an appropriate measurement scale. Given a point cloud of N structures in a representation space with estimated diameter D, we compute the mean nearest-neighbor spacing μ and point density ρ = N/D. An initial target radius rtarget is selected to capture approximately 4096 points in one dimension:
+
+rtarget = 4096/ρ
+
+This radius is constrained to the range [10μ, D/1.1] to ensure statistically meaningful measurements while avoiding boundary effects.
+
+To refine rtarget for the actual data distribution, we iteratively shrink the radius by factors of 1.1 until identifying a sphere containing 256–266 points around a randomly selected probe structure. This adaptive procedure ensures sufficient local sampling regardless of the global distribution characteristics.
+
+Monte Carlo Dimension Estimation
+The dimension is estimated through repeated measurements at randomly selected probe points. For each trial, we:
+
+Select a random structure p from the dataset as probe center
+Count points within radius r: Nlarge = |{x : d(x, p) ≤ r}|
+Count points within radius r/1.1: Nsmall = |{x : d(x, p) ≤ r/1.1}|
+Compute local dimension estimate: dest = ln(Nlarge/Nsmall) / ln(1.1)
+The number of trials is set to √N with a minimum of 10, providing a balance between computational efficiency and statistical reliability. Trials where Nsmall ≥ Nlarge are rejected as non-physical (indicating insufficient local point density).
+
+Statistical Analysis and Convergence
+The algorithm accumulates the mean dimension ⟨d⟩ and variance σ^2^ across successful trials. Early termination occurs when at least half the trials have succeeded and the standard error satisfies:
+
+σ^2^ ≤ ε^2^
+
+where ε is the requested precision. The final estimate is reported as dH ± σ, with physically meaningless results (dH + 3σ < 0) rejected.
+
+Implementation Considerations
+The method requires minimum 32 structures and non-trivial diameter (> machine epsilon) for meaningful estimation. For crystallographic datasets, the distance metric d(x, y) is typically the NCDist (Niggli cell distance) or CS6Dist (Selling-reduced cell distance), ensuring the dimension measurement respects crystallographic equivalence and reduction conventions.
+
+Cached results are returned when previous estimates meet the requested precision, avoiding redundant computation during iterative analyses. The algorithm's robustness derives from its adaptive scaling, Monte Carlo sampling strategy, and explicit validation of statistical convergence.
+
+Applications to Crystallographic Analysis
+The Hausdorff dimension provides quantitative insight into the geometric organization of crystal structure families. Low-dimensional manifolds (dH ≈ 1–2) within 6-dimensional lattice spaces indicate strong geometric constraints, such as those arising from coordination chemistry or packing efficiency. Higher dimensions suggest greater structural diversity or weaker systematic relationships. Comparison of Hausdorff dimensions across different structural classifications (space groups, composition families, structure types) reveals the relative geometric complexity and constraint hierarchy within crystallographic databases.

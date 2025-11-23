@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="900" height="700" xmlns="http://www.w3.org/2000/svg">
+  <g id="title" transform="translate(0,0)">
+  <text x="450" y="20" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">SELLA Lattice Fit Analysis</text>
+  <text x="450" y="40" text-anchor="middle" font-family="Arial" font-size="16">p 19.26 63.8825 27.2394 5.7696 19.4709 17.2952</text>
+  </g>
+  <g id="delonePlot" transform="translate(100,80)">
+  <rect fill="#FFFFFF" height="200" stroke="#333333" stroke-width="1" width="375" x="0" y="0" />
+  <text fill="#000000" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" x="187" y="-20">Delone Types (Sorted by Fit Value)</text>
+  <text x="-60" y="100" transform="rotate(-90,-60,100)" text-anchor="middle" font-family="Arial" font-size="14">Fit Value</text>
+  <text fill="#000000" font-family="Arial" font-size="14" font-weight="normal" text-anchor="middle" x="187" y="235">Types (sorted by fit value)</text>
+  <line stroke="#DDDDDD" stroke-width="1" x1="0" x2="375" y1="200" y2="200" />
+  <text fill="#000000" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="-5" y="205">0</text>
+  <line stroke="#DDDDDD" stroke-width="1" x1="0" x2="375" y1="146" y2="146" />
+  <text fill="#000000" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="-5" y="151">1.000</text>
+  <line stroke="#DDDDDD" stroke-width="1" x1="0" x2="375" y1="92" y2="92" />
+  <text fill="#000000" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="-5" y="97">10.0</text>
+  <line stroke="#DDDDDD" stroke-width="1" x1="0" x2="375" y1="26" y2="26" />
+  <text fill="#000000" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="-5" y="31">50.0</text>
+  <line stroke="#DDDDDD" stroke-width="1" x1="0" x2="375" y1="0" y2="0" />
+  <text fill="#000000" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="-5" y="5">80.0</text>
+  <line stroke="#00CC00" stroke-dasharray="5,3" stroke-width="1" x1="0" x2="375" y1="99" y2="99" />
+  <text fill="#00CC00" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="370" y="94">0.1% (8.149361)</text>
+  <line stroke="#FF6600" stroke-dasharray="5,3" stroke-width="1" x1="0" x2="375" y1="0" y2="0" />
+  <text fill="#FF6600" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="370" y="-5">1% (81.493613)</text>
+  <line stroke="#CC0000" stroke-dasharray="5,3" stroke-width="1" x1="0" x2="375" y1="0" y2="0" />
+
+  <polyline fill="none" points="10,200 25.4348,187.668 40.8696,183.704 56.3043,180.48 71.7391,180.313 87.1739,180.018 102.609,179.896 118.043,179.798 133.478,179.79 148.913,178.152 164.348,178.003 179.783,177.377 195.217,177.373 210.652,177.064 226.087,177.056 241.522,176.067 256.957,14.7411 272.391,14.7411 287.826,14.7411 303.261,14.7411 318.696,14.7411 334.13,6.59143 349.565,6.59143 365,0 " stroke="#56B4E9" stroke-width="2" />
+  <circle cx="10" cy="200" fill="#56B4E9" r="4" />
+  <title>A1: 0.000</title>
+  <text x="10.000" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,10.000,215)">A1</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="10" x2="10" y1="200" y2="200" />
+  <circle cx="25" cy="187" fill="#56B4E9" r="4" />
+  <title>M1B: 0.007</title>
+  <text x="25.435" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,25.435,215)">M1B</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="25" x2="25" y1="187" y2="200" />
+  <circle cx="40" cy="183" fill="#56B4E9" r="4" />
+  <title>O1B: 0.019</title>
+  <text x="40.870" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,40.870,215)">O1B</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="40" x2="40" y1="183" y2="200" />
+  <circle cx="56" cy="180" fill="#56B4E9" r="4" />
+  <title>A2: 0.034</title>
+  <text x="56.304" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,56.304,215)">A2</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="56" x2="56" y1="180" y2="200" />
+  <circle cx="71" cy="180" fill="#56B4E9" r="4" />
+  <title>M1A: 0.035</title>
+  <text x="71.739" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,71.739,215)">M1A</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="71" x2="71" y1="180" y2="200" />
+  <circle cx="87" cy="180" fill="#56B4E9" r="4" />
+  <title>M2A: 0.037</title>
+  <text x="87.174" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,87.174,215)">M2A</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="87" x2="87" y1="180" y2="200" />
+  <circle cx="102" cy="179" fill="#56B4E9" r="4" />
+  <title>O1A: 0.038</title>
+  <text x="102.609" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,102.609,215)">O1A</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="102" x2="102" y1="179" y2="200" />
+  <circle cx="118" cy="179" fill="#56B4E9" r="4" />
+  <title>M2B: 0.038</title>
+  <text x="118.043" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,118.043,215)">M2B</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="118" x2="118" y1="179" y2="200" />
+  <circle cx="133" cy="179" fill="#56B4E9" r="4" />
+  <title>T1: 0.038</title>
+  <text x="133.478" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,133.478,215)">T1</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="133" x2="133" y1="179" y2="200" />
+  <circle cx="148" cy="178" fill="#56B4E9" r="4" />
+  <title>O2: 0.050</title>
+  <text x="148.913" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,148.913,215)">O2</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="148" x2="148" y1="178" y2="200" />
+  <circle cx="164" cy="178" fill="#56B4E9" r="4" />
+  <title>T2: 0.051</title>
+  <text x="164.348" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,164.348,215)">T2</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="164" x2="164" y1="178" y2="200" />
+  <circle cx="179" cy="177" fill="#56B4E9" r="4" />
+  <title>A3: 0.056</title>
+  <text x="179.783" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,179.783,215)">A3</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="179" x2="179" y1="177" y2="200" />
+  <circle cx="195" cy="177" fill="#56B4E9" r="4" />
+  <title>M3: 0.056</title>
+  <text x="195.217" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,195.217,215)">M3</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="195" x2="195" y1="177" y2="200" />
+  <circle cx="210" cy="177" fill="#56B4E9" r="4" />
+  <title>O3: 0.058</title>
+  <text x="210.652" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,210.652,215)">O3</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="210" x2="210" y1="177" y2="200" />
+  <circle cx="226" cy="177" fill="#56B4E9" r="4" />
+  <title>R3: 0.059</title>
+  <text x="226.087" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,226.087,215)">R3</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="226" x2="226" y1="177" y2="200" />
+  <circle cx="241" cy="176" fill="#56B4E9" r="4" />
+  <title>C3: 0.067</title>
+  <text x="241.522" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,241.522,215)">C3</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="241" x2="241" y1="176" y2="200" />
+  <circle cx="256" cy="14" fill="#56B4E9" r="4" />
+  <title>M4: 61.80</title>
+  <text x="256.96" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,256.96,215)">M4</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="256" x2="256" y1="14" y2="200" />
+  <circle cx="272" cy="14" fill="#56B4E9" r="4" />
+  <title>O4: 61.80</title>
+  <text x="272.39" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,272.39,215)">O4</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="272" x2="272" y1="14" y2="200" />
+  <circle cx="287" cy="14" fill="#56B4E9" r="4" />
+  <title>O5: 61.80</title>
+  <text x="287.83" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,287.83,215)">O5</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="287" x2="287" y1="14" y2="200" />
+  <circle cx="303" cy="14" fill="#56B4E9" r="4" />
+  <title>T5: 61.80</title>
+  <text x="303.26" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,303.26,215)">T5</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="303" x2="303" y1="14" y2="200" />
+  <circle cx="318" cy="14" fill="#56B4E9" r="4" />
+  <title>C5: 61.80</title>
+  <text x="318.70" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,318.70,215)">C5</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="318" x2="318" y1="14" y2="200" />
+  <circle cx="334" cy="6" fill="#56B4E9" r="4" />
+  <title>R1: 71.33</title>
+  <text x="334.13" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,334.13,215)">R1</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="334" x2="334" y1="6" y2="200" />
+  <circle cx="349" cy="6" fill="#56B4E9" r="4" />
+  <title>C1: 71.33</title>
+  <text x="349.57" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,349.57,215)">C1</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="349" x2="349" y1="6" y2="200" />
+  <circle cx="365" cy="0" fill="#56B4E9" r="4" />
+  <title>H4: 79.76</title>
+  <text x="365.00" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,365.00,215)">H4</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="365" x2="365" y1="0" y2="200" />
+  </g>
+  <g id="pearsonPlot" transform="translate(100,400)">
+  <rect fill="#FFFFFF" height="200" stroke="#333333" stroke-width="1" width="375" x="0" y="0" />
+  <text fill="#000000" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" x="187" y="-20">Pearson Types (Sorted by Fit Value)</text>
+  <text x="-60" y="100" transform="rotate(-90,-60,100)" text-anchor="middle" font-family="Arial" font-size="14">Fit Value</text>
+  <text fill="#000000" font-family="Arial" font-size="14" font-weight="normal" text-anchor="middle" x="187" y="235">Types (sorted by fit value)</text>
+  <line stroke="#DDDDDD" stroke-width="1" x1="0" x2="375" y1="200" y2="200" />
+  <text fill="#000000" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="-5" y="205">0</text>
+  <line stroke="#DDDDDD" stroke-width="1" x1="0" x2="375" y1="146" y2="146" />
+  <text fill="#000000" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="-5" y="151">1.000</text>
+  <line stroke="#DDDDDD" stroke-width="1" x1="0" x2="375" y1="92" y2="92" />
+  <text fill="#000000" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="-5" y="97">10.0</text>
+  <line stroke="#DDDDDD" stroke-width="1" x1="0" x2="375" y1="26" y2="26" />
+  <text fill="#000000" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="-5" y="31">50.0</text>
+  <line stroke="#DDDDDD" stroke-width="1" x1="0" x2="375" y1="0" y2="0" />
+  <text fill="#000000" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="-5" y="5">80.0</text>
+  <line stroke="#00CC00" stroke-dasharray="5,3" stroke-width="1" x1="0" x2="375" y1="99" y2="99" />
+  <text fill="#00CC00" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="370" y="94">0.1% (8.149361)</text>
+  <line stroke="#FF6600" stroke-dasharray="5,3" stroke-width="1" x1="0" x2="375" y1="0" y2="0" />
+  <text fill="#FF6600" font-family="Arial" font-size="12" font-weight="normal" text-anchor="end" x="370" y="-5">1% (81.493613)</text>
+  <line stroke="#CC0000" stroke-dasharray="5,3" stroke-width="1" x1="0" x2="375" y1="0" y2="0" />
+
+  <polyline fill="none" points="10,200 37.3077,187.668 64.6154,183.704 91.9231,179.896 119.231,179.79 146.538,177.056 173.846,176.067 201.154,14.7411 228.462,14.7411 255.769,14.7411 283.077,14.7411 310.385,14.7411 337.692,6.59143 365,0 " stroke="#E69F00" stroke-width="2" />
+  <circle cx="10" cy="200" fill="#E69F00" r="4" />
+  <title>aP: 0.000</title>
+  <text x="10.000" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,10.000,215)">aP</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="10" x2="10" y1="200" y2="200" />
+  <circle cx="37" cy="187" fill="#E69F00" r="4" />
+  <title>mC: 0.007</title>
+  <text x="37.308" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,37.308,215)">mC</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="37" x2="37" y1="187" y2="200" />
+  <circle cx="64" cy="183" fill="#E69F00" r="4" />
+  <title>oI: 0.019</title>
+  <text x="64.615" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,64.615,215)">oI</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="64" x2="64" y1="183" y2="200" />
+  <circle cx="91" cy="179" fill="#E69F00" r="4" />
+  <title>oF: 0.038</title>
+  <text x="91.923" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,91.923,215)">oF</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="91" x2="91" y1="179" y2="200" />
+  <circle cx="119" cy="179" fill="#E69F00" r="4" />
+  <title>tI: 0.038</title>
+  <text x="119.231" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,119.231,215)">tI</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="119" x2="119" y1="179" y2="200" />
+  <circle cx="146" cy="177" fill="#E69F00" r="4" />
+  <title>hR: 0.059</title>
+  <text x="146.538" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,146.538,215)">hR</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="146" x2="146" y1="177" y2="200" />
+  <circle cx="173" cy="176" fill="#E69F00" r="4" />
+  <title>cF: 0.067</title>
+  <text x="173.846" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,173.846,215)">cF</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="173" x2="173" y1="176" y2="200" />
+  <circle cx="201" cy="14" fill="#E69F00" r="4" />
+  <title>mP: 61.80</title>
+  <text x="201.15" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,201.15,215)">mP</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="201" x2="201" y1="14" y2="200" />
+  <circle cx="228" cy="14" fill="#E69F00" r="4" />
+  <title>oC: 61.80</title>
+  <text x="228.46" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,228.46,215)">oC</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="228" x2="228" y1="14" y2="200" />
+  <circle cx="255" cy="14" fill="#E69F00" r="4" />
+  <title>oP: 61.80</title>
+  <text x="255.77" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,255.77,215)">oP</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="255" x2="255" y1="14" y2="200" />
+  <circle cx="283" cy="14" fill="#E69F00" r="4" />
+  <title>tP: 61.80</title>
+  <text x="283.08" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,283.08,215)">tP</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="283" x2="283" y1="14" y2="200" />
+  <circle cx="310" cy="14" fill="#E69F00" r="4" />
+  <title>cP: 61.80</title>
+  <text x="310.38" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,310.38,215)">cP</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="310" x2="310" y1="14" y2="200" />
+  <circle cx="337" cy="6" fill="#E69F00" r="4" />
+  <title>cI: 71.33</title>
+  <text x="337.69" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,337.69,215)">cI</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="337" x2="337" y1="6" y2="200" />
+  <circle cx="365" cy="0" fill="#E69F00" r="4" />
+  <title>hP: 79.76</title>
+  <text x="365.00" y="215" text-anchor="middle" font-family="Arial" font-size="10" transform="rotate(45,365.00,215)">hP</text>
+  <line stroke="#DDDDDD" stroke-dasharray="2,2" stroke-width="1" x1="365" x2="365" y1="0" y2="200" />
+  </g>
+  <g id="fitList" transform="translate(515,80)">
+  <text x="0" y="-20" font-family="Arial" font-size="16" font-weight="bold">Delone Types by Pearson Type</text>
+  <g id="leftFitColumn" transform="translate(0,0)">
+  <text x="0" y="0" font-family="Arial" font-size="14" font-weight="bold">aP (0.000)</text>
+  <text x="20" y="20" font-family="Arial" font-size="12">A1: 0.000</text>
+  <text x="20" y="38" font-family="Arial" font-size="12">A2: 0.034</text>
+  <text x="20" y="56" font-family="Arial" font-size="12">A3: 0.056</text>
+  <text x="0" y="79" font-family="Arial" font-size="14" font-weight="bold">mC (0.007)</text>
+  <text x="20" y="99" font-family="Arial" font-size="12">M1A: 0.035</text>
+  <text x="20" y="117" font-family="Arial" font-size="12">M1B: 0.007</text>
+  <text x="20" y="135" font-family="Arial" font-size="12">M2B: 0.038</text>
+  <text x="20" y="153" font-family="Arial" font-size="12">M2A: 0.037</text>
+  <text x="20" y="171" font-family="Arial" font-size="12">M3: 0.056</text>
+  <text x="0" y="194" font-family="Arial" font-size="14" font-weight="bold">oI (0.019)</text>
+  <text x="20" y="214" font-family="Arial" font-size="12">O1B: 0.019</text>
+  <text x="20" y="232" font-family="Arial" font-size="12">O2: 0.050</text>
+  <text x="20" y="250" font-family="Arial" font-size="12">O3: 0.058</text>
+  <text x="0" y="273" font-family="Arial" font-size="14" font-weight="bold">oF (0.038)</text>
+  <text x="20" y="293" font-family="Arial" font-size="12">O1A: 0.038</text>
+  <text x="0" y="316" font-family="Arial" font-size="14" font-weight="bold">tI (0.038)</text>
+  <text x="20" y="336" font-family="Arial" font-size="12">T1: 0.038</text>
+  <text x="20" y="354" font-family="Arial" font-size="12">T2: 0.051</text>
+  </g>
+  <g id="rightFitColumn" transform="translate(160,0)">
+  <text x="0" y="0" font-family="Arial" font-size="14" font-weight="bold">hR (0.059)</text>
+  <text x="20" y="20" font-family="Arial" font-size="12">R1: 71.33</text>
+  <text x="20" y="38" font-family="Arial" font-size="12">R3: 0.059</text>
+  <text x="0" y="61" font-family="Arial" font-size="14" font-weight="bold">cF (0.067)</text>
+  <text x="20" y="81" font-family="Arial" font-size="12">C3: 0.067</text>
+  <text x="0" y="104" font-family="Arial" font-size="14" font-weight="bold">mP (61.80)</text>
+  <text x="20" y="124" font-family="Arial" font-size="12">M4: 61.80</text>
+  <text x="0" y="147" font-family="Arial" font-size="14" font-weight="bold">oC (61.80)</text>
+  <text x="20" y="167" font-family="Arial" font-size="12">O4: 61.80</text>
+  <text x="0" y="190" font-family="Arial" font-size="14" font-weight="bold">oP (61.80)</text>
+  <text x="20" y="210" font-family="Arial" font-size="12">O5: 61.80</text>
+  <text x="0" y="233" font-family="Arial" font-size="14" font-weight="bold">tP (61.80)</text>
+  <text x="20" y="253" font-family="Arial" font-size="12">T5: 61.80</text>
+  <text x="0" y="276" font-family="Arial" font-size="14" font-weight="bold">cP (61.80)</text>
+  <text x="20" y="296" font-family="Arial" font-size="12">C5: 61.80</text>
+  <text x="0" y="319" font-family="Arial" font-size="14" font-weight="bold">cI (71.33)</text>
+  <text x="20" y="339" font-family="Arial" font-size="12">C1: 71.33</text>
+  <text x="0" y="362" font-family="Arial" font-size="14" font-weight="bold">hP (79.76)</text>
+  <text x="20" y="382" font-family="Arial" font-size="12">H4: 79.76</text>
+  </g>
+  </g>
+  <g id="legend" transform="translate(515,460)">
+  <text x="0" y="0" font-family="Arial" font-size="14" font-weight="bold">Legend</text>
+  <text x="0" y="25" font-family="Arial" font-size="12">Reference Lines:</text>
+  <line x1="20" y1="40" x2="50" y2="40" stroke="#00CC00" stroke-width="1" stroke-dasharray="5,3" />
+  <text x="60" y="45" font-family="Arial" font-size="12">0.1% of S6 norm</text>
+  <line x1="20" y1="60" x2="50" y2="60" stroke="#FF6600" stroke-width="1" stroke-dasharray="5,3" />
+  <text x="60" y="65" font-family="Arial" font-size="12">1% of S6 norm</text>
+
+  <text x="0" y="105" font-family="Arial" font-size="12">Plot Lines:</text>
+  <line x1="20" y1="120" x2="50" y2="120" stroke="#56B4E9" stroke-width="2" />
+  <text x="60" y="125" font-family="Arial" font-size="12">Delone types</text>
+  <line x1="20" y1="140" x2="50" y2="140" stroke="#E69F00" stroke-width="2" />
+  <text x="60" y="145" font-family="Arial" font-size="12">Pearson types</text>
+  <text x="0" y="165" font-family="Arial" font-size="12" font-style="italic">Lower fit values indicate better matches</text>
+  <text x="0" y="185" font-family="Arial" font-size="12" fill="#666666">Y-axis uses logarithmic compression</text>
+  <text x="0" y="205" font-family="Arial" font-size="12" fill="#666666">to emphasize small values</text>
+  </g>
+  <g id="footer" transform="translate(0,660)">
+  <text x="300" y="15" text-anchor="middle" font-family="Arial" font-size="12" fill="#666666">Created by SELLA - 2025-09-18</text>
+  </g>
+</svg>

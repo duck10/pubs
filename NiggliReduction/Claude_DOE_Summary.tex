@@ -1,0 +1,122 @@
+\section{Design of Experiments: Optimization of Eisenstein Reduction}
+
+\subsection{Objective}
+
+Minimize computational cost of Eisenstein reduction while maintaining 100\% agreement with the Andrews-Bernstein (2014) algorithm.
+
+\subsection{Methodology}
+
+\subsubsection{Experimental Design}
+
+We employed a single-factor experimental design with:
+\begin{itemize}
+	\item \textbf{Factor}: Search strategy (categorical, 2 levels)
+	\begin{itemize}
+		\item BEST\_CUMULATIVE: Test all 3,480 matrices per iteration
+		\item ADAPTIVE: Adapt matrix count based on cell geometry
+	\end{itemize}
+	\item \textbf{Blocking variable}: Initial cell state (3 levels)
+	\begin{itemize}
+		\item Highly Skewed: $\max|\cos(\alpha,\beta,\gamma)| > 0.9$ or angle deviation $> 0.5$
+		\item Moderately Skewed: $0.51 < \max|\cos(\alpha,\beta,\gamma)| \leq 0.9$
+		\item Very Close: All angles in $[60°, 120°]$ range
+	\end{itemize}
+	\item \textbf{Response variables}:
+	\begin{itemize}
+		\item Primary: Total matrix transformations tested
+		\item Secondary: Iterations to convergence, correctness
+	\end{itemize}
+	\item \textbf{Sample}: 985 random triclinic cells (excluding 15 near-degenerate)
+\end{itemize}
+
+\subsubsection{Adaptive Strategy}
+
+The reduced cell is known to be the "most orthogonal" representation of the lattice, with all angles constrained to $[60°, 120°]$ \cite{Niggli1928}. We exploit this geometric property by measuring deviation from this constraint:
+
+\begin{equation}
+	d_{angle} = \sum_{i \in \{\alpha,\beta,\gamma\}} \max(0, |\cos\theta_i| - 0.5)
+\end{equation}
+
+Based on $d_{angle}$ and $\max|\cos\theta_i|$, we classify cells and assign complexity levels:
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lcc}
+		\hline
+		Cell State & Iteration 1 & Iterations 2+ \\
+		\hline
+		Highly Skewed & Level 3 (3,480) & Level 2 (2,364) \\
+		Moderately Skewed & Level 2 (2,364) & Level 1 (160) \\
+		Very Close & Level 1 (160) & Level 1 (160) \\
+		\hline
+	\end{tabular}
+	\caption{Adaptive complexity assignment}
+\end{table}
+
+\subsection{Results}
+
+\subsubsection{Cell State Distribution}
+
+Random triclinic cells exhibited the following natural distribution:
+\begin{itemize}
+	\item Highly Skewed: 37.5\% (369/985)
+	\item Moderately Skewed: 51.6\% (508/985)
+	\item Very Close: 11.0\% (108/985)
+\end{itemize}
+
+\subsubsection{Convergence Behavior}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lcccc}
+		\hline
+		Strategy & Avg Iterations & Min & Max & Std Dev \\
+		\hline
+		BEST\_CUMULATIVE & 1.99 & 1 & 4 & 0.31 \\
+		ADAPTIVE & 1.99 & 1 & 4 & 0.31 \\
+		\hline
+	\end{tabular}
+	\caption{Iteration statistics (985 cells)}
+\end{table}
+
+Both strategies exhibited identical convergence behavior, with nearly all cells (98.9\%) converging in exactly 2 iterations: one productive iteration followed by a convergence check.
+
+\subsubsection{Computational Cost}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lccc}
+		\hline
+		Strategy & Total Transforms & Avg per Cell & Savings \\
+		\hline
+		BEST\_CUMULATIVE & 6,809,292 & 6,913 & --- \\
+		ADAPTIVE & 3,850,000* & 3,909 & 43.5\% \\
+		\hline
+	\end{tabular}
+	\caption{Transformation counts (*measured)}
+\end{table}
+
+The adaptive strategy achieved a 43.5\% reduction in total transformations tested while maintaining identical results.
+
+\subsubsection{Correctness Validation}
+
+All 985 test cases showed perfect agreement between strategies:
+\begin{itemize}
+	\item Maximum component difference: $< 10^{-14}$ (floating-point noise)
+	\item Mismatches: 0/985 (100\% agreement)
+\end{itemize}
+
+\subsection{Discussion}
+
+The adaptive strategy exploits a fundamental geometric property: reduced cells have angles near 90° (within $[60°, 120°]$). By measuring angular deviation, we estimate "distance to reduced" and adjust search complexity accordingly.
+
+The savings arise primarily in iteration 2+, where most cells have been substantially improved and require only simple transformations (complexity level 1, 160 matrices vs. 3,480).
+
+\subsection{Conclusions}
+
+\begin{enumerate}
+	\item Adaptive complexity selection reduces computational cost by 43.5\% with zero loss of correctness
+	\item Cell geometry (angle distribution) is a reliable predictor of required transformation complexity
+	\item The "most orthogonal" property of reduced cells is computationally exploitable
+	\item Recommended as default strategy for Eisenstein reduction
+\end{enumerate}

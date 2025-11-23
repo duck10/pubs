@@ -1,0 +1,38 @@
+\section{Hausdorff Dimension and Its Estimation in Crystallographic Unit Cells}
+
+The \emph{Hausdorff dimension} provides a rigorous mathematical measure of the effective dimensionality of a set, extending the familiar notion of integer dimensions to fractal and irregular structures. For a point cloud, such as a collection of crystallographic unit cells represented in a metric space, the Hausdorff dimension characterizes how the number of points within a ball of radius $r$ scales as $r$ increases. Formally, if $N(r)$ denotes the number of points within distance $r$ of a given probe point, then
+
+
+\[
+N(r) \sim r^d,
+\]
+
+
+where $d$ is the Hausdorff dimension. Unlike the topological dimension, which is always an integer, the Hausdorff dimension may take non‑integer values, reflecting the scaling properties of the distribution.
+
+\subsection{Method of Estimation}
+
+To estimate the Hausdorff dimension of a finite set of unit cells, we employ a \emph{local scaling analysis} around randomly chosen probe points:
+
+\begin{enumerate}
+	\item \textbf{Preconditions.} The dataset must contain a sufficient number of unit cells (at least several dozen) and a non‑trivial diameter to ensure meaningful statistics.
+	\item \textbf{Radius Selection.} A target radius is chosen based on the overall point density, adjusted to avoid extremes. The radius is scaled so that spheres around probe points contain a reasonable number of neighbors, typically several hundred.
+	\item \textbf{Neighbor Counts.} For each probe point, we count the number of unit cells within two concentric spheres:
+	\begin{itemize}
+		\item A larger sphere of radius $R$
+		\item A smaller sphere of radius $R/\lambda$, with $\lambda$ slightly greater than 1 (e.g.\ $\lambda = 1.1$)
+	\end{itemize}
+	\item \textbf{Local Dimension Estimate.} The ratio of populations in the two spheres provides a local estimate of dimension:
+	
+	
+	\[
+	d = \frac{\log\!\left(\tfrac{N(R)}{N(R/\lambda)}\right)}{\log(\lambda)}.
+	\]
+	
+	
+	\item \textbf{Averaging and Error.} Repeating this procedure across many randomly selected probe points yields a distribution of local dimension estimates. The mean provides the global dimension estimate, while the variance supplies an uncertainty measure.
+\end{enumerate}
+
+\subsection{Application to Unit Cells}
+
+When applied to sets of crystallographic unit cells expressed in reduced metric spaces (e.g.\ $S_6$ or $G_6$), this method quantifies the effective dimensionality of the ensemble. A dimension close to 6 indicates a nearly uniform distribution in the six‑dimensional parameter space, whereas lower values suggest clustering along lower‑dimensional manifolds, reflecting structural correlations or constraints among the cells.

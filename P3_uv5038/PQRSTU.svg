@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="1400" height ="850" viewBox = "0 0 1400 850"
+version = "1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- Creation date and time _2024-03-11.08_38_17.-->
+<desc>Delone grid created for LRL_WEB, the site for Larry Andrews and Herbert J Bernstein</desc>
+
+<defs>
+           <style> <!-- from Anthropic's AI Claude -->
+            .large-text { font-family: sans-serif; font-weight: bold; font-size: 75px; }
+            .characteristic-text { font-family: sans-serif; font-weight:700; font-size: 13px; }
+        </style>
+   
+   <polyline id="tetrahedron" stroke="black" points="0,-0   70,-0   35,-60.6218   -0.175,0.303109   0.175,-0.101036   35,-20.2073   35,-60.6218   35,-20.2073   70,-0   " style="fill:none; stroke-width:3 stroke-linejoin:round; stroke-linecap:round" />
+</defs>
+<!-- _________________________________________________________ -->
+<g transform="translate(010, 10)">
+			<rect aria-label="Basic" x="0" y="0" width="102" height="102" stroke-width="2" stroke="none" fill="lightcyan" />
+   <g transform=" translate(18, 78)  ">
+   <use xlink:href="#tetrahedron" />
+<text class="characteristic-text" x = "44" y = "-7" >T</text>
+<text class="characteristic-text" x = "50" y = "-23" >P</text>
+<text class="characteristic-text" x = "10" y = "-23" >Q</text>
+<text class="characteristic-text" x = "29" y = "-29" >U</text>
+<text class="characteristic-text" x = "29" y = "5" >R</text>
+<text class="characteristic-text" x = "10" y = "-4" >S</text>
+</g>
+
+   <rect x="0" y="0" width="100" height="100" stroke="black" stroke-width="3" fill="none" />>
+
+</g>
+</svg>

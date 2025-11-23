@@ -83,6 +83,24 @@
 \makeatother
 
 
+%Andrea Hill
+%2:18 AM (4 hours ago)
+%to Herbert, me, Mois
+%
+%Dear Larry and Herbert
+%
+%Thanks for the submissions uv5038 and uv5039.
+%
+%Please cite these in the format Authors, Year, Journal, Volume, Note, ie:
+%
+%Andrews, L. & Bernstein, H. J. (2025a). Acta Cryst. A81. Submitted (uv5038)
+%
+%Andrews, L. & Bernstein, H. J. (2025b). Acta Cryst. A81. Submitted (uv5039)
+%
+%You could also give the article code (uv5038/uv5039) in plain text in the citations, and provide the article title for reviewers.
+%
+%Best wishes, Andrea
+
 \begin{document}                  % DO NOT DELETE THIS LINE
 	
 	%-------------------------------------------------------------------------
@@ -183,11 +201,6 @@
 	
 	\maketitle                        % DO NOT DELETE THIS LINE
 	
-	\begin{synopsis}
-
-	\end{synopsis}
-
-	
 	\newcommand{\OPES}[0]{$E^3toS^6$}
 	\newcommand{\OPESS}[0]{$$E^3toS^6$$}
 	\newcommand{\MSVI}[0]{$M_{S^{6}}$}
@@ -205,9 +218,6 @@ Given two unit cells, the problem of determining the best match
 of the lattice of one to the lattice of the other can require
 large numbers of trial transformations. We present a solution 
 that requires only a limited number of trials.
- 
-		
-		{\bf Note:}  In his later publications, Boris Delaunay used the Russian version of his surname, Delone.\\
 		
 		
 	\end{abstract}
@@ -219,7 +229,7 @@ that requires only a limited number of trials.
 	\section{Introduction}
 
 	A relatively common crystallographic problem is to compare two 
-	unit cells and determine whether their lattices are the or
+	unit cells and determine whether their lattices are the same or
 	close to each other. \citeasnoun{flor2016comparison} have described a
 	solution for more symmetric crystal families. However, for the general case of triclinic lattices
 	a different method is required.
@@ -229,13 +239,21 @@ that requires only a limited number of trials.
 	based on projections fails to produce the 3D transformations needed
 	for reindexing reflection data and for examining the relationships
 	of structures.
+
+	\citeasnoun{Mighell1996} give a flow chart that partly encompasses the
+	method here described, but no details are given there. Whereas their
+	method relies on completely on Niggli reduction, our method does
+	not, only including Niggli reduction as part of the processes.
+	In addition, their description of the generation of alternative
+	unit cells is quite brief, focusing on subcell and supercell
+	transformations.
 	
 	 Attempts to solve the problem
 	by trying a large number of trial transformations can require
-	an unknown and unknowable number of trials of transformation. Here we describe
+	an unknown and unknowable number of trials of transformations. Here we describe
 	a straight-forward approach that uses a fixed, modest number
 	of trials and that gives multiple possible matches if they are
-	appropriate.
+	near or identical to the best match.
 	
 	\section{Notation}
 	
@@ -256,7 +274,7 @@ that requires only a limited number of trials.
 
 	\section{Lattice matching}
 	
-	The general solution to matching two lattice has been to 
+	The general solution approach to matching two lattices has been to 
 	test the comparison using a large number of likely transformations.
 	Two problems arise: how many trials to make and how to effectively
 	measure the difference between two lattices.
@@ -276,7 +294,7 @@ that requires only a limited number of trials.
 		that transforms the modified mobile to the modified reference. \cite{Niggli1928} \cite{Andrews2025b} 
 		\item Compare the results of each transformation using
 		the \PIII{} Euclidean distance between the reference and the mobile 
-		cell. \cite{Andrews2025c} 
+		cell. \cite{Andrews2025a} 
 	\end{enumerate}
 
 	\subsection{Finishing}
@@ -298,7 +316,7 @@ that requires only a limited number of trials.
 	The immediate question is ``how many transformations will
 	need to be tested in stage three''. We have chosen to use all
 	the unimodular matrices ({\it i.e.} determinant = 1.0), with
-	elements -1, 0, +1. (3480 total matrices). Each transformation
+	elements -1, 0, +1. (3480 total matrices, by direct computation). Each transformation
 	is tested and acceptable results are accumulated to be ``finished''.
 
 	
@@ -306,7 +324,7 @@ that requires only a limited number of trials.
 	
 	\subsection{example 1}
 {
-	\noindent personal communication, \citeasnoun{aroyo2025pc}\\
+
 	More than one acceptable match was found\\
 \noindent Test input\\
 p 5.17 3.18 7.74 90. 104.5 90.  (reference)\\
@@ -366,9 +384,9 @@ Transformed cell: C    12.770    21.235    14.411   136.017    84.071   111.795
 
 
 \subsection{example 3}
-	\noindent personal communication 
-	\cite{simmons2025pc}\\
-	A case where more than one accepted match was found.\\
+
+
+	A case where more than one accepted match was found. ()Personal communication: \citeasnoun{simmons2025pc}.)\\
 	Input:\\
 	p 10.25 10.74 21.08 87.72 75.97 61.53 (reference)\\
 	p 10.25 10.74 21.08 78.96 75.97 61.49 (mobile)\\
@@ -385,7 +403,7 @@ Transformed cell: C    12.770    21.235    14.411   136.017    84.071   111.795
 	[ -1.0000,   1.0000,   0.0000]
 	[  0.0000,   0.0000,  -1.0000]
 	Matrix determinant: 1.0000
-	    Reference cell    p    10.25     10.74     21.08     87.72     75.97     61.53 (reference)\\
+	    Reference cell    p    10.25     10.74     21.08     87.72     75.97     61.53 (reference)
 			Transformed cell: P    10.250    10.739    21.080    87.714    75.970    61.502
 	*** SUCCESS: Excellent match within P3-relative threshold ***
 	
@@ -398,7 +416,7 @@ Transformed cell: C    12.770    21.235    14.411   136.017    84.071   111.795
 	[  0.0000,  -1.0000,   0.0000]
 	[ -1.0000,   0.0000,   1.0000]
 Matrix determinant: 1.0000
-    	Reference cell    p    10.25     10.74     21.08     87.72     75.97     61.53 (reference)\\
+    	Reference cell    p    10.25     10.74     21.08     87.72     75.97     61.53 (reference)
     	Transformed cell: P    10.250    10.740    21.087    87.674    75.893    61.490
 *** SUCCESS: Excellent match within P3-relative threshold ***
 
@@ -409,64 +427,116 @@ Matrix determinant: 1.0000
 %	; To Cell
 %	; Enter control variables and input vectors (type 'end' to finish):
 %	end
-20 slight variations on a primitive cubic cell
-were
-created, with a=10.0, each Niggli reduced, and lattice-matched.\\
+Twenty slight variations of a primitive cubic unit cell (a = 10.0), expressed in \SVI{}, were generated by adding random orthogonal perturbation vectors to the original \SVI{} representation. Each perturbation had a length of 0.001 times the \SVI{} norm of the cubic cell and was added to the vector [0, 0, 0, –100, –100, –100]. The resulting \SVI{} vectors were then converted back to unit cell parameters.
+ The modified vectors
+were lattice-matched to the reference, which is the first entry.\\
 
 Input:
 \begin{verbatim}
-	P   7.579   7.579   7.579  90.000  90.000  90.000 (reference)
-	P   7.570   7.573   7.574  89.957  89.937  89.958
-	P   7.576   7.580   7.581  89.989  89.957  89.964
-	P   7.573   7.574   7.576  89.950  89.946  89.994
-	P   7.571   7.578   7.583  90.058  90.029  90.062
-	P   7.577   7.578   7.578  90.051  90.033  90.051
-	P   7.572   7.576   7.578  90.033  90.034  90.084
-	P   7.573   7.576   7.580  90.028  90.060  90.020
-	P   7.570   7.573   7.580  89.993  89.977  89.931
-	P   7.572   7.572   7.573  89.982  89.934  89.936
-	P   7.577   7.580   7.588  89.958  89.970  89.996
-	P   7.571   7.581   7.581  90.061  90.028  90.059
-	P   7.573   7.574   7.584  90.005  90.023  90.065
-	P   7.580   7.581   7.581  89.933  89.996  89.968
-	P   7.576   7.581   7.586  89.913  89.990  89.956
-	P   7.573   7.574   7.581  89.979  89.983  89.974
-	P   7.570   7.575   7.57   90.025  90.063  90.066
-	P   7.571   7.579   7.581  89.988  89.993  89.942
-	P   7.578   7.581   7.588  90.049  90.023  90.002
-	P   7.580   7.580   7.585  89.932  89.989  89.988
-	P   7.571   7.576   7.577  89.970  89.993  89.943
+P    10.000    10.000    10.000    90.000    90.000    90.000 Reference
+P     9.994     9.992     9.988    89.958    89.937    89.957
+P    10.002    10.003     9.996    89.957    90.036    90.011
+P     9.996     9.992     9.993    89.994    89.950    89.946
+P     9.990     9.999    10.005    90.058    89.971    89.938
+P     9.997     9.999     9.998    90.051    89.949    89.967
+P     9.996     9.998     9.990    89.966    89.916    90.033
+P    10.002     9.993     9.996    89.980    90.028    89.940
+P    10.002     9.992     9.988    89.931    89.977    89.993
+P     9.991     9.992     9.991    89.934    89.936    89.982
+P    10.002     9.998    10.012    90.030    90.042    89.996
+P    10.003     9.990    10.002    89.972    90.061    89.941
+P     9.993    10.006     9.992    90.023    89.935    89.995
+P    10.002    10.002    10.002    89.968    90.004    90.067
+P    10.003    10.010     9.996    90.010    89.956    90.087
+P     9.992    10.003     9.994    89.979    89.974    89.983
+P     9.999     9.995     9.988    89.934    89.937    90.025
+P    10.003     9.990    10.000    89.942    90.012    90.007
+P    10.012     9.998    10.002    90.002    90.049    90.023
+P    10.008    10.002    10.002    90.012    90.068    89.989
+P     9.989     9.996     9.998    89.970    89.993    89.943
 \end{verbatim}
 	
 \begin{verbatim}
-		and here is the matching results:
+		and here are the matching results:
 	
-	Most common transformation matrices:
-	[1,0,0,0,1,0,0,0,1]   : 9 mobiles (P3 agreement: 0.016)
-	[1,0,0,0,-1,0,0,0,-1] : 3 mobiles (P3 agreement: 0.015)
-	[0,1,0,0,0,-1,-1,0,0] : 2 mobiles (P3 agreement: 0.015)
-	[1,0,0,0,0,-1,0,1,0]  : 1 mobiles (P3 agreement: 0.011)
-	[0,0,1,1,0,0,0,1,0]   : 1 mobiles (P3 agreement:, 0.012)
-	[0,0,1,0,-1,0,1,0,0]  : 1 mobiles (P3 agreement: 0.014)
-	[0,0,-1,0,1,0,1,0,0]  : 1 mobiles (P3 agreement: 0.012)
-	[0,-1,0,-1,0,0,0,0,-1]: 1 mobiles (P3 agreement: 0.009)
-	[-1,0,0,0,0,-1,0,-1,0]: 1 mobiles (P3 agreement: 0.017)
+Most common transformation matrices:
+[-1,0,0,0,-1,0,0,0,1] : 3 mobiles (EXCELLENT, 0.019)
+[1,0,0,0,-1,0,0,0,-1] : 2 mobiles (EXCELLENT, 0.013)
+[0,0,-1,0,-1,0,-1,0,0]: 2 mobiles (EXCELLENT, 0.022)
+[0,-1,0,-1,0,0,0,0,-1]: 2 mobiles (EXCELLENT, 0.020)
+[-1,0,0,0,1,0,0,0,-1] : 2 mobiles (EXCELLENT, 0.014)
+[-1,0,0,0,0,-1,0,-1,0]: 2 mobiles (EXCELLENT, 0.022)
+[1,0,0,0,1,0,0,0,1]   : 1 mobiles (EXCELLENT, 0.016)
+[0,1,0,1,0,0,0,0,-1]  : 1 mobiles (EXCELLENT, 0.015)
+[0,1,0,0,0,1,1,0,0]   : 1 mobiles (EXCELLENT, 0.017)
+[0,1,0,-1,0,0,0,0,1]  : 1 mobiles (EXCELLENT, 0.016)
+
+=== BEST MATCH DETAILS ===
+Mobile 2: 1.13e-02 (EXCELLENT)
+Matrix: [0 0 -1 1 0 0 0 -1 0]
+Transformed:     9.996    10.002    10.003    89.989    89.957    89.964
+
+Mobile 15: 1.23e-02 (EXCELLENT)
+Matrix: [-1 0 0 0 0 -1 0 -1 0]
+Transformed:     9.992     9.994    10.003    89.979    89.983    89.974
+
+Mobile 13: 1.34e-02 (EXCELLENT)
+Matrix: [1 0 0 0 -1 0 0 0 -1]
+Transformed:    10.002    10.002    10.002    89.968    89.996    89.933
+
 	
-	=== BEST MATCH DETAILS ===
-	Mobile 2: 8.42e-03 (EXCELLENT)
-	Matrix: [1 0 0 0 1 0 0 0 1]
-	Reference	 P     7.579     7.579     7.579    90.000    90.000    90.000
-	Transformed:     7.576     7.580     7.581    89.989    89.957    89.964
+\end{verbatim}
+
+\subsection{Example 5}
+
+Two reported polymorphic forms of triphenylphosphine oxide
+hemihydrate, C\textsubscript{18}H\textsubscript{15} PO$\cdot$0.5H\textsubscript{2}O. \cite{mighell2011role}
+
+
+\begin{verbatim}
+	F 19.794 32.54 9.459 90 90  90
+	C 9.4313 32.193 10.8435 90 115.742 90
+	end
 	
-	Mobile 15: 9.36e-03 (EXCELLENT)
-	Matrix: [0 -1 0 -1 0 0 0 0 -1]
-	Reference:   P   7.579     7.579     7.579    90.000    90.000    90.000
-	Transformed:     7.574     7.573     7.581    89.983    89.979    89.974
+	=== PROCESSING INPUT LIST ===
+	Total results before processing: 500
+	NC Distance: 6.44756
+	Range: 4.34e-01 to 6.61e+01 
+	Reference P3 norm: 39.244 
+	Method: Fixed strict
+	Thresholds:
+	EXCELLENT <= 1.96e-01 (0.5% of P3)
+	GOOD      <= 7.85e-01 (2.0% of P3)
+	POOR      <= 3.14e+00 (8.0% of P3)
+
 	
-	Mobile 13: 1.03e-02 (EXCELLENT)
-	Matrix: [1 0 0 0 1 0 0 0 1]
-	Reference:   P   7.579     7.579     7.579    90.000    90.000    90.000
-	Transformed      7.580     7.581     7.581    89.933    89.996    89.968
+	=== LATTICE MATCHING RESULTS === ===================================================
+	Found 2 good matches
+	Success threshold: 1.96e-01  (Fixed strict)
+	
+	--- Match 1 ---
+	Quality: GOOD (0.434 )
+	P3 Distance: 0.434
+	S6 Angle: 0.12 degrees
+	Transformation Matrix:
+	[ -1.0000,   0.0000,  -2.0000]
+	[  0.0000,  -1.0000,   0.0000]
+	[ -1.0000,   0.0000,   0.0000]
+	Matrix determinant: 2.0000
+	Transformed cell: F    19.535    32.193     9.431    90.000    89.964    90.000
+	*** SUCCESS: Good match within P3-relative threshold ***
+	
+	--- Match 2 ---
+	Quality: GOOD (0.434 )
+	P3 Distance: 0.434
+	S6 Angle: 0.12 degrees
+	Transformation Matrix:
+	[  1.0000,   0.0000,   2.0000]
+	[  0.0000,  -1.0000,   0.0000]
+	[  1.0000,   0.0000,   0.0000]
+	Matrix determinant: 2.0000
+	Transformed cell: F    19.535    32.193     9.431    90.000    89.964    90.000
+	*** SUCCESS: Good match within P3-relative threshold ***
 	
 \end{verbatim}
 
@@ -483,11 +553,17 @@ to treat these more extreme cases using this algorithm, a larger
 range of element values would need to be examined. The consequence is
 that the number of matrices and thus the number of trials grows rapidly.
 
+	\section{Summary}
+Lattice matching based on unit cell parameters and 3-dimensional
+transformation matrices is described, including the production
+of the matrices for transforming unit cell base vectors from
+a probe's to those of a reference cell.
+
 
 	\section{Availability of code}
 	
-	The code for Lattice Matching and related 
-	software tools are available in github.com, in
+	The code for Lattice Matching (CmdLMP3) and related 
+	software tools is available in github.com, in
 	\url{https://github.com/duck10/LatticeRepLib.git}.
 	The program CmdLMP3 uses the required files.
 	
@@ -495,21 +571,18 @@ that the number of matrices and thus the number of trials grows rapidly.
 	
 	
 	%\section{blah blah blah -- Supplementary Material}
-	\ack{Acknowledgements}
+	
+\ack{{\bf Acknowledgements}}
 
 Careful copy-editing and corrections by Frances C. Bernstein are 
-gratefully acknowledged.
+gratefully acknowledged. M.I. Aroyo kindly provided test examples,  \citeasnoun{aroyo2025pc}\\.
 
-%	Our thanks to Jean Jakoncic and Alexei Soares for 
-%	helpful conversations and access to data and facilities at 
-%	Brookhaven National Laboratory.
-%	
 \ack{{\bf Funding information}}      
 
 Funding for this research was provided in part by:  
 US Department of Energy Offices of Biological and 
 Environmental Research and of Basic Energy Sciences 
-(grant No. DE-AC02-98CH10886; grant No. E-SC0012704); 
+(contract No. DE-AC02-98CH10886; contract No. E-SC0012704); 
 U.S. National Institutes of Health (grant No. P41RR012408; 
 grant No. P41GM103473; grant No. P41GM111244; 
 grant No. R01GM117126,
@@ -520,7 +593,9 @@ grant No. 1R21GM129570); Dectris, Ltd.
 
 A solution is proposed for the problem of best matching the 
 lattices of unit cells that are described in different
-presentations.
+presentations along with the 3D matrix
+that defines the relationship between matched
+lattices.
 	
 	\bibliography{Reduced}
 	

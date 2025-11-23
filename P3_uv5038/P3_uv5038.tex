@@ -164,11 +164,11 @@
 	
 	
 	\cauthor[a]{Lawrence C.}{Andrews}{larry6640995@gmail.com}{}
-	\author[b]{Herbert J.}{Bernstein}
+	\author[a]{Herbert J.}{Bernstein}
 	
 \aff[a]{Ronin Institute for Independent Scholarship 2.0, USA}
-\aff[b]{Ronin Institute for Independent Scholarship 2.0, USA}
-	
+
+
 	% Use \shortauthor to indicate an abbreviated author list for use in
 	% running heads (you will need to uncomment it).
 	
@@ -191,10 +191,7 @@
 	
 	
 	\maketitle                        % DO NOT DELETE THIS LINE
-	
-	\begin{synopsis}
-		
-	\end{synopsis}
+
 	
 	
 	\newcommand{\si}{\ensuremath{s_1}}
@@ -225,7 +222,7 @@
 	
 	
 	\begin{abstract}
-		The space \PIII{} is introduced, derived from unit cell axial lengths and interaxial angles. \PIII enables linearization of unit cell parameters using three polar coordinate bases.
+		The space \PIII{} is introduced, derived from unit cell axial lengths and interaxial angles. \PIII{} enables linearization of unit cell parameters using three polar coordinate bases.
 
 	\PIII{} serves as a compact, 
 	interpretable alternative to more abstract spaces such as \GVI{} and \SVI{}.
@@ -247,7 +244,10 @@
 	simple measure of the ``difference'' between two lattices; how can one 
 	compare a difference of 1 \AA{}ngstrom unit vs. one angular degree?
 	
-	For the above reasons, other spaces are often used to describe lattices, often for specialized purposes; see Table  \ref{tbl_spaces}. Figure \ref{fig_spaces} shows relationships between
+[\underline{	Note: Boris Delaunay in his later publications chose to render
+	his surname as ``Delone'' (which is still pronounced the same as Delaunay).}]
+	
+	For the above reasons, other spaces are often used to describe lattices, often for specialized purposes; see Table  \ref{tbl_spaces}. Figure \ref{fig_spaces} shows relationships among
 	several of these spaces. Although some of these spaces, such as \HVI{} and	\FIII{} are in almost daily use, they are not often referred to 
 	as ``spaces''. In the case of \FIII{}, symmetry elements are linear
 	operations in this space, and fractional coordinates of atomic positions
@@ -287,7 +287,7 @@ having all measures in \AA{}ngstrom units (or other chosen linear measures.)
 		$\alpha,\, \beta,\, \gamma \in (0^\circ, 180^\circ)$ — opposing angles\\
 		
 	} &
-	Composite geometric parameter space $\mathbb{R}_{>0}^3 \times (0^\circ, 180^\circ)^3$. Lengths are unconstrained; angles are geometrically restricted. The sum of the angles must be less than $360^\circ$ and obey the triangle inequality \HVI{} is useful for conventional lattice descriptions, but limited in symmetry representation and metric-based classification. \\
+	Composite geometric parameter space $\mathbb{R}_{>0}^3 \times (0^\circ, 180^\circ)^3$. Lengths are unconstrained; angles are geometrically restricted. The angles must obey the spherical triangle inequalities (summing to less than 360 degrees, and the sum of any 2 must not exceed the third). \HVI{} is useful for conventional lattice descriptions, but limited in symmetry representation and metric-based classification. \\
 	\midrule
 	\FIII{} &
 	$\vec{a},\, \vec{b},\, \vec{c} \in \mathbb{R}^3$ &
@@ -312,8 +312,8 @@ having all measures in \AA{}ngstrom units (or other chosen linear measures.)
 		\hspace*{0.5cm}$(|\vec{c}|\cos\gamma,\, |\vec{c}|\sin\gamma)$\\
 		also known as $(p_1, p_2, p_3)$
 	} &
-	Polar coordinate space defined in terms to unit cell axial
-	lengths and their opposing angle. It is a compact and smooth alternative to $\HVI$. Useful for comparing unit cells. (This work) \\
+	Polar coordinate space defined in terms of unit cell axial
+	lengths and their opposing angles (opposing, the angle between the other two unit cell axes). It is a compact and smooth alternative to $\HVI$. Useful for comparing unit cells. (This work) \\
 		\midrule
 	
 	\SVI{} &
@@ -322,7 +322,7 @@ having all measures in \AA{}ngstrom units (or other chosen linear measures.)
 		$s_4 = \vec{a} \cdot \vec{d},\, s_5 = \vec{b} \cdot \vec{d},\, s_6 = \vec{c} \cdot \vec{d}$\\
 		\quad where $\vec{d} = -\vec{a} - \vec{b} - \vec{c}$
 	} &
-	Used for Selling/Delone reduction. The scalar components are dot products between lattice vectors. \SVI{} supports Bravsi lattice classification. 24 Bravais types were defined using the scalar components of \SVI{} by Delone (1975), later revised using \SVI{} \cite{andrews2023measuring}. \\
+	Used for Selling/Delone reduction. The scalar components are dot products between lattice vectors. \SVI{} supports Bravais lattice classification. 24 Bravais types were defined using the scalar components of \SVI{} by Delone (1975), later revised using \SVI{} \cite{andrews2023measuring}. \\
 		\midrule
 	
 	\GVI{} &
@@ -339,7 +339,7 @@ having all measures in \AA{}ngstrom units (or other chosen linear measures.)
 		$c_1 = (s_1, s_4),\ c_2 = (s_2, s_5),\ c_3 = (s_3, s_6)$\\
 		where the parentheses denote a complex number
 	} &
-	\CIII{} associates scalar pairs identified by Delone as “opposites.” Symmetry and Selling/Delone reduction simplify in this space \cite{andrews2023complex}. \\
+	\CIII{} associates scalar pairs identified by Delone as ``opposites.'' Symmetry and Selling/Delone reduction simplify in this space \cite{andrews2023complex}. \\
 		\midrule
 	
 	$\mathbf{DC7u}$ &
@@ -354,42 +354,7 @@ having all measures in \AA{}ngstrom units (or other chosen linear measures.)
 
 
 \begin{figure}
-	\centering
-\begin{tikzpicture}[
-	node distance=1.2cm and 2.0cm,
-	coordspace/.style={text width=3.2cm, align=center, rectangle, draw=black,
-		fill=gray!20, rounded corners, font=\small, thick},
-	metricspace/.style={text width=3.2cm, align=center, rectangle, draw=black,
-		fill=blue!10, rounded corners, font=\small, thick},
-	derivedspace/.style={text width=3.2cm, align=center, rectangle, draw=black,
-		fill=green!10, rounded corners, font=\small, thick},
-	arrowlabel/.style={font=\scriptsize, midway, fill=white, inner sep=1pt}
-	]
-	
-	% Row 1: Fundamental space
-	\node[coordspace] (F3) {\FIII{} \\ Base vectors};
-	
-	% Row 2: Scalar & parameter spaces
-	\node[metricspace] (G6) [below left=of F3] {\GVI{} \\ Metric tensor};
-	\node[metricspace] (S6) [below=of F3] {\SVI{} \\ Selling/Delone};
-	\node[coordspace] (H6) [below right=of F3] {\HVI \\ Cell params};
-	
-	% Row 3: Derived/reduced spaces
-	\node[derivedspace] (DC7u) [below=of G6] {DC7u \\ Dirichlet coords};
-	\node[derivedspace] (C3) [below=of S6] {\CIII{} \\ Reduced coords};
-	\node[derivedspace] (P3) [below=of H6] {\PIII{} \\ Polar coords};
-	
-	% Arrows from F3 to row 2
-	\draw[->, thick] (F3) -- (G6);
-	\draw[->, thick] (F3) -- (S6);
-	\draw[->, thick] (F3) -- (H6);
-	
-	% Arrows from row 2 to row 3
-	\draw[->, thick] (G6) -- (DC7u);
-	\draw[->, thick] (S6) -- (C3);
-	\draw[->, thick] (H6) -- (P3);
-	
-\end{tikzpicture}
+\includegraphics[]{P3_fig1.png}
 \label{fig_spaces}
 \caption{Schematic relationships among crystallographic spaces. The base vector 
 	space \FIII{} gives rise to three scalar spaces: metric tensor space \GVI{}, 
@@ -405,6 +370,30 @@ having all measures in \AA{}ngstrom units (or other chosen linear measures.)
 scalars. Examining those relationships shows that the opposite terms 
 are pairs where a term involving $\mathbf{a}$ is opposite a term involving $\alpha$, {\it etc.}
 
+As described in Table \ref{tbl_spaces}, the Selling scalars are a vector:
+[$s_1, s_2, s_3, s_4, s_5, s_6$]. \citeasnoun{Delaunay1932} represents
+their relationships as the edge components of a tetrahedron as 
+shown in Figure \ref{tetrahedron}.
+
+
+
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.3\columnwidth]{tetrahedron}
+		\label{tetrahedron}
+		\caption{The relationships of the Selling scalars as
+		described by  \citeasnoun{Delaunay1932}, but labeled using the vector components of \SVI{} \cite{andrews2023measuring}. Visualized as a
+		3 dimensional tetrahedron, scalar $s_1$ is
+		opposite scalar $s_4$, etc. The number of each scalar is the 
+		position in the \SVI{} vector. See Table \ref{tbl_spaces}
+		for the definitions of the scalars in space \SVI{}. }
+
+	\end{center}
+\end{figure}
+
+
+
 Extending the observation of \citeasnoun{Delone1975}, the idea occurs
 to make a triple of those pairs. Since each pair has
 one length and one angle, we consider each pair as the definition of
@@ -415,8 +404,8 @@ The first use applies the two-dimensional character of the coordinates of \PIII{
 allow simple-to-plot representations of collections of unit cells. Plotting
 each of the coordinates of \PIII{} generates plots that are easily
 interpreted as crystallographic axial length/opposite angle pairs. The
-distance of a point has a length equal to the axial length, and the interaxisl
-angle of the two other bases is illustrated on the plots. See Section  \ref{graphical}. Basically, together the three plots of the three coordinates are
+distance of a point from the origin has a length equal to the axial length, and the interaxial
+angle between the 2 other bases (plotted as the angle from the x-axis) is illustrated on the plots. Basically, together the three plots of the three coordinates are
 simple projections of \HVI{}. See Section \ref{graphical}.
 
 
@@ -430,7 +419,7 @@ lend themselves to a distance calculation. See Section \ref{comparing}.
 
 \section{Relationship to Other Spaces}
 
-While \PIII{} is derived from the same foundational cell parameters as $\mathbf{H^6}$, $\mathbf{P^3}$ sidesteps issues of angular nonlinearity  that arise in the conventional cell representation. Compared with $\mathbf{C^3}$ \cite{andrews2023delone}, which derives coordinates from $\mathbf{S^6}$, the construction of $\mathbf{P^3}$ is more geometric than algebraic. It provides a useful intermediary: more interpretable than metric tensors or other spaces, but less abstract than \SVI{} or \GVI{}.
+While \PIII{} is derived from the same foundational cell parameters as $\mathbf{H^6}$, $\mathbf{P^3}$ sidesteps issues of angular nonlinearity  that arise in the conventional cell representation. Compared with $\mathbf{C^3}$ \cite{andrews2023complex}, which derives coordinates from $\mathbf{S^6}$, the construction of $\mathbf{P^3}$ is more geometric than algebraic. It provides a useful intermediary: more interpretable than metric tensors or other spaces, but less abstract than \SVI{} or \GVI{}.
 
 	
 
@@ -439,8 +428,8 @@ While \PIII{} is derived from the same foundational cell parameters as $\mathbf{
 \label{graphical}
 \PIII{}
 allows simple-to-plot representations of collections of unit cells. 
-See Figures \ref{PlotPolar_raw}, \ref{PlotPolar_Niggli}, and  \ref{PlotPolar_Delone} where 100 randomly chosen triclinic cells are plotted
-(Figure \ref{PlotPolar_raw}) and the effects of unit cell reduction
+See Figures \ref{PlotPolar_raw}, \ref{PlotPolar_Niggli}, and  \ref{PlotPolar_Delone}, where 100 randomly chosen triclinic cells are plotted
+(Figure \ref{PlotPolar_raw}), and the effects of unit cell reduction
 are demonstrated (Figure \ref{PlotPolar_Niggli} and Figure \ref{PlotPolar_Delone} ).
 }
 
@@ -451,7 +440,7 @@ are demonstrated (Figure \ref{PlotPolar_Niggli} and Figure \ref{PlotPolar_Delone
 	\label{PlotPolar_raw}
 	\caption{Scatter plots of 100 randomly selected
 		 primitive triclinic unit cells represented in \PIII{}. Each of the 3 components of \PIII{}
-		 is shown.}
+		 is shown. (Colors reflect the order of input of the unit cells.)}
 	\end{center}
 \end{figure}
 
@@ -459,7 +448,7 @@ are demonstrated (Figure \ref{PlotPolar_Niggli} and Figure \ref{PlotPolar_Delone
     \begin{center}
 	\includegraphics[width=\columnwidth]{PlotPolar_Niggli.png}
 	\label{PlotPolar_Niggli}
-	\caption{The same 100 random primitive triclinic unit cells shown in Figure \ref{PlotPolar_raw}, Niggli-reduced}
+	\caption{The same 100 randomly selected primitive triclinic unit cells shown in Figure \ref{PlotPolar_raw}, Niggli-reduced}.
 	\end{center}
 \end{figure}
 
@@ -469,68 +458,24 @@ are demonstrated (Figure \ref{PlotPolar_Niggli} and Figure \ref{PlotPolar_Delone
 	\includegraphics[width=\columnwidth]{PlotPolar_Delone.png}
 	\label{PlotPolar_Delone}
 	\caption{Scatter plots of 100 randomly selected
-		primitive triclinic unit cells represented in \PIII{} as shown in Figure \ref{PlotPolar_raw}, Selling (Delaunay)-reduced}
+		primitive triclinic unit cells represented in \PIII{} as shown in Figure \ref{PlotPolar_raw}, Selling /Delone-reduced}.
 	\end{center}
 \end{figure}
 
 \section{Comparing different unit cells}
 \label{comparing}
 
-In three-space, measuring the Euclidean distance between two points is just computing the square root
+In 3-space, measuring the Euclidean distance between two points is just computing the square root
 of the sum of the squares of the differences in the three coordinates. Similarly in \PIII{},
-we compute distances from the sum of squared difference between the three
-polar coordinates. But polar coordinates have a Euclidean measure from
-their xy representation. So taking the six scalar values of two unit cells
+we compute distances from the square root of the sum of squared differences between the three
+polar coordinates. Polar coordinates have a Euclidean measure from
+their xy representation. So, taking the 6 scalar values of 2 unit cells
 presented in \PIII{}, we calculate a Euclidean distance by the ordinary
 method. 
 
-%; CmdDists, calculate distances
-%; Enter control variables and input vectors (type 'end' to finish):
-%P 10 10 10  90 90 90
-%p 10 10 10  90 90 91
-%p 10 10 10.1 90 90 90
-%end
-%10.000    10.000    10.000    90.000    90.000    90.000
-%14.142    30.113     8.479   147.466    56.504   144.893
-%
-%10.000    10.000    10.000    90.000    90.000    90.000
-%14.142    29.916     8.564   147.586    56.504   144.621
-%
-%<pre style="font-size: 105%; line-height: 60%; display:inline;" >;
-%; ordinals   P3-Euclid    P3Dist       NCDist    || ordinals     P3-Euclid    P3Dist       NCDist
-%; 1-2        0.175      19191.000      3.490         1-2         0.175      19191.000      3.490
-%; 2-3        0.202      19191.000      4.028         1-3         0.100      19191.000      2.010
-%
-%
-%;.......... input.cells ........................................ ordinals .....
-%P   10.000    10.000    10.000    90.000    90.000    90.000     1
-%P   10.000    10.000    10.000    90.000    90.000    91.000     2
-%P   10.000    10.000    10.100    90.000    90.000    90.000     3
-%;</pre>
 
 
-%; CmdDists, calculate distances
-%; Enter control variables and input vectors (type 'end' to finish):
-%p 10 10 10   90 90 90
-%p 10 10 10   90 90 91
-%p 10 10 11   90 90 90
-%end
-%<pre style="font-size: 105%; line-height: 60%; display:inline;" >;
-%; ordinals   P3-Euclid    P3Dist       NCDist    || ordinals     P3-Euclid    P3Dist       NCDist
-%; 1-2        3.490        0.203        3.490         1-2         0.175       26.959        3.490
-%; 2-3        21.288       0.872       21.288         1-3         1.000       26.896       21.000
-%
-%
-%;.......... input.cells ........................................ ordinals .....
-%P   10.000    10.000    10.000    90.000    90.000    90.000     1
-%P   10.000    10.000    10.000    90.000    90.000    91.000     2
-%P   10.000    10.000    11.000    90.000    90.000    90.000     3
-%;</pre>
-
-
-
-
-Let us compare two cells derived by modifying a primitive unit cell to form two slightly modified cells, one by changing $\gamma$, and one by changing $c$.
+Let us compare two cells derived by modifying a primitive unit cell to form two slightly modified cells, one by changing $\gamma$, and one by changing $\vec{c}$.
 \begin{enumerate}
 	\item P 10 10 10  90 90 90
 	\item P 10 10 10  90 90 91
@@ -538,174 +483,22 @@ Let us compare two cells derived by modifying a primitive unit cell to form two 
 \end{enumerate}
 The Euclidean distances between these cells are:
 \begin{itemize}
-	\item 1-2: 0.175
-	\item 1-3: 0.100
-	\item 2-3: 0.202
+	\item 1--2: 0.175
+	\item 1--3: 0.100
+	\item 2--3: 0.202
 \end{itemize}
 
-In this example, a 1.0° change in $\gamma$ yields a Euclidean distance comparable to a 0.1 Å change in the c-axis length.
-%
-%\section{Scalar Reduction and Canonical Presentation in Projected Vector Triplets}
-%
-%\subsection{1. Standard Presentation of Projected Vectors}
-%	
-%	Let a set of three projected vectors be given:
-%	
-%	
-%	\[
-%	(p_1, p_2, p_3), \quad p_i \in \mathbb{R}^2
-%	\]
-%	
-%	
-%	Each \( p_i \) is constructed from a lattice vector via magnitude and opposing angle:
-%	
-%	
-%	\[
-%	p_i = |\vec{v}_i| (\cos \theta_i, \sin \theta_i)
-%	\]
-%	
-%	
-%	
-%	The \textbf{Standard Presentation} algorithm assigns a canonical ordering and orientation to the triplet:
-%	
-%	\begin{enumerate}
-%		\item \textbf{Magnitude Sort:} Reorder vectors so that
-%		
-%		
-%		\[
-%		|p_1| \leq |p_2| \leq |p_3|
-%		\]
-%		
-%		
-%		using Euclidean norms \( |p_i| = \sqrt{x_i^2 + y_i^2} \). Ties are preserved up to a numerical tolerance \( \delta \).
-%		
-%\item \textbf{Directional Coherence:} If the \( x \)-components of the triplet are not all of consistent sign, flip the necessary vectors by negating only the \( x_i \) component:
-%
-%
-%\[
-%p_i \to (-x_i,\ y_i)
-%\]
-%
-%
-%This maps quadrant I vectors into quadrant II, preserving their placement in the upper half-plane and maintaining angular conventions typical in crystallographic analysis.
-%
-%
-%
-%\[
-%p_i \to (-x_i,\ y_i)
-%\]
-%
-%
-%to align the triplet into a directionally consistent state. If all \( x_i < 0 \), the configuration is already coherent and requires no change.
-%
-%		
-%		
-%		\[
-%		p_i \to (-x_i, y_i)
-%		\]
-%		
-%		
-%		for any two vectors, preserving chirality.
-%		
-%		\item \textbf{Return Ordered Triplet:} Output the permuted and flipped triplet with consistent magnitude order and cosine directionality.
-%	\end{enumerate}
-%	
-%	\vspace{1em}
-%	
-%	\subsection{2. Scalar Projection Interaction and Cost Function}
-%	
-%	For any pair of projected vectors \( p_i, p_j \in \mathbb{R}^2 \), define the scalar projection interaction (or directional affinity):
-%	
-%	
-%	\[
-%	\mu_{ij} = p_i \cdot p_j = x_i x_j + y_i y_j
-%	\]
-%	
-%	
-%	
-%	The \textbf{scalar coupling cost} is then defined over the triplet as:
-%	
-%	
-%	\[
-%	C' = \frac{|\mu_{12}| + |\mu_{13}| + |\mu_{23}|}{p_1 \cdot p_1 + p_2 \cdot p_2 + p_3 \cdot p_3}
-%	\]
-%	
-%	
-%	
-%	This cost measures the normalized sum of pairwise directional alignment. Lower values of \( C' \) indicate that the projected vectors are less directionally coupled — i.e., more orthogonal or dispersed.
-%	
-%	\vspace{1em}
-%	
-%	\subsection{3. Scalar Reduction Algorithm}
-%	
-%	The goal of scalar reduction is to transform the triplet \( (p_1, p_2, p_3) \) into an algebraically simpler form — one with lower scalar coupling cost \( C' \) — while preserving lattice identity (e.g., volume and reconstructability).
-%	
-%	The reduction proceeds iteratively:
-%	
-%	\begin{enumerate}
-%		\item \textbf{Initialization:}
-%		Apply standard presentation. Compute initial cost \( C'_0 \) and physical volume \( V_0 > 0 \).
-%		
-%		\item \textbf{Pairwise Projection Subtractions:}
-%		For each unordered pair \( (p_i, p_j),\ i \neq j \), compute the scalar coefficient:
-%		
-%		
-%		\[
-%		\lambda = \frac{p_i \cdot p_j}{p_j \cdot p_j}
-%		\]
-%		
-%		
-%		Then define the candidate vector:
-%		
-%		
-%		\[
-%		p_i' = p_i - \lambda p_j
-%		\]
-%		
-%		
-%		
-%		\item \textbf{Evaluate Candidate:}
-%		Apply standard presentation to updated triplet. Recompute cost \( C'_{\text{new}} \) and volume \( V_{\text{new}} \).
-%		
-%		\item \textbf{Acceptance Criteria:}
-%		Accept the transformation if:
-%		
-%		
-%		\[
-%		C'_{\text{new}} + \delta < C' \quad \text{and} \quad V_{\text{new}} > 0
-%		\]
-%		
-%		
-%		
-%		\item \textbf{Repeat:}
-%		Continue until no further accepted transformations lower the cost.
-%		
-%		\item \textbf{Output:}
-%		Return the reduced triplet \( (p_1, p_2, p_3)_{\text{red}} \) with minimal scalar cost.
-%	\end{enumerate}
-%	
-%	\vspace{1em}
-%	
-%	\subsection{4. Interpretation of Cost and Reduction}
-%	
-%	The term "reduction" refers to minimizing the scalar coupling among vectors — reducing directional alignment that obscures presentation clarity. The cost \( C' \) is a rigorously defined metric for this alignment. Transformations reduce \( C' \) while preserving:
-%	\begin{itemize}
-%		\item The vector magnitudes and their reconstructable relationships
-%		\item The unit cell's volume and crystallographic identity
-%		\item The triplet’s algebraic validity in scalar projection space
-%	\end{itemize}
-%	
-%	Reduction leads to a cleaner, more canonical representation of the original structure — just as Niggli reduction provides a minimal cell in metric tensor space, scalar reduction provides a minimal configuration in projected vector space.
-%	
-%	
-	
+In this example, a 1.0$^\circ$ change in $\gamma$ yields a Euclidean distance comparable to a 0.1~\AA{} change in the $c$-axis length.
+
 	
 	\section{Summary}
 	
-	The space \PIII{} is introduced. Less abstract than space based
-	on dot products and metric tensors, it provides a simple to understand
+	The space \PIII{} is introduced. Less abstract than spaces based
+	on dot products and metric tensors, it provides a simple way to understand the
 	method for comparing unit cells and a convenient method of displaying 
 	unit cells.
+	
+	
 	
 	
 	\section{Availability of code} CmdToP3 and PlotPolar are available in github.com, in
@@ -714,19 +507,15 @@ In this example, a 1.0° change in $\gamma$ yields a Euclidean distance comparab
 	%\appendix
 	
 	
-	%\section{blah blah blah -- Supplementary Material}
 	\ack{{\bf Acknowledgements}}
-	
-	Careful copy-editing and corrections by Frances C. Bernstein are 
-	gratefully acknowledged.
-	%	Our thanks to Jean Jakoncic and Alexei Soares for 
-	%	helpful conversations and access to data and facilities at 
-	%	Brookhaven National Laboratory.
-	%	
+
+Careful copy-editing and corrections by Frances C. Bernstein are 
+gratefully acknowledged. 
+
 	\ack{{\bf Funding information}}      
 	
 	Funding for this research was provided in part by:  
-	US Department of Energy Offices of Biological and 
+	U.S. Department of Energy Offices of Biological and 
 	Environmental Research and of Basic Energy Sciences 
 	(grant No. DE-AC02-98CH10886; grant No. E-SC0012704); 
 	U.S. National Institutes of Health (grant No. P41RR012408; 
@@ -737,7 +526,7 @@ In this example, a 1.0° change in $\gamma$ yields a Euclidean distance comparab
 	\section{Synopsis}
 	
 	\PIII{} is a linearized description of unit cell parameters,
-	derived from usual lengths and angles of the unit cell. It 
+	created from the usual lengths and angles of the unit cell. It 
 	provides a useful metric for comparing unit cells and a
 	convenient base for displaying and comparing unit cells.
 	
