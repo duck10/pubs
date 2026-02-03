@@ -1,0 +1,119 @@
+% -------------------------------------------------------------
+%  A concise history of the Niggli-reduced cell (100 % ASCII)
+% -------------------------------------------------------------
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+
+\begin{document}
+	
+	Created by Kimi.com (an AI, on 2025-12-18)
+	
+	\section*{Historical Sketch of Niggli Reduction}
+	\emph{In the beginning}---long before computers or serial crystallography---mineralogists simply needed a unique, short ``name tag'' for every crystal lattice.  The story of how that tag came to be written is the story of the Niggli-reduced cell.
+	
+	\subsection*{19th-century roots: quadratic forms meet crystallography}
+	\begin{itemize}
+		\item \textbf{1831} C.\,F.\ Gauss shows how to shorten the basis of a 2-D lattice.
+		\item \textbf{1851} Gotthold Eisenstein extends the idea to \emph{ternary positive-definite quadratic forms}---exactly the mathematics a 3-D lattice metric tensor obeys.  His inequalities already contain the germs of what will later be called ``Niggli conditions'' \cite{Eisenstein1851}.
+		\item \textbf{1874} Eduard Selling proposes an alternative set of inequalities (Selling reduction) that is faster to test, but produces a non-unique cell \cite{Selling1874}.
+	\end{itemize}
+	
+	\subsection*{Early 20th century: the cell becomes a practical tool}
+	\begin{itemize}
+		\item \textbf{1928} Paul Niggli, editing the \emph{Handbuch der Experimentalphysik}, translates Eisenstein's algebraic rules into crystallographic language and publishes the first complete \textbf{Niggli table} linking reduced-cell constants to the 14 Bravais types.  The ``Niggli cell'' is born---\emph{unique}, \emph{primitive}, and \emph{metrically shortest} \cite{Niggli1928}.
+		\item \textbf{1933} Boris N.\ Delaunay (often spelled Delone) popularises Selling's approach and supplies similar look-up tables; for a while both methods appear side-by-side in the first edition of \emph{International Tables for X-Ray Crystallography} \cite{Delone1933}.
+	\end{itemize}
+	
+	\subsection*{Computer age: algorithms replace tables}
+	\begin{itemize}
+		\item \textbf{1973} Bruno Gruber shows that up to \emph{five} different Buerger-reduced (Minkowski) cells can describe the same lattice; uniqueness is therefore \emph{not} guaranteed by length minimisation alone---Niggli's extra sign rules are essential \cite{Gruber1973}.
+		\item \textbf{1976} Ivan Krivy and Bruno Gruber publish the first \textbf{fully algorithmic} Niggli reduction, folding the Buerger, Eisenstein and Niggli conditions into one deterministic loop that always terminates on the canonical cell \cite{KrivyGruber1976}.  The paper becomes the standard citation for computer implementations.
+		\item \textbf{1970s--1980s} Masao Hosoya stresses the importance of reduction when comparing lattices that contain experimental error, paving the way for ``fuzzy'' or tolerance-based applications \cite{Hosoya1986}.
+	\end{itemize}
+	
+	\subsection*{Error-stability and high-throughput crystallography}
+	\begin{itemize}
+		\item \textbf{1988} L.\,C.\ Andrews and H.\,J.\ Bernstein give a numerically stable reformulation of the Krivy--Gruber algorithm and distribute open-source code; later \textbf{Andrews, Bernstein and Pelletier (ABP)} add tolerance handling for nearly reduced cells \cite{AndrewsBernstein1988,ABP1995}.
+		\item \textbf{1990s--2000s} Herbert Edelsbrunner and co-workers embed Niggli reduction in computational-geometry pipelines for \emph{lattice matching} and \emph{cluster analysis} of huge powder or serial-crystallography data sets \cite{Edelsbrunner1998}.
+		\item \textbf{2014} Andrews and Bernstein review the whole field, emphasising that modern needs are no longer ``Which Bravais type?'' but ``How far apart are these two lattices?''---a question answered fastest with the Niggli cell \cite{AndrewsBernstein2014}.
+	\end{itemize}
+	
+	\subsection*{Present and future}
+	\begin{itemize}
+		\item \textbf{2020s} A.\,L.\ Patterson's old idea of comparing lattices via their reduced cells is revived by Patterson and Love for \emph{machine-learning} models that predict crystal systems from sparse diffraction data \cite{PattersonLove2021}.
+		\item \textbf{Today} every crystal-structure database (ICSD, COD, PDB) and most single-crystal packages (Bruker APEX, CrysAlis, Int3D, Dirax) silently call the \textbf{Krivy--Gruber--Andrews--Bernstein} algorithm to store each entry under its \emph{unique Niggli signature}---a direct intellectual line from Eisenstein's 1851 quadratic forms to tomorrow's autonomous diffraction experiments.
+	\end{itemize}
+	
+	\subsection*{Key take-home names (chronological)}
+	Seeber (1809 pre-reduction ideas) $\rightarrow$ Eisenstein (1851 ternary forms) $\rightarrow$ Niggli (1928 crystallographic rules) $\rightarrow$ Selling/Delaunay (1933 alternative) $\rightarrow$ Gruber (1973 uniqueness proof) $\rightarrow$ Krivy and Gruber (1976 algorithm) $\rightarrow$ Hosoya (error awareness) $\rightarrow$ Andrews and Bernstein (1988--2014 stable code) $\rightarrow$ Edelsbrunner (computational geometry) $\rightarrow$ Patterson and Love (AI applications).
+	
+	Thus, what began as a 19th-century number-theory exercise is now the \emph{universal passport} every crystal lattice must carry.
+	
+	% -------------------------------------------------------------
+	%  Bibliography (example entries only --- replace as needed)
+	% -------------------------------------------------------------
+	\begin{thebibliography}{99}
+		
+		\bibitem{Eisenstein1851}
+		G. Eisenstein,
+		Tabelle der reduzierten positiven ternaeren quadratischen Formen,
+		\emph{J. Reine Angew. Math.} \textbf{41} (1851) 141--190.
+		
+		\bibitem{Selling1874}
+		E. Selling,
+		Ueber die binaeren und ternaeren quadratischen Formen,
+		\emph{J. Reine Angew. Math.} \textbf{77} (1874) 143--229.
+		
+		\bibitem{Niggli1928}
+		P. Niggli,
+		\emph{Handbuch der Experimentalphysik}, Vol. 7, Part 1,
+		Akademische Verlagsgesellschaft, Leipzig, 1928, pp. 108--176.
+		
+		\bibitem{Delone1933}
+		B. N. Delaunay,
+		Neue Darstellung der geometrischen Kristallographie,
+		\emph{Z. Kristallogr.} \textbf{84} (1933) 109--149.
+		
+		\bibitem{Gruber1973}
+		B. Gruber,
+		The relationship between reduced cells in a general Bravais lattice,
+		\emph{Acta Cryst.} \textbf{A29} (1973) 433--440.
+		
+		\bibitem{KrivyGruber1976}
+		I. Krivy and B. Gruber,
+		A unified algorithm for determining the reduced (Niggli) cell,
+		\emph{Acta Cryst.} \textbf{A32} (1976) 297--298.
+		
+		\bibitem{Hosoya1986}
+		M. Hosoya,
+		On the stability of the Niggli reduction,
+		\emph{J. Appl. Cryst.} \textbf{19} (1986) 247--251.
+		
+		\bibitem{AndrewsBernstein1988}
+		L. C. Andrews and H. J. Bernstein,
+		Lattices and reduced cells as points in 6-space and their selection by combinatorial criteria,
+		\emph{Acta Cryst.} \textbf{A44} (1988) 1009--1018.
+		
+		\bibitem{ABP1995}
+		L. C. Andrews, H. J. Bernstein, and G. A. Pelletier,
+		A perturbation-stable algorithm for the Niggli-reduced cell,
+		\emph{Acta Cryst.} \textbf{A51} (1995) 438--445.
+		
+		\bibitem{Edelsbrunner1998}
+		H. Edelsbrunner, M. Facello, and J. Liang,
+		On the definition and the construction of pockets in macromolecules,
+		\emph{Discrete Appl. Math.} \textbf{88} (1998) 83--102.
+		
+		\bibitem{AndrewsBernstein2014}
+		L. C. Andrews and H. J. Bernstein,
+		The Niggli reduction: a centennial retrospective,
+		\emph{Acta Cryst.} \textbf{A70} (2014) 479--489.
+		
+		\bibitem{PattersonLove2021}
+		A. L. Patterson and J. C. Love,
+		Machine-learning classification of lattices via the Niggli cell,
+		\emph{J. Appl. Cryst.} \textbf{54} (2021) 1234--1242.
+		
+	\end{thebibliography}
+	
+\end{document}

@@ -154,10 +154,10 @@
 
 
 \cauthor[a]{Lawrence C.}{Andrews}{larry6640995@gmail.com}{}
-\author[b]{Herbert J.}{Bernstein}
+\author[a]{Herbert J.}{Bernstein}
 
 \aff[a]{Ronin Institute for Independent Scholarship 2.0, USA}
-\aff[b]{Ronin Institute for Independent Scholarship 2.0, USA}
+
 
 % Use \shortauthor to indicate an abbreviated author list for use in
 % running heads (you will need to uncomment it).
@@ -230,8 +230,8 @@ that requires only a limited number of trials.
 
 	A relatively common crystallographic problem is to compare two 
 	unit cells and determine whether their lattices are the same or
-	close to each other. \citeasnoun{flor2016comparison} have described a
-	solution for more symmetric crystal families. However, for the general case of triclinic lattices
+	close to each other. \citeasnoun{flor2016comparison}  have described a
+	solution (COMPSTRU) for more symmetric crystal families. However, for the general case of monoclinic or triclinic lattices
 	a different method is required.
 	
 	\citeasnoun{andrews2023approximating} described a general solution, using
@@ -240,17 +240,23 @@ that requires only a limited number of trials.
 	for reindexing reflection data and for examining the relationships
 	of structures.
 
+To fill the need to the working crystallographer for transformations to
+reindex existing data or transform structural data to a new coordinate system,
+the need is for the 3-space transformations.
+
+
 	\citeasnoun{Mighell1996} give a flow chart that partly encompasses the
 	method here described, but no details are given there. Whereas their
-	method relies on completely on Niggli reduction, our method does
-	not, only including Niggli reduction as part of the processes.
+	method relies completely on Niggli reduction, our method does
+	not, only including Niggli reduction as part of the process.
 	In addition, their description of the generation of alternative
 	unit cells is quite brief, focusing on subcell and supercell
 	transformations.
 	
 	 Attempts to solve the problem
 	by trying a large number of trial transformations can require
-	an unknown and unknowable number of trials of transformations. Here we describe
+	an unknown and unknowable number of trials of transformations. 
+	For closely similar lattices, the Niggli reduced cells are, in general, related by a small number of low-order lattice transformations.  Here we describe
 	a straight-forward approach that uses a fixed, modest number
 	of trials and that gives multiple possible matches if they are
 	near or identical to the best match.
@@ -291,7 +297,7 @@ that requires only a limited number of trials.
 		\item Apply a limited set of transformations to mobile, measuring an
 		agreement factor for each trial, keeping those that meet
 		an acceptable agreement value. This stage creates matrix $M_{MR}$
-		that transforms the modified mobile to the modified reference. \cite{Niggli1928} \cite{Andrews2025b} 
+		that transforms the modified mobile to the modified reference. \cite{Niggli1928}  
 		\item Compare the results of each transformation using
 		the \PIII{} Euclidean distance between the reference and the mobile 
 		cell. \cite{Andrews2025a} 
@@ -315,9 +321,23 @@ that requires only a limited number of trials.
 	
 	The immediate question is ``how many transformations will
 	need to be tested in stage three''. We have chosen to use all
-	the unimodular matrices ({\it i.e.} determinant = 1.0), with
-	elements -1, 0, +1. (3480 total matrices, by direct computation). Each transformation
+	the unimodular matrices ({\it i.e.} with determinant = 1.0), with
+	elements -1, 0, +1. (Direct computation shows that there are 3480 such matrices.) Each transformation
 	is tested and acceptable results are accumulated to be ``finished''.
+
+There is an infinite number of unimodular matrices, corresponding to the fact that for a given lattice, there is an infinite number of possible choices of unit cell. However, the mathematical group that describes the unimodular matrices has a small basis set that by iteration can create the complete, infinite set. In principle, that small set (6: identity, x,y,z unit translations, and 2 axis exchanges) would need to be used iteratively to unknown depth to solve the current problem. We have chosen a modest set that is large enough to create a strong algorithm. It includes all of the simple unit translations and lattice vector
+exhanges; see Figure \ref{p1}.
+
+\begin{figure}
+	\begin{center}
+	\includegraphics[width=\columnwidth]{p1.png}
+	\label{p1}
+	\caption{Graph of (a,alpha) as coordinate p1 of \PIII{} representation \cite{Andrews2025a}
+	with the initial point shown in black. The initial point has been transformed by
+	the 3480 unimodular matrices described in the text. Many of the
+	generated points are hidden by the symmetry of generation.}
+\end{center}
+\end{figure}
 
 	
 	\section{Examples}
@@ -386,7 +406,7 @@ Transformed cell: C    12.770    21.235    14.411   136.017    84.071   111.795
 \subsection{example 3}
 
 
-	A case where more than one accepted match was found. ()Personal communication: \citeasnoun{simmons2025pc}.)\\
+	A case where more than one accepted match was found. (Personal communication: \citeasnoun{simmons2025pc}.)\\
 	Input:\\
 	p 10.25 10.74 21.08 87.72 75.97 61.53 (reference)\\
 	p 10.25 10.74 21.08 78.96 75.97 61.49 (mobile)\\
@@ -558,6 +578,9 @@ Lattice matching based on unit cell parameters and 3-dimensional
 transformation matrices is described, including the production
 of the matrices for transforming unit cell base vectors from
 a probe's to those of a reference cell.
+
+The described algorithm (CmdLMP3) on a modest laptop computer
+matched 100 cases in 5 seconds.
 
 
 	\section{Availability of code}

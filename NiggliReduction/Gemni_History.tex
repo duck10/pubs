@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{booktabs}
+
+\title{A Historical Overview of Niggli Reduction in Crystallography}
+\author{Historical Summary}
+\date{}
+
+\begin{document}
+	
+	\maketitle
+	
+	Summary created by Gemeni (an AI from Google)
+	\section{Introduction}
+	The reduction of a crystal lattice to its unique, canonical form—known as Niggli reduction—is a cornerstone of modern crystallography. It provides a mathematical standard for comparing different experimental observations and identifying the underlying symmetry of a unit cell.
+	
+	\section{19th Century Foundations}
+	The mathematical roots of lattice reduction lie in the theory of positive definite ternary quadratic forms. 
+	
+	\begin{itemize}
+		\item \textbf{Seeber (1824):} Ludwig August Seeber provided the first systematic investigation into the conditions for reduced quadratic forms, establishing that a lattice could be described by a set of primary inequalities.
+		\item \textbf{Eisenstein (1847):} Gotthold Eisenstein refined Seeber's work, providing the rigorous algebraic proofs required to ensure that a reduced form was not only minimal but unique.
+	\end{itemize}
+	
+	\section{The Standardization of the Niggli Cell}
+	In the early 20th century, the focus shifted from pure mathematics to practical crystallography.
+	
+	\begin{itemize}
+		\item \textbf{Niggli (1928):} Paul Niggli formalized the application of Eisenstein's reduction to crystal lattices. In his \textit{Handbuch der Kristallographie}, he defined the 44 possible Niggli characters, creating a standardized language for the classification of lattices.
+		\item \textbf{Patterson and Love (1957):} A.L. Patterson and W.E. Love adapted these theories for the era of X-ray diffraction, emphasizing the relationship between the reduced cell and the Bravais lattice.
+	\end{itemize}
+	
+	\section{The Algorithmic Evolution}
+	The transition to computer-aided crystallography required the conversion of Niggli’s inequalities into logical flowcharts.
+	
+	\begin{itemize}
+		\item \textbf{Roof (1967):} R.B. Roof Jr. was a critical figure in this transition. He published one of the first explicit computer programs for Niggli reduction. While earlier methods were often descriptive, Roof's work focused on the iterative logic required to transform an arbitrary basis into a reduced one via unimodular transformations.
+		\item \textbf{Gruber (1973):} Boris Gruber refined the theory of cell reduction, exploring the relationships between different types of reduction (such as Buerger and Niggli) and their geometric interpretations.
+		\item \textbf{Krivy and Gruber (1976):} This landmark paper provided the definitive algorithmic implementation. They consolidated Niggli's conditions into a robust computational procedure that handles all boundary cases, ensuring a unique solution regardless of the starting basis.
+	\end{itemize}
+	
+	\section{Modern Refinements and Stability}
+	Recent decades have focused on the sensitivity of the reduction to experimental measurement errors.
+	
+	\begin{itemize}
+		\item \textbf{Hosoya (1980s):} Masahiko Hosoya introduced geometric interpretations of the reduction process, treating the Niggli cell as a point within a higher-dimensional parameter space.
+		\item \textbf{Andrews and Bernstein / Andrews, Bernstein, and Pelletier:} This group addressed the "instability" of Niggli reduction. Because the reduction depends on strict inequalities, small errors in cell parameters can lead to different Niggli types. Their work on "robust" reduction and the identification of higher symmetry remains central to modern software.
+		\item \textbf{Edelsbrunner:} Herbert Edelsbrunner has applied contemporary computational geometry to the problem, ensuring that lattice reduction remains an efficient and mathematically sound process in the era of big data and high-throughput crystallography.
+	\end{itemize}
+	
+	\section{The Krivy-Gruber Mathematical Framework}
+	The algorithm processes the symmetric matrix of scalar products:
+	\[
+	\begin{pmatrix}
+		\mathbf{a} \cdot \mathbf{a} & \mathbf{a} \cdot \mathbf{b} & \mathbf{a} \cdot \mathbf{c} \\
+		\cdot & \mathbf{b} \cdot \mathbf{b} & \mathbf{b} \cdot \mathbf{c} \\
+		\cdot & \cdot & \mathbf{c} \cdot \mathbf{c}
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		A & \frac{1}{2}\eta & \frac{1}{2}\zeta \\
+		\cdot & B & \frac{1}{2}\xi \\
+		\cdot & \cdot & C
+	\end{pmatrix}
+	\]
+	The reduction is achieved when the primary inequalities $A \le B \le C$ and $|\xi| \le B, |\zeta| \le A, |\eta| \le A$ are satisfied, alongside specific boundary conditions for equality cases.
+	
+\end{document}
