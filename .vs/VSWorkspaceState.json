@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\LinearAxis"
+    "\\LinearAxis",
+    "\\SELLA"
   ],
-  "SelectedNode": "\\NiggliReduction",
+  "SelectedNode": "\\SELLA\\Sella.tex",
   "PreviewInSolutionExplorer": false
 }

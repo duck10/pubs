@@ -104,7 +104,20 @@
 	% for use in running heads (you will need to uncomment it).
 	
 	{\LARGE \emph{\today}} \\
-	\title{Determining Bravais Lattice Types}
+	
+\cauthor[a]{Lawrence C.}{Andrews}{larry6640995@gmail.com}{}
+\author[a]{Herbert J.}{Bernstein}
+\author[b]{Nicholas K.}{Sauter}
+
+\aff[a]{Ronin Institute for Independent Scholarship 2.0, USA}
+\aff[b]{Lawrence Berkeley National Laboratory, 1 Cyclotron Rd., Berkeley 94720, CA, USA}
+
+\shortauthor{Andrews, Bernstein, and Sauter}
+
+\title{Determining Bravais Lattice Types Using Selling Reduction}
+
+\maketitle
+	
 	%\shorttitle{SELLA  Determining Bravais Lattice Types}
 	
 	% Authors' names and addresses. Use \cauthor for the main (contact) author.
@@ -112,14 +125,13 @@
 	% Use lower-case letters in square brackets to link authors to their
 	% affiliations; if there is only one affiliation address, remove the [a].
 	
-	\cauthor[a]{Lawrence C.}{Andrews}{larry6640995@gmail.com}{}
-	\author[b]{Herbert J.}{Bernstein}
-	\author[c]{Nicholas K.}{Sauter}
 	
 	% ORCID for LCA - 0000-0002-4451-1641
 	
-	\aff[a]{Ronin Institute for Independent Scholarship 2.0, USA}
-	
+\aff[a]{Ronin Institute for Independent Scholarship 2.0, USA}
+\aff[b]{Lawrence Berkeley National Laboratory, 1 Cyclotron Rd., Berkeley 94720, CA, USA}
+
+
 	% Use \shortauthor to indicate an abbreviated author list for use in
 	% running heads (you will need to uncomment it).
 	
@@ -149,685 +161,491 @@
 	% \PDBref[dethiobiotin synthetase]{1byi} \NDBref[d(G$_4$CGC$_4$)]{ad0002}
 	
 	%\PDBref[optional name]{refcode}
-	%\NDBref[optional name]{refcode}
-	
-	\maketitle                        % DO NOT DELETE THIS LINE
-	
-	\begin{synopsis}
-		A method for determining likely Bravais lattice types based on Selling (Delone) 
-		reduction. It is a complete, closed solution.
-	\end{synopsis}
-	
-	\begin{abstract}
-		We introduce a new Bravais lattice determination algorithm. SELLA is a 
-		straight-forward algorithm and a program for determining Bravais lattice type 
-		based on Selling (Delone) reduction. It provides a clear metric of fit to each type. The mathematical foundations for treating near-symmetries are
-		described. The 24 Bravais lattice types described by \citeasnoun{Delaunay1932} 
-		are described as linear manifolds in 6-dimensions.
-	\end{abstract}
-	
-	
-	%-------------------------------------------------------------------------
-	% The main body of the paper
-	%-------------------------------------------------------------------------
-	% Now enter the text of the document in multiple \section's, \subsection's
-	% and \subsubsection's as required.
-	
-	\section{Introduction}
-	
-	
-	\section*{Scope and Limitations of Niggli's Reduction Rules}
-	
-	Niggli's 1928 reduction framework provides a complete and correct set of rules for identifying a unique reduced cell in the general triclinic case. These rules define a canonical region in metric tensor space ($G^6$) using edge ordering, angle constraints, sign consistency, and tie-breaking equalities.
-	
-	However, the framework is primarily designed to resolve \textbf{first-order boundaries}—those defined by a single equality or saturation condition. These include:
-	
-	\begin{itemize}
-		\item Edge equalities (e.g., $g_1 = g_2$)
-		\item Angle saturations (e.g., $|g_4| = g_2$)
-		\item Orthogonality boundaries (e.g., $g_4 = 0$)
-	\end{itemize}
-	
-	For \textbf{second-order} and \textbf{third-order boundaries}—where multiple conditions intersect—Niggli's rules are often incomplete. In these compound zones:
-	
-	\begin{itemize}
-		\item Reduction may yield multiple valid cells
-		\item Tie-breaking logic may be underspecified or absent
-		\item Classifier intervention is required to resolve ambiguity
-	\end{itemize}
-	
-	It is not yet clear which compound boundaries admit simple, well-defined actions and which do not. A full classification of these zones remains an open problem. The current boundary table enumerates 45 polytopes, but only a subset are fully resolved by Niggli's original rules.
-	
-	This motivates the development of a \textbf{reduction-aware classifier pipeline}—one that augments Niggli's framework with symbolic triggers, parametric thresholds, and adjacency logic to ensure robust Bravais assignment across all regions of $G^6$.
-	
-	
-	
-	
-	We introduce a new Bravais lattice determination algorithm. The Bravais 
-	lattice types were created by \citeasnoun{Bravais1850}. \citeasnoun{Delaunay1932} 
-	and \citeasnoun{Niggli1928} developed methods for the identification 
-	of the Bravais lattice type of a crystal using the measured unit cell 
-	dimensions; their methods were exact only if the cell parameters 
-	exactly corresponded to the actual type \cite{Patterson1957}. 
-	Delaunay \cite{Delaunay1932} discussed the issues of scalars that have nearly zero values, 
-	but the broader issues of measurement errors were not 
-	discussed. (Delaunay later changed the spelling to Delone, a
-	transliteration of the Cyrillic spelling of his name.)
-	
-	\citeasnoun{Zimmermann1985} described the program, DELOS
-	for the above purpose and based on the use of Selling scalars, which
-	SELLA uses as well; they treat the scalars as a list of 6 numbers, but do not consider them as points in 
-	a space.  SELLA treats the scalars as elements of vectors in the 6-dimensional
-	space, \SVI. Treating lattices as points in a liner space accesses the tools
-	and systematic procedures of linear algebra.
-	
-	
-	\citeasnoun{andrews2014} reviewed the literature on 
-	 efforts to create methods to utilize data that contain unavoidable 
-	measurement error, and they add a more generic view of the problem.
-	
-	SELLA is a based on Selling (Delone) reduction. It is a complete, closed solution, and it provides a clear metric of fit to each type.
-	
-	
-	\section{Introduction}
-	\section{Brief historical review}
-	\section{The problem of experimental error and related issues}
-	\subsection{experimental error}
-	\subsection{approximate symmetry}
-	\subsection{Solid solutions}
-	
-	
-	\section{Terminology}
-	
-	\section{SELLA}
-		
-	\subsection{Terminology of the Bravais types}		
-	\subsection{The Bravais tetrahedron}		
-	\subsection{The characteristic}	
-	\subsection{Projectors and perps}	
-	
-	\section{Classifications of the Bravais types}
-	\subsection{Niggli}
-	\subsubsection{the space \GVI{}}		
-	\subsection{Delaunay}
-	\subsubsection{the space \SVI{}}		
-	
-	\section{Algorithms}
-	\subsection{Simple}
-	\subsection{Search with transformed vectors}
-	\subsection{Search with transformed manifolds}
-	\subsection{B-Matrix}
-	
-	
-	\section{THE OLDER TEXT}
-	
-	\subsection{The Bravais types}
-	
-	\citeasnoun{Delaunay1932} found that the 14 Bravais lattice types 
-	could be allocated among 24 types (here termed "Delone Types") that are determined by the 
-	type of Dirichlet unit cell (termed the Voronoi region \cite{Voronoi1908} or 
-	Dirichlet region \cite{dirichlet1850} by 
-	Delone). Delone used the tetrahedral convention of \citeasnoun{Bravais1850}
-	using the sides of the tetrahedron labeled by the symbols of the six
-	Selling scalars. Figure \ref{fig:PQRSTU} shows the labeling used in
-	the International Tables for Crystallography \cite{Henry1952}; 
-	Table \ref{table:ScalarConcordance} shows other choices that have been used. The
-	contents for each type are described in Figure \ref{fig:PQRSTU}.
-	
-	
-	
-	\citeasnoun{Burzlaff1985} revised the labeling of the types.
-	Here we have returned to the numbering of the Bravais types to that 
-	of \citeasnoun{Delaunay1932}, which addresses the type
-	of Federov polyhedron for the reduced cell.
-	In some cases, Delone included two forms within a single 
-	type. \citeasnoun{Burzlaff1985}
-	renumbered by ordinals. We have labeled the Delone 
-	types that have multiple items as "A" and "B". Table \ref{table:DeloneTypeConcordance}
-	shows the various labelings. Figure \ref{fig:rotatedDeloneTypes} 
-	revises the figure of \citeasnoun{Delaunay1932}, using 
-	more modern notation. Table \ref{table:ScalarConcordance} 
-	lists the various labelings that have been 
-	used for the sides of the Bravais tetrahedron. 
-	Figure \ref{fig:PQRSTU} shows the arrangement of the 
-	symbols as used in the International Tables for Crystallography.
-	
-	\begin{table}
-		\begin{tabular}{cccccccccccc} 
-			\toprule
-			
-			\rotatebox{80}{\citeasnoun{Delaunay1932}}
-			& \rotatebox{80}{\citeasnoun{Henry1952}  }
-			& \rotatebox{80}{\citeasnoun{Patterson1957} }
-			& \rotatebox{80}{\citeasnoun{Burzlaff1985}}
-			&\rotatebox{80}{\citeasnoun{andrews2019} } \\	
-			\midrule
-			g&P&h$_{23}$&$a_2.s_3$&\scalarsub{s}{1}\\		
-			k&R&h$_{12}$&$a_1.a_3$&\scalarsub{s}{3}\\		
-			l&S&h$_{14}$&$a_1.a_2$&\scalarsub{s}{4}\\		
-			m&T&h$_{24}$&$a_1.a_4$&\scalarsub{s}{5}\\		
-			h&Q&h$_{13}$&$a_2.a_4$&\scalarsub{s}{2}\\		
-			n&U&h$_{34}$&$a_3.a_4$&\scalarsub{s}{6}\\		
-			\bottomrule
-		\end{tabular}
-		
-		\caption{The various terms used to describe the sides of 
-			the Bravais tetrahedron. (In the figures in \citeasnoun{Delaunay1932} 
-			the tetrahedron has been rotated by -120 degrees)}
-		\label{table:ScalarConcordance}
-	\end{table}
-	
-	
-	\begin{table}
-		\begin{tabular}{ccccccccc}
-			\toprule
-			\cite{Delaunay1932} & \cite{Burzlaff1985}   &this &Pearson  \\
-			&  & paper & symbol\\
-			\midrule
-			K$_I$ & K1 & C1 & cI \\		
-			K$_{III}$ & K2 & C3 &cF \\		
-			K$_V$ & K3 & C5 &cP \\		
-			Q$_I$ & Q1 & T1 &tI \\		
-			Q$_{II}$ & Q2 & T2 &tI \\		
-			Q$_V$ & Q3 & T5 & tP\\		
-			R$_I$ & R1 & H1 & hR \\		
-			R$_{III}$ & R2 & H3 & hR \\		
-			O$_I$ & O1 & O1A & oF  \\		
-			O$_I$ & O2 & O1B &oI  \\		
-			O$_{II}$ & O3 & O2 & oI   \\		
-			O$_{III}$ & O4 & O3$^*$ & oI   \\		
-			O$_{IV}$ & O5 & O4 & oS   \\		
-			O$_V$ & O6 & O5 & oP   \\		
-			M$_I$ & M1 & M1A & mC  \\		
-			M$_I$ & M2 & M1B & mC \\		
-			M$_{II_2}$  & M3 & M2A$^*$ & mC \\		
-			M$_{II}$ & M4 & M2B$^*$ & mC  \\		
-			M$_{III}$ & M5 & M3 & mC  \\		
-			M$_{IV}$ & M6 & M4 & mP  \\		
-			T$_I$ & T1 & A1 & aP  \\ 		
-			T$_{II}$ & T2 & A2$^*$ & aP \\		
-			T$_{III}$ & T3 & A3$^*$ & aP \\		
-			H$_{IV}$  & H1 & H4 & hP \\ 
-			\bottomrule
-		\end{tabular}
-		~\\ ~\\
-		\caption{The 24 Delone types. \cite{Delaunay1932}\\
-			$^*$ not a full Bravais type.}
-		\label{table:DeloneTypeConcordance}
-	\end{table}
-	
-	\subsection{The space \SVI{}}
-	\citeasnoun{andrews2019} recast the Selling parameters as a metric space, \SVI{}.
-	The base vectors, $\bf{a}$, $\bf{b}$, $\bf{c}$ of the unit cell
-	are used to define $\bf{d}=-(\bf{a}+\bf{b}+\bf{c})$.
-	A point ${s}$ in \SVI{} is defined as:\\
-	${s}$= [\scalarsub{s}{1}, \scalarsub{s}{2}, \scalarsub{s}{3},\scalarsub{s}{4}, \scalarsub{s}{5}, \scalarsub{s}{6}] \\
-	where \scalarsub{s}{1}=\vdotv{b}{c}, ~\scalarsub{s}{2}=\vdotv{a}{c}, ~\scalarsub{s}{3}=\vdotv{a}{b}, 
-	~\scalarsub{s}{4}=\vdotv{a}{d}, ~\scalarsub{s}{5}= \vdotv{b}{d}, and \scalarsub{s}{6}=\vdotv{c}{d}.
-	
-	\subsection{Terminology of the Bravais lattice types}
-	The Bravais tetrahedron symbol is described in Figure \ref{fig:PQRSTU}.\\
-	The different ways that the scalars have been labeled is shown in Table \ref{table:ScalarConcordance} \\
-	The table of the Delone types is displayed in Figure \ref{fig:rotatedDeloneTypes}. The table has been transposed from that of Delone. Where Delone listed 2 types in one cell, we have been split them into parts A and B. The crystal family names and abbreviations have been changed to modern usage. \\
-	
-	\subsection{Character}
-	In \SVI{} for reduced cells, each Bravais type is a single, connected,
-	origin-inclusive, Euclidean manifold. As such, all points in a
-	particular manifold can be described by their ``character'', 
-	a representation of the vectors of that type. The table of \citeasnoun{Delaunay1932} included this information 
-	encoded in the formalism of Bravais, as a tetrahedron, with
-	the sides marked to show which of the 6 Selling parameters were
-	zero or which pairs (or multiplets) have equal values. 
-	
-	As an example, in Figure \ref{fig:O4_terminology}, the tetrahedron shows two
-	zeros, in positions P and Q (\scalarsub{s}{1} and \scalarsub{s}{2}). The slashes on the lines
-	show that positions S and T (\scalarsub{s}{4} and \scalarsub{s}{5}) are equal. This is 
-	encoded in the \textit{character}, which is shown at the bottom of the item as \charseq{00r sst}.
-	
-	\section{Algorithms for creation of an exhaustive list of the manifolds of the Bravais types}
-	
-	\subsection{Deriving the projectors and perps}
-	
-	Sella creates projectors for each of the Bravais
-	lattice types. The projectors will be used to generate
-	images of probe points in each of the types, and the perps
-	will measure the distance from each manifold. Perps
-	are the matrices that when multiplied times a vector,
-	create a vector that is the component of the input 
-	that is orthogonal to the domain that the projector
-	is associated with.
-	
-	We will use Selling reduction; Niggli reduction has a reduced
-	domain that is non-convex and some boundaries of the 
-	reduced domain are partly closed and partly open \cite{andrews2014} leading 
-	to considerable complexity. Because Niggli reduction divides the 
-	fundamental unit of Niggli reduction into separate all obtuse and all acute regions, 
-	the transitions between those are quite complex \cite{andrews2014}. 
-	In space \SVI{} \cite{andrews2019b}, the reduced domain is the simple, convex all-negative orthant of a 6-dimensional 
-	Cartesian space. Only two kinds of operations in the space 
-	will need to be considered: the transform operations 
-	at the boundaries of the reduced orthant (zeros of an axis) and 
-	24 reflections (allowed permutations) \cite{andrews2019}
-	
-	Twenty-four lattice types were enumerated by \citeasnoun{Delaunay1932}. 
-	Three of those are triclinic, and we will ignore them because all crystals 
-	can be indexed as triclinic. We 
-	shall need all representations of all non-triclinic lattice 
-	types within the \SVI{} fundamental unit (all Selling-reduced 
-	cells) or those generated beyond the boundaries by boundary transforms. 
-	Three forms (M3, M2B, and O3) are reduced-dimension boundaries between 2 Delone Types, that do
-	not correspond to unique Bravais types; any lattice that falls in those
-	three is indexed by both of the other types.
-	
-	
-	
-	
-	Seven of the 19 non-triclinic, nondegenerate Delone types do not have a zero in their \SVI{} 
-	representation; the presence of zero indicates that a form is 
-	on the boundary of the \SVI{} fundamental unit. Since a 
-	point on the boundary transforms to another boundary 
-	point \cite{andrews2019b}, we can generate the Virtual 
-	Cartesian Point (VCP) \cite{andrews2019b} appropriate to 
-	each zero in the \SVI{} vector. Because the reduction
-	operations do not commute, in the cases where there is more 
-	than one zero in the vector, all orderings of applying 
-	reductions to all of the zeros must be generated. (For example, 
-	for two zeros, there will be six vectors produced.) Again, 
-	there may be many duplicate results. 
-	
-	Finally, the projectors must be computed for each of the many 
-	sample vectors of the 21 types. We will also need the 
-	``perps'', the operators that give the normal vector to each 
-	such manifold. For a particular manifold, its projector 
-	applied to the probe gives
-	the least-squares best fit point within that manifold
-	to the probe vector. 
-	Perps are computed by subtracting the 
-	corresponding projector from the unit matrix. The norm of a vector
-	created by multiplying the probe times a projector
-	 is the distance from that manifold.
-	
-	\subsubsection{Generating sample vectors from all Bravais types\protect\\}
-	
-	For each Delone Type, we will create a list of
-	vectors that can be generated for that type.
-	
-	\emph{Step 1:}
-	
-	Generate any random vector that contains no zero 
-	values and no duplicate values.  For a later operation, 
-	it should only contain values large enough that adding or
-	subtracting the smallest
-	representable floating point number will not change the 
-	value in computer arithmetic ($DBL\_MIN$ in the C language).
-	That value will be used to mark the positions of zeros
-	in vectors that have been processed.
-	
-	
-	
-	\emph{Step 2:}
-	
-	 For each Delone type, multiply its projector times 
-	the vector from Step 1. Store  the resulting vector
-	from Step 1 in a list 
-	with entries for each Delone type (see Table \ref{table:DeloneTypes} 
-	for the projectors).
-	
-	\emph{Step 3:}
-	
-	a) If the vector result of Step 2 contains no zeros, generate the 24 reflections
-	and store in the list by Delone type. 
-	
-	
-	
-	b) If the vector contains one zero, apply the boundary transform 
-	operation for that boundary
-	to the vector, and
-	store the products of the vector and its 24 reflections in the list. Note, 
-	this is where the choice of $DBL\_MIN$ has effect; adding or
-	subtracting such a small value will not change
-	any value except zero.
-	
-	c) If the vector contains more than one zero and \underline{not} $DBL\_MIN$, 
-	first set one zero to $DBL\_MIN$,  and then return it to 
-	step b, using the modified vector. Then set the second zero to $DBL\_MIN$ (with the
-	first zero still zero), and send that result to step b. 
-	If there is a third zero,  process it the same way as 2 zeros and return to c.
-	(Note that no valid unit cell can have more than 3 zeros
-	in space \SVI{}.)
-	
-	Continue those steps until all the types have been processed. 
-	There will be duplicates within each type,
-	which will be eliminated later.
-	
-	
-	\subsubsection{Generate projectors from sample vectors\\}
-	
-	Each vector in each of the lists from the previous steps is a representative of one
-	of the Delone types. Although a vector is a one-dimensional manifold,
-	these vectors encode the information about the full manifolds of the
-	Delone types in their zeros and their duplicate values. Now we 
-	discuss the creation of the projector matrices that correspond
-	to each vector.
-	
-	We begin by defining a function: \\ \relax
-	\underline{Fraction} computes the reciprocal of the 
-	number of elements that equal \\ \relax
-	an input value or zero if there are no duplicates.
-	
-	\textit{\textbf{LCA write pseudocode for Fraction.}}
-	
-	The following steps will be repeated for each of the vectors in the
-	list generated above in order to generate the list
-	of the corresponding projector matrices. 
-	
-	To generate a matrix \textit{m} starting from a vector.
-	
-	Step 1: Zero any elements of the vector that have been set to $DBL\_MIN$.
-	
-	Step 2: For each of the six scalars
-	
-	For i in 1-6
-	\textit{m}[i,i] = \{if \textit{Fraction}(s[i]) == 0.0 or abs(s[i]) == 0.0\} then 0.0 else \textit{Fraction}(s[i])
-	
-	For i in 1-6
-	For j in 1-6
-	\textit{m}[i,j] 	= \{if s[i]==s[j] or abs(s[j]) $>$ 0\} then~\textit{Fraction}(s[j]) else 0.0
-	
-	Add m to a list of the projectors.
-	
-	
-	To finish, the duplicate projectors are removed within each type, 
-	leaving 239 non-triclinic projectors. (If the triclinic cases are 
-	included, there are 10 more.) See Table \ref{table:TypeCounts}.
-	
-	
-	\subsection {Measuring the fit}
-	
-	When the library of projectors has been prepared, then
-	the distance of any probe from each of the manifolds
-	can be computed. 
-	The distance from the given manifold is just
-	the norm of the perp for that manifold applied to the probe.
-	An alternative, scale-free measure is the angle between
-	the sample vector and its projected image.
-	
-	\section{Degenerate Delone types}
-	
-	Three of the 21 non-triclinic Delone types are only boundaries of other types. In Figure 
-	\ref{fig:degenerate}, Delone types M2B and M3 are in the row for orthorhombic, and
-	O3 is in the row for rhombohedral and tetragonal. These types do not need to
-	be searched for in general surveys. If a probe is close to 
-	one of these degenerate manifold, it will be close to one
-	or both of the adjacent manifolds.
-	
-	\section{Verification}
-	
-	\subsection{Rationale}
-	
-	Most of the proposals for Bravais lattice determination in the 
-	presence of experimental error do not have a clear proof that 
-	they are complete. For many years there were verbal complaints 
-	that available programs would not infrequently miss experimental 
-	cases (for example, TRACER \cite{lawton1965} and many anecdotal 
-	communications).  To our knowledge, only the method of 
-	\cite{OishiTomiyasu2012} has clearly demonstrated completeness
-	for exact values.	
-	
-	The justification that Sella is complete has three parts.
-	
-	First: We require that the cell being tested be Selling reduced, and
-	all Bravais lattice types within the \SVI{} fundamental unit (all
-	\SVI{} scalars negative) to have their projectors generated. Therefore,
-	the 24 possible forms (reflections) of a 
-	reduced cell will be close to one of the 24 copies of the types. 
-	For the reflections, we do not need to consider the case of 
-	points near a boundary; the boundary 
-	transforms must be treated for that.
-	
-	Second: In the case of the boundary transform operations, 
-	we take the case of a point that is infinitesimally distant from the manifold of a 
-	Bravais lattice type that has one zero in its scalars. Take 
-	the point in the manifold that is closest to the experimental 
-	point. We transform both by the corresponding boundary transform 
-	operation. We have generated a new pair of points in a 
-	different location, one of which is in some representation of 
-	the same Bravais lattice type. The points are still 
-	infinitesimally distant from each other.
-	
-	Third: Assume we have a point that is outside the fundamental 
-	unit and is near an undiscovered manifold for a Bravais lattice 
-	type. If the point is near a boundary defined by a single 
-	zero, then we apply a boundary transform to the point and to 
-	the Bravais manifold, bringing them both into the fundamental 
-	unit. If all of the variations of all of the Bravais 
-	lattice types within and on the boundaries of the fundamental unit have 
-	been generated, then this putative undiscovered manifold 
-	has already been included in the list of possibilities. 
-	Similar arguments apply to the cases of two or three zeros.
-	
-	If we apply all of the boundary transform operations to the 
-	representations of the Bravais lattice types, then 
-	there are no places that a point in the fundamental 
-	unit will fail to find the closest Bravais lattice 
-	(or lattices). As stated above, we found 239 
-	non-triclinic possible representations.
-	
-	What might occur if some reduced point has an unreduced 
-	copy near the all-negative orthant?  Would it be 
-	possible for it to be close to one of the copies of one 
-	of the 21 Delone types? The reduced point is obviously in 
-	the non-positive orthant. Further, because all possible 
-	copies of all of the Delone type manifolds have been 
-	generated, the reduced point will be near a copy of the 
-	manifold it was near when it was unreduced.
-	
-	\subsection{Testing against known cells}
-	
-	89539 unit cells were extracted from the Protein Data Bank 
-	in 2018
-	(\citeasnoun{bernstein1977} and \citeasnoun{berman2000}). 
-	When evaluated with Sella, all but 57 were found at zero 
-	distance from the described crystal class. The 57 were 
-	identified as incorrect unit cells for the assigned 
-	crystal class; however, the distances from the assigned 
-	classes were small because the deviations from the 
-	appropriate parameters were modest (see Table \ref{tab:PDBCells}).
-	The suspect cases have since been corrected \cite{Burley_personal_communication}.
-	\begin{table}
-		
-		\begin{tabular}{ccccccc}
-			\toprule
-			PDB ID & Sp.Gr. & Delone type&distance ({{\AA}}) \\ 
-			\midrule
-			1NUI&P3121&H4&0.0439\\ 
-			2NW8&P3121&H4&0.0401\\ 
-			2J1L&P3121&H4&0.0307\\ 
-			1VYI&P3121&H4&0.2504\\ 
-			3FZ8&P32&H4&0.0575\\ 
-			2J5W&P3221&H4&0.0543\\ 
-			2VAM&P3221&H4&0.1166\\ 
-			1Y8J&P3221&H4&0.0389\\ 
-			1F4V&P3221&H4&0.0276\\ 
-			2ZP9&P6&H4&0.0528\\ 
-			1DDR&P61&H4&0.0726\\ 
-			1DDS&P61&H4&0.0726\\ 
-			1SGU&P61&H4&0.0295\\ 
-			3CDC&P61&H4&0.0559\\ 
-			2WAG&P6122&H4&0.0377\\ 
-			1LBM&P6122&H4&0.0312\\ 
-			2O9Z&P62&H4&0.0402\\ 
-			1ELZ&P6322&H4&0.4035\\ 
-			1SA0&P65&H4&0.0681\\ 
-			3KQI&P6522&H4&0.0331\\ 
-			2F9Y&P6522&H4&0.0470\\ 
-			3E73&P6522&H4&0.0523\\ 
-			3CAP&H3&H4&0.0586\\ 
-			2UX6&H32&H4&0.0386\\ 
-			1ODT&H32&H4&0.0816\\ 
-			2FDI&P43&T5&0.0758\\ 
-			3HQ7&P43212&T5&0.2869\\ 
-			1E2Q&P43212&T5&0.5482\\ \\
-			\bottomrule
-		\end{tabular}
-		\begin{tabular}{ccccccc}
-			\toprule
-			PDB ID & Sp.Gr. & Delone type&distance ({{\AA}}) \\ 
-			\midrule
-			1SHN&P43212&T5&0.0491\\ 
-			1C50&P43212&T5&1.9040\\ 
-			2A1L&P43212&T5&0.0528\\ 
-			1S2L&P43212&T5&0.0334\\ 
-			1H9S&P41&T5&1.0149\\ 
-			1H9R&P41&T5&1.0141\\ 
-			2F0Q&P41&T5&0.0260\\ 
-			3EYM&P41&T5&0.0476\\ 
-			1WV5&P41212&T5&0.0250\\ 
-			2DF3&P41212&T5&0.0387\\ 
-			1L6O&P41212&T5&0.0346\\ 
-			3A58&P41212&T5&0.2976\\ 
-			2IU9&P41212&T5&0.0373\\ 
-			4BTP&P41212&T5&0.0666\\ 
-			1W54&P4212&T5&0.0420\\ 
-			2PBE&P42212&T5&0.0548\\ 
-			3BR5&P42212&T5&0.2203\\ 
-			1GMD&P42212&T5&0.1400\\ 
-			1GMC&P42212&T5&0.1402\\ 
-			2CCN&P42212&T5&0.0447\\ 
-			1CE1&P212121&O5&0.6472\\ 
-			3DQ2&P212121&O5&0.1058\\ 
-			1Z2A&P212121&O5&0.0670\\ 
-			2HA3&P212121&O5&0.3070\\ 
-			3BNJ&I4122&T2&0.9518\\ 
-			4MGP&I-42d&T1&0.2128\\ 
-			4ASL&C2221&O4&0.3383\\ 
-			3K7M&P432&C5&0.0517\\ 
-			3GBN&I213&C1&1.2661\\ 
-			\bottomrule
-		\end{tabular}
-		
-		\caption{57 unit cells from the PDB around 2018 that did not match their types (later corrected)}
-		\label{tab:PDBCells}
-	\end{table}
-	\subsection{Testing for continuity}
-	
-	The manifolds of the Bravais lattice types are characterized by required zeros
-	of scalars and/or multiplets of equal values. For instance, all primitive 
-	monoclinic cells have two 90 degree angles and so require two zero scalars. Consider H1 as
-	an example for multiplets. The character for H1 is \charseq{rrr sss}; two triplets of equal values.
-	
-	Consider the case of M4, primitive monoclinic, the character is \charseq{00r stu}. 
-	For particular values for r,s,t,u, the best monoclinic cell will not
-	depend on whatever values are substituted for the zeros. (It does not depend on the zero values because the projectors to that 
-	manifold create zero elements for any vector.) Imagine a plane
-	with axis that are the values of the two elements of the character that are zero. Points in the plane represent unit 
-	cells with angles defined by the \scalarsub{s}{1} and \scalarsub{s}{2} and r,s,t,u. We can draw a circle in the
-	\scalarsub{s}{1},\scalarsub{s}{2} plane, each point
-	on the circle corresponding to a lattice. 
-	
-	Reducing the lattices corresponding to the points on the
-	circle and r,s,t,u and calculating
-	the distance of the reduced cell from \charseq{00r stu}.
-	Plotting the curve of the circle with the distance of
-	each point from the origin changed to distance above
-	 will give a curve that
-	should not have any discontinuities. See Figure \ref{fig:M4}. 
-	
-	Similarly, Bravais type O5 has a triplet of zeros, character \charseq{000 rst}. Here we
-	can generate a sphere that surrounds the orthorhombic point. See Figure \ref{fig:O5}.
-	
-	Bravais type O4 (side-centered orthorhombic) has two zeros and a pair of required equal values, 
-character \charseq{00r~sst}. The zeros can be treated the same as above
-for the case of M4 (primitive monoclinic). 
-	The pair of equal values must 
-	have an average value that remains equal to $\bf{s}$ in the lattice character. 
-	That means 3 values to vary (the 2 zeros and the distance from average
-	value for the equal scalars), and we can create a sphere around 
-	the point \charseq{00r~sst}. See Figure \ref{fig:O4}.
-	
-	
-	
-	\section{Comparisons}
-	\textit{\textbf{LCA this section is incomplete. Table needs caption/label.}}
+	%\NDBref[optional name]{refcode}	
 
-	
-\begin{table}
-	\begin{tabular}{cccccc}
-		\toprule
-		Lattice character & \GVI{} distance & BGAOL Z score & XDS QI & Scaled QI & Sella \\
-		\midrule
-		mP               &     20.138  & 0.657    &   1.0  & 0.13  & 1.06\\	
-		oC               &     125.958 &  3.560   &    23. & 8 3.09& 13.82\\	
-		mC               &     125.150 &  4.085   &    23. & 4 3.03& 13.80\\	
-		\bottomrule
-	\end{tabular}
-	\caption{Comparison to other distance measure; Data for other measures taken from \citeasnoun{andrews2014}.}
-	\label{tab:comparisons}
-\end{table}
-	~\\
-	
-	\section{Interpreting the results}
-	
-\begin{table}[htbp]
+
+
+\begin{abstract}
+	SELLA is a straightforward algorithm for determining Bravais lattice type
+	based on Selling (Delone) reduction. The method represents each Bravais type
+	as one or more linear manifolds in the six-dimensional space $S^6$ of Selling
+	scalars. Distances from a probe cell to these manifolds are computed using
+	projectors and their orthogonal complements, giving a clear metric of fit.
+	The geometry of $S^6$ provides a simple, convex reduced domain, making it
+	well suited for treating experimental error and approximate symmetry. The
+	24 Delone types described by Delaunay (1932) appear naturally in this
+	framework. Examples and tests against large data sets are included.
+\end{abstract}
+
+\section{Introduction}
+
+Determining the Bravais lattice type from measured unit-cell parameters is a
+routine crystallographic task, but the presence of experimental error and
+near-symmetry can complicate the process. The traditional approach uses the
+metric tensor in $G^6$ together with Niggli reduction (Niggli, 1928). While
+mathematically correct, the geometry of the Niggli-reduced region is
+complicated: it is non-convex, some facets are open while others are closed,
+and higher-order intersections require special handling. These features make
+it difficult to treat perturbations in a uniform way.
+
+Selling (Delone) reduction provides a simpler geometric setting. The six
+Selling scalars form a point in the linear space $S^6$, and the Selling-reduced
+domain is the all-negative orthant of that space. The domain is convex, the
+boundary operations are uniform, and reflections act linearly. These
+properties make $S^6$ a natural place to study approximate symmetry and to
+measure distances between lattices.
+
+In this paper we describe SELLA, an algorithm for Bravais lattice
+determination based on Selling reduction. Each Bravais type is represented by
+one or more linear manifolds in $S^6$, and the distance from a probe cell to
+any type is obtained from the orthogonal complement of the corresponding
+projector. The method behaves smoothly under perturbations of the input cell
+and provides a clear metric of fit.
+
+The 24 Delone types described by Delaunay (1932) appear naturally in this
+framework. We describe their representation in $S^6$, the construction of the
+associated projectors, and the use of these projectors to classify experimental
+cells. Examples and tests against large data sets are included.
+
+\section{Geometry of Reduction: Niggli vs.\ Selling}
+
+\subsection{Niggli reduction and the geometry of $G^6$}
+
+Niggli reduction provides a unique reduced cell for triclinic lattices by
+imposing a hierarchy of inequalities and equalities on the metric tensor.
+These rules define a canonical region of $G^6$, but the geometry of this
+region is intricate. It is non-convex, and its boundaries mix open and closed
+facets. Ambiguities arise when several boundary conditions are simultaneously
+active, because the original tie-breaking rules were written for
+single-condition boundaries. As a result, the mapping from an experimental
+cell to its reduced form can become non-unique near higher-order
+intersections.
+
+These complications have practical consequences. Grosse-Kunstleve, Sauter,
+and Adams (2004) documented stability problems and infinite-loop behavior
+near certain boundaries. Although the boundary structure is well defined—the
+standard table lists 45 polytopes in $G^6$—the reduction rules do not always
+specify how to choose among equivalent representatives on their
+intersections.
+
+\subsection{Selling reduction and the geometry of $S^6$}
+
+Selling (Delone) reduction embeds the six Selling scalars as coordinates in
+the linear space $S^6$. The Selling-reduced domain is simply the convex,
+closed, all-negative orthant of that space. Boundary operations are uniform,
+and reflections act linearly. As in $G^6$, each Bravais type corresponds to a
+finite collection of linear manifolds, each determined by a particular pattern
+of equalities or zeros in the scalars. The advantage of $S^6$ lies in the
+geometry of the reduced domain: the manifolds can be enumerated
+systematically without the complications introduced by the Niggli region.
+
+\subsection{Definitions of $G^6$ and $S^6$}
+
+The space $G^6$ is the six-dimensional real vector space of metric tensors for
+unit cells, expressed in terms of scalar products of the edge vectors
+$\mathbf{a}, \mathbf{b}, \mathbf{c}$. A point $\mathbf{g} \in G^6$ is defined by
+
+
+\[
+\mathbf{g} = (g_1, g_2, g_3, g_4, g_5, g_6)
+= \left( \mathbf{a}\!\cdot\!\mathbf{a},\,
+\mathbf{b}\!\cdot\!\mathbf{b},\,
+\mathbf{c}\!\cdot\!\mathbf{c},\,
+2\,\mathbf{b}\!\cdot\!\mathbf{c},\,
+2\,\mathbf{a}\!\cdot\!\mathbf{c},\,
+2\,\mathbf{a}\!\cdot\!\mathbf{b} \right).
+\]
+
+
+The first three components represent squared edge lengths; the last three
+encode interaxial angles via scalar products scaled by a factor of~2.
+
+The space $S^6$ is the six-dimensional real vector space of Selling scalars
+derived from scalar products among the four vectors
+$\mathbf{a}, \mathbf{b}, \mathbf{c}, \mathbf{d}$, where
+$\mathbf{d} = -\mathbf{a} - \mathbf{b} - \mathbf{c}$. A point
+$\mathbf{s} \in S^6$ is defined by
+
+
+\[
+\mathbf{s} = (s_1, s_2, s_3, s_4, s_5, s_6)
+= \left( \mathbf{b}\!\cdot\!\mathbf{c},\,
+\mathbf{a}\!\cdot\!\mathbf{c},\,
+\mathbf{a}\!\cdot\!\mathbf{b},\,
+\mathbf{a}\!\cdot\!\mathbf{d},\,
+\mathbf{b}\!\cdot\!\mathbf{d},\,
+\mathbf{c}\!\cdot\!\mathbf{d} \right).
+\]
+
+
+Selling reduction places all reduced cells in the all-negative orthant of
+$S^6$, giving a convex domain with uniform boundary behavior.
+
+\section{Overview of SELLA}
+
+SELLA is based on the observation that each Bravais type corresponds to one
+or more linear manifolds in $S^6$. For each manifold, a projector is
+constructed that maps any vector in $S^6$ to the closest point on that
+manifold in the least-squares sense. The orthogonal complement of the
+projector (the ``perp'') measures the distance from a probe cell to the
+manifold.
+
+The algorithm proceeds by generating all representations of all non-triclinic
+Delone types within the Selling-reduced domain, including those obtained by
+boundary transforms. For each representation, a projector is computed. Given a
+probe cell, its Selling-reduced vector is compared to each manifold by
+applying the corresponding perp. The Bravais type(s) with the smallest
+distance are reported.
+
+The method is complete in the sense that all relevant manifolds are included,
+and continuous in the sense that small perturbations of the input cell lead to
+small changes in the computed distances.
+
+
+\section{Historical Background}
+
+Bravais (1850) classified lattices into 14 types based on geometric symmetry.
+Delaunay (1932) refined this classification by examining the Dirichlet (Voronoi)
+cell of the lattice and introduced 24 types, now called the Delone types. Several
+of these correspond to the same Bravais type, but the Delone classification is
+useful because it describes the local geometry of the lattice in a uniform way.
+
+Selling (1874) introduced a reduction method based on six scalar products among
+the vectors $\mathbf{a}, \mathbf{b}, \mathbf{c}, \mathbf{d}$, where
+$\mathbf{d} = -\mathbf{a} - \mathbf{b} - \mathbf{c}$. Delaunay adopted these
+scalars in his formulation of reduction. Andrews et al.\ (2019a, 2019b) later
+showed that the Selling scalars form a natural coordinate system for a metric
+space $S^6$ in which distances between lattices can be measured directly.
+
+Zimmermann and Burzlaff (1985) used Selling scalars in their program DELOS,
+treating the scalars as a list of six numbers. SELLA extends this idea by treating
+the scalars as points in a linear space, allowing the use of projectors and
+orthogonal complements to measure distances to the Bravais manifolds.
+
+The 24 Delone types appear naturally in $S^6$, and their representation as linear
+manifolds provides a convenient framework for classification. Three of the Delone
+types (M3, M2B, and O3) correspond to boundaries between other types and do not
+represent unique Bravais types.
+
+\section{Terminology and Representations}
+
+\subsection{The Bravais tetrahedron}
+
+Delaunay represented the Selling scalars using a tetrahedron whose edges are
+labeled by the six scalar products. This diagram, often called the Bravais
+tetrahedron, provides a compact way to visualize which scalars are zero or which
+pairs are equal. The labeling conventions have varied in the literature; Table~1
+summarizes several of these.
+
+\subsection{Characters}
+
+For reduced cells in $S^6$, each Bravais type is represented by a linear manifold
+that includes the origin. The structure of the manifold is described by its
+\emph{character}, a symbolic representation indicating which scalars are zero and
+which are equal. For example, the character for the rhombohedral type H1 is
+\((rrr\,sss)\), indicating two triplets of equal values. The primitive monoclinic
+type M4 has character \((00r\,stu)\), indicating two zeros and four independent
+values.
+
+Characters provide a compact way to describe the geometry of each manifold and
+are useful for generating sample vectors and constructing projectors.
+
+\subsection{Zero patterns and equal-value multiplets}
+
+A zero in a Selling scalar indicates that the corresponding vector lies on a
+boundary of the Selling-reduced orthant. Equal-value multiplets indicate
+additional symmetry. For example, the orthorhombic type O5 has character
+\((000\,rst)\), with three zeros and three independent values.
+
+These patterns determine the dimension of the manifold and the structure of the
+projector associated with the type.
+
+\subsection{Delone types and Bravais types}
+
+The 24 Delone types refine the 14 Bravais types. Some Bravais types correspond to
+multiple Delone types; for example, the cubic Bravais type includes three Delone
+types (C1, C3, C5). Three Delone types (M3, M2B, O3) correspond to boundaries
+between other types and do not represent unique Bravais types.
+
+SELLA uses the Delone types as the fundamental units for classification, since
+each Delone type corresponds to a single linear manifold in $S^6$.
+
+\section{Geometry of Bravais Manifolds in \SVI{}}
+
+Each Bravais type corresponds to one or more linear manifolds in $S^6$. These
+manifolds are defined by the zero patterns and equal-value multiplets in the
+character. For example, the manifold for M4 consists of all vectors of the form
+\((0,0,r,s,t,u)\) with $r,s,t,u < 0$.
+
+The manifolds are linear because the Selling scalars are linear functions of the
+metric tensor. The Selling-reduced domain is the all-negative orthant, so each
+manifold is the intersection of a linear subspace with this orthant.
+
+\subsection{Dimension}
+
+The dimension of a manifold is determined by the number of independent scalars.
+For example:
+\begin{itemize}
+	\item M4 has two zeros and four independent values, so its manifold is
+	four-dimensional.
+	\item O5 has three zeros and three independent values, so its manifold is
+	three-dimensional.
+	\item H1 has two triplets of equal values, so its manifold is two-dimensional.
+\end{itemize}
+
+\subsection{Degenerate types}
+
+Three Delone types (M3, M2B, O3) correspond to boundaries between other types.
+These manifolds have reduced dimension and do not represent unique Bravais
+types. A probe cell close to one of these manifolds will also be close to one or
+both of the adjacent manifolds.
+
+\subsection{Reflections and boundary transforms}
+
+The 24 reflections of $S^6$ correspond to permutations and sign changes of the
+Selling scalars. These reflections map each manifold to 24 equivalent copies.
+Boundary transforms occur when a scalar crosses zero; these transforms map a
+vector on one side of a boundary to a vector on the other side. The transforms
+are linear and self-inverse.
+
+\subsection{Continuity}
+
+Because the manifolds are linear and the domain is convex, distances from a
+probe cell to the manifolds vary continuously with the input cell. This is
+important for treating experimental error and approximate symmetry. For
+example, varying the two zero scalars in M4 over a circle in the $(s_1,s_2)$
+plane produces a continuous curve of distances to the M4 manifold.
+
+Similarly, varying the three zeros in O5 over a sphere produces a continuous
+surface of distances. These continuity properties are used in Section~8 to
+demonstrate the completeness of SELLA.
+
+
+\section{The SELLA Algorithm}
+
+SELLA classifies a probe cell by measuring its distance to the manifolds
+associated with the Delone types. The algorithm has three main components:
+generation of sample vectors, construction of projectors and perps, and
+evaluation of distances.
+
+\subsection{Generating sample vectors}
+
+Each Delone type is represented by a linear manifold in $S^6$. To construct a
+projector for a type, we begin by generating a representative vector for that
+manifold.
+
+\paragraph{Step 1: Initial vector.}
+Choose a random vector in $S^6$ with no zeros and no duplicate values. The
+values should be large enough that adding or subtracting the smallest
+representable floating-point number (DBL\_MIN) does not change them. This
+value will later be used to mark positions of zeros.
+
+\paragraph{Step 2: Apply projectors.}
+For each Delone type, multiply the initial vector by the projector associated
+with that type. The result is a sample vector lying on the manifold.
+
+\paragraph{Step 3: Boundary transforms and reflections.}
+If the sample vector contains zeros, apply the appropriate boundary transform
+for each zero. Because boundary transforms do not commute, all orderings must
+be considered. For each transformed vector, generate the 24 reflections
+(permutations and sign changes allowed by Selling reduction). Store all
+results.
+
+This process generates a complete set of sample vectors for each Delone type.
+Duplicates are removed at the end.
+
+\subsection{Constructing projectors and perps}
+
+Each sample vector encodes the structure of its manifold through its zeros and
+duplicate values. A projector matrix is constructed as follows.
+
+\paragraph{Step 1: Zero DBL\_MIN entries.}
+Any entry equal to DBL\_MIN is set to zero.
+
+\paragraph{Step 2: Diagonal entries.}
+For each scalar $s_i$,
+
+
+\[
+m_{ii} =
+\begin{cases}
+	0, & \text{if } s_i = 0 \text{ or } \mathrm{Fraction}(s_i) = 0, \\
+	\mathrm{Fraction}(s_i), & \text{otherwise},
+\end{cases}
+\]
+
+
+where $\mathrm{Fraction}(s_i)$ is the reciprocal of the number of occurrences
+of the value $s_i$ in the vector.
+
+\paragraph{Step 3: Off-diagonal entries.}
+For $i \neq j$,
+
+
+\[
+m_{ij} =
+\begin{cases}
+	\mathrm{Fraction}(s_j), & \text{if } s_i = s_j \text{ or } |s_j| > 0, \\
+	0, & \text{otherwise}.
+\end{cases}
+\]
+
+
+
+The perp for the manifold is obtained by subtracting the projector from the
+identity matrix. The norm of the perp applied to a probe vector gives the
+distance from the probe to the manifold.
+
+\subsection{Evaluating a probe cell}
+
+Given a probe cell:
+
+\begin{enumerate}
+	\item Convert the cell to its Selling-reduced form in $S^6$.
+	\item Apply each perp to the probe vector.
+	\item Compute the norm of each result.
+	\item Identify the Delone type(s) with the smallest distance.
+\end{enumerate}
+
+The corresponding Bravais type is reported. If the probe lies near a degenerate
+Delone type, two adjacent types may be returned.
+
+\section{Completeness and Correctness}
+
+SELLA is complete in the sense that every relevant manifold is included in the
+library of projectors. The justification has three parts.
+
+\subsection{Coverage of the fundamental unit}
+
+All Bravais lattice types within the Selling-reduced domain (all scalars
+negative) have their projectors generated. The 24 reflections of a reduced cell
+cover all equivalent representations. Points near boundaries are handled by
+boundary transforms.
+
+\subsection{Boundary transforms preserve proximity}
+
+Consider a probe cell infinitesimally close to a manifold with one zero scalar.
+Let $p$ be the closest point on the manifold. Applying the boundary transform
+to both $p$ and the probe produces a new pair of points in a different
+representation of the same type. The distance between them remains
+infinitesimal. This argument extends to cases with two or three zeros.
+
+\subsection{No missing manifolds}
+
+Suppose a probe lies outside the fundamental unit but is near an undiscovered
+manifold. If the probe is near a boundary defined by a single zero, applying
+the boundary transform moves both the probe and the manifold into the
+fundamental unit. Since all manifolds within and on the boundaries of the
+fundamental unit have been generated, the putative manifold must already be in
+the library. The same reasoning applies to cases with two or three zeros.
+
+Thus, after applying all boundary transforms and reflections, no manifold is
+missed. In total, 239 non-triclinic manifolds are generated (249 if triclinic
+cases are included).
+
+\section{Validation Against Data}
+
+To test SELLA, 89\,539 unit cells were extracted from the Protein Data Bank
+(Bernstein et al., 1977; Berman et al., 2000). Each cell was Selling-reduced
+and classified using SELLA.
+
+All but 57 cells were found at zero distance from their assigned Bravais type.
+The 57 exceptions were identified as incorrect unit cells for their assigned
+types. The distances were small, indicating modest deviations from the correct
+parameters. These cases were later corrected (Burley, 2018).
+
+Table~3 lists the 57 cells, their assigned types, and their distances.
+
+\section{Comparisons}
+
+Several measures have been proposed for comparing unit cells. Table~4 compares
+SELLA distances with:
+
+\begin{itemize}
+	\item the $G^6$ distance,
+	\item the BGAOL $Z$ score,
+	\item the XDS quality index (QI),
+	\item a scaled version of QI.
+\end{itemize}
+
+SELLA provides a direct geometric measure in $S^6$ and behaves smoothly under
+perturbations. The examples in Table~4 illustrate that SELLA distances correlate
+well with other measures while providing a clear interpretation as the distance
+to a linear manifold.
+
+
+\section{Discussion}
+
+SELLA provides a uniform geometric framework for Bravais lattice
+determination. The use of $S^6$ avoids the complications of the Niggli-reduced
+region in $G^6$, where non-convexity and mixed open/closed boundaries require
+special handling. In contrast, the Selling-reduced domain is convex, and all
+boundary operations are linear and self-inverse. This makes it straightforward
+to enumerate all representations of each Delone type and to construct the
+corresponding projectors.
+
+The projector–perp formulation gives a clear metric of fit. The distance from a
+probe cell to a Bravais type is simply the norm of the perp applied to the
+Selling-reduced vector. This distance behaves smoothly under perturbations,
+making the method suitable for experimental data. The examples in Section~9
+show that SELLA identifies incorrect unit cells reliably and that the distances
+provide a meaningful measure of deviation.
+
+The method is also computationally efficient. Once the library of projectors is
+constructed, classification of a probe cell requires only matrix–vector
+multiplications. The number of projectors is modest (239 non-triclinic types),
+and the operations are inexpensive.
+
+\section{Conclusion}
+
+SELLA uses Selling reduction and the geometry of $S^6$ to provide a simple and
+complete method for Bravais lattice determination. Each Bravais type is
+represented by one or more linear manifolds, and distances to these manifolds
+are computed using projectors and their orthogonal complements. The method
+handles experimental error and approximate symmetry in a uniform way and
+produces clear, interpretable metrics of fit.
+
+The 24 Delone types appear naturally in this framework, and the method
+correctly identifies all types in large data sets. SELLA provides a practical
+tool for crystallographers and a geometric foundation for further work on
+lattice classification and comparison.
+
+\section*{Figures}
+
+\begin{figure}[h]
 	\centering
-	\renewcommand{\arraystretch}{1.3}
-	\begin{tabular}{@{}p{4cm} p{5.5cm} p{5.5cm}@{}}
-		\toprule
-		\textbf{Property} & \textbf{Phase II (Room Temp)} & \textbf{Phase I (Low Temp)} \\
-		\midrule
-		Crystal System & Triclinic & Monoclinic \\
-		Space Group & \textit{P$\bar{1}$} & \textit{C2/c} or \textit{Cc} \\
-		Z (Formula Units) & 2 & 8 \\
-		Unit Cell Parameters &
-		\makecell[l]{
-			$a = 7.485$ Å \\
-			$b = 7.515$ Å \\
-			$c = 7.520$ Å \\
-			$\alpha = 89.98^\circ$ \\
-			$\beta = 90.01^\circ$ \\
-			$\gamma = 90.03^\circ$ \\
-			$V \approx 423$ Å$^3$
-		} &
-		\makecell[l]{
-			$a = 10.60$ Å \\
-			$b = 18.30$ Å \\
-			$c = 7.52$ Å \\
-			$\beta = 92.8^\circ$ \\
-			$V \approx 1457$ Å$^3$
-		} \\
-		Metric Symmetry & Nearly Cubic (pseudo-symmetry) & Monoclinic \\
-		Transformation Proposed &
-		\makecell[l]{
-			Non-unimodular matrix: \\
-			$\begin{bmatrix}
-				2 & 1 & 0 \\
-				0 & 1 & 0 \\
-				0 & 0 & 1
-			\end{bmatrix}$ \\
-			Yields monoclinic cell: \\
-			$a \approx 15.73$ Å, $b \approx 9.07$ Å, \\
-			$c \approx 6.44$ Å, $\beta \approx 92.8^\circ$
-		} & — \\
-		Key Insight &
-		\makecell[l]{
-			Pseudo-symmetry masks true triclinic \\
-			structure; reinterpretation improves \\
-			crystallographic clarity
-		} &
-		\makecell[l]{
-			Cation disorder and complex packing \\
-			in monoclinic symmetry
-		} \\
-		\bottomrule
-	\end{tabular}
-	\caption{Summary of structural phases for [(CH$_3$)$_4$N]CuCl$_3$ from Marsh (1988).}
-\end{table}
+	% \includegraphics{figure1_placeholder}
+	\caption{Placeholder for Figure~1. Suggested content: Bravais tetrahedron with
+		labels for the six Selling scalars.}
+\end{figure}
 
+\begin{figure}[h]
+	\centering
+	% \includegraphics{figure2_placeholder}
+	\caption{Placeholder for Figure~2. Suggested content: schematic comparison of
+		the Niggli-reduced region in $G^6$ and the Selling-reduced orthant in $S^6$.}
+\end{figure}
 
-	
-	
-	
-	\section{What could go wrong?}
+\begin{figure}[h]
+	\centering
+	% \includegraphics{figure3_placeholder}
+	\caption{Placeholder for Figure~3. Suggested content: example of a Bravais
+		manifold in $S^6$ showing zero patterns and equal-value multiplets.}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	% \includegraphics{figure4_placeholder}
+	\caption{Placeholder for Figure~4. Suggested content: continuity test for a
+		manifold such as M4, showing distances along a circle in the $(s_1,s_2)$ plane.}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	% \includegraphics{figure5_placeholder}
+	\caption{Placeholder for Figure~5. Suggested content: comparison of SELLA
+		distances with other measures (G6 distance, BGAOL $Z$ score, XDS QI).}
+\end{figure}
 	
 	
 	
