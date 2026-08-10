@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="790">
+
+  <rect x="0" y="0" width="900" height="790" fill="white"/>
+
+  <style>
+    .box   { fill:#f9f9f9; stroke:#000; stroke-width:1.5; }
+    .lib   { fill:#eaeff5; stroke:#000; stroke-width:1.5; }
+    .outer { fill:#fdfdfd; stroke:#000; stroke-width:1.5; }
+    .title { font-family: sans-serif; font-size:13px; font-weight:bold; text-anchor:middle; }
+    .head  { font-family: sans-serif; font-size:13px; font-weight:bold; text-anchor:start; }
+    .text  { font-family: sans-serif; font-size:11.5px; text-anchor:middle; }
+    .note  { font-family: sans-serif; font-size:11.5px; font-style:italic; fill:#003366; text-anchor:middle; }
+    .arrow { fill:none; stroke:#2c3e50; stroke-width:2; marker-end:url(#ah); }
+    .arrowb{ fill:none; stroke:#003366; stroke-width:3; marker-end:url(#ahb); }
+  </style>
+
+  <defs>
+    <marker id="ah" markerWidth="6" markerHeight="6" refX="3" refY="3"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2c3e50" />
+    </marker>
+    <marker id="ahb" markerWidth="6" markerHeight="6" refX="3" refY="3"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#003366" />
+    </marker>
+  </defs>
+
+  <!-- Reference column -->
+  <rect x="60" y="40" width="240" height="50" class="box" />
+  <text x="180" y="70" class="title">REFERENCE INPUT</text>
+
+  <rect x="60" y="130" width="240" height="50" class="box" />
+  <text x="180" y="160" class="title">Primitive Reference Cell</text>
+
+  <rect x="60" y="220" width="240" height="50" class="box" />
+  <text x="180" y="250" class="title">Reduced Reference Cell</text>
+
+  <path class="arrow" d="M180 90 V 125" />
+  <path class="arrow" d="M180 180 V 215" />
+  <path class="arrow" d="M180 270 V 310" />
+  <path class="arrow" d="M300 155 H 330 V 310" />
+
+  <!-- Probe column -->
+  <rect x="600" y="40" width="240" height="50" class="box" />
+  <text x="720" y="70" class="title">PROBE INPUT</text>
+
+  <rect x="600" y="130" width="240" height="50" class="box" />
+  <text x="720" y="160" class="title">Primitive Probe Cell</text>
+
+  <rect x="600" y="220" width="240" height="50" class="box" />
+  <text x="720" y="250" class="title">Reduced Probe Cell</text>
+
+  <path class="arrow" d="M720 90 V 125" />
+  <path class="arrow" d="M720 180 V 215" />
+  <path class="arrow" d="M720 270 V 310" />
+  <path class="arrow" d="M600 155 H 570 V 310" />
+
+  <!-- Matrix library -->
+  <rect x="345" y="150" width="210" height="100" class="lib" />
+  <text x="450" y="176" class="title">MATRIX LIBRARY</text>
+  <text x="450" y="203" class="text">det = 1: alternative settings</text>
+  <text x="450" y="223" class="text">det = n: derivative lattices</text>
+  <text x="450" y="241" class="text">(HNF, index n)</text>
+
+  <path class="arrow" d="M450 250 V 345" />
+
+  <!-- Matching -->
+  <rect x="60" y="315" width="780" height="240" class="outer" />
+  <text x="75" y="337" class="head">LATTICE MATCHING</text>
+
+  <rect x="250" y="350" width="400" height="50" class="box" />
+  <text x="450" y="380" class="title">Apply candidate transformation M to probe cell</text>
+
+  <path class="arrow" d="M450 400 V 412" />
+
+  <rect x="250" y="415" width="400" height="58" class="box" />
+  <text x="450" y="440" class="title">Score in P3</text>
+  <text x="450" y="461" class="text">| P3(reference) - P3(M x probe) |</text>
+
+  <text x="450" y="500" class="note">the transformed probe cell is not re-reduced before scoring</text>
+  <text x="450" y="524" class="text">four pairings of primitive and reduced cells; multiple matches accepted</text>
+
+  <path class="arrowb" d="M450 555 V 590" />
+
+  <!-- Composition -->
+  <rect x="250" y="595" width="400" height="58" class="box" />
+  <text x="450" y="620" class="title">COMPOSE REVERSE TRANSFORMATIONS</text>
+  <text x="450" y="641" class="text">reduction inverses, then primitive conversion</text>
+
+  <path class="arrowb" d="M450 653 V 685" />
+
+  <!-- Output -->
+  <rect x="300" y="690" width="300" height="55" class="box" />
+  <text x="450" y="715" class="title">POSTPROCESSING &amp; OUTPUT</text>
+  <text x="450" y="735" class="text">frame of the initial reference</text>
+
+</svg>

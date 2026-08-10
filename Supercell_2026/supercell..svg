@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900">
+
+  <!-- White border / background -->
+  <rect x="0" y="0" width="900" height="900" fill="white"/>
+
+  <style>
+    .box { fill:#f9f9f9; stroke:#000; stroke-width:1.5; }
+    .title { font-family: sans-serif; font-size:14px; font-weight:bold; text-anchor:middle; }
+    .text { font-family: sans-serif; font-size:12px; text-anchor:middle; }
+    .arrow-down { fill:none; stroke:#2c3e50; stroke-width:2; marker-end:url(#arrowhead-small); }
+    .arrow-blue { fill:none; stroke:#003366; stroke-width:6; marker-end:url(#arrowhead-blue); }
+    .label-rot { font-family: sans-serif; font-size:14px; fill:#003366; text-anchor:middle; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead-blue" markerWidth="6" markerHeight="6" refX="3" refY="3"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#003366" />
+    </marker>
+
+    <marker id="arrowhead-small" markerWidth="6" markerHeight="6" refX="3" refY="3"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2c3e50" />
+    </marker>
+  </defs>
+
+  <!-- Reference column -->
+  <rect x="80" y="40" width="260" height="60" class="box" />
+  <text x="210" y="65" class="title">REFERENCE INPUT</text>
+
+  <rect x="80" y="130" width="260" height="60" class="box" />
+  <text x="210" y="155" class="title">Primitive Reference Cell</text>
+
+  <rect x="80" y="220" width="260" height="60" class="box" />
+  <text x="210" y="245" class="title">Niggli-Reduced Reference Cell</text>
+
+  <!-- Down arrows (Reference) -->
+  <path class="arrow-down" d="M210 100 L210 125" />
+  <path class="arrow-down" d="M210 190 L210 215" />
+  <path class="arrow-down" d="M210 280 L210 355" />
+
+  <!-- Probe column -->
+  <rect x="560" y="40" width="260" height="60" class="box" />
+  <text x="690" y="65" class="title">PROBE INPUT</text>
+
+  <rect x="560" y="130" width="260" height="60" class="box" />
+  <text x="690" y="155" class="title">Primitive Probe Cell</text>
+
+  <rect x="560" y="220" width="260" height="60" class="box" />
+  <text x="690" y="245" class="title">Niggli-Reduced Probe Cell</text>
+
+  <!-- Down arrows (Probe) — BLUE -->
+  <path class="arrow-blue" d="M690 100 L690 113" />
+  <path class="arrow-blue" d="M690 190 L690 203" />
+  <path class="arrow-blue" d="M690 280 L690 343" />
+
+  <!-- Matching box -->
+  <rect x="180" y="360" width="540" height="160" class="box" />
+  <text x="450" y="385" class="title">LATTICE MATCHING</text>
+  <text x="450" y="410" class="text">Compare probe Niggli-reduced cells</text>
+  <text x="450" y="430" class="text">to reference Niggli-reduced cells</text>
+  <text x="450" y="450" class="text">accept multiple matches</text>
+
+  <!-- Postprocessing/output box (moved down 30 px) -->
+  <rect x="370" y="30" width="160" height="60" class="box" />
+  <text x="450" y="52" class="title">POSTPROCESSING</text>
+  <text x="450" y="77" class="title">&amp; OUTPUT</text>
+
+  <!-- GROUP: blue arrows + label -->
+  <g transform="translate(3,0)">
+
+    <!-- Blue upward arrows -->
+		<path class="arrow-blue" d="M366 370 L366 108" />
+		<path class="arrow-blue" d="M396 370 L396 108" />
+		<path class="arrow-blue" d="M426 370 L426 108" />
+
+    <!-- Rotated label -->
+    <text x="470" y="200" class="label-rot" transform="rotate(90,470,200)">
+      <tspan x="470" y="200">reverse</tspan>
+      <tspan x="470" y="220">transformations</tspan>
+      <tspan x="470" y="240">(multiple matches)</tspan>
+    </text>
+
+  </g>
+
+</svg>

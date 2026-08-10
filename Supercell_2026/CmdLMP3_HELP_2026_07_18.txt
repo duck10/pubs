@@ -1,0 +1,228 @@
+; === P3 LATTICE MATCHING ===
+; Enter control variables and input vectors (type 'end' to finish):
+======================================================================
+  CmdLMP3 -- P3 Lattice Matching
+  Run date (UTC)         : 2026-07-18 20:16:41
+  Compiled (local time)  : 2026-07-18 11:57:24
+  Compiled (local time)  : Andrews and Bernstein, 2026
+======================================================================
+
+; CmdLMP3 -- P3 Lattice Matching
+;
+; Finds transformation matrices relating two or more crystal lattices,
+; including supercell/subcell relationships.
+; an extension of Andrews&Bernstein, 2026
+;
+; INPUT FORMAT
+;   One lattice per line: <centering> a b c alpha beta gamma
+;   The centering symbol may also be given AFTER the six cell
+;   parameters instead of before: a b c alpha beta gamma <centering>
+;   Centerings: P I F A B C R H
+;   Example:  P 5.0 5.0 7.0 90 90 120
+;   Finish input with:  end
+;
+; CONTROL KEYWORDS (enter before 'end')
+;
+;   HELP  or  ?
+;      Show this message.
+;
+;   DETAILS
+;      Show extended diagnostic output during matching, including
+;      separate primitive-frame and reference-frame P3/S6 numbers
+;      for each match -- the most useful tool for checking WHY a
+;      particular cell pair is or is not shown as CONVENTIONAL.
+;
+;   MODE <ALL | SUPER | EQUIVALENT | COMPOSED>
+;      ALL        Search det=1 and det=2,3,4,5,6 matrices, concatenated (default)
+;      SUPER      Search only supercell matrices (det=2,3,4,5,6)
+;      EQUIVALENT Search only equivalent-lattice matrices (det=1)
+;      COMPOSED   Search the same det=1 and det=2..6 matrix sets as ALL,
+;                 but composed (u * s, for every equivalent-lattice matrix
+;                 u and every supercell matrix s) rather than concatenated.
+;                 A different, larger search space -- not a modifier on ALL.
+;
+;   USEHNF
+;      HNF (Hermite Normal Form) is a standardized upper-triangular
+;      representation of supercell transformation matrices. For a given
+;      supercell order n, HNF provides the minimal complete set of
+;      distinct supercell relationships for primitive cells
+;      (Santoro & Mighell, Acta Cryst. A28, 284-287, 1972).
+;      Counts: det=2: 7, det=3: 13, det=4: 35, det=5: 31, det=6: 91.
+;      Hermite Normal Form (HNF): a transformation matrix of the form
+;         [ a  b  c ]        a, d, f > 0
+;         [ 0  d  e ]        0 <= b < a
+;         [ 0  0  f ]        0 <= c, e < f
+;      where the determinant equals a*d*f (the supercell order).
+;      Every integer supercell matrix is equivalent to exactly one HNF
+;      matrix under unimodular left-multiplication, making HNF the
+;      minimal complete set for primitive cells
+;      (Santoro & Mighell, Acta Cryst. A28, 284-287, 1972).
+;
+;      det=5 and det=6 ALWAYS use HNF matrices only, in both modes --
+;      the brute-force integer search is computationally infeasible
+;      at those orders, so there is no alternative. USEHNF has no
+;      effect on det=5,6.
+;
+;      By default (USEHNF off), det=2,3,4 are searched using a
+;      brute-force integer matrix set supplemented by HNF.
+;
+;      USEHNF restricts the det=2,3,4 search to HNF matrices only.
+;      This is faster but is NOT guaranteed complete for a given
+;      pair of cells: HNF enumerates the minimal complete set of
+;      supercell relationships only up to relabeling -- every
+;      relationship has SOME equivalent HNF representation, but only
+;      if the basis is free to be chosen. Once a primitive cell's
+;      axes are already fixed (as they are here, coming out of a
+;      particular Niggli reduction), the transformation matrix
+;      connecting it to the reference may require a non-upper-
+;      triangular form, which HNF mode cannot find -- there is no
+;      fallback. The brute-force (non-HNF) search, working over a
+;      much larger general matrix space, can still find it. If a
+;      relationship is suspected but USEHNF does not find it, turn
+;      USEHNF off, or re-index the cell to a standard setting first.
+;
+;   NIGGLIDELTA <value>
+;      Tolerance for Niggli reduction (default 1e-5).
+;
+;   DISPLAYMODE <OLD | NEW | BOTH>
+;      Controls how each match's REFERENCE / TRANSFORMED MOBILE cell
+;      pair is shown.
+;      NEW   (default) Show the reference's own original cell (with
+;            its actual centering) alongside the mobile transformed
+;            into that SAME frame, labeled TRANSFORMED MOBILE
+;            (CONVENTIONAL), when that reference-frame match is good
+;            enough (see THRESHOLD below). When it is not good
+;            enough, falls back to the primitive-frame pair instead,
+;            with a NOTE line explaining why.
+;      OLD   Always show the primitive-frame pair (primitive
+;            reference cell vs the matcher's raw transformed mobile,
+;            both in primitive space). No reference-frame cell is
+;            attempted or shown.
+;      BOTH  Internal/debugging use only -- shows both the OLD-style
+;            primitive block and the NEW-style reference-frame block
+;            for the same match, so the two can be compared directly.
+;            Not intended for normal use; combine with DETAILS for
+;            full diagnostic output of both frames' P3/S6 numbers.
+;
+;   THRESHOLD <percent>
+;      Maximum acceptable reference-frame P3 distance, expressed as a
+;      PERCENTAGE of the reference cell's own P3 norm (not an
+;      absolute distance -- a fixed Angstrom cutoff would not be
+;      scale invariant across cells of very different size). Default
+;      2.0, matching the GOOD quality tier. Only affects DISPLAYMODE
+;      NEW/BOTH; raise this value to see reference-frame cells for
+;      more marginal matches (e.g. a known but distorted
+;      relationship you still want displayed), lower it to be more
+;      conservative about what is shown as CONVENTIONAL.
+;
+;   RATIOTOLERANCE <value>
+;      A confidence bar (0 to 0.5) for whether a second, non-nearest
+;      determinant is also searched for a given reference/mobile
+;      primitive-cell volume ratio r. Modeling a determinant d's
+;      likelihood of being correct as a linear function of its
+;      distance from r -- 100% at distance 0, 50% at distance 0.5
+;      (an exact tie between neighbors, e.g. r=3.5 between det=3
+;      and det=4), 0% at distance 1 or more -- a determinant is
+;      searched whenever its likelihood meets or exceeds
+;      RATIOTOLERANCE. The single nearest determinant is always
+;      searched regardless (its likelihood never drops below 50%).
+;
+;      Default 0.20: only search a second determinant if it has at
+;      least a 20% chance of being the right one. NOTE: unlike a
+;      plain widening margin, LARGER values here mean a STRICTER,
+;      narrower, faster search -- 0.5 is the strictest useful value
+;      (never search a second candidate unless exactly tied with
+;      the nearest); 0 is the loosest (search any determinant
+;      within distance 1.0 of r).
+;
+;      A ratio very close to an integer (e.g. 5.02) searches only
+;      that one determinant at default settings, even though 4 and
+;      6 are its neighbors -- there is no reason to also search
+;      them when the ratio already points clearly at one answer.
+;
+;      PERFORMANCE NOTE: det=3 and det=4 both include a full
+;      brute-force integer matrix search, far more expensive than
+;      det=2, 5, or 6 (which use Hermite Normal Form matrices only).
+;      A ratio genuinely ambiguous between det=3 and det=4 triggers
+;      BOTH brute-force searches at once, which can take 50-70+
+;      seconds for a single match -- versus 1-10 seconds otherwise.
+;      This is expected, not a hang, and CmdLMP3 prints a warning
+;      when it happens. Raising RATIOTOLERANCE (stricter) reduces
+;      how often this triggers, at the expense of the completeness
+;      guarantee described above.
+;
+;   TEST [n] [n2] [n3] ...
+;      Run built-in tests. Omit n (or use 0) to run the full suite;
+;      supply one or more test numbers to run only those tests, each
+;      with its own pass/fail summary. TEST can also be repeated on
+;      separate lines to accumulate the same list, e.g.
+;         test 6
+;         test 18
+;      is equivalent to  test 6 18
+;      The full suite (no number) also runs two short sets of standalone
+;      regression checks at the end: match-presentation checks and
+;      RATIOTOLERANCE determinant-selection checks.
+;
+; SUPERCELL SEARCH NOTES
+;   det=2,3,4: searched by both brute-force integer matrices and HNF.
+;   det=5,6:   searched by HNF only (177 matrices total for det=2-6).
+;
+;   Hermite Normal Form (HNF) matrices are a standardized upper-
+;   triangular representation of supercell transformation matrices.
+;   For a given supercell order n (volume ratio), HNF provides the
+;   minimal complete set of distinct supercell relationships for
+;   primitive cells (Santoro & Mighell, Acta Cryst. A28, 1972).
+;   Counts: det=2: 7, det=3: 13, det=4: 35, det=5: 31, det=6: 91.
+;
+;   The brute-force search space for det=5,6 is computationally
+;   infeasible (~10^10 candidates), so HNF is used exclusively.
+;   HNF may miss relationships requiring a non-upper-triangular
+;   transformation matrix. If a det=5 or det=6 relationship is
+;   suspected but not found, re-index the cell to a standard setting
+;   before running CmdLMP3.
+;   det=5 supercells are rare in practice.
+;
+; INTERPRETING RESULTS -- WHERE TO LOOK IF SOMETHING LOOKS WRONG
+;
+;   P3 distance vs S6 angle measure different things. P3 distance
+;   reflects the full metric mismatch, including scale/size. S6
+;   angle reflects only shape (it is computed from normalized
+;   Selling vectors), so it CAN read near 0 deg for two cells that
+;   are the same shape but different size -- this is most visible
+;   for high-symmetry cells (e.g. two PRIMITIVE cubic cells of
+;   different edge length, with the SAME centering, both reduce to
+;   parallel Selling vectors, so S6 angle is 0 between them; this
+;   does not hold when the two cells have different centering).
+;   A small S6 angle next to a large P3 distance is not a
+;   contradiction; trust P3 distance for overall match quality and
+;   S6 angle only for shape/axis-permutation sanity checks.
+;
+;   A match's quality tier (EXCELLENT/GOOD/POOR/DISTORTED) is always
+;   based on the PRIMITIVE-frame P3 distance, regardless of
+;   DISPLAYMODE -- it describes how good the underlying lattice
+;   match is, independent of which cell pair ends up on screen.
+;
+;   When DISPLAYMODE NEW falls back to the primitive pair (NOTE
+;   line shown), this means the reference-frame transform of THIS
+;   PARTICULAR transformation matrix did not reproduce the
+;   reference cell well, even though the primitive-space match
+;   itself may be excellent. This is expected and not a bug: when a
+;   centered lattice has multiple equally-good primitive matches,
+;   only some of their transformation matrices correctly invert the
+;   reference's specific centering relationship. Other matches for
+;   the SAME mobile cell, with a different transformation matrix,
+;   may show a good reference-frame match instead -- check
+;   neighboring matches before assuming the relationship is wrong.
+;
+;   To see exactly why a given match did or did not get a
+;   reference-frame (CONVENTIONAL) display, use DETAILS: it prints
+;   the primitive-frame and reference-frame P3/S6 numbers for every
+;   match, which is the data DISPLAYMODE's choice is based on.
+;
+; EXAMPLE SESSION
+;   MODE SUPER
+;   P 5.0 5.0 7.0 90 90 120
+;   P 5.0 5.0 14.0 90 90 120
+;   end
+;
+; CmdLMP3 requires at least 2 input cells
