@@ -125,7 +125,7 @@
 	{\LARGE \emph{\today}} \\
 \end{center}
 
-\title{Approximate Supercell (Superlattice) Matching}
+\title{Approximate Supercell Matching}
 \shorttitle{3D Supercell Matching}
 
 % Authors' names and addresses. Use \cauthor for the main (contact) author.
@@ -206,7 +206,7 @@ A solution is presented for determining the relationship between two unit cells 
 	\vspace{1mm}
 	
 	\upshape\normalfont\raggedleft
-	--- Claude (Anthropic), 2026
+	--- Claude (Anthropic, Inc.), 2026
 \end{minipage}
 \vspace{4mm}
 
@@ -219,9 +219,9 @@ A solution is proposed for the problem of best matching of a unit cell to a supe
 	\section{Introduction}
 
 \citeasnoun{santoro1980determination} enumerated transformation 
-{matrices} for generating coincidence site lattices (superlattices)
+{matrices} for generating coincidence site lattices (sublattices)
 from a given unit cell description. They create one exact representation
-of a superlattice for each choice of input and transformation. The
+of a sublattice for each choice of input and transformation. The
 general solution requires awareness of different choices of unit cells, 
 alternative choices for basis vectors for actual or near degeneracies,
 and allowance for lattice distortion (for instance, because of
@@ -237,14 +237,14 @@ replacement on one metal ion with another).
 \begin{figure}
 	\includegraphics[width=\columnwidth]{supercell1}
 	\label{process}
-	\caption{The process of Andrews \& Bernstein (2026) for approximate matching of lattices.
+	\caption{The process of Andrews \& Bernstein (\cite{andrews2026approximate}) for approximate matching of lattices.
 		 Reference and probe cells are converted to primitive form and reduced. Both 
 		 the primitive and the reduced cell of each are passed to the matching stage, 
 		 giving four pairings. A library of matrices supplies candidate transformations 
 		 of the probe: matrices of determinant one enumerate alternative settings of  
 		 the probe lattice, and matrices of determinant n enumerate the derivative 
 		 lattices of index n. Each candidate transformation is applied to the probe lattice and 
-		 scored by the \PIII{} distance to the reference. The transformed cell 
+		 scored by the \PIII{} \cite{andrews2026p3} distance to the reference. The transformed cell 
 		 is not reduced again before scoring, so the score depends on the setting 
 		 as well as on the lattice. Accepted matches are carried back through 
 		 the reduction and primitive-conversion inverses to the frame of 
@@ -281,11 +281,7 @@ would only need output reporting changed.
 
 \section{Implementation details}
 
-\subsection{Matrix generator}
-Appendix \ref{generator} is a $C^{++}$ function for generating
-libraries of matrices with specified integer valued determinants. In program CmdLMP3, this function is used
-to create the library of matrices that are used for
-approximate lattice matching.
+
 
 \subsection{Determinants}
 
@@ -302,16 +298,11 @@ approximate lattice matching.
 \begin{table}
 		\label{tab:matrix_determinants}
 	\caption{Transformation matrix counts by determinant class. For $n=1$ and $n=2$
-		the complete set is used in CmdLMP3. For $n=3$ and $n=4$ the complete set is used with the
-		13 and 35 Hermite normal forms appended, respectively; those matrices are already present in
-		the complete set, so the appended copies are redundant and are retained only as
-		a guard. For index $n=5$ and index $n=6$ the exhaustive search is not attempted, as it would
+		the complete set of integer matrices with determinant = 1 or 2, respectively with elements -1,0,1 or -2,-1,0,1,2, respectively is used in CmdLMP3. For index $n=5$ and index $n=6$ the exhaustive search is not attempted, as it would
 		screen $2.4\times10^{9}$ and $1.1\times10^{10}$ candidates to yield sets of
 		$1.4\times10^{7}$ and $7.1\times10^{7}$ matrices. In their place the 3480
-		matrices of determinant one are composed with the Hermite normal forms of index
-		5 and 6 in both right and left multiplication orders. Left multiplication preserves the lattice
-		and supplies alternative settings of it; right multiplication changes the
-		lattice. The resulting sets span all 31 and all 91 derivative lattices, but
+		matrices of determinant one are composed by multiplication of the Hermite normal forms of index
+		5 and 6. The resulting sets span all 31 and all 91 derivative lattices, but
 		sample the settings of each lattice less densely than the exhaustive sets at lower index.}
 		
 	\label{tab:matrixcounts}
@@ -338,8 +329,7 @@ approximate lattice matching.
 	
 	\noindent
 	{\dag} Number of distinct sublattices of index $n$ in a three-dimensional
-	lattice. Each has exactly one Hermite normal form. The total excludes the
-	trivial lattice at $n=1$.
+	lattice. Each has exactly one Hermite normal form..
 	
 	\noindent
 	{\ddag} Size of the exhaustive search over integer matrices with coefficients in
@@ -394,7 +384,7 @@ the reverse of the choice that the user desires, so
 	\subsection{Example 1}
 {
 \begin{verbatim}
-=== TEST: Hawaiian ===
+=== TEST: (Charles Simmons, personal communcaion) ===
 Description: Nearly identical cells with known transformation
 Input cells:
 Cell 1 (P):    10.250    10.740    21.080    87.720    75.970    61.530 
@@ -454,7 +444,7 @@ Cell 2 (P):    10.250    10.740    21.080    78.960    75.970    61.490
 \subsection{Example 3}
 
 \begin{verbatim}
-	=== TEST: Simon Parsons ===
+	=== TEST: (Simon Parsons, personal communication) ===
 	Description: [SUPERCELL] R primitive vs P triclinic -- order-4, dist=0.820
 	Input cells:
 	Cell 1 (P):     9.477     9.477     9.477    64.240    64.240    64.240 
@@ -478,7 +468,40 @@ Cell 2 (P):    10.250    10.740    21.080    78.960    75.970    61.490
 	Checking result 1 ([SUPERCELL] order-4 det~4 dist~1.9):
 \end{verbatim}
 
+\subsection{Example 4}
 
+\begin{verbatim}
+(Simon Parsons, personal communication)
+	Two phase of CuSO4.5H2O. Comparing orientation matrices gives
+	[   0.996436 -0.992217  0.004600 ]
+	[  -0.953339 -0.987698 -0.005615 ]
+	[  -0.006338  0.029284 -1.004780 ]
+	This is in agreement with CmdLMP3 results
+	
+	; === P3 LATTICE MATCHING ===
+	; Enter control variables and input vectors (type 'end' to finish):
+	P 5.8699    5.9614   10.0883   76.9978   82.8643   72.3787 (1 atm)
+	P 6.9425    9.2826   10.1032   77.6881   86.0909   88.5508 (5-6 GPa)
+	end
+	; === PROCESSING INPUT LIST ===
+	; primitive cell volume ratio, mobile/reference
+	;  ratio = 1.939   swapped
+	; Note: input order swapped -- the larger-volume cell is used as reference.
+	;       The matrix shown transforms the MOBILE (smaller) cell to match the REFERENCE (larger).
+	
+	; === LATTICE MATCHING RESULTS ===
+	; === SUPERCELL ===  prim. cell volume ratio = 2.000
+	
+	; --- Match 1 ---
+	; order-2 supercell  POOR  P3 distance: 0.340 (2.2% of P3 norm)  S6 angle: 0.99 deg
+	; Matrix:  [1 -1 0   -1 -1 0   0 0 -1] (Determinant: 2.000  [SUPERCELL])
+	; Inverse: [1/2 -1/2 0   -1/2 -1/2 0   0 0 -1]
+	; NOTE: P3 distance (2.213% of P3 norm) exceeds threshold 2.000% -- match is distorted
+	; P     6.942     9.283    10.103    77.688    86.091    88.551  [REFERENCE]
+	; P     6.986     9.549    10.088    77.478    84.974    89.070  [TRANSFORMED MOBILE]
+	
+	
+\end{verbatim}
 	\section{Summary}
 A method for determining whether  a reference cell and a probe cell have a subcell/supercell relationship and
 for determining the three-dimensional
@@ -501,9 +524,7 @@ The program CmdLMP3 uses the required files.
 
 CmdLP3 has two functions in addition to the processing of
 users' inputs. Their results are included as supporting
-information.
-
-Two text files are deposited. \texttt{CmdLMP\_HELP\_2026\_07\_18.txt}
+information. Two text files are deposited. \texttt{CmdLMP\_HELP\_2026\_07\_18.txt}
 contains descriptions of possible input parameters that
 can be used in addition to experimental data input. For instance,
 ``DETAILS'' will trigger output of information about intermediate
@@ -512,6 +533,9 @@ calculations.
 contains about 50 example cases that the command ``TEST''
 causes to be executed.
 
+
+\section{Artificial intelligence notice}
+Figure \ref{process} was created with the assistance of the AI program Claude distributed by Anthropic, Inc.
 
 \section{Acknowledgements}
 
@@ -536,50 +560,6 @@ All AI-generated code was reviewed, tested, and verified by the authors for
 correctness and adherence to the algorithmic specifications described in this
 paper; the authors take full responsibility for its accuracy and behavior.
 
-
-\appendix
-\section{Supercell generation code}
-\label{generator}
-This is a C++ function to generate all 3x3 matrices with a specified determinant value and the range of coefficients from -maxCoeff to maxCoeff.
-
-\begin{verbatim}
-		inline std::vector<Matrix_3x3> generateSupercellMatrices(
-           const std::vector<int>& determinants,
-           const int maxCoeff = 1) {
-			
-			std::vector<Matrix_3x3> matrices;
-			matrices.reserve(8000);
-			
-			std::set<int> detSet(determinants.begin(), determinants.end());
-			
-			const int lo = -maxCoeff;
-			const int hi = maxCoeff;
-			
-			for (int a00 = lo; a00 <= hi; ++a00)
-			for (int a01 = lo; a01 <= hi; ++a01)
-			for (int a02 = lo; a02 <= hi; ++a02)
-			for (int a10 = lo; a10 <= hi; ++a10)
-			for (int a11 = lo; a11 <= hi; ++a11)
-			for (int a12 = lo; a12 <= hi; ++a12)
-			for (int a20 = lo; a20 <= hi; ++a20)
-			for (int a21 = lo; a21 <= hi; ++a21)
-			for (int a22 = lo; a22 <= hi; ++a22) {
-				Matrix_3x3 M(
-				a00, a01, a02,
-				a10, a11, a12,
-				a20, a21, a22
-			);
-			const int det =
-			static_cast<int>(std::round(M.Det()));
-			if (detSet.count(det))
-			   matrices.emplace_back(M);
-			}
-			
-			matrices.shrink_to_fit();
-			return matrices;
-		}
-		
-	\end{verbatim}
 	
 	%\section{blah blah blah -- Supplementary Material}
 	
