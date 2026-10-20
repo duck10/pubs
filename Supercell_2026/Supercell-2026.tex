@@ -226,46 +226,75 @@ general solution requires awareness of different choices of unit cells,
 alternative choices for basis vectors for actual or near degeneracies,
 and allowance for lattice distortion (for instance, because of
 replacement on one metal ion with another).
+
+The program NIST*LATTICE \cite{nistlattice,nisttn1290}
+is similar to CmdLMP3. NIST*LATTICE uses a more obscure
+matrix generation module and does not have a simple measure
+of fit, instead relying on error windows on each of the 6
+cell parameters.
 	
 	\citeasnoun{andrews2026approximate} describe a general solution for finding 
 	approximate relationships between unit cells that are similar but
 	not necessarily sampled from the identically-same lattice.
 	A user of that software (CmdLMP3) asked if the same could be applied to
-	the determination of unit cells to supercells. Here we extend their method to the case of supercells.
+	the determination of unit cells to supercells. Here we extend their method to the case of supercells. (CmdLMP3
+	is a component of LatticeRepresentationLib; see Section~ \ref{refAvailability}.
+		
+	Figure \ref{figProcess} summarized the operations of 
+	\citeasnoun{andrews2023approximating} that are used to compare
+	a ``reference'' unit cell to a ``probe'' unit cell; the
+	results are returned in the coordinate frame of the reference. 
 
 
 \begin{figure}
 	\includegraphics[width=\columnwidth]{supercell1}
-	\label{process}
-	\caption{The process of Andrews \& Bernstein (\cite{andrews2026approximate}) for approximate matching of lattices.
-		 Reference and probe cells are converted to primitive form and reduced. Both 
-		 the primitive and the reduced cell of each are passed to the matching stage, 
-		 giving four pairings. A library of matrices supplies candidate transformations 
-		 of the probe: matrices of determinant one enumerate alternative settings of  
-		 the probe lattice, and matrices of determinant n enumerate the derivative 
-		 lattices of index n. Each candidate transformation is applied to the probe lattice and 
-		 scored by the \PIII{} \cite{andrews2026p3} distance to the reference. The transformed cell 
-		 is not reduced again before scoring, so the score depends on the setting 
-		 as well as on the lattice. Accepted matches are carried back through 
-		 the reduction and primitive-conversion inverses to the frame of 
-		 the initial reference.
+	\label{figProcess}
+	\caption{
+		Flowchart of the approximate lattice matching process of ~\citeasnoun{andrews2026approximate}.
+		Reference and probe cells are converted to primitive form and reduced.
+		Both the primitive and the reduced cell of each are passed to the matching stage, giving four pairings.
+		A library of matrices supplies candidate transformations of the probe:
+		matrices of determinant one enumerate alternative settings of the probe lattice,
+		and matrices of determinant n enumerate the derivative lattices of index n.
+		Each candidate transformation is applied to the probe lattice
+		and scored by the \PIII{} \cite{andrews2026p3} distance to the reference.
+		The transformed cell is not reduced again before scoring, so the score is 
+		calculated in the 
+		coordinate frame of the reference.
+		Accepted matched approximate cells are carried back through the reduction and primitive-conversion inverses
+		to the frame of the initial reference.
+
 }
 \end{figure}
 
 \section{Algorithm}
 
-The above algorithm suffices for matching lattices that are somewhat
+The algorithm described above and in Figure \ref{figProcess} suffices for matching lattices that are somewhat
 similar to each other, but the question of matching a cell to a supercell
-can be tackled with a modest modification. Where matching above is
+can be tackled with a modest modification: where matching as 
+described in Figure \ref{figProcess} is
 done using unimodular matrices, by replacing the library of transformation
 matrices with a library  of matrices that have larger determinants, approximate
 supercell relationships can be determined.
 
 For instance, for a given unit cell, to find supercells that have 
 a base vector tripled a library of transformations with 
-determinant=3.0 would be used. Other than that, the algorithm 
-would only need output reporting changed.
-	
+determinant=3.0 would be used. 
+
+A library of matrices for a supercell of order n can be 
+constructed by a function that uses 9 nested loops, one for
+each element of the 3x3 transformation matrices. For 
+transformations of order n, the loops would run from -n to
++n, and matrices with determinant = n would be added to the
+library.
+
+\citeasnoun{santoro1980determination} addressed the question 
+of supercells using a limited set of matrices, the \textbf{H}ermite \textbf{N}ormal \textbf{F}orm (HNF) \cite{hermitewiki}. For a
+given supercell order (equal to the determinant of the
+transformation matrix between original and supercell), 
+the HNF gives and one example of each possible lattice. The issues that arise are that the possible exchanges of axes
+and inexact, measured data are not addressed.
+
 	\section{Notation}
 	
 \noindent \PIII{}: Polar coordinate space is a compact and smooth alternative to lengths and angles. \PIII{} is useful for comparing unit cells. \cite{andrews2026p3}
@@ -273,9 +302,9 @@ would only need output reporting changed.
 	\PIII{}: 
 		$(|\vec{a}|,\alpha),\ (|\vec{b}|,\beta),\ (|\vec{c}|,\gamma)$\\
 	$\Rightarrow$\\
-	\hspace*{0.5cm}$(|\vec{a}|\cos\alpha,\, |\vec{a}|\sin\alpha)$\\
-	\hspace*{0.5cm}$(|\vec{b}|\cos\beta,\, |\vec{b}|\sin\beta)$\\
-	\hspace*{0.5cm}$(|\vec{c}|\cos\gamma,\, |\vec{c}|\sin\gamma)$\\
+	\hspace*{0.5cm}($(|\vec{a}|\cos\alpha,\, |\vec{a}|\sin\alpha)$,
+	~$(|\vec{b}|\cos\beta,\, |\vec{b}|\sin\beta)$,
+	~$(|\vec{c}|\cos\gamma,\, |\vec{c}|\sin\gamma)$)\\
 	also known as $(p_1, p_2, p_3)$
 
 
@@ -312,7 +341,7 @@ would only need output reporting changed.
 	\begin{tabular}{crrrr}
 		\hline
 		& Derivative       & Candidates          & Complete       & Used in \\
-		$n$   & lattices\dag     & screened\ddag       & set\S          & CmdLMP3\P \\
+		$n$   & lattices\dag     & screened\ddag      & set\S          & CmdLMP3\\
 		\hline
 		1     &  1 &         19\,683 &        3\,480 &       3\,480 \\
 		2     &  7 &   1\,953\,125 &    147\,696 &     147\,696 \\
@@ -364,7 +393,16 @@ would only need output reporting changed.
 For a given input pair of unit cells, the decision to 
 search for supercells of the reference cell requires
 that the reference have the smaller primitive unit
-volume of the pair. The output of the results of matching
+volume of the pair. When 2 input cells are compared
+and the ratio of he volumes is not near 1.0, then
+the smaller of the 2 is designated as the reference
+cell and the other as the probe. CmdLMP3 assumes that the
+first input cell of a pair to be compared is the reference.
+In the case where the reference cell has the larger 
+primitive volume, then the reference and probe cells
+are interchanged.
+
+The output of the results of matching
 shows the transformation from the input probe cell to
 the frame of the input reference cells. That might be
 the reverse of the choice that the user desires, so
@@ -380,8 +418,20 @@ the reverse of the choice that the user desires, so
 
 
 	\section{Examples}
+	A small selection of example executions of CmdLMP3 is 
+	shown. The example range from simple comparisons to
+	a variety of different types of supercells. For
+	the cases of supercells, the program
+	uses the \PIII{} fit value to attempt to describe the fit
+	as EXCELLENT/GOOD/POOR/DISTORTED. 
 	
 	\subsection{Example 1}
+	A case where supercell search is not needed. This
+	is the simplest example of using CmdLMP3. Because
+	the reduced cell volumes are compared, CmdLMP3 does
+	not perform a supercell alignment. 2 possible alignments
+	of the lattices are found.
+	
 {
 \begin{verbatim}
 === TEST: (Charles Simmons, personal communcaion) ===
@@ -412,6 +462,10 @@ Cell 2 (P):    10.250    10.740    21.080    78.960    75.970    61.490
 \end{verbatim}
 
 \subsection{Example 2}
+This example is a synthetic example of a cubic unit cell
+where a face diagonal has been doubled. As expected in 
+such a high symmetry case, multiple matches are found.
+
 \begin{verbatim}
 	=== TEST: FaceDiagonalOrder2 ===
 	Description: [SUPERCELL] Cubic doubled along face diagonal -- order-2, dist=0
@@ -442,6 +496,10 @@ Cell 2 (P):    10.250    10.740    21.080    78.960    75.970    61.490
 \end{verbatim}
 
 \subsection{Example 3}
+A case of quadrupling the reference cell in more than
+one direction with significant distortion (fit labeled
+``POOR'').
+[Zn(XeF$_2$)$_6$][AsF$_6$]$_2$ \cite{clough2026phase}
 
 \begin{verbatim}
 	=== TEST: (Simon Parsons, personal communication) ===
@@ -469,15 +527,20 @@ Cell 2 (P):    10.250    10.740    21.080    78.960    75.970    61.490
 \end{verbatim}
 
 \subsection{Example 4}
+\cite{parsons2026} supplies low and high pressure
+measurments of CuSO$_4\cdot$5H$_2$O. The experimental
+orientation matrices were used to compute a trial
+supercell relationship (which agreed with CmdLMP3). 
+Again, the suggested fit quality is ``POOR'' due
+to significant distortion.
+\begin{verbatim}
+		[   0.996436 -0.992217  0.004600 ]
+		[  -0.953339 -0.987698 -0.005615 ]
+		[  -0.006338  0.029284 -1.004780 ]
+\end{verbatim}
 
 \begin{verbatim}
-(Simon Parsons, personal communication)
-	Two phase of CuSO4.5H2O. Comparing orientation matrices gives
-	[   0.996436 -0.992217  0.004600 ]
-	[  -0.953339 -0.987698 -0.005615 ]
-	[  -0.006338  0.029284 -1.004780 ]
-	This is in agreement with CmdLMP3 results
-	
+
 	; === P3 LATTICE MATCHING ===
 	; Enter control variables and input vectors (type 'end' to finish):
 	P 5.8699    5.9614   10.0883   76.9978   82.8643   72.3787 (1 atm)
@@ -502,18 +565,19 @@ Cell 2 (P):    10.250    10.740    21.080    78.960    75.970    61.490
 	
 	
 \end{verbatim}
-	\section{Summary}
-A method for determining whether  a reference cell and a probe cell have a subcell/supercell relationship and
-for determining the three-dimensional
-transformation matrices between them is described.
 
-The described algorithm (CmdLMP3) on a modest laptop computer
-processes det=1 cases in about one second. Det=4
-cases take the order of one minute.
+%	\section{Summary}
+%A method for determining whether  a reference cell and a probe cell have a subcell/supercell relationship and
+%for determining the three-dimensional
+%transformation matrices between them is described.
+%
+%The described algorithm (CmdLMP3) on a modest laptop computer
+%processes det=1 cases in about one second. Det=4
+%cases take the order of one minute.
 
 
 \section{Availability of code}
-
+\label {refAvailability}
 The code for Lattice Matching (CmdLMP3) and related 
 software tools is available in github.com, in
 \url{https://github.com/duck10/LatticeRepLib.git}.
@@ -535,7 +599,7 @@ causes to be executed.
 
 
 \section{Artificial intelligence notice}
-Figure \ref{process} was created with the assistance of the AI program Claude distributed by Anthropic, Inc.
+Figure \ref{figProcess} was created with the assistance of the AI program Claude distributed by Anthropic, Inc.
 
 \section{Acknowledgements}
 
@@ -554,7 +618,7 @@ grant No. R01GM117126,
 grant No. R24GM154040 (from U.S.NIHGMS, Lawrence Berkeley Laboratory, for DIALS)
 grant No. 1R21GM129570); Dectris, Ltd.
 
-Portions of the C++ code used in the implementation of [CmdLMP3 module/function names]
+Portions of the C++ code used in the implementation of CmdLMP3 
 were generated with the assistance of Claude (Anthropic), a large language model.
 All AI-generated code was reviewed, tested, and verified by the authors for
 correctness and adherence to the algorithmic specifications described in this
