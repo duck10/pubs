@@ -254,7 +254,10 @@ matched to. The output includes the <strong>P<sup>3</sup></strong> distances and
 is more compact. Output includes the transformation matrices that operate on<br>
 the base vectors of the unit cell (this is important). Note, there are likely<br>
 to be more than one transformation listed, but they are listed in order of<br>
-of worsening fit.<br>
+of worsening fit.<br><br />
+	In cases where a supercell exist, indicated by a ratio of unit cell<br>
+	volumes that is larger than 1.0, then matching the smaller cell to<br>
+	the large is performed.<br>
 <em><u>Output type:</u>
 </em> transformation matrices, distance metrics (<strong>P<sup>3</sup></strong> and <strong>S<sup>6</sup></strong> angles), and transformed <br>
 lattice parameters with detailed quality assessment and multiple solution rankings.<br>

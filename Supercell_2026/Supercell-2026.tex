@@ -192,7 +192,10 @@
 	
 	
 	\begin{abstract}
-A solution is presented for determining the relationship between two unit cells when one is a supercell of the other.
+A solution is presented for determining the relationship between two unit cells when one is a supercell of the other. For supercell of sizes 1x,2x,3x, and 4x,
+the integer 3x3 transformations of the reduced basis vectors is exhaustively
+enumerated. For 5x and 6x a limited set is explored, principally exploring
+5 and 6 expansion of one basis vector.
 	\end{abstract}
 	% Appendices appear after the main body of the text. They are prefixed by
 	% a single \appendix declaration, and are then structured just like the
@@ -229,8 +232,9 @@ and allowance for lattice distortion (for instance, because of
 replacement on one metal ion with another).
 
 The program NIST*LATTICE \cite{nistlattice,nisttn1290}
-is similar to CmdLMP3. NIST*LATTICE uses a more obscure
-matrix generation module and does not have a simple measure
+is similar to CmdLMP3. NIST*LATTICE uses a 
+matrix generation module that constructs the matrices row-by-row
+ and does not have a simple measure
 of fit, instead relying on error windows on each of the 6
 cell parameters.
 	

@@ -44,6 +44,7 @@
 \usepackage{booktabs}
 \usepackage{makecell}
 \usepackage[T2A]{fontenc} \usepackage[utf8]{inputenc} \usepackage[russian,english]{babel}
+\usepackage{rotating}
 
 \newcommand{\SVI}[0]{$\mathbf{S^{6}}$}
 \newcommand{\GVI}[0]{$\bf{G^{6}}$}
@@ -300,7 +301,7 @@ The method behaves smoothly in response to perturbations of the input cell and p
 	subspace.
 	
 	The algorithm proceeds by generating all representations of all non-triclinic
-	Delone types (Figure~\ref{fig:delonegrid})
+	Delone types (Figure~\ref{fig:delonegrid}, modified after \citeasnoun{Delone1975})
 	within the Selling-reduced domain, including those obtained by
 	boundary transforms. For each representation, a projector is computed. Given a
 	probe cell, its Selling-reduced vector is compared to each subspace by
@@ -741,9 +742,9 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 	
 	\begin{figure}
 		\centering
-\includegraphics[angle=90,height=0.7\textheight]{HorizontalDeloneGrid.eps}
+\includegraphics[angle=90,height=0.7\textheight]{DeloneGridClaude_2}
 		\caption{
-			The 24 Delone types arranged by lattice system.  
+			The 24 Delone types arranged by lattice system, modified after \citeasnoun{Delone1975}.  
 			Each type is shown with its Bravais tetrahedron, using zeros and slash marks to indicate
 			the character (zero pattern and equal‑value multiplets).  
 			These characters determine the dimension and structure of the corresponding linear
@@ -931,81 +932,58 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 		\end{table}
 	}
 	
-		\begin{table}
-		
-		\begin{tabular}{ccccccc}
-			\toprule
-			PDB ID & Sp.Gr. & Delone type&distance ({{\AA}}) \\ 
-			\midrule
-			1NUI&P3121&H4&0.0439\\ 
-			2NW8&P3121&H4&0.0401\\ 
-			2J1L&P3121&H4&0.0307\\ 
-			1VYI&P3121&H4&0.2504\\ 
-			3FZ8&P32&H4&0.0575\\ 
-			2J5W&P3221&H4&0.0543\\ 
-			2VAM&P3221&H4&0.1166\\ 
-			1Y8J&P3221&H4&0.0389\\ 
-			1F4V&P3221&H4&0.0276\\ 
-			2ZP9&P6&H4&0.0528\\ 
-			1DDR&P61&H4&0.0726\\ 
-			1DDS&P61&H4&0.0726\\ 
-			1SGU&P61&H4&0.0295\\ 
-			3CDC&P61&H4&0.0559\\ 
-			2WAG&P6122&H4&0.0377\\ 
-			1LBM&P6122&H4&0.0312\\ 
-			2O9Z&P62&H4&0.0402\\ 
-			1ELZ&P6322&H4&0.4035\\ 
-			1SA0&P65&H4&0.0681\\ 
-			3KQI&P6522&H4&0.0331\\ 
-			2F9Y&P6522&H4&0.0470\\ 
-			3E73&P6522&H4&0.0523\\ 
-			3CAP&H3&H4&0.0586\\ 
-			2UX6&H32&H4&0.0386\\ 
-			1ODT&H32&H4&0.0816\\ 
-			2FDI&P43&T5&0.0758\\ 
-			3HQ7&P43212&T5&0.2869\\ 
-			1E2Q&P43212&T5&0.5482\\ \\
-			\bottomrule
-		\end{tabular}
-		\begin{tabular}{ccccccc}
-			\toprule
-			PDB ID & Sp.Gr. & Delone type&distance ({{\AA}}) \\ 
-			\midrule
-			1SHN&P43212&T5&0.0491\\ 
-			1C50&P43212&T5&1.9040\\ 
-			2A1L&P43212&T5&0.0528\\ 
-			1S2L&P43212&T5&0.0334\\ 
-			1H9S&P41&T5&1.0149\\ 
-			1H9R&P41&T5&1.0141\\ 
-			2F0Q&P41&T5&0.0260\\ 
-			3EYM&P41&T5&0.0476\\ 
-			1WV5&P41212&T5&0.0250\\ 
-			2DF3&P41212&T5&0.0387\\ 
-			1L6O&P41212&T5&0.0346\\ 
-			3A58&P41212&T5&0.2976\\ 
-			2IU9&P41212&T5&0.0373\\ 
-			4BTP&P41212&T5&0.0666\\ 
-			1W54&P4212&T5&0.0420\\ 
-			2PBE&P42212&T5&0.0548\\ 
-			3BR5&P42212&T5&0.2203\\ 
-			1GMD&P42212&T5&0.1400\\ 
-			1GMC&P42212&T5&0.1402\\ 
-			2CCN&P42212&T5&0.0447\\ 
-			1CE1&P212121&O5&0.6472\\ 
-			3DQ2&P212121&O5&0.1058\\ 
-			1Z2A&P212121&O5&0.0670\\ 
-			2HA3&P212121&O5&0.3070\\ 
-			3BNJ&I4122&T2&0.9518\\ 
-			4MGP&I-42d&T1&0.2128\\ 
-			4ASL&C2221&O4&0.3383\\ 
-			3K7M&P432&C5&0.0517\\ 
-			3GBN&I213&C1&1.2661\\ 
-			\bottomrule
-		\end{tabular}
-		
-		\caption{57 unit cells from the PDB around 2018 that did not match their types (later corrected)}
-		\label{tab:PDBCells}
-	\end{table}
+% Table 4, rebuilt 2026-11-12 from the current CmdSella (COMPARE,
+% TYPES set to each cell's claimed Delone type). Replaces the old table:
+% its column "distance (A)" held sqrt(fit)/10. The two halves are side by
+% side in one tabular, rotated (rotating package: sidewaystable*), so that
+% the table fits on one page at the normal text size.
+\begin{sidewaystable*}
+	\begin{tabular}{ccccc@{\hspace{18pt}}c@{\hspace{18pt}}ccccc}
+		\toprule
+		PDB ID & Space group & Delone type & Fit ({\AA}$^2$) & Fit$/|\mathbf{s}|$ (\%) && PDB ID & Space group & Delone type & Fit ({\AA}$^2$) & Fit$/|\mathbf{s}|$ (\%) \\
+		\cmidrule{1-5}\cmidrule{7-11}
+		1NUI&$P3_121$&H4&0.1930&0.0011 && 1C50&$P4_32_12$&T5&362.5&1.35\\
+		2NW8&$P3_121$&H4&0.1613&0.0011 && 2A1L&$P4_32_12$&T5&0.2798&0.0015\\
+		2J1L&$P3_121$&H4&0.09448&0.00082 && 1S2L&$P4_32_12$&T5&0.1121&0.00031\\
+		1VYI&$P3_121$&H4&6.272&0.055 && 1H9S&$P4_1$&T5&103.0&1.30\\
+		3FZ8&$P3_2$&H4&0.3306&0.00073 && 1H9R&$P4_1$&T5&102.9&1.30\\
+		2J5W&$P3_221$&H4&0.2958&0.00077 && 2F0Q&$P4_1$&T5&0.06809&0.0013\\
+		2VAM&$P3_221$&H4&1.360&0.013 && 3EYM&$P4_1$&T5&0.2269&0.00047\\
+		1Y8J&$P3_221$&H4&0.1518&0.00094 && 1WV5&$P4_12_12$&T5&0.06284&0.0011\\
+		1F4V&$P3_221$&H4&0.07670&0.000064 && 2DF3&$P4_12_12$&T5&0.1501&0.0016\\
+		2ZP9&$P6$&H4&0.2788&0.00082 && 1L6O&$P4_12_12$&T5&0.1198&0.00066\\
+		1DDR&$P6_1$&H4&0.5271&0.0057 && 3A58&$P4_12_12$&T5&8.861&0.014\\
+		1DDS&$P6_1$&H4&0.5271&0.0057 && 2IU9&$P4_12_12$&T5&0.1398&0.00017\\
+		1SGU&$P6_1$&H4&0.08708&0.0011 && 4BTP&$P4_12_12$&T5&0.4446&0.00014\\
+		3CDC&$P6_1$&H4&0.3132&0.0029 && 1W54&$P42_12$&T5&0.1771&0.00076\\
+		2WAG&$P6_122$&H4&0.1422&0.00099 && 2PBE&$P4_22_12$&T5&0.3014&0.0018\\
+		1LBM&$P6_122$&H4&0.09735&0.00028 && 3BR5&$P4_22_12$&T5&4.857&0.011\\
+		2O9Z&$P6_2$&H4&0.1623&0.00030 && 1GMD&$P4_22_12$&T5&1.961&0.017\\
+		1ELZ&$P6_322$&H4&16.29&0.054 && 1GMC&$P4_22_12$&T5&1.967&0.017\\
+		1SA0&$P6_5$&H4&0.4648&0.00050 && 2CCN&$P4_22_12$&T5&0.2002&0.0018\\
+		3KQI&$P6_522$&H4&0.1100&0.0015 && 1CE1&$P2_12_12_1$&O5&34.54&0.15\\
+		2F9Y&$P6_522$&H4&0.2217&0.00052 && 3DQ2&$P2_12_12_1$&O5&1.121&0.016\\
+		3E73&$P6_522$&H4&0.2745&0.00041 && 1Z2A&$P2_12_12_1$&O5&0.4489&0.0078\\
+		3CAP&$H3$&H4&0.3435&0.00065 && 2HA3&$P2_12_12_1$&O5&9.423&0.018\\
+		2UX6&$H32$&H4&0.1494&0.0015 && 3BNJ&$I4_122$&T2&90.61&0.63\\
+		1ODT&$H32$&H4&0.6668&0.0024 && 4MGP&$I\bar{4}2d$&T1&4.532&0.26\\
+		2FDI&$P4_3$&T5&0.5749&0.0041 && 4ASL&$C222_1$&O4&8.924&0.14\\
+		3HQ7&$P4_32_12$&T5&5.630&0.037 && 3K7M&$P432$&C5&0.2677&0.00058\\
+		1E2Q&$P4_32_12$&T5&30.06&0.20 && 3GBN&$I2_13$&C1&160.3&0.64\\
+		1SHN&$P4_32_12$&T5&0.2414&0.00058 && &&&&\\
+		\bottomrule
+	\end{tabular}
+	
+	\caption{The 57 unit cells from the PDB (around 2018) that did not fit
+		their deposited lattice types (later corrected). Delone type: the
+		type required by the space group. Fit: the SELLA distance in $S^6$
+		from the cell to the nearest lattice of that type; $|\mathbf{s}|$ is
+		the length of the Selling-reduced $S^6$ vector. Fits are from the current program;
+		53 are the same as in the original 2018 survey, and four are lower
+		(3HQ7 8.234, 4ASL 11.45, 1CE1 41.90, 2HA3 9.431 before), owing to
+		additions to the method since then.}
+	\label{tab:PDBCells}
+\end{sidewaystable*}
 	
 	
 	% Postscript figures can be included with multiple figure blocks
