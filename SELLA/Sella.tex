@@ -1,6 +1,3 @@
-
-
-
 %Table 3. Illustration of the power of the 'matrix approach to symmetry'
 %The initial cell was originally tested by Himes & Mighell (1987a). BLAF confirmed the reported cubic F-centred cell with a = 15.728 A
 %and, in addition, calculated the estimated error in the cell edge and produced the admitted subgroup sequence. The
@@ -43,7 +40,7 @@
 \usepackage{epsfig}
 \usepackage{booktabs}
 \usepackage{makecell}
-\usepackage[T2A]{fontenc} \usepackage[utf8]{inputenc} \usepackage[russian,english]{babel}
+\usepackage[T1]{fontenc} \usepackage{lmodern} \usepackage[utf8]{inputenc} \usepackage[english]{babel}
 \usepackage{rotating}
 
 \newcommand{\SVI}[0]{$\mathbf{S^{6}}$}
@@ -74,7 +71,7 @@
 	%	Consistency in terminology: There are variations between "Delaunay" and "Delone" throughout the paper. While you note that Delaunay later changed his name's spelling, consistency within the paper would be helpful. Perhaps use one version with a note about the alternative spelling at first mention.
 	%	Incomplete sections: Several sections are marked as incomplete:
 	%	
-	%	Section 3.1.1 has a note "LCA–need to normalize the vectors..."
+	%	Section 3.1.1 has a note "LCA--need to normalize the vectors..."
 	%	Section 3.1.2 has "LCA write pseudocode for Fraction."
 	%	Section 6 "LCA this section is incomplete. Table needs caption/label."
 	%	Sections 7 and 8 are just headings without content.
@@ -178,7 +175,7 @@
 		24 Delone types described by Delaunay (1932) appear naturally in this
 		framework. Examples and tests against large data sets are included.
 		
-		Boris Nikolaevich Delone (\textcyrillic{Борис Николаевич Делоне}), whose surname
+		Boris Nikolaevich Delone, whose surname
 		also appears in the French form ``Delaunay'' in early Western publications, did not
 		change his name; the variation reflects differing transliteration conventions.
 		
@@ -191,7 +188,7 @@
 	routine crystallographic task, but the presence of experimental error and
 	near-symmetry can complicate the process. The traditional approach uses the
 	metric tensor in $G^6$ together with Niggli reduction (\citeasnoun{niggli1928krystallographische}, \citeasnoun{Roof1967},
-	 \citeasnoun{Gruber1973}, \citeasnoun{grosse2004numerically}). While
+	\citeasnoun{Gruber1973}, \citeasnoun{grosse2004numerically}). While
 	mathematically correct, the geometry of the Niggli-reduced region is
 	complicated: it is non-convex, some facets are open while others are closed,
 	and higher-order intersections require special handling \cite{Andrews2014}. These features make
@@ -207,10 +204,10 @@
 	one or more linear subspaces in $S^6$, and the distance from a probe cell to
 	any type is obtained from the orthogonal complement of the corresponding
 	projector (usually expressed as a matrix).
-The method behaves smoothly in response to perturbations of the input cell and provides a clear metric of fit.
+	The method behaves smoothly in response to perturbations of the input cell and provides a clear metric of fit.
 	
 	The 24 Delone types described by Delaunay (1932) appear naturally in this
-	framework (Figure \ref{fig:rotatedDeloneTypes}). We describe their representation in $S^6$, the construction of the
+	framework (Figure \ref{fig:delonegrid}). We describe their representation in $S^6$, the construction of the
 	associated projectors, and the use of these projectors to classify experimental
 	cells. Examples and tests against large data sets are included.
 	
@@ -232,8 +229,8 @@ The method behaves smoothly in response to perturbations of the input cell and p
 	
 	These complications have practical consequences. Grosse-Kunstleve, Sauter,
 	and Adams (2004) documented stability problems and infinite-loop behavior
-	near certain boundaries. Although the boundary structure is well defined—the
-	standard table lists 44 polytopes in $G^6$—the reduction rules do not always
+	near certain boundaries. Although the boundary structure is well defined---the
+	standard table lists 44 polytopes in $G^6$---the reduction rules do not always
 	specify how to choose among equivalent representatives on their
 	intersections.
 	
@@ -309,59 +306,59 @@ The method behaves smoothly in response to perturbations of the input cell and p
 	from the subspace as the norm of the resulting vector. The Bravais type(s) with the smallest
 	distance are reported.
 	
-\begin{quote}
-
-	An example using hen eggwhite lysozyme (PDB entry 1vdp)
-	
-	
-	The unit cell is $P2_1~a=28.0,~  b=62.9,~   c= 60.6,~ 
-	\alpha=90,~ \beta=90.9,~    \gamma=90 $
-	
-	
-	Consider the case of primitive orthorhombic:
-	hen eggwhite lysozyme 1vdp
-
-
-
-The character for primitive orthorhombic (oP), O5 in Figure \ref{fig:rotatedDeloneTypes} is:
-\[
-\begin{bmatrix}
-	0 & 0 & 0 & 0 & 0 & 0 \\
-	0 & 0 & 0 & 0 & 0 & 0 \\
-	0 & 0 & 0 & 0 & 0 & 0 \\
-	0 & 0 & 0 & 1 & 0 & 0 \\
-	0 & 0 & 0 & 0 & 1 & 0 \\
-	0 & 0 & 0 & 0 & 0 & 1 \\
-	
-\end{bmatrix}
-\]
-
-And the perp is:
-\[
-\begin{bmatrix}
-	-1 & 0 & 0 & 0 & 0 & 0 \\
-	0 & -1 & 0 & 0 & 0 & 0 \\
-	0 & 0 & -1 & 0 & 0 & 0 \\
-	0 & 0 & 0 & 0 & 0 & 0 \\
-	0 & 0 & 0 & 0 & 0 & 0 \\
-	0 & 0 & 0 & 0 & 0 & 0 \\
-	
-\end{bmatrix}
-\]
-
-The unit cell expressed in space \SVI{} is:\\
-S6   0.0, -26.7,   0.0, -757.3, -3956.4, -3645.7
-
-Multiplying the \SVI{} vector by the projector gives:
-S6 0, 0, 0,  -757.3, -3956.4, -3645.7, which is an oP unit cell.
-
-Multiplying the \SVI{} vector by the perp give:
-S6 0, 26.7, 0, 0, 0, 0.
-which clearly has a norm of 26.7; the ratio of that norm
-to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation from a primitive orthorhombic cell.
-
-
-\end{quote}
+	\begin{quote}
+		
+		An example using hen eggwhite lysozyme (PDB entry 1vdp)
+		
+		
+		The unit cell is $P2_1~a=28.0,~  b=62.9,~   c= 60.6,~ 
+		\alpha=90,~ \beta=90.9,~    \gamma=90 $
+		
+		
+		Consider the case of primitive orthorhombic:
+		hen eggwhite lysozyme 1vdp
+		
+		
+		
+		The character for primitive orthorhombic (oP), O5 in Figure \ref{fig:delonegrid} is:
+		\[
+		\begin{bmatrix}
+			0 & 0 & 0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 1 & 0 & 0 \\
+			0 & 0 & 0 & 0 & 1 & 0 \\
+			0 & 0 & 0 & 0 & 0 & 1 \\
+			
+		\end{bmatrix}
+		\]
+		
+		And the perp is:
+		\[
+		\begin{bmatrix}
+			-1 & 0 & 0 & 0 & 0 & 0 \\
+			0 & -1 & 0 & 0 & 0 & 0 \\
+			0 & 0 & -1 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 & 0 & 0 \\
+			0 & 0 & 0 & 0 & 0 & 0 \\
+			
+		\end{bmatrix}
+		\]
+		
+		The unit cell expressed in space \SVI{} is:\\
+		S6   0.0, -26.7,   0.0, -757.3, -3956.4, -3645.7
+		
+		Multiplying the \SVI{} vector by the projector gives:
+		S6 0, 0, 0,  -757.3, -3956.4, -3645.7, which is an oP unit cell.
+		
+		Multiplying the \SVI{} vector by the perp give:
+		S6 0, 26.7, 0, 0, 0, 0.
+		which clearly has a norm of 26.7; the ratio of that norm
+		to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation from a primitive orthorhombic cell.
+		
+		
+	\end{quote}
 	
 	
 	
@@ -393,7 +390,7 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 	The 24 Delone types appear naturally in $S^6$, and their representation as linear
 	subspaces provides a convenient framework for classification. Three of the Delone
 	types (M3, M2B, and O3) correspond to boundaries between other types and do not
-	represent unique Bravais types. See Figure \ref{fig:rotatedDeloneTypes} for the names of the types.
+	represent unique Bravais types. See Figure \ref{fig:delonegrid} for the names of the types.
 	
 	\section{Terminology and Representations}
 	
@@ -415,8 +412,8 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 		\label{fig:tetrahedron}
 		
 	\end{figure}
-			
-	The contents of Figure \ref{fig:rotatedDeloneTypes} (all of the Delone types) for each type are
+	
+	The contents of Figure \ref{fig:delonegrid} (all of the Delone types) for each type are
 	described in Figure \ref{fig:O4_terminology}.
 	
 	
@@ -427,15 +424,15 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 	\emph{character}, a symbolic representation indicating which scalars are zero and
 	which are equal. For example, the character for the rhombohedral type R1 is
 	\((rrr\,sss)\), 
-(see Figure~	\ref{figure:R1})
-	 indicating two triplets of equal values. The primitive monoclinic
+	(see Figure~	\ref{figure:R1})
+	indicating two triplets of equal values. The primitive monoclinic
 	type M4 has character \((00r\,stu)\) (see Figure \ref{fig:O4_terminology}), indicating two zeros and four independent
 	values.
 	
 	Characters provide a compact way to describe the geometry of each subspace and
 	are useful for generating sample vectors and constructing projectors.
 	
-	The SELLA algorithm proceeds by generating all representations of the non‑triclinic Delone types (see Figure~\ref{fig:delonegrid} for their designations) within the Selling‑reduced domain, including those obtained by boundary transforms. For each representation, a projector is computed. Given a probe cell, its Selling‑reduced vector is compared to each subspace by applying the corresponding perp, and the Bravais type(s) with the smallest distance are reported.
+	The SELLA algorithm proceeds by generating all representations of the non-triclinic Delone types (see Figure~\ref{fig:delonegrid} for their designations) within the Selling-reduced domain, including those obtained by boundary transforms. For each representation, a projector is computed. Given a probe cell, its Selling-reduced vector is compared to each subspace by applying the corresponding perp, and the Bravais type(s) with the smallest distance are reported.
 	
 	\begin{quote}
 		Constructing a projector from a character
@@ -458,15 +455,15 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 		\]
 	\end{quote}
 	
-%	\subsection{Zero patterns and equal-value multiplets}
-%	
-%	A zero value for a Selling scalar indicates that the corresponding vector lies on a
-%	boundary of the Selling-reduced orthant. Equal-value multiplets indicate
-%	additional symmetry. For example, the orthorhombic type O5 has character
-%	\((000\,rst)\), with three zeros and three independent values.
-%	
-%	These patterns determine the dimension of the subspace and the structure of the
-%	projector associated with the type.
+	%	\subsection{Zero patterns and equal-value multiplets}
+	%	
+	%	A zero value for a Selling scalar indicates that the corresponding vector lies on a
+	%	boundary of the Selling-reduced orthant. Equal-value multiplets indicate
+	%	additional symmetry. For example, the orthorhombic type O5 has character
+	%	\((000\,rst)\), with three zeros and three independent values.
+	%	
+	%	These patterns determine the dimension of the subspace and the structure of the
+	%	projector associated with the type.
 	
 	\subsection{Delone types and Bravais types}
 	
@@ -489,7 +486,7 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 	metric tensor. The Selling-reduced domain is the all-negative orthant, so each
 	subspace is the intersection of a linear subspace with this orthant.
 	Up to 24 reflections (permutations) of a general \SVI{} vector are allowed,
-	but the particular ones used in Table \ref{fig:rotatedDeloneTypes} are those chosen by \citeasnoun{Delaunay1932}
+	but the particular ones used in Figure~\ref{fig:delonegrid} are those chosen by \citeasnoun{Delaunay1932}
 	
 	\subsection{Dimension}
 	
@@ -556,10 +553,10 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 	Choose a random vector in $S^6$ with no zeros and no duplicate values. The
 	values should be large enough that adding or subtracting the smallest
 	representable floating-point number (DBL\_MIN \footnote{``DBL\_MIN'' is the C++
-	specification for the smallest number that added to a double precision
-	value of X will cause a change in the value. Here DBL\_MIN will
-	be used as a placeholder for such a small, rather neglible,
-	number.}) does not change them. This
+		specification for the smallest number that added to a double precision
+		value of X will cause a change in the value. Here DBL\_MIN will
+		be used as a placeholder for such a small, rather neglible,
+		number.}) does not change them. This
 	value will later be used to mark positions of zeros.
 	
 	\paragraph{Step 2: Apply projectors.}
@@ -627,12 +624,12 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 	\begin{enumerate}
 		\item Convert the cell to its Selling-reduced form in $S^6$. Then 
 		for each Delone type:
-\begin{enumerate}
-	\item 		Apply the perp to the probe vector.
-	\item 		Compute the norm of the result.
-\end{enumerate}
-	\item 	 Identify the Delone type with the smallest distance.
-
+		\begin{enumerate}
+			\item 		Apply the perp to the probe vector.
+			\item 		Compute the norm of the result.
+		\end{enumerate}
+		\item 	 Identify the Delone type with the smallest distance.
+		
 	\end{enumerate}	
 	
 	The corresponding Bravais type is reported or all of them
@@ -712,7 +709,7 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 	to enumerate all representations of each Delone type and to construct the
 	corresponding projectors.
 	
-	Use of the projector–perp formulation gives a clear metric of fit. The distance from a
+	Use of the projector--perp formulation gives a clear metric of fit. The distance from a
 	probe cell to a Bravais type is simply the norm of the perp applied to the
 	Selling-reduced vector. This distance measure behaves smoothly under perturbations,
 	making the method suitable for experimental data. The examples in Section~9
@@ -720,7 +717,7 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 	provide a meaningful measure of deviation.
 	
 	The method is also computationally efficient. Once the library of projectors is
-	constructed, classification of a probe cell requires only matrix–vector
+	constructed, classification of a probe cell requires only matrix--vector
 	multiplications. The number of projectors is modest (239 non-triclinic types),
 	and the operations are inexpensive.
 	
@@ -742,11 +739,11 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 	
 	\begin{figure}
 		\centering
-\includegraphics[angle=90,height=0.7\textheight]{DeloneGridClaude_2}
+		\includegraphics[angle=90,height=0.7\textheight]{DeloneGridClaude_2}
 		\caption{
 			The 24 Delone types arranged by lattice system, modified after \citeasnoun{Delone1975}.  
 			Each type is shown with its Bravais tetrahedron, using zeros and slash marks to indicate
-			the character (zero pattern and equal‑value multiplets).  
+			the character (zero pattern and equal-value multiplets).  
 			These characters determine the dimension and structure of the corresponding linear
 			subspace in $S^6$ used by SELLA.
 		}
@@ -754,33 +751,33 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 	\end{figure}
 	
 	
-%	\begin{figure}[h]
-%		\centering
-%		% \includegraphics{figure1_placeholder}
-%		\caption{Placeholder for Figure~1. Suggested content: Bravais tetrahedron with
-%			labels for the six Selling scalars.}
-%	\end{figure}	
+	%	\begin{figure}[h]
+		%		\centering
+		%		% \includegraphics{figure1_placeholder}
+		%		\caption{Placeholder for Figure~1. Suggested content: Bravais tetrahedron with
+			%			labels for the six Selling scalars.}
+		%	\end{figure}	
 	
 	\begin{figure}
-	\centering
-	\includegraphics{R1.png}
-	\caption{Delone types: entry for rhombohedral cells.}
-	\label{figure:R1}
+		\centering
+		\includegraphics{R1.png}
+		\caption{Delone types: entry for rhombohedral cells.}
+		\label{figure:R1}
 	\end{figure}
 	
-%	\begin{figure}[h]
-%		\centering
-%		% \includegraphics{figure2_placeholder}
-%		\caption{Placeholder for Figure~2. Suggested content: schematic comparison of
-%			the Niggli-reduced region in $G^6$ and the Selling-reduced orthant in $S^6$.}
-%	\end{figure}
+	%	\begin{figure}[h]
+		%		\centering
+		%		% \includegraphics{figure2_placeholder}
+		%		\caption{Placeholder for Figure~2. Suggested content: schematic comparison of
+			%			the Niggli-reduced region in $G^6$ and the Selling-reduced orthant in $S^6$.}
+		%	\end{figure}
 	
-%	\begin{figure}[h]
-%		\centering
-%		% \includegraphics{figure3_placeholder}
-%		\caption{Placeholder for Figure~3. Suggested content: example of a Bravais
-%			subspace in $S^6$ showing zero patterns and equal-value multiplets.}
-%	\end{figure}
+	%	\begin{figure}[h]
+		%		\centering
+		%		% \includegraphics{figure3_placeholder}
+		%		\caption{Placeholder for Figure~3. Suggested content: example of a Bravais
+			%			subspace in $S^6$ showing zero patterns and equal-value multiplets.}
+		%	\end{figure}
 	
 	\begin{figure}[h]
 		\centering
@@ -890,100 +887,110 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 		\end{tabular}
 	\end{table}
 	
-	\fontseries{Courier}{
-		\begin{table}
-			\caption{Properly normalized projectors for the 24 Delone types}
-			\label{table:DeloneTypes}
-			\begin{tabular}{lclc}
-				\toprule
-				Type & Lattice & Projector & Characteristic \\
-				\midrule
-				C1  & (cI) & [1/6 1/6 1/6 1/6 1/6 1/6/ 1/6 1/6 1/6 1/6 1/6 1/6/ 1/6 1/6 1/6 1/6 1/6 1/6/ 1/6 1/6 1/6 1/6 1/6 1/6/ 1/6 1/6 1/6 1/6 1/6 1/6/ 1/6 1/6 1/6 1/6 1/6 1/6] & (rrr rrr) \\ 
-				C3  & (cF) & [1/4 1/4 0 1/4 1/4 0/ 1/4 1/4 0 1/4 1/4 0/ 0 0 0 0 0 0/ 1/4 1/4 0 1/4 1/4 0/ 1/4 1/4 0 1/4 1/4 0/ 0 0 0 0 0 0] & (rr0 rr0) \\ 
-				C5  & (cP) & [0 0 0 0 0 0/ 0 0 0 0 0 0/ 0 0 0 0 0 0/ 0 0 0 1/3 1/3 1/3/ 0 0 0 1/3 1/3 1/3/ 0 0 0 1/3 1/3 1/3] & (000 rrr) \\ \\
-				
-				T1  & (tI) & [1/4 1/4 0 1/4 1/4 0/ 1/4 1/4 0 1/4 1/4 0/ 0 0 1/2 0 0 1/2/ 1/4 1/4 0 1/4 1/4 0/ 1/4 1/4 0 1/4 1/4 0/ 0 0 1/2 0 0 1/2] & (rrr rrs) \\ 
-				T2  & (tI) & [1/4 1/4 0 1/4 1/4 0/ 1/4 1/4 0 1/4 1/4 0/ 0 0 0 0 0 0/ 1/4 1/4 0 1/4 1/4 0/ 1/4 1/4 0 1/4 1/4 0/ 0 0 0 0 0 1] & (rr0 rrs) \\ 
-				T5  & (tP) & [0 0 0 0 0 0/ 0 0 0 0 0 0/ 0 0 0 0 0 0/ 0 0 0 1/2 1/2 0/ 0 0 0 1/2 1/2 0/ 0 0 0 0 0 1] & (000 rrs) \\ \\
-				
-				H1  & (hR) & [1/3 1/3 1/3 0 0 0/ 1/3 1/3 1/3 0 0 0/ 1/3 1/3 1/3 0 0 0/ 0 0 0 1/3 1/3 1/3/ 0 0 0 1/3 1/3 1/3/ 0 0 0 1/3 1/3 1/3] & (rrr sss) \\ 
-				H3  & (hR) & [1/4 1/4 0 0 1/4 0/ 1/4 1/4 0 0 1/4 0/ 0 0 0 0 0 0/ 0 0 0 1 0 0/ 1/4 1/4 0 0 1/4 0/ 0 0 0 0 0 0] & (rr0 sr0) \\
-				H4  & (hP) & [0 0 0 0 0 0/ 0 0 0 0 0 0/ 0 0 1/3 1/3 1/3 0/ 0 0 1/3 1/3 1/3 0/ 0 0 1/3 1/3 1/3 0/ 0 0 0 0 0 1] & (00r rrs) \\ \\
-				
-				O1A & (oF) & [1/4 1/4 0 1/4 1/4 0/ 1/4 1/4 0 1/4 1/4 0/ 0 0 1 0 0 0/ 1/4 1/4 0 1/4 1/4 0/ 1/4 1/4 0 1/4 1/4 0/ 0 0 0 0 0 1] & (rrs rrt) \\ 
-				O1B & (oI) & [1/2 0 0 1/2 0 0/ 0 1/2 0 0 1/2 0/ 0 0 1/2 0 0 1/2/ 1/2 0 0 1/2 0 0/ 0 1/2 0 0 1/2 0/ 0 0 1/2 0 0 1/2] & (rst rst) \\ 
-				O2  & (oI) & [1/2 0 0 0 1/2 0/ 0 1/2 0 1/2 0 0/ 0 0 0 0 0 0/ 0 1/2 0 1/2 0 0/ 1/2 0 0 0 1/2 0/ 0 0 0 0 0 1] & (rs0 srt) \\ 
-				O3  & (oI) & [1/2 0 0 1/2 0 0/ 0 1/2 0 0 1/2 0/ 0 0 0 0 0 0/ 1/2 0 0 1/2 0 0/ 0 1/2 0 0 1/2 0/ 0 0 0 0 0 0] & (rs0 rs0) \\ 
-				O4  & (oS) & [0 0 0 0 0 0/ 0 0 0 0 0 0/ 0 0 1 0 0 0/ 0 0 0 1/2 1/2 0/ 0 0 0 1/2 1/2 0/ 0 0 0 0 0 1] & (00r sst) \\ 
-				O5  & (oP) & [0 0 0 0 0 0/ 0 0 0 0 0 0/ 0 0 0 0 0 0/ 0 0 0 1 0 0/ 0 0 0 0 1 0/ 0 0 0 0 0 1] & (000 rst) \\ \\
-				
-				M1A & (mC) & [1/2 1/2 0 0 0 0/ 1/2 1/2 0 0 0 0/ 0 0 1 0 0 0/ 0 0 0 1/2 1/2 0/ 0 0 0 1/2 1/2 0/ 0 0 0 0 0 1] & (rrs ttu) \\ 
-				M1B & (mC) & [1/2 0 0 1/2 0 0/ 0 1/2 0 0 1/2 0/ 0 0 1 0 0 0/ 1/2 0 0 1/2 0 0/ 0 1/2 0 0 1/2 0/ 0 0 0 0 0 1] & (rst rsu) \\ 
-				M2A & (mC) & [1 0 0 0 0 0/ 0 1/2 0 1/2 0 0/ 0 0 0 0 0 0/ 0 1/2 0 1/2 0 0/ 0 0 0 0 1 0/ 0 0 0 0 0 1] & (rs0 stu) \\ 
-				M2B & (mC) & [1/2 0 0 1/2 0 0/ 0 1/2 0 0 1/2 0/ 0 0 0 0 0 0/ 1/2 0 0 1/2 0 0/ 0 1/2 0 0 1/2 0/ 0 0 0 0 0 1] & (rs0 rst) \\ 
-				M3  & (mC) & [1 0 0 0 0 0/ 0 1/2 0 0 1/2 0/ 0 0 0 0 0 0/ 0 0 0 1 0 0/ 0 1/2 0 0 1/2 0/ 0 0 0 0 0 0] & (rs0 ts0) \\ 
-				M4  & (mP) & [0 0 0 0 0 0/ 0 0 0 0 0 0/ 0 0 1 0 0 0/ 0 0 0 1 0 0/ 0 0 0 0 1 0/ 0 0 0 0 0 1] & (00r stu) \\ \\
-				
-				A1  & (aP) & [1 0 0 0 0 0/ 0 1 0 0 0 0/ 0 0 1 0 0 0/ 0 0 0 1 0 0/ 0 0 0 0 1 0/ 0 0 0 0 0 1] & (rst uvw) \\ 
-				A2  & (aP) & [1 0 0 0 0 0/ 0 1 0 0 0 0/ 0 0 0 0 0 0/ 0 0 0 1 0 0/ 0 0 0 0 1 0/ 0 0 0 0 0 1] & (rs0 tuv) \\ 
-				A3  & (aP) & [1 0 0 0 0 0/ 0 1 0 0 0 0/ 0 0 0 0 0 0/ 0 0 0 1 0 0/ 0 0 0 0 1 0/ 0 0 0 0 0 0] & (rs0 tu0) \\ \\				
-				\bottomrule
-			\end{tabular}
-		\end{table}
-	}
+	% Table 3, rebuilt 2026-11-15. Each projector is generated from its
+	% character: P = sum over letter groups k of (1/n_k) 1_k 1_k^T.
+	% Corrections from the issue sheet: R3 entries 1/3 (were 1/4, not
+	% idempotent); T1 character (rrs rrs) (was rrr rrs); H1/H3 -> R1/R3.
+	\begin{sidewaystable*}
+		\caption{Projectors for the 24 Delone types. Each entry gives the
+			Delone type, its Bravais lattice type and its character; the
+			projector has entry $1/n_k$ wherever both slots belong to letter
+			group $k$ of the character ($n_k$ slots) and 0 elsewhere.}
+		\label{table:DeloneTypes}
+		\centering
+		\setlength{\arraycolsep}{2pt}
+		\setlength{\tabcolsep}{4pt}
+		\renewcommand{\arraystretch}{1.3}
+		\begin{tabular}{cccccc}
+			\toprule
+			C1 (cI) \charseq{rrr rrr} & C3 (cF) \charseq{rr0 rr0} & C5 (cP) \charseq{000 rrr} & T1 (tI) \charseq{rrs rrs} & T2 (tI) \charseq{rr0 rrs} & T5 (tP) \charseq{000 rrs} \\[2pt]
+			$\begin{bmatrix} \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} \\ \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} \\ \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} \\ \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} \\ \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} \\ \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} & \tfrac{1}{6} \end{bmatrix}$ &
+			$\begin{bmatrix} \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix}$ &
+			$\begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & \tfrac{1}{3} & \tfrac{1}{3} & \tfrac{1}{3} \\ 0 & 0 & 0 & \tfrac{1}{3} & \tfrac{1}{3} & \tfrac{1}{3} \\ 0 & 0 & 0 & \tfrac{1}{3} & \tfrac{1}{3} & \tfrac{1}{3} \end{bmatrix}$ &
+			$\begin{bmatrix} \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ 0 & 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} \\ \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ 0 & 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} \end{bmatrix}$ &
+			$\begin{bmatrix} \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ &
+			$\begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ \\
+			\midrule
+			R1 (hR) \charseq{rrr sss} & R3 (hR) \charseq{rr0 sr0} & H4 (hP) \charseq{00r rrs} & O1A (oF) \charseq{rrs rrt} & O1B (oI) \charseq{rst rst} & O2 (oI) \charseq{rs0 srt} \\[2pt]
+			$\begin{bmatrix} \tfrac{1}{3} & \tfrac{1}{3} & \tfrac{1}{3} & 0 & 0 & 0 \\ \tfrac{1}{3} & \tfrac{1}{3} & \tfrac{1}{3} & 0 & 0 & 0 \\ \tfrac{1}{3} & \tfrac{1}{3} & \tfrac{1}{3} & 0 & 0 & 0 \\ 0 & 0 & 0 & \tfrac{1}{3} & \tfrac{1}{3} & \tfrac{1}{3} \\ 0 & 0 & 0 & \tfrac{1}{3} & \tfrac{1}{3} & \tfrac{1}{3} \\ 0 & 0 & 0 & \tfrac{1}{3} & \tfrac{1}{3} & \tfrac{1}{3} \end{bmatrix}$ &
+			$\begin{bmatrix} \tfrac{1}{3} & \tfrac{1}{3} & 0 & 0 & \tfrac{1}{3} & 0 \\ \tfrac{1}{3} & \tfrac{1}{3} & 0 & 0 & \tfrac{1}{3} & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 \\ \tfrac{1}{3} & \tfrac{1}{3} & 0 & 0 & \tfrac{1}{3} & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix}$ &
+			$\begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & \tfrac{1}{3} & \tfrac{1}{3} & \tfrac{1}{3} & 0 \\ 0 & 0 & \tfrac{1}{3} & \tfrac{1}{3} & \tfrac{1}{3} & 0 \\ 0 & 0 & \tfrac{1}{3} & \tfrac{1}{3} & \tfrac{1}{3} & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ &
+			$\begin{bmatrix} \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 \\ \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ \tfrac{1}{4} & \tfrac{1}{4} & 0 & \tfrac{1}{4} & \tfrac{1}{4} & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ &
+			$\begin{bmatrix} \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 & 0 \\ 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 \\ 0 & 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} \\ \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 & 0 \\ 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 \\ 0 & 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} \end{bmatrix}$ &
+			$\begin{bmatrix} \tfrac{1}{2} & 0 & 0 & 0 & \tfrac{1}{2} & 0 \\ 0 & \tfrac{1}{2} & 0 & \tfrac{1}{2} & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & \tfrac{1}{2} & 0 & \tfrac{1}{2} & 0 & 0 \\ \tfrac{1}{2} & 0 & 0 & 0 & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ \\
+			\midrule
+			O3 (oI) \charseq{rs0 rs0} & O4 (oS) \charseq{00r sst} & O5 (oP) \charseq{000 rst} & M1A (mC) \charseq{rrs ttu} & M1B (mC) \charseq{rst rsu} & M2A (mC) \charseq{rs0 stu} \\[2pt]
+			$\begin{bmatrix} \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 & 0 \\ 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 & 0 \\ 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix}$ &
+			$\begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ &
+			$\begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ &
+			$\begin{bmatrix} \tfrac{1}{2} & \tfrac{1}{2} & 0 & 0 & 0 & 0 \\ \tfrac{1}{2} & \tfrac{1}{2} & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & \tfrac{1}{2} & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ &
+			$\begin{bmatrix} \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 & 0 \\ 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 \\ \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 & 0 \\ 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ &
+			$\begin{bmatrix} 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & \tfrac{1}{2} & 0 & \tfrac{1}{2} & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & \tfrac{1}{2} & 0 & \tfrac{1}{2} & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ \\
+			\midrule
+			M2B (mC) \charseq{rs0 rst} & M3 (mC) \charseq{rs0 ts0} & M4 (mP) \charseq{00r stu} & A1 (aP) \charseq{rst uvw} & A2 (aP) \charseq{rs0 tuv} & A3 (aP) \charseq{rs0 tu0} \\[2pt]
+			$\begin{bmatrix} \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 & 0 \\ 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 & 0 \\ 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ &
+			$\begin{bmatrix} 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & \tfrac{1}{2} & 0 & 0 & \tfrac{1}{2} & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix}$ &
+			$\begin{bmatrix} 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ &
+			$\begin{bmatrix} 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ &
+			$\begin{bmatrix} 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix}$ &
+			$\begin{bmatrix} 1 & 0 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix}$ \\
+			\bottomrule
+		\end{tabular}
+	\end{sidewaystable*}
 	
-% Table 4, rebuilt 2026-11-12 from the current CmdSella (COMPARE,
-% TYPES set to each cell's claimed Delone type). Replaces the old table:
-% its column "distance (A)" held sqrt(fit)/10. The two halves are side by
-% side in one tabular, rotated (rotating package: sidewaystable*), so that
-% the table fits on one page at the normal text size.
-\begin{sidewaystable*}
-	\begin{tabular}{ccccc@{\hspace{18pt}}c@{\hspace{18pt}}ccccc}
-		\toprule
-		PDB ID & Space group & Delone type & Fit ({\AA}$^2$) & Fit$/|\mathbf{s}|$ (\%) && PDB ID & Space group & Delone type & Fit ({\AA}$^2$) & Fit$/|\mathbf{s}|$ (\%) \\
-		\cmidrule{1-5}\cmidrule{7-11}
-		1NUI&$P3_121$&H4&0.1930&0.0011 && 1C50&$P4_32_12$&T5&362.5&1.35\\
-		2NW8&$P3_121$&H4&0.1613&0.0011 && 2A1L&$P4_32_12$&T5&0.2798&0.0015\\
-		2J1L&$P3_121$&H4&0.09448&0.00082 && 1S2L&$P4_32_12$&T5&0.1121&0.00031\\
-		1VYI&$P3_121$&H4&6.272&0.055 && 1H9S&$P4_1$&T5&103.0&1.30\\
-		3FZ8&$P3_2$&H4&0.3306&0.00073 && 1H9R&$P4_1$&T5&102.9&1.30\\
-		2J5W&$P3_221$&H4&0.2958&0.00077 && 2F0Q&$P4_1$&T5&0.06809&0.0013\\
-		2VAM&$P3_221$&H4&1.360&0.013 && 3EYM&$P4_1$&T5&0.2269&0.00047\\
-		1Y8J&$P3_221$&H4&0.1518&0.00094 && 1WV5&$P4_12_12$&T5&0.06284&0.0011\\
-		1F4V&$P3_221$&H4&0.07670&0.000064 && 2DF3&$P4_12_12$&T5&0.1501&0.0016\\
-		2ZP9&$P6$&H4&0.2788&0.00082 && 1L6O&$P4_12_12$&T5&0.1198&0.00066\\
-		1DDR&$P6_1$&H4&0.5271&0.0057 && 3A58&$P4_12_12$&T5&8.861&0.014\\
-		1DDS&$P6_1$&H4&0.5271&0.0057 && 2IU9&$P4_12_12$&T5&0.1398&0.00017\\
-		1SGU&$P6_1$&H4&0.08708&0.0011 && 4BTP&$P4_12_12$&T5&0.4446&0.00014\\
-		3CDC&$P6_1$&H4&0.3132&0.0029 && 1W54&$P42_12$&T5&0.1771&0.00076\\
-		2WAG&$P6_122$&H4&0.1422&0.00099 && 2PBE&$P4_22_12$&T5&0.3014&0.0018\\
-		1LBM&$P6_122$&H4&0.09735&0.00028 && 3BR5&$P4_22_12$&T5&4.857&0.011\\
-		2O9Z&$P6_2$&H4&0.1623&0.00030 && 1GMD&$P4_22_12$&T5&1.961&0.017\\
-		1ELZ&$P6_322$&H4&16.29&0.054 && 1GMC&$P4_22_12$&T5&1.967&0.017\\
-		1SA0&$P6_5$&H4&0.4648&0.00050 && 2CCN&$P4_22_12$&T5&0.2002&0.0018\\
-		3KQI&$P6_522$&H4&0.1100&0.0015 && 1CE1&$P2_12_12_1$&O5&34.54&0.15\\
-		2F9Y&$P6_522$&H4&0.2217&0.00052 && 3DQ2&$P2_12_12_1$&O5&1.121&0.016\\
-		3E73&$P6_522$&H4&0.2745&0.00041 && 1Z2A&$P2_12_12_1$&O5&0.4489&0.0078\\
-		3CAP&$H3$&H4&0.3435&0.00065 && 2HA3&$P2_12_12_1$&O5&9.423&0.018\\
-		2UX6&$H32$&H4&0.1494&0.0015 && 3BNJ&$I4_122$&T2&90.61&0.63\\
-		1ODT&$H32$&H4&0.6668&0.0024 && 4MGP&$I\bar{4}2d$&T1&4.532&0.26\\
-		2FDI&$P4_3$&T5&0.5749&0.0041 && 4ASL&$C222_1$&O4&8.924&0.14\\
-		3HQ7&$P4_32_12$&T5&5.630&0.037 && 3K7M&$P432$&C5&0.2677&0.00058\\
-		1E2Q&$P4_32_12$&T5&30.06&0.20 && 3GBN&$I2_13$&C1&160.3&0.64\\
-		1SHN&$P4_32_12$&T5&0.2414&0.00058 && &&&&\\
-		\bottomrule
-	\end{tabular}
-	
-	\caption{The 57 unit cells from the PDB (around 2018) that did not fit
-		their deposited lattice types (later corrected). Delone type: the
-		type required by the space group. Fit: the SELLA distance in $S^6$
-		from the cell to the nearest lattice of that type; $|\mathbf{s}|$ is
-		the length of the Selling-reduced $S^6$ vector. Fits are from the current program;
-		53 are the same as in the original 2018 survey, and four are lower
-		(3HQ7 8.234, 4ASL 11.45, 1CE1 41.90, 2HA3 9.431 before), owing to
-		additions to the method since then.}
-	\label{tab:PDBCells}
-\end{sidewaystable*}
+	% Table 4, rebuilt 2026-11-12 from the current CmdSella (COMPARE,
+	% TYPES set to each cell's claimed Delone type). Replaces the old table:
+	% its column "distance (A)" held sqrt(fit)/10. The two halves are side by
+	% side in one tabular, rotated (rotating package: sidewaystable*), so that
+	% the table fits on one page at the normal text size.
+	\begin{sidewaystable*}
+		\setlength{\tabcolsep}{5pt}
+		\begin{tabular}{ccccc@{\hspace{18pt}}c@{\hspace{18pt}}ccccc}
+			\toprule
+			PDB ID & Space group & Delone type & Fit ({\AA}$^2$) & Fit$/|\mathbf{s}|$ (\%) && PDB ID & Space group & Delone type & Fit ({\AA}$^2$) & Fit$/|\mathbf{s}|$ (\%) \\
+			\cmidrule{1-5}\cmidrule{7-11}
+			1NUI&$P3_121$&H4&0.1930&0.0011 && 1C50&$P4_32_12$&T5&362.5&1.35\\
+			2NW8&$P3_121$&H4&0.1613&0.0011 && 2A1L&$P4_32_12$&T5&0.2798&0.0015\\
+			2J1L&$P3_121$&H4&0.09448&0.00082 && 1S2L&$P4_32_12$&T5&0.1121&0.00031\\
+			1VYI&$P3_121$&H4&6.272&0.055 && 1H9S&$P4_1$&T5&103.0&1.30\\
+			3FZ8&$P3_2$&H4&0.3306&0.00073 && 1H9R&$P4_1$&T5&102.9&1.30\\
+			2J5W&$P3_221$&H4&0.2958&0.00077 && 2F0Q&$P4_1$&T5&0.06809&0.0013\\
+			2VAM&$P3_221$&H4&1.360&0.013 && 3EYM&$P4_1$&T5&0.2269&0.00047\\
+			1Y8J&$P3_221$&H4&0.1518&0.00094 && 1WV5&$P4_12_12$&T5&0.06284&0.0011\\
+			1F4V&$P3_221$&H4&0.07670&0.000064 && 2DF3&$P4_12_12$&T5&0.1501&0.0016\\
+			2ZP9&$P6$&H4&0.2788&0.00082 && 1L6O&$P4_12_12$&T5&0.1198&0.00066\\
+			1DDR&$P6_1$&H4&0.5271&0.0057 && 3A58&$P4_12_12$&T5&8.861&0.014\\
+			1DDS&$P6_1$&H4&0.5271&0.0057 && 2IU9&$P4_12_12$&T5&0.1398&0.00017\\
+			1SGU&$P6_1$&H4&0.08708&0.0011 && 4BTP&$P4_12_12$&T5&0.4446&0.00014\\
+			3CDC&$P6_1$&H4&0.3132&0.0029 && 1W54&$P42_12$&T5&0.1771&0.00076\\
+			2WAG&$P6_122$&H4&0.1422&0.00099 && 2PBE&$P4_22_12$&T5&0.3014&0.0018\\
+			1LBM&$P6_122$&H4&0.09735&0.00028 && 3BR5&$P4_22_12$&T5&4.857&0.011\\
+			2O9Z&$P6_2$&H4&0.1623&0.00030 && 1GMD&$P4_22_12$&T5&1.961&0.017\\
+			1ELZ&$P6_322$&H4&16.29&0.054 && 1GMC&$P4_22_12$&T5&1.967&0.017\\
+			1SA0&$P6_5$&H4&0.4648&0.00050 && 2CCN&$P4_22_12$&T5&0.2002&0.0018\\
+			3KQI&$P6_522$&H4&0.1100&0.0015 && 1CE1&$P2_12_12_1$&O5&34.54&0.15\\
+			2F9Y&$P6_522$&H4&0.2217&0.00052 && 3DQ2&$P2_12_12_1$&O5&1.121&0.016\\
+			3E73&$P6_522$&H4&0.2745&0.00041 && 1Z2A&$P2_12_12_1$&O5&0.4489&0.0078\\
+			3CAP&$H3$&H4&0.3435&0.00065 && 2HA3&$P2_12_12_1$&O5&9.423&0.018\\
+			2UX6&$H32$&H4&0.1494&0.0015 && 3BNJ&$I4_122$&T2&90.61&0.63\\
+			1ODT&$H32$&H4&0.6668&0.0024 && 4MGP&$I\bar{4}2d$&T1&4.532&0.26\\
+			2FDI&$P4_3$&T5&0.5749&0.0041 && 4ASL&$C222_1$&O4&8.924&0.14\\
+			3HQ7&$P4_32_12$&T5&5.630&0.037 && 3K7M&$P432$&C5&0.2677&0.00058\\
+			1E2Q&$P4_32_12$&T5&30.06&0.20 && 3GBN&$I2_13$&C1&160.3&0.64\\
+			1SHN&$P4_32_12$&T5&0.2414&0.00058 && &&&&\\
+			\bottomrule
+		\end{tabular}
+		
+		\caption{The 57 unit cells from the PDB (around 2018) that did not fit
+			their deposited lattice types (later corrected). Delone type: the
+			type required by the space group. Fit: the SELLA distance in $S^6$
+			from the cell to the nearest lattice of that type; $|\mathbf{s}|$ is
+			the length of the Selling-reduced $S^6$ vector. Fits are from the current program;
+			53 are the same as in the original 2018 survey, and four are lower
+			(3HQ7 8.234, 4ASL 11.45, 1CE1 41.90, 2HA3 9.431 before), owing to
+			additions to the method since then.}
+		\label{tab:PDBCells}
+	\end{sidewaystable*}
 	
 	
 	% Postscript figures can be included with multiple figure blocks
@@ -994,13 +1001,13 @@ to the norm of the \SVI{} unit cell vector is: 0.005 (0.5\%), a tiny deviation f
 		%		\label{fig:DeloneTypes}
 		%		\includegraphics[width=12cm]{DeloneGridClaude_2-3}
 		%	\end{figure}
-		
-%	\begin{figure}
-%		\centering
-%		\includegraphics[angle=90, width=0.7\textheight]{HorizontalDeloneGrid}
-%		\caption{The Delone types}
-%		\label{fig:rotatedDeloneTypes}
-%	\end{figure}
+	
+	%	\begin{figure}
+		%		\centering
+		%		\includegraphics[angle=90, width=0.7\textheight]{HorizontalDeloneGrid}
+		%		\caption{The Delone types}
+		%		\label{fig:rotatedDeloneTypes}
+		%	\end{figure}
 	
 	\begin{figure}
 		\caption{The O4 item from the Delone Grid with Delone type description}
